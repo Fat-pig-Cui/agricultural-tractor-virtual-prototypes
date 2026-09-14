@@ -1,0 +1,23 @@
+parameter_id,symbol,code_identifier,nominal_value,unit,source_class,source_locator,model_role,stress_or_coverage,claim_dependency
+P01,dt,LiftParameters.dt_s,0.01,s,numerical_setting,VP-1.0|code/config/parameters.py,explicit Euler integration,Fixed for all reported simulations,Reproduction time base
+P02,A,LiftParameters.cylinder_area_m2,0.012,m2,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,pressure-to-force and loss scaling,Fixed nominal virtual component input,Mechanical and pressure surrogate
+P03,V,LiftParameters.chamber_volume_m3,0.004,m3,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,accumulator pressure-rate scaling,Fixed nominal virtual component input,Accumulator branch only
+P04,beta_e,LiftParameters.bulk_modulus_pa,1200000000,Pa,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,accumulator pressure-rate scaling,Fixed nominal virtual component input,Accumulator branch only
+P05,p_relief,LiftParameters.relief_pressure_pa,21000000,Pa,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,bounded virtual pressure difference,Fixed nominal virtual component input,Pressure-state bound
+P06,G_p,LiftParameters.valve_pressure_gain_pa,8000000,Pa,reduced_order_coefficient,VP-1.0|code/config/parameters.py,command-to-pressure-difference surrogate,Fixed nominal reduced-order coefficient,All command-dependent results
+P07,a_track,LiftParameters.tracking_pressure_rate_s,18,1/s,reduced_order_coefficient,VP-1.0|code/config/parameters.py,tracking pressure relaxation,Fixed nominal reduced-order coefficient,Tracking-phase dynamics
+P08,a_hold,LiftParameters.hold_pressure_rate_s,4,1/s,reduced_order_coefficient,VP-1.0|code/config/parameters.py,hold pressure relaxation,Fixed nominal reduced-order coefficient,Hold-phase dynamics
+P09,g_hold,LiftParameters.hold_leakage_retention,0.08,1,reduced_order_coefficient,VP-1.0|code/config/parameters.py,retained virtual loss in lock mode,Fixed nominal reduced-order coefficient,Passive-lock loss sensitivity
+P10,p_common_min,LiftParameters.minimum_common_pressure_pa,1000000,Pa,reduced_order_coefficient,VP-1.0|code/config/parameters.py,ideal paired-pressure reconstruction floor,Fixed nominal reduced-order coefficient,Ideal pressure output only
+P11,g_T,LiftParameters.temperature_leakage_gain_per_c,0.018,1/C,reduced_order_coefficient,VP-1.0|code/config/parameters.py,linear thermal multiplier for virtual leakage,25-50 C temperature-load screen,Thermal sensitivity conclusions
+P12,C_l,LiftParameters.leakage_m3_s_pa,1.5e-12,m3/(s Pa),virtual_hydraulic_input,VP-1.0|code/config/parameters.py,virtual cylinder-loss proxy,0.5x 2x 5x and 1x-to-8x step screens,Leakage proxy and sensitivity results
+P13,m,LiftParameters.mass_kg,1200,kg,virtual_mechanical_input,VP-1.0|code/config/parameters.py,actuator inertia,0.7x and 1.3x one-at-a-time screen,Motion response sensitivity
+P14,c,LiftParameters.viscous_n_s_m,2200,N s/m,virtual_mechanical_input,VP-1.0|code/config/parameters.py,velocity-dependent virtual friction,0.7x and 1.3x one-at-a-time screen,Motion response sensitivity
+P15,F_f,LiftParameters.coulomb_n,850,N,virtual_mechanical_input,VP-1.0|code/config/parameters.py,direction-dependent virtual friction,Fixed nominal virtual component input,Mechanical load balance
+P16,k,LiftParameters.stiffness_n_m,18000,N/m,virtual_mechanical_input,VP-1.0|code/config/parameters.py,position-dependent virtual load,0.7x and 1.3x one-at-a-time screen,Motion response sensitivity
+P17,x_max,LiftParameters.stroke_m,0.85,m,virtual_mechanical_input,VP-1.0|code/config/parameters.py,position-state saturation,Fixed nominal virtual component input,State bound
+P18,sigma_x,LiftParameters.sensor_std_m,0.0015,m,measurement_setting,VP-1.0|code/config/parameters.py,seeded Gaussian position-noise standard deviation,0.5x and 2x one-at-a-time screen,Reported seed variability
+P19,p_pre,LiftParameters.acc_precharge_pa,12000000,Pa,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,virtual accumulator initial gas pressure,Fixed nominal virtual component input,Accumulator availability
+P20,V_acc,LiftParameters.acc_volume_m3,0.004,m3,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,virtual accumulator gas and oil capacity,Fixed nominal virtual component input,Accumulator availability
+P21,K_acc,LiftParameters.acc_flow_m3_s_pa,2e-12,m3/(s Pa),virtual_hydraulic_input,VP-1.0|code/config/parameters.py,virtual accumulator discharge-flow proxy,0.5x and 1.5x at 14 kN,Load-step compensation sensitivity
+P22,q_charge,LiftParameters.acc_charge_m3_s,6e-5,m3/s,virtual_hydraulic_input,VP-1.0|code/config/parameters.py,virtual accumulator recharge proxy,Fixed nominal virtual component input,Long-hold accumulator availability

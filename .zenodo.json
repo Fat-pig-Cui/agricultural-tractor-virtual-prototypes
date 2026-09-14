@@ -1,0 +1,39 @@
+{
+  "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
+  "description": "<p>Source code, declared virtual-model inputs, reproduction scripts, result JSON files, figures, and English manuscript sources for two theoretical simulation studies: electrohydraulic tractor-hitch position holding and strictly causal hybrid-tractor energy-management benchmarking.</p><p>All evidence is conditional on declared virtual models. The archive contains no field, vehicle, bench, or calibrated component-map measurements.</p>",
+  "creators": [
+    {
+      "name": "Cui, Chenyu",
+      "orcid": "0009-0005-1928-6218",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    },
+    {
+      "name": "Zhu, Zhenhua",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    },
+    {
+      "name": "Wang, Lihan",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    },
+    {
+      "name": "Lu, Zaiwang",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    },
+    {
+      "name": "Zhang, Yucheng",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    }
+  ],
+  "keywords": [
+    "agricultural tractor",
+    "electrohydraulic hitch",
+    "hybrid electric tractor",
+    "energy management",
+    "model predictive control",
+    "virtual prototype",
+    "reproducible research"
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "software",
+  "access_right": "open"
+}

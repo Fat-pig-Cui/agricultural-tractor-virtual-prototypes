@@ -1,0 +1,2970 @@
+{
+  "full_hybrid": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.235510978891105,
+    "mean_settling_error_mm": 4.26695737365192,
+    "mean_hold_drop_mm": 0.021856754794077893,
+    "max_hold_drop_mm": 0.07389515024197602,
+    "mean_hold_start_time_s": 8.523,
+    "mean_max_velocity_mps": 0.12397640865167694,
+    "mean_command_energy": 0.4225601724337887,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.236262091541146,
+        "settling_error_mm": 4.3471150972087536,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.025597528864940156,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.424528305209341
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.225377168431685,
+        "settling_error_mm": 4.548663777566464,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.4235957397444954
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.226300609622305,
+        "settling_error_mm": 3.9310686792556337,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12434182989722758,
+        "command_energy": 0.4233390229813538
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.23718091822628,
+        "settling_error_mm": 4.113107562391194,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12107017414005472,
+        "command_energy": 0.4193261736619988
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.234532289853552,
+        "settling_error_mm": 4.7083119181722255,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.07389515024197602,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.4172222927908213
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.232253174992985,
+        "settling_error_mm": 4.0061015802010385,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.0604379798071486,
+        "max_velocity_mps": 0.12001341810461363,
+        "command_energy": 0.4235473336606602
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.240284576615858,
+        "settling_error_mm": 3.803508977925474,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.017242127996308643,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.42376441796844455
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.241111275474898,
+        "settling_error_mm": 3.807837321215368,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.4241330802853866
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.234185256579178,
+        "settling_error_mm": 4.386097509825271,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13355892815037207,
+        "command_energy": 0.4221507927054616
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.238803800145563,
+        "settling_error_mm": 4.3399893522398925,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.42563128933513455
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.23324739792115,
+        "settling_error_mm": 4.128305543348699,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.04778845635367013,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.42134945788312805
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.23798592778472,
+        "settling_error_mm": 4.713654446726389,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.01301506468492919,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.42128603571662127
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.234762896290972,
+        "settling_error_mm": 3.878544799641115,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.008922537153510657,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.4227202513138424
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.235853586232583,
+        "settling_error_mm": 4.188473450872476,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.018573451918635353,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.4248052666517429
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.246292331272645,
+        "settling_error_mm": 4.451010849944481,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.4214257297750797
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.236592222846205,
+        "settling_error_mm": 4.574189592374934,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.05584524805418711,
+        "max_velocity_mps": 0.1017651557750046,
+        "command_energy": 0.42213179368740955
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.228156870976033,
+        "settling_error_mm": 4.574483381476979,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.4249327651629114
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.228093263589157,
+        "settling_error_mm": 4.525123614097792,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.07311381035413067,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.4167621020674999
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.241050133888706,
+        "settling_error_mm": 4.3097885735136625,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13493527945901368,
+        "command_energy": 0.42566782214677573
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.241893785536467,
+        "settling_error_mm": 4.003771445040549,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.04270374045212133,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.4228837759276653
+      }
+    ]
+  },
+  "no_pressure_feedforward": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.239766005694497,
+    "mean_settling_error_mm": 4.207827498435815,
+    "mean_hold_drop_mm": 0.019326051112197873,
+    "max_hold_drop_mm": 0.050556955324687625,
+    "mean_hold_start_time_s": 8.357000000000001,
+    "mean_max_velocity_mps": 0.16531264774218918,
+    "mean_command_energy": 0.3903309520097066,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.23096626858903,
+        "settling_error_mm": 4.319066677779759,
+        "hold_started": true,
+        "hold_start_time_s": 8.18,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.17204059384511824,
+        "command_energy": 0.3889946343048114
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.233603353013654,
+        "settling_error_mm": 3.973792970884793,
+        "hold_started": true,
+        "hold_start_time_s": 8.21,
+        "hold_drop_mm": 0.0226664312057423,
+        "max_velocity_mps": 0.16185399505019182,
+        "command_energy": 0.38771076145490346
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.233555628175655,
+        "settling_error_mm": 4.246211304662461,
+        "hold_started": true,
+        "hold_start_time_s": 8.21,
+        "hold_drop_mm": 0.03477471433260826,
+        "max_velocity_mps": 0.1587471285480905,
+        "command_energy": 0.39112725603060616
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.24690256237251,
+        "settling_error_mm": 4.2643779176707035,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1555899832791106,
+        "command_energy": 0.3916374572146231
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.230111744793899,
+        "settling_error_mm": 3.9388926392789347,
+        "hold_started": true,
+        "hold_start_time_s": 8.35,
+        "hold_drop_mm": 0.03320051788413547,
+        "max_velocity_mps": 0.15808332919022236,
+        "command_energy": 0.3867360147253755
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.227514130977589,
+        "settling_error_mm": 4.586333767754692,
+        "hold_started": true,
+        "hold_start_time_s": 8.14,
+        "hold_drop_mm": 0.027999994782423876,
+        "max_velocity_mps": 0.16150076709727218,
+        "command_energy": 0.38712848210317263
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.233739544468243,
+        "settling_error_mm": 3.9904067713432134,
+        "hold_started": true,
+        "hold_start_time_s": 8.25,
+        "hold_drop_mm": 0.050556955324687625,
+        "max_velocity_mps": 0.15120969586914082,
+        "command_energy": 0.3878295394246916
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.24042915313796,
+        "settling_error_mm": 4.453041585258943,
+        "hold_started": true,
+        "hold_start_time_s": 8.27,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.17841456555977284,
+        "command_energy": 0.38897279752921704
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.2555286504789,
+        "settling_error_mm": 4.450570923096919,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.16100592288604207,
+        "command_energy": 0.3973912833248447
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.2306024382293,
+        "settling_error_mm": 4.060907592355168,
+        "hold_started": true,
+        "hold_start_time_s": 8.120000000000001,
+        "hold_drop_mm": 0.01993131927524594,
+        "max_velocity_mps": 0.1561573298157724,
+        "command_energy": 0.3842328176387329
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.248127864385337,
+        "settling_error_mm": 4.300371570367334,
+        "hold_started": true,
+        "hold_start_time_s": 8.67,
+        "hold_drop_mm": 0.04101312557935888,
+        "max_velocity_mps": 0.16013070132155527,
+        "command_energy": 0.39320735600826423
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.225954959211819,
+        "settling_error_mm": 3.774879292328448,
+        "hold_started": true,
+        "hold_start_time_s": 8.16,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1586986281487031,
+        "command_energy": 0.3895680446677765
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.25235120575986,
+        "settling_error_mm": 3.9456692742668165,
+        "hold_started": true,
+        "hold_start_time_s": 8.49,
+        "hold_drop_mm": 0.016410137078648468,
+        "max_velocity_mps": 0.16173169688372696,
+        "command_energy": 0.395134882399024
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.236759918356645,
+        "settling_error_mm": 4.178217565099063,
+        "hold_started": true,
+        "hold_start_time_s": 8.18,
+        "hold_drop_mm": 0.010858253232659543,
+        "max_velocity_mps": 0.1483094955075546,
+        "command_energy": 0.39036406397891543
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.249294639174424,
+        "settling_error_mm": 4.534047002362984,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.03375627256774205,
+        "max_velocity_mps": 0.16212969916353911,
+        "command_energy": 0.39256945653587744
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.243623403111343,
+        "settling_error_mm": 3.963366407784774,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.012335152622278134,
+        "max_velocity_mps": 0.2440949840315218,
+        "command_energy": 0.387556641347951
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.259667402579135,
+        "settling_error_mm": 3.8333796366731843,
+        "hold_started": true,
+        "hold_start_time_s": 8.61,
+        "hold_drop_mm": 0.03812485485027439,
+        "max_velocity_mps": 0.15741387523560418,
+        "command_energy": 0.3933313019705085
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.257195686771615,
+        "settling_error_mm": 4.587906557988076,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1667785897954441,
+        "command_energy": 0.39876989378296507
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.233037862009446,
+        "settling_error_mm": 4.373394788388052,
+        "hold_started": true,
+        "hold_start_time_s": 8.19,
+        "hold_drop_mm": 0.04489329350815252,
+        "max_velocity_mps": 0.17109629899680967,
+        "command_energy": 0.38612445439410975
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.226353698293588,
+        "settling_error_mm": 4.381715723371982,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.16126567461859154,
+        "command_energy": 0.38823190135776026
+      }
+    ]
+  },
+  "no_leakage_observer": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.235909224536357,
+    "mean_settling_error_mm": 4.333393339856427,
+    "mean_hold_drop_mm": 0.021856754794077893,
+    "max_hold_drop_mm": 0.07389515024197602,
+    "mean_hold_start_time_s": 8.5185,
+    "mean_max_velocity_mps": 0.12397640865167694,
+    "mean_command_energy": 0.42276035663588063,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.23515815739224,
+        "settling_error_mm": 4.441573748944327,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.025597528864940156,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.4242847299764577
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.224917655159004,
+        "settling_error_mm": 4.537257938914518,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.42357657999444726
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.226236016073761,
+        "settling_error_mm": 4.216611986031071,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12434182989722758,
+        "command_energy": 0.4233285453951098
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.238075771063286,
+        "settling_error_mm": 4.047644253924398,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12107017414005472,
+        "command_energy": 0.41958722083623634
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.235545513317273,
+        "settling_error_mm": 4.360681120654297,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.07389515024197602,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.41750524878413253
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.232253174992985,
+        "settling_error_mm": 4.0061015802010385,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.0604379798071486,
+        "max_velocity_mps": 0.12001341810461363,
+        "command_energy": 0.4235473336606602
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.239613604619198,
+        "settling_error_mm": 4.62242610194502,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.017242127996308643,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.4235738360499198
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.241425418214515,
+        "settling_error_mm": 4.523775472173752,
+        "hold_started": true,
+        "hold_start_time_s": 8.42,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.4246698432437026
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.23951828684499,
+        "settling_error_mm": 4.586582446233334,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13355892815037207,
+        "command_energy": 0.4244171580184517
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.240180504964398,
+        "settling_error_mm": 3.7832605793094998,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.4258792952489553
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.232815709425065,
+        "settling_error_mm": 4.641795147497407,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.04778845635367013,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.4212876122980229
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.237952594944485,
+        "settling_error_mm": 4.103933403741433,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.01301506468492919,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.42116851438373576
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.233702865885844,
+        "settling_error_mm": 4.288822625604594,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.008922537153510657,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.42234064435808394
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.236651048595721,
+        "settling_error_mm": 4.679687613141692,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.018573451918635353,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.4250179256618239
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.24695704576053,
+        "settling_error_mm": 4.233436338890506,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.4219003864093631
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.236592222846205,
+        "settling_error_mm": 4.574189592374934,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.05584524805418711,
+        "max_velocity_mps": 0.1017651557750046,
+        "command_energy": 0.42213179368740955
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.228256721783938,
+        "settling_error_mm": 4.475856400554146,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.4249459728587866
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.227113422135949,
+        "settling_error_mm": 4.5556139356608405,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.07311381035413067,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.4166207687007665
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.245628265360798,
+        "settling_error_mm": 3.985360083724354,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13493527945901368,
+        "command_energy": 0.42736283088340155
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.239590491346954,
+        "settling_error_mm": 4.003256427607349,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.04270374045212133,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.42206089226814736
+      }
+    ]
+  },
+  "raw_velocity_gate": {
+    "hold_trigger_rate": 0.0,
+    "mean_rmse_mm": 8.635364542628572,
+    "mean_settling_error_mm": 2.6497623528929233,
+    "mean_hold_drop_mm": 0.0,
+    "max_hold_drop_mm": 0.0,
+    "mean_hold_start_time_s": 1800.0,
+    "mean_max_velocity_mps": 0.12397640865167694,
+    "mean_command_energy": 0.6495224848699745,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 8.633715971001918,
+        "settling_error_mm": 2.5750678847192288,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.6499634834980939
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 8.627670704074914,
+        "settling_error_mm": 2.7134264288398158,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.6506847965758076
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 8.6287385959519,
+        "settling_error_mm": 2.704388348285791,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12434182989722758,
+        "command_energy": 0.6520173819459659
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 8.640571204049387,
+        "settling_error_mm": 2.5750870792692337,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12107017414005472,
+        "command_energy": 0.6470140896766441
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 8.632086634289143,
+        "settling_error_mm": 2.5647719039838535,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.6430921801819433
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 8.634370692330972,
+        "settling_error_mm": 2.7210305759108877,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12001341810461363,
+        "command_energy": 0.6513556097960674
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 8.63669995527497,
+        "settling_error_mm": 2.548679483177718,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.6487573374718473
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 8.64162581357115,
+        "settling_error_mm": 2.7866369748998365,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.6515309715086569
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 8.634306929994544,
+        "settling_error_mm": 2.5475120559539377,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13355892815037207,
+        "command_energy": 0.6497855115981331
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 8.637164639329683,
+        "settling_error_mm": 2.626371920140813,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.6517454749366844
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 8.635754459248645,
+        "settling_error_mm": 2.5374652144629084,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.6495848509240093
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 8.637275265732372,
+        "settling_error_mm": 3.11238214412507,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.6489286153218639
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 8.634615135991874,
+        "settling_error_mm": 2.421165702282013,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.6501849092413303
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 8.632285269972662,
+        "settling_error_mm": 2.6903454728131604,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.650538369094352
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 8.642542502721906,
+        "settling_error_mm": 2.5109803232198358,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.644664045287955
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 8.64047976743188,
+        "settling_error_mm": 2.425459377729977,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1017651557750046,
+        "command_energy": 0.6507080875001943
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 8.63198057632791,
+        "settling_error_mm": 2.668740220044874,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.6536000650807803
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 8.627603182218376,
+        "settling_error_mm": 2.583603164648174,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.6453278337973598
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 8.63920560365729,
+        "settling_error_mm": 2.897986060225455,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13493527945901368,
+        "command_energy": 0.6522155758707957
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 8.638597949399948,
+        "settling_error_mm": 2.78414672312588,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.648750508091004
+      }
+    ]
+  },
+  "high_leakage_10x": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.236761919865321,
+    "mean_settling_error_mm": 4.192828828899098,
+    "mean_hold_drop_mm": 0.015480674982876197,
+    "max_hold_drop_mm": 0.05162591113277992,
+    "mean_hold_start_time_s": 8.502500000000001,
+    "mean_max_velocity_mps": 0.1210547995783687,
+    "mean_command_energy": 0.42212484398860567,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.232787226783719,
+        "settling_error_mm": 3.999304746810539,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.05162591113277992,
+        "max_velocity_mps": 0.1129789232542042,
+        "command_energy": 0.42062659496793603
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.233032683545995,
+        "settling_error_mm": 4.314138420824564,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.03988977026647689,
+        "max_velocity_mps": 0.12224785156157215,
+        "command_energy": 0.42317695834120655
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.23568054450421,
+        "settling_error_mm": 4.095720920581414,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11644908884877746,
+        "command_energy": 0.4239814637825501
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.237957062980982,
+        "settling_error_mm": 3.967184622282738,
+        "hold_started": true,
+        "hold_start_time_s": 8.39,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11556830205607904,
+        "command_energy": 0.42068350203489346
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.230733673606318,
+        "settling_error_mm": 4.244944562285413,
+        "hold_started": true,
+        "hold_start_time_s": 8.32,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11249878309432744,
+        "command_energy": 0.4208793011491592
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.239034836856728,
+        "settling_error_mm": 4.05773263235737,
+        "hold_started": true,
+        "hold_start_time_s": 8.34,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10547853451056718,
+        "command_energy": 0.422562374745447
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.240190576615797,
+        "settling_error_mm": 4.071351985934113,
+        "hold_started": true,
+        "hold_start_time_s": 8.46,
+        "hold_drop_mm": 0.023735151515269504,
+        "max_velocity_mps": 0.13702080971067362,
+        "command_energy": 0.4213156541899783
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.24385086964373,
+        "settling_error_mm": 4.413165776701478,
+        "hold_started": true,
+        "hold_start_time_s": 8.43,
+        "hold_drop_mm": 0.04914938898664678,
+        "max_velocity_mps": 0.1146408540111558,
+        "command_energy": 0.42147145104747274
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.236738593534598,
+        "settling_error_mm": 4.439979961884832,
+        "hold_started": true,
+        "hold_start_time_s": 8.71,
+        "hold_drop_mm": 0.022525093533065643,
+        "max_velocity_mps": 0.14161258698532858,
+        "command_energy": 0.42389970747685246
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.242316515453263,
+        "settling_error_mm": 4.008376391804069,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10902607770273462,
+        "command_energy": 0.42350055175058543
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.232530967721466,
+        "settling_error_mm": 4.443201914527018,
+        "hold_started": true,
+        "hold_start_time_s": 8.4,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14043372409006308,
+        "command_energy": 0.419054468328337
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.234629376334539,
+        "settling_error_mm": 4.423703225225173,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.002262870469671441,
+        "max_velocity_mps": 0.14972607130288262,
+        "command_energy": 0.42056208471458917
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.240315417737044,
+        "settling_error_mm": 3.9464707875898064,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.038759781888053624,
+        "max_velocity_mps": 0.13331582157442032,
+        "command_energy": 0.4251926022975616
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.229232594017608,
+        "settling_error_mm": 4.236724010866222,
+        "hold_started": true,
+        "hold_start_time_s": 8.8,
+        "hold_drop_mm": 0.03508287097514495,
+        "max_velocity_mps": 0.12367869993904626,
+        "command_energy": 0.41978805010835374
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.23732314694525,
+        "settling_error_mm": 4.2266719766621,
+        "hold_started": true,
+        "hold_start_time_s": 8.71,
+        "hold_drop_mm": 0.013665210459479216,
+        "max_velocity_mps": 0.1241576225173354,
+        "command_energy": 0.4203747881370818
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.241632517091608,
+        "settling_error_mm": 4.4171104595001065,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.013908011937291409,
+        "max_velocity_mps": 0.11321707460680222,
+        "command_energy": 0.4223125927476986
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.235617201524834,
+        "settling_error_mm": 4.012037906573451,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12968636115160642,
+        "command_energy": 0.4255455210722596
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.228759851009382,
+        "settling_error_mm": 4.468327175007502,
+        "hold_started": true,
+        "hold_start_time_s": 8.47,
+        "hold_drop_mm": 0.01900943849364456,
+        "max_velocity_mps": 0.0977673197986859,
+        "command_energy": 0.4224530506733817
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.241993453139008,
+        "settling_error_mm": 3.8802148196385167,
+        "hold_started": true,
+        "hold_start_time_s": 8.27,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1180542520159666,
+        "command_energy": 0.42389600167602687
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.240881288260354,
+        "settling_error_mm": 4.190214280925531,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10353723283514511,
+        "command_energy": 0.4212201605307426
+      }
+    ]
+  },
+  "no_hysteresis": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.229259688915818,
+    "mean_settling_error_mm": 4.243911646831759,
+    "mean_hold_drop_mm": 0.017102718098543912,
+    "max_hold_drop_mm": 0.05461975425707921,
+    "mean_hold_start_time_s": 8.4915,
+    "mean_max_velocity_mps": 0.12214032454272321,
+    "mean_command_energy": 0.42127353136458323,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.229061061859356,
+        "settling_error_mm": 4.482584847642245,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.023145108006772386,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.42022761113606805
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.221324996110543,
+        "settling_error_mm": 4.27740724047021,
+        "hold_started": true,
+        "hold_start_time_s": 8.63,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.4224416442051127
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.222867832667408,
+        "settling_error_mm": 4.110991720219836,
+        "hold_started": true,
+        "hold_start_time_s": 8.55,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12070483661944459,
+        "command_energy": 0.42174113844565
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.232190800216573,
+        "settling_error_mm": 4.3169843216392945,
+        "hold_started": true,
+        "hold_start_time_s": 8.41,
+        "hold_drop_mm": 0.05461975425707921,
+        "max_velocity_mps": 0.12543545776548432,
+        "command_energy": 0.42007081796427714
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.228447770610831,
+        "settling_error_mm": 4.308559473316043,
+        "hold_started": true,
+        "hold_start_time_s": 8.53,
+        "hold_drop_mm": 0.024333628785067063,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.41668207660394874
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.226738484567107,
+        "settling_error_mm": 4.171599001692505,
+        "hold_started": true,
+        "hold_start_time_s": 8.290000000000001,
+        "hold_drop_mm": 0.00978809940116454,
+        "max_velocity_mps": 0.10259671802671272,
+        "command_energy": 0.42305962227623584
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.230964353660923,
+        "settling_error_mm": 4.732006950512291,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.030387757017302786,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.4238644475503479
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.234303005735857,
+        "settling_error_mm": 4.4642776549070895,
+        "hold_started": true,
+        "hold_start_time_s": 8.32,
+        "hold_drop_mm": 0.04729581478590816,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.4244035378116092
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.22826037417848,
+        "settling_error_mm": 4.012773468012709,
+        "hold_started": true,
+        "hold_start_time_s": 8.31,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12313902846873728,
+        "command_energy": 0.42360359865504615
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.231748212151086,
+        "settling_error_mm": 3.8464217506607445,
+        "hold_started": true,
+        "hold_start_time_s": 8.57,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.4235404761916977
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.229139292193985,
+        "settling_error_mm": 4.263481345198605,
+        "hold_started": true,
+        "hold_start_time_s": 8.57,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.42087026693400453
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.230574210275087,
+        "settling_error_mm": 4.145670252346189,
+        "hold_started": true,
+        "hold_start_time_s": 8.42,
+        "hold_drop_mm": 0.053848659314292835,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.41967339707642376
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.231109523959072,
+        "settling_error_mm": 4.568128350768086,
+        "hold_started": true,
+        "hold_start_time_s": 8.45,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.4213826599556624
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.226689539671188,
+        "settling_error_mm": 3.9903363154244476,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.42133614872761627
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.232341849632403,
+        "settling_error_mm": 4.04204106526257,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.4181315661761138
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.234872938835329,
+        "settling_error_mm": 4.544840062434885,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.015807750650576047,
+        "max_velocity_mps": 0.09650110494596781,
+        "command_energy": 0.4215993752224489
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.225774451153315,
+        "settling_error_mm": 4.143569546395831,
+        "hold_started": true,
+        "hold_start_time_s": 8.61,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.4208380167448542
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.222221253303148,
+        "settling_error_mm": 4.169907261874107,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.04115714763147649,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.4187311561047374
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.234673489064587,
+        "settling_error_mm": 4.228907056010867,
+        "hold_started": true,
+        "hold_start_time_s": 8.25,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13058595752086505,
+        "command_energy": 0.42347854686795644
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.231890338470057,
+        "settling_error_mm": 4.057745251846601,
+        "hold_started": true,
+        "hold_start_time_s": 8.4,
+        "hold_drop_mm": 0.04167064212123872,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.41979452264185413
+      }
+    ]
+  },
+  "no_accumulator": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.230116616626516,
+    "mean_settling_error_mm": 4.214803709152626,
+    "mean_hold_drop_mm": 0.041058619055753254,
+    "max_hold_drop_mm": 0.11668128346215001,
+    "mean_hold_start_time_s": 8.523,
+    "mean_max_velocity_mps": 0.12397640865167694,
+    "mean_command_energy": 0.4205041838537421,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.229111303936527,
+        "settling_error_mm": 4.317596994085681,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.025597528864940156,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.4220579052589375
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.222069404804193,
+        "settling_error_mm": 4.511290855393312,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.4224120990994383
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.224263133888057,
+        "settling_error_mm": 4.359604775700854,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.11668128346215001,
+        "max_velocity_mps": 0.12434182989722758,
+        "command_energy": 0.422409723120275
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.232428484374944,
+        "settling_error_mm": 4.46551491937025,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.08573370985992534,
+        "max_velocity_mps": 0.12107017414005472,
+        "command_energy": 0.4175919827154839
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.229371042207296,
+        "settling_error_mm": 3.772703425873103,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.07389515024197602,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.41522354858885957
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.229687306689593,
+        "settling_error_mm": 3.987038886251737,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.0604379798071486,
+        "max_velocity_mps": 0.12001341810461363,
+        "command_energy": 0.42236798794569214
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.23146590111657,
+        "settling_error_mm": 3.8560591375431663,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.017242127996308643,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.4204023060447921
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.235226531898169,
+        "settling_error_mm": 4.2129747637690285,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.42186891510305496
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.228914903515442,
+        "settling_error_mm": 4.235716312396775,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.11240598780687394,
+        "max_velocity_mps": 0.13355892815037207,
+        "command_energy": 0.42026228714308766
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.232553965756656,
+        "settling_error_mm": 4.042395129206011,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.4232044857037542
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.229753739880614,
+        "settling_error_mm": 4.570743549328238,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.0709427315548905,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.41989070180664
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.232657192864918,
+        "settling_error_mm": 4.365236124573735,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.05907709358826674,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.41920696475864105
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.230631202671244,
+        "settling_error_mm": 4.28648878648935,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.008922537153510657,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.4210542840861494
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.228306920671166,
+        "settling_error_mm": 4.0085764907592525,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.018573451918635353,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.42182748795954117
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.23362703518432,
+        "settling_error_mm": 4.215982910574178,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.416818090522943
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.234751109340962,
+        "settling_error_mm": 4.166715682833222,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.05584524805418711,
+        "max_velocity_mps": 0.1017651557750046,
+        "command_energy": 0.4214063861611104
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.22539640583582,
+        "settling_error_mm": 4.127567712202962,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.42380406366441764
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.225105459332458,
+        "settling_error_mm": 4.421832861716879,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.07311381035413067,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.4156596186918118
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.233597446928371,
+        "settling_error_mm": 4.0883950711363415,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13493527945901368,
+        "command_energy": 0.42304008694235234
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.233413841632967,
+        "settling_error_mm": 4.283639793848437,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.04270374045212133,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.4195747517578595
+      }
+    ]
+  },
+  "noise_2x": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.227939230293881,
+    "mean_settling_error_mm": 4.236360343588317,
+    "mean_hold_drop_mm": 0.01493862801161816,
+    "max_hold_drop_mm": 0.06653695630187695,
+    "mean_hold_start_time_s": 8.6125,
+    "mean_max_velocity_mps": 0.15803628571285339,
+    "mean_command_energy": 0.4234830632945899,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.224564001347979,
+        "settling_error_mm": 4.09895532177984,
+        "hold_started": true,
+        "hold_start_time_s": 9.18,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1866327394781995,
+        "command_energy": 0.42222407510501675
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.20549174097009,
+        "settling_error_mm": 4.634427102302496,
+        "hold_started": true,
+        "hold_start_time_s": 8.64,
+        "hold_drop_mm": 0.022798818177904856,
+        "max_velocity_mps": 0.14494894452420096,
+        "command_energy": 0.4230425493511183
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.24127619448163,
+        "settling_error_mm": 3.9127731414623224,
+        "hold_started": true,
+        "hold_start_time_s": 8.88,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.16241463796057287,
+        "command_energy": 0.4318424726178624
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.223420035247887,
+        "settling_error_mm": 4.050613656297886,
+        "hold_started": true,
+        "hold_start_time_s": 9.55,
+        "hold_drop_mm": 0.008053634214688632,
+        "max_velocity_mps": 0.16337613561508874,
+        "command_energy": 0.42244117138560167
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.228004692349451,
+        "settling_error_mm": 4.504126319547996,
+        "hold_started": true,
+        "hold_start_time_s": 8.4,
+        "hold_drop_mm": 0.06653695630187695,
+        "max_velocity_mps": 0.14102347040116048,
+        "command_energy": 0.42246763767899015
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.214004194583662,
+        "settling_error_mm": 4.197324828831395,
+        "hold_started": true,
+        "hold_start_time_s": 8.26,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14391539271075604,
+        "command_energy": 0.422172795330725
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.23352681752439,
+        "settling_error_mm": 4.229810627537356,
+        "hold_started": true,
+        "hold_start_time_s": 8.43,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.15705052140729278,
+        "command_energy": 0.42162805272973375
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.238205648157823,
+        "settling_error_mm": 4.098461033279821,
+        "hold_started": true,
+        "hold_start_time_s": 8.43,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1409345639891619,
+        "command_energy": 0.424164407779733
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.227124154643938,
+        "settling_error_mm": 4.065560733745199,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.0031576997268079054,
+        "max_velocity_mps": 0.19025291744876505,
+        "command_energy": 0.426394169783338
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.24251048087663,
+        "settling_error_mm": 4.323383282089921,
+        "hold_started": true,
+        "hold_start_time_s": 8.63,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1831488477150438,
+        "command_energy": 0.4243336467237787
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.229860561350899,
+        "settling_error_mm": 4.619658195281595,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.016539831335538047,
+        "max_velocity_mps": 0.20145773423230176,
+        "command_energy": 0.42207870514388696
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.237650259631701,
+        "settling_error_mm": 4.466464593451791,
+        "hold_started": true,
+        "hold_start_time_s": 8.3,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14740285018722257,
+        "command_energy": 0.41949085385828183
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.229198922234845,
+        "settling_error_mm": 4.390562044974677,
+        "hold_started": true,
+        "hold_start_time_s": 8.34,
+        "hold_drop_mm": 0.02223717953975246,
+        "max_velocity_mps": 0.1424236581384449,
+        "command_energy": 0.4224477209385794
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.212756824335592,
+        "settling_error_mm": 4.073882947152329,
+        "hold_started": true,
+        "hold_start_time_s": 8.790000000000001,
+        "hold_drop_mm": 0.020449016171042445,
+        "max_velocity_mps": 0.15756941726537568,
+        "command_energy": 0.42267804163007305
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.240439869154176,
+        "settling_error_mm": 4.561171423861865,
+        "hold_started": true,
+        "hold_start_time_s": 8.74,
+        "hold_drop_mm": 0.0005117049897696013,
+        "max_velocity_mps": 0.16685196045743486,
+        "command_energy": 0.42110417655670823
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.235208262315926,
+        "settling_error_mm": 4.017837518812906,
+        "hold_started": true,
+        "hold_start_time_s": 8.61,
+        "hold_drop_mm": 0.026099968238935123,
+        "max_velocity_mps": 0.15010225923766646,
+        "command_energy": 0.42577458724663336
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.233951941907142,
+        "settling_error_mm": 4.153454022781999,
+        "hold_started": true,
+        "hold_start_time_s": 8.61,
+        "hold_drop_mm": 0.03528354101911546,
+        "max_velocity_mps": 0.13606595639034158,
+        "command_energy": 0.42202557777400346
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.215174696388297,
+        "settling_error_mm": 4.052606981752305,
+        "hold_started": true,
+        "hold_start_time_s": 8.72,
+        "hold_drop_mm": 0.037712759089758574,
+        "max_velocity_mps": 0.13406822365848897,
+        "command_energy": 0.42771535839615105
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.23671059204326,
+        "settling_error_mm": 4.217072187783555,
+        "hold_started": true,
+        "hold_start_time_s": 8.26,
+        "hold_drop_mm": 0.007096794010952312,
+        "max_velocity_mps": 0.1552496713634514,
+        "command_energy": 0.4243785722807184
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.209704716332286,
+        "settling_error_mm": 4.0590609090390695,
+        "hold_started": true,
+        "hold_start_time_s": 8.41,
+        "hold_drop_mm": 0.03229465741622084,
+        "max_velocity_mps": 0.1558358120760977,
+        "command_energy": 0.4212566935808648
+      }
+    ]
+  },
+  "load_step_14kn": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.229617718568775,
+    "mean_settling_error_mm": 4.326388430112436,
+    "mean_hold_drop_mm": 1.7478588918245443,
+    "max_hold_drop_mm": 2.2707782698049295,
+    "mean_hold_start_time_s": 8.523,
+    "mean_max_velocity_mps": 0.12397640865167694,
+    "mean_command_energy": 0.42055119915702627,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.228555694350908,
+        "settling_error_mm": 4.294064095260952,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 1.7003087417739038,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.4220893158863186
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.220883992627275,
+        "settling_error_mm": 4.2656132383657175,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 1.8973426624978584,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.42236109520063886
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.224293001615314,
+        "settling_error_mm": 4.060109644270171,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 1.8047735728042302,
+        "max_velocity_mps": 0.12434182989722758,
+        "command_energy": 0.42253514515976087
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.232565945919243,
+        "settling_error_mm": 4.14682822839707,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 1.8391015799900656,
+        "max_velocity_mps": 0.12107017414005472,
+        "command_energy": 0.41774202009676925
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.227997444293786,
+        "settling_error_mm": 4.028942426724802,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 1.7924846178214993,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.41514036344751254
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.228828198479484,
+        "settling_error_mm": 4.336381125172817,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 2.2707782698049295,
+        "max_velocity_mps": 0.12001341810461363,
+        "command_energy": 0.4223648860872871
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.23128946495445,
+        "settling_error_mm": 4.5582703748514035,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 1.2943567677261014,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.4204907686377626
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.235827138278221,
+        "settling_error_mm": 4.435100505403577,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 1.2806962592391002,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.42206789655806065
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.227874727159191,
+        "settling_error_mm": 4.687224959473046,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 1.745253582930928,
+        "max_velocity_mps": 0.13355892815037207,
+        "command_energy": 0.42023499152744526
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.231836155740309,
+        "settling_error_mm": 4.362027968061177,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 1.350622922933864,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.4232131484920047
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.228766884770197,
+        "settling_error_mm": 4.46945107181368,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 2.0857727122680636,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.4198657790913969
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.23276808546495,
+        "settling_error_mm": 4.349145578556202,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 1.305776495135691,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.41934447407743525
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.229489879797914,
+        "settling_error_mm": 3.9827311795031517,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 1.761211559041076,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.42099977485385914
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.2282832335793,
+        "settling_error_mm": 4.50015729154396,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 1.7950029173965931,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.4219419619463603
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.234214159261867,
+        "settling_error_mm": 4.548587433405249,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 1.5766791711716577,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.4170205705674785
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.233992040668427,
+        "settling_error_mm": 4.578984575479339,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 1.9910718332395438,
+        "max_velocity_mps": 0.1017651557750046,
+        "command_energy": 0.4214255545267689
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.22422136370835,
+        "settling_error_mm": 3.7961030709408594,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 2.1825472810226287,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.42375701102061597
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.223878595592904,
+        "settling_error_mm": 4.574561468380034,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 2.1372102608269716,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.4156092965799481
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.234288151047805,
+        "settling_error_mm": 4.608637132786864,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 1.0477803249243633,
+        "max_velocity_mps": 0.13493527945901368,
+        "command_energy": 0.4232572516671118
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.23250021406566,
+        "settling_error_mm": 3.9448472338586282,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 2.0984063039418133,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.41956267771598926
+      }
+    ]
+  },
+  "load_step_14kn_no_feedforward": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 80.91298177632066,
+    "mean_settling_error_mm": 59.951639225775736,
+    "mean_hold_drop_mm": 96.59042060866564,
+    "max_hold_drop_mm": 96.90596947666702,
+    "mean_hold_start_time_s": 8.523,
+    "mean_max_velocity_mps": 0.7447269491396128,
+    "mean_command_energy": 8.974026628050973,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 80.92227190618316,
+        "settling_error_mm": 29.530572083197036,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 96.66267832404523,
+        "max_velocity_mps": 0.7447161384513313,
+        "command_energy": 8.975698348642267
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 80.92337671902867,
+        "settling_error_mm": 38.97970681989682,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 96.5661823429717,
+        "max_velocity_mps": 0.7447144027121041,
+        "command_energy": 8.976246898610164
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 80.90373786499359,
+        "settling_error_mm": 88.40110817115348,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 96.40631792311865,
+        "max_velocity_mps": 0.74470788505213,
+        "command_energy": 8.975796835516594
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 80.90332514437098,
+        "settling_error_mm": 91.74594601545888,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 96.73128271672115,
+        "max_velocity_mps": 0.744723803311135,
+        "command_energy": 8.971060559939527
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 80.90460117445049,
+        "settling_error_mm": 93.74501187613987,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 96.66385168366575,
+        "max_velocity_mps": 0.7447183796976824,
+        "command_energy": 8.968686105439566
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 80.90041695058426,
+        "settling_error_mm": 92.11985108727694,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 96.76370115626109,
+        "max_velocity_mps": 0.7446488904981815,
+        "command_energy": 8.975887161531958
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 80.9220924672909,
+        "settling_error_mm": 25.98153160993727,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 96.43656943916484,
+        "max_velocity_mps": 0.7447359212295439,
+        "command_energy": 8.973969277205372
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 80.90909050572627,
+        "settling_error_mm": 70.47965087389096,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 96.4754173452988,
+        "max_velocity_mps": 0.7447520867964523,
+        "command_energy": 8.975111848795713
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 80.90729036547444,
+        "settling_error_mm": 78.43862101013727,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 96.65847497724228,
+        "max_velocity_mps": 0.7447409354701076,
+        "command_energy": 8.973721027249274
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 80.91233889705263,
+        "settling_error_mm": 47.70887737087026,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 96.61782054822804,
+        "max_velocity_mps": 0.7447553412360937,
+        "command_energy": 8.976486160619086
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 80.91830875639877,
+        "settling_error_mm": 4.453988927151653,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 96.54374200900573,
+        "max_velocity_mps": 0.7447445570565178,
+        "command_energy": 8.973362637867076
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 80.91864248471674,
+        "settling_error_mm": 0.17899967350348822,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 96.37098264346933,
+        "max_velocity_mps": 0.744738947858126,
+        "command_energy": 8.972726388212994
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 80.92354634606588,
+        "settling_error_mm": 26.209636195219264,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 96.54421804498342,
+        "max_velocity_mps": 0.7447554627747663,
+        "command_energy": 8.974863518755198
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 80.90275972786684,
+        "settling_error_mm": 90.41321805062586,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 96.90596947666702,
+        "max_velocity_mps": 0.7447165217967368,
+        "command_energy": 8.975028092685271
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 80.90107425947582,
+        "settling_error_mm": 92.73204300333288,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 96.64325281566644,
+        "max_velocity_mps": 0.744717701918733,
+        "command_energy": 8.9702930542166
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 80.93732477925641,
+        "settling_error_mm": 126.59499332458796,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 96.44433935197134,
+        "max_velocity_mps": 0.7447250128273271,
+        "command_energy": 8.975696207482686
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 80.909049326654,
+        "settling_error_mm": 62.82921046541551,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 96.78390729888042,
+        "max_velocity_mps": 0.7447004665749349,
+        "command_energy": 8.977241997733511
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 80.9198234085168,
+        "settling_error_mm": 13.769912376572101,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 96.6566664788459,
+        "max_velocity_mps": 0.7447493248447619,
+        "command_energy": 8.969244374763774
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 80.91317369703067,
+        "settling_error_mm": 40.87737156873189,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 96.3807486654179,
+        "max_velocity_mps": 0.7447406538638263,
+        "command_energy": 8.976469334404493
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 80.90739074527605,
+        "settling_error_mm": 83.84253401241548,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 96.55228893168771,
+        "max_velocity_mps": 0.744736548821766,
+        "command_energy": 8.97294273134835
+      }
+    ]
+  },
+  "load_step_14kn_no_acc_closed_loop": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 9.249389576371959,
+    "mean_settling_error_mm": 4.118376666788665,
+    "mean_hold_drop_mm": 20.851590617725837,
+    "max_hold_drop_mm": 21.90785518534344,
+    "mean_hold_start_time_s": 8.523,
+    "mean_max_velocity_mps": 0.2381899087620563,
+    "mean_command_energy": 0.421986043161194,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 9.248527836594885,
+        "settling_error_mm": 3.786962315359188,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 20.699989325538294,
+        "max_velocity_mps": 0.23479617794562416,
+        "command_energy": 0.4236619988668066
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 9.241608458724016,
+        "settling_error_mm": 3.8837975862623386,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 21.267102194471143,
+        "max_velocity_mps": 0.2443791464324004,
+        "command_energy": 0.4237133391524877
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 9.24108836276225,
+        "settling_error_mm": 4.528844884932215,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 20.069671598927975,
+        "max_velocity_mps": 0.22871420518333196,
+        "command_energy": 0.42368112141475217
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 9.252565705306107,
+        "settling_error_mm": 4.312231212108109,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 21.245420289838947,
+        "max_velocity_mps": 0.24138249832142344,
+        "command_energy": 0.4191264183444095
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 9.245365439327648,
+        "settling_error_mm": 4.172314082710793,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 20.48544813978326,
+        "max_velocity_mps": 0.23133664550058455,
+        "command_energy": 0.4164758070941166
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 9.248749218344484,
+        "settling_error_mm": 4.57952051906746,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 21.412199467225722,
+        "max_velocity_mps": 0.2431721587673409,
+        "command_energy": 0.4236899177593278
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 9.249224451751868,
+        "settling_error_mm": 3.7719760504399957,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 20.265379447177768,
+        "max_velocity_mps": 0.2320076131065406,
+        "command_energy": 0.42183040225155366
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 9.254029561423646,
+        "settling_error_mm": 4.430318675915035,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 20.50417611306482,
+        "max_velocity_mps": 0.23521537283282806,
+        "command_energy": 0.4233231005283903
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 9.246808504630296,
+        "settling_error_mm": 3.940750487848421,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 20.57105112157004,
+        "max_velocity_mps": 0.2327167925288069,
+        "command_energy": 0.4217453001465807
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 9.251415581322712,
+        "settling_error_mm": 4.1701695654103865,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 20.511411277481685,
+        "max_velocity_mps": 0.2332881959454445,
+        "command_energy": 0.42472466180848734
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 9.247127992498747,
+        "settling_error_mm": 4.499467639691613,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 20.64031060970989,
+        "max_velocity_mps": 0.23527479986425828,
+        "command_energy": 0.4212307920418042
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 9.255476469635193,
+        "settling_error_mm": 3.9488577486528342,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 21.33605998734445,
+        "max_velocity_mps": 0.24809592402353575,
+        "command_energy": 0.4208922447267937
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 9.25113481348232,
+        "settling_error_mm": 3.8746290214822787,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 20.987713542248375,
+        "max_velocity_mps": 0.2407586846109128,
+        "command_energy": 0.4226238052253959
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 9.246881770253767,
+        "settling_error_mm": 4.021536771390277,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 20.729033303951596,
+        "max_velocity_mps": 0.2318555940874767,
+        "command_energy": 0.4233907160850908
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 9.251420475557586,
+        "settling_error_mm": 3.943441022519256,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 20.22677872080736,
+        "max_velocity_mps": 0.22807801973466715,
+        "command_energy": 0.418411811522012
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 9.259175716902506,
+        "settling_error_mm": 4.065145780464463,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 21.90785518534344,
+        "max_velocity_mps": 0.2557909759922087,
+        "command_energy": 0.42322548418233086
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 9.24682033097449,
+        "settling_error_mm": 3.906869308825056,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 21.623827163392452,
+        "max_velocity_mps": 0.24640963902265497,
+        "command_energy": 0.42531767876465515
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 9.245722156411427,
+        "settling_error_mm": 3.9385314688361595,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 21.419718134008335,
+        "max_velocity_mps": 0.2451072813231615,
+        "command_energy": 0.4171310178730866
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 9.253259623622444,
+        "settling_error_mm": 4.125801836624365,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 20.797673454226285,
+        "max_velocity_mps": 0.24126335723461403,
+        "command_energy": 0.4245702681896422
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 9.251389057912732,
+        "settling_error_mm": 4.466367357233048,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 20.33099327840482,
+        "max_velocity_mps": 0.23415509278331126,
+        "command_energy": 0.42095497724615455
+      }
+    ]
+  },
+  "no_hold_structure": {
+    "hold_trigger_rate": 0.0,
+    "mean_rmse_mm": 8.635364542628572,
+    "mean_settling_error_mm": 2.6497623528929233,
+    "mean_hold_drop_mm": 0.0,
+    "max_hold_drop_mm": 0.0,
+    "mean_hold_start_time_s": 1800.0,
+    "mean_max_velocity_mps": 0.12397640865167694,
+    "mean_command_energy": 0.6495224848699745,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 8.633715971001918,
+        "settling_error_mm": 2.5750678847192288,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11427698068199504,
+        "command_energy": 0.6499634834980939
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 8.627670704074914,
+        "settling_error_mm": 2.7134264288398158,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10510108000769126,
+        "command_energy": 0.6506847965758076
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 8.6287385959519,
+        "settling_error_mm": 2.704388348285791,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12434182989722758,
+        "command_energy": 0.6520173819459659
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 8.640571204049387,
+        "settling_error_mm": 2.5750870792692337,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12107017414005472,
+        "command_energy": 0.6470140896766441
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 8.632086634289143,
+        "settling_error_mm": 2.5647719039838535,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11185991895061863,
+        "command_energy": 0.6430921801819433
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 8.634370692330972,
+        "settling_error_mm": 2.7210305759108877,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12001341810461363,
+        "command_energy": 0.6513556097960674
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 8.63669995527497,
+        "settling_error_mm": 2.548679483177718,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12673906094107185,
+        "command_energy": 0.6487573374718473
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 8.64162581357115,
+        "settling_error_mm": 2.7866369748998365,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12467187835670812,
+        "command_energy": 0.6515309715086569
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 8.634306929994544,
+        "settling_error_mm": 2.5475120559539377,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13355892815037207,
+        "command_energy": 0.6497855115981331
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 8.637164639329683,
+        "settling_error_mm": 2.626371920140813,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12383911955242853,
+        "command_energy": 0.6517454749366844
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 8.635754459248645,
+        "settling_error_mm": 2.5374652144629084,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1368767237262198,
+        "command_energy": 0.6495848509240093
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 8.637275265732372,
+        "settling_error_mm": 3.11238214412507,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14781955617234005,
+        "command_energy": 0.6489286153218639
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 8.634615135991874,
+        "settling_error_mm": 2.421165702282013,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13353252742085642,
+        "command_energy": 0.6501849092413303
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 8.632285269972662,
+        "settling_error_mm": 2.6903454728131604,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1266479827839344,
+        "command_energy": 0.650538369094352
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 8.642542502721906,
+        "settling_error_mm": 2.5109803232198358,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12571434196145853,
+        "command_energy": 0.644664045287955
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 8.64047976743188,
+        "settling_error_mm": 2.425459377729977,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1017651557750046,
+        "command_energy": 0.6507080875001943
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 8.63198057632791,
+        "settling_error_mm": 2.668740220044874,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13191763850267407,
+        "command_energy": 0.6536000650807803
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 8.627603182218376,
+        "settling_error_mm": 2.583603164648174,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13276242712530503,
+        "command_energy": 0.6453278337973598
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 8.63920560365729,
+        "settling_error_mm": 2.897986060225455,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13493527945901368,
+        "command_energy": 0.6522155758707957
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 8.638597949399948,
+        "settling_error_mm": 2.78414672312588,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10208415132395081,
+        "command_energy": 0.648750508091004
+      }
+    ]
+  },
+  "no_hold_structure_leak_10x": {
+    "hold_trigger_rate": 0.0,
+    "mean_rmse_mm": 8.638204729881119,
+    "mean_settling_error_mm": 2.6497623512167086,
+    "mean_hold_drop_mm": 0.0,
+    "max_hold_drop_mm": 0.0,
+    "mean_hold_start_time_s": 1800.0,
+    "mean_max_velocity_mps": 0.1210547995783687,
+    "mean_command_energy": 0.649681696408471,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 8.634411861056991,
+        "settling_error_mm": 2.5750678830588347,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1129789232542042,
+        "command_energy": 0.6474254223358572
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 8.633694170875728,
+        "settling_error_mm": 2.713426427160326,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12224785156157215,
+        "command_energy": 0.649528136571854
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 8.63817870535192,
+        "settling_error_mm": 2.7043883466051355,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11644908884877746,
+        "command_energy": 0.6525400851075115
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 8.64082427032124,
+        "settling_error_mm": 2.575087077584859,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11556830205607904,
+        "command_energy": 0.6484703810311377
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 8.631814256038624,
+        "settling_error_mm": 2.564771902306806,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11249878309432744,
+        "command_energy": 0.6479848023131196
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 8.642412696653285,
+        "settling_error_mm": 2.7210305742358942,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10547853451056718,
+        "command_energy": 0.6505260800257681
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 8.639607154789763,
+        "settling_error_mm": 2.548679481497562,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13702080971067362,
+        "command_energy": 0.6475618203773615
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 8.645023993235045,
+        "settling_error_mm": 2.7866369732219565,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1146408540111558,
+        "command_energy": 0.6493163450358632
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 8.639733777069289,
+        "settling_error_mm": 2.547512054270895,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14161258698532858,
+        "command_energy": 0.6520709873242514
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 8.64176777293743,
+        "settling_error_mm": 2.6263719184711487,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10902607770273462,
+        "command_energy": 0.6500807531892083
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 8.634937500045941,
+        "settling_error_mm": 2.5374652127885255,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14043372409006308,
+        "command_energy": 0.6473551424829433
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 8.635620737326313,
+        "settling_error_mm": 3.112382142449577,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.14972607130288262,
+        "command_energy": 0.6489372983673865
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 8.64202857753372,
+        "settling_error_mm": 2.4211657006052434,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.13331582157442032,
+        "command_energy": 0.6532156802108774
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 8.628002495483111,
+        "settling_error_mm": 2.690345471129729,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12367869993904626,
+        "command_energy": 0.6465600947688123
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 8.642009569496874,
+        "settling_error_mm": 2.5109803215619952,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1241576225173354,
+        "command_energy": 0.6467927990316129
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 8.641916975322177,
+        "settling_error_mm": 2.4254593760550947,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.11321707460680222,
+        "command_energy": 0.6496864593752271
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 8.63891855237483,
+        "settling_error_mm": 2.668740218382315,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.12968636115160642,
+        "command_energy": 0.6539658082010721
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 8.628902589069618,
+        "settling_error_mm": 2.5836031629614675,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.0977673197986859,
+        "command_energy": 0.6511279106571992
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 8.64332499157781,
+        "settling_error_mm": 2.897986058550628,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.1180542520159666,
+        "command_energy": 0.6517310181595637
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 8.64096395106268,
+        "settling_error_mm": 2.784146721436176,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "max_velocity_mps": 0.10353723283514511,
+        "command_energy": 0.648756903602793
+      }
+    ]
+  },
+  "leak_lock_10x": {
+    "hold_trigger_rate": 1.0,
+    "mean_rmse_mm": 8.590640532930143,
+    "mean_settling_error_mm": 2.5437404444462266,
+    "mean_hold_drop_mm": 0.4398956625132843,
+    "max_hold_drop_mm": 0.8147358900580381,
+    "mean_hold_start_time_s": 8.502500000000001,
+    "mean_max_velocity_mps": 0.1210547995783687,
+    "mean_command_energy": 0.33056608849361296,
+    "rows": [
+      {
+        "seed": 2026,
+        "rmse_mm": 8.586387399156344,
+        "settling_error_mm": 2.5248016435771015,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.5499688579305162,
+        "max_velocity_mps": 0.1129789232542042,
+        "command_energy": 0.32920391220713646
+      },
+      {
+        "seed": 2027,
+        "rmse_mm": 8.585441944461287,
+        "settling_error_mm": 2.627130882548012,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.32167926590453977,
+        "max_velocity_mps": 0.12224785156157215,
+        "command_energy": 0.3312077752100441
+      },
+      {
+        "seed": 2028,
+        "rmse_mm": 8.590754902283324,
+        "settling_error_mm": 2.64854847672219,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.16153415242115,
+        "max_velocity_mps": 0.11644908884877746,
+        "command_energy": 0.3327897013080277
+      },
+      {
+        "seed": 2029,
+        "rmse_mm": 8.590850245234464,
+        "settling_error_mm": 2.5023910671023164,
+        "hold_started": true,
+        "hold_start_time_s": 8.39,
+        "hold_drop_mm": 0.8147358900580381,
+        "max_velocity_mps": 0.11556830205607904,
+        "command_energy": 0.3289276699561281
+      },
+      {
+        "seed": 2030,
+        "rmse_mm": 8.585878342122248,
+        "settling_error_mm": 2.6881781180603803,
+        "hold_started": true,
+        "hold_start_time_s": 8.32,
+        "hold_drop_mm": 0.3952575275037451,
+        "max_velocity_mps": 0.11249878309432744,
+        "command_energy": 0.3298165785302254
+      },
+      {
+        "seed": 2031,
+        "rmse_mm": 8.594652052849618,
+        "settling_error_mm": 2.4566265179819524,
+        "hold_started": true,
+        "hold_start_time_s": 8.34,
+        "hold_drop_mm": 0.6893921039750617,
+        "max_velocity_mps": 0.10547853451056718,
+        "command_energy": 0.3313402577837837
+      },
+      {
+        "seed": 2032,
+        "rmse_mm": 8.592462562088887,
+        "settling_error_mm": 2.4839386489025617,
+        "hold_started": true,
+        "hold_start_time_s": 8.46,
+        "hold_drop_mm": 0.5775684270573067,
+        "max_velocity_mps": 0.13702080971067362,
+        "command_energy": 0.3292058665463962
+      },
+      {
+        "seed": 2033,
+        "rmse_mm": 8.596561825450005,
+        "settling_error_mm": 2.6349506395768607,
+        "hold_started": true,
+        "hold_start_time_s": 8.43,
+        "hold_drop_mm": 0.30658702715291586,
+        "max_velocity_mps": 0.1146408540111558,
+        "command_energy": 0.32953912654171047
+      },
+      {
+        "seed": 2034,
+        "rmse_mm": 8.593320313040886,
+        "settling_error_mm": 2.5373985832520263,
+        "hold_started": true,
+        "hold_start_time_s": 8.71,
+        "hold_drop_mm": 0.13531698111146628,
+        "max_velocity_mps": 0.14161258698532858,
+        "command_energy": 0.3327921701964075
+      },
+      {
+        "seed": 2035,
+        "rmse_mm": 8.595231245833926,
+        "settling_error_mm": 2.5965520711058176,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.28477897469914026,
+        "max_velocity_mps": 0.10902607770273462,
+        "command_energy": 0.33157266059798796
+      },
+      {
+        "seed": 2036,
+        "rmse_mm": 8.586175334635055,
+        "settling_error_mm": 2.405564490987666,
+        "hold_started": true,
+        "hold_start_time_s": 8.4,
+        "hold_drop_mm": 0.34736648172351003,
+        "max_velocity_mps": 0.14043372409006308,
+        "command_energy": 0.32751032424899945
+      },
+      {
+        "seed": 2037,
+        "rmse_mm": 8.589414631509687,
+        "settling_error_mm": 2.4383957111103194,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.44848392851015717,
+        "max_velocity_mps": 0.14972607130288262,
+        "command_energy": 0.32932725510619115
+      },
+      {
+        "seed": 2038,
+        "rmse_mm": 8.596393229700166,
+        "settling_error_mm": 2.6164623718868962,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.5410515118047798,
+        "max_velocity_mps": 0.13331582157442032,
+        "command_energy": 0.33423586758481627
+      },
+      {
+        "seed": 2039,
+        "rmse_mm": 8.580887921646175,
+        "settling_error_mm": 2.5194074338888983,
+        "hold_started": true,
+        "hold_start_time_s": 8.8,
+        "hold_drop_mm": 0.5680767188609992,
+        "max_velocity_mps": 0.12367869993904626,
+        "command_energy": 0.3275050486748065
+      },
+      {
+        "seed": 2040,
+        "rmse_mm": 8.590937825299775,
+        "settling_error_mm": 2.4712316332261564,
+        "hold_started": true,
+        "hold_start_time_s": 8.71,
+        "hold_drop_mm": 0.36528242908195896,
+        "max_velocity_mps": 0.1241576225173354,
+        "command_energy": 0.3287291018149105
+      },
+      {
+        "seed": 2041,
+        "rmse_mm": 8.5940460836421,
+        "settling_error_mm": 2.6207032866964464,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.603499551023956,
+        "max_velocity_mps": 0.11321707460680222,
+        "command_energy": 0.3302583555150353
+      },
+      {
+        "seed": 2042,
+        "rmse_mm": 8.590181587667319,
+        "settling_error_mm": 2.583168357321697,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.500065265177041,
+        "max_velocity_mps": 0.12968636115160642,
+        "command_energy": 0.33415834976064296
+      },
+      {
+        "seed": 2043,
+        "rmse_mm": 8.582786425190257,
+        "settling_error_mm": 2.5439027705297934,
+        "hold_started": true,
+        "hold_start_time_s": 8.47,
+        "hold_drop_mm": 0.36800945926790396,
+        "max_velocity_mps": 0.0977673197986859,
+        "command_energy": 0.3311310589433918
+      },
+      {
+        "seed": 2044,
+        "rmse_mm": 8.596841685876136,
+        "settling_error_mm": 2.4922051452395677,
+        "hold_started": true,
+        "hold_start_time_s": 8.27,
+        "hold_drop_mm": 0.41231957279902476,
+        "max_velocity_mps": 0.1180542520159666,
+        "command_energy": 0.33270071753236236
+      },
+      {
+        "seed": 2045,
+        "rmse_mm": 8.593605100915177,
+        "settling_error_mm": 2.483251039207879,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.4069391242024767,
+        "max_velocity_mps": 0.10353723283514511,
+        "command_energy": 0.32936997181325667
+      }
+    ]
+  }
+}

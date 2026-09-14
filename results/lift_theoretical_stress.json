@@ -1,0 +1,2768 @@
+{
+  "seeds": {
+    "leakage_step_ablation": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037,
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045
+    ],
+    "one_at_a_time_ranges": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ]
+  },
+  "protocol": {
+    "duration_s": 1800.0,
+    "controller": "hybrid",
+    "integration_step_s": 0.01,
+    "range_interpretation": "One-at-a-time virtual stress settings over five fixed noise seeds; not calibrated uncertainty distributions or a probabilistic coverage claim.",
+    "leakage_step_interpretation": "The pressure-transition estimator is evaluated only against the same virtual model used to generate the state transition."
+  },
+  "one_at_a_time_ranges": {
+    "nominal": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.019898535821383234,
+        "std": 0.03215574627535992,
+        "ci95_low": -0.010199823276617236,
+        "ci95_high": 0.04999689491938371
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.231930615534994,
+        "std": 0.005651121736315454,
+        "ci95_low": 9.226641063556643,
+        "ci95_high": 9.237220167513344
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.329653406918855,
+        "std": 0.315204143822763,
+        "ci95_low": 4.034616637169709,
+        "ci95_high": 4.624690176668
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42160230687760203,
+        "std": 0.00315898438872173,
+        "ci95_low": 0.4186454404530905,
+        "ci95_high": 0.42455917330211357
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.3103692594347279,
+        "std": 0.1124218229716393,
+        "ci95_low": 0.20514040331438071,
+        "ci95_high": 0.41559811555507503
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.5002277078087022e-12,
+        "std": 6.761633810181085e-16,
+        "ci95_low": 1.4995948066756814e-12,
+        "ci95_high": 1.500860608941723e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7062917143734815,
+        "lock": 0.29198916473512243,
+        "accumulator": 0.0017191208913960177
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.025597528864940156,
+          "rmse_mm": 9.236262091541146,
+          "terminal_error_mm": 4.3471150972087536,
+          "command_energy": 0.424528305209341,
+          "accumulator_valve_energy": 0.4487474132454798,
+          "observer_coefficient_m3_s_pa": 1.5006486458248385e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179705,
+          "hold_mode_counts": {
+            "fine_trim": 126344,
+            "lock": 52350,
+            "accumulator": 341
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.225377168431685,
+          "terminal_error_mm": 4.548663777566464,
+          "command_energy": 0.4235957397444954,
+          "accumulator_valve_energy": 0.20887644282314538,
+          "observer_coefficient_m3_s_pa": 1.4998565995136979e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179819,
+          "hold_mode_counts": {
+            "fine_trim": 126477,
+            "lock": 52358,
+            "accumulator": 213
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.226300609622305,
+          "terminal_error_mm": 3.9310686792556337,
+          "command_energy": 0.4233390229813538,
+          "accumulator_valve_energy": 0.18815451898534952,
+          "observer_coefficient_m3_s_pa": 1.5011589850373699e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179785,
+          "hold_mode_counts": {
+            "fine_trim": 126491,
+            "lock": 52248,
+            "accumulator": 313
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.23718091822628,
+          "terminal_error_mm": 4.113107562391194,
+          "command_energy": 0.4193261736619988,
+          "accumulator_valve_energy": 0.3174786271940487,
+          "observer_coefficient_m3_s_pa": 1.4994496523414943e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179772,
+          "hold_mode_counts": {
+            "fine_trim": 126571,
+            "lock": 52138,
+            "accumulator": 337
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.07389515024197602,
+          "rmse_mm": 9.234532289853552,
+          "terminal_error_mm": 4.7083119181722255,
+          "command_energy": 0.4172222927908213,
+          "accumulator_valve_energy": 0.38858929492561606,
+          "observer_coefficient_m3_s_pa": 1.5000246563261109e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179695,
+          "hold_mode_counts": {
+            "fine_trim": 126407,
+            "lock": 52302,
+            "accumulator": 335
+          }
+        }
+      ]
+    },
+    "mass_0p7x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.05904199755846218,
+        "std": 0.07742122459793077,
+        "ci95_low": -0.013425666534940511,
+        "ci95_high": 0.13150966165186487
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.24093273939974,
+        "std": 0.012452536836285414,
+        "ci95_low": 9.229276940085676,
+        "ci95_high": 9.252588538713805
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.156640055917016,
+        "std": 0.24002749583741076,
+        "ci95_low": 3.931969986025213,
+        "ci95_high": 4.381310125808819
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4317704638822176,
+        "std": 0.0006962697681239054,
+        "ci95_low": 0.4311187428078374,
+        "ci95_high": 0.43242218495659784
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.6547316771934446,
+        "std": 0.39717994516833344,
+        "ci95_low": 0.28296407728048534,
+        "ci95_high": 1.0264992771064039
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.4995807605144808e-12,
+        "std": 4.14375667986919e-16,
+        "ci95_low": 1.4991928974075342e-12,
+        "ci95_high": 1.4999686236214273e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7032138639986684,
+        "lock": 0.29474961263605215,
+        "accumulator": 0.002036523365279455
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.237794395252624,
+          "terminal_error_mm": 4.0801866526016255,
+          "command_energy": 0.43082765284187646,
+          "accumulator_valve_energy": 0.3630719409298555,
+          "observer_coefficient_m3_s_pa": 1.499556735704957e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179806,
+          "hold_mode_counts": {
+            "fine_trim": 125942,
+            "lock": 52861,
+            "accumulator": 246
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.05719097742235002,
+          "rmse_mm": 9.227317253305864,
+          "terminal_error_mm": 4.17901410326138,
+          "command_energy": 0.43198885320891683,
+          "accumulator_valve_energy": 0.4301107830213043,
+          "observer_coefficient_m3_s_pa": 1.498872448501229e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179807,
+          "hold_mode_counts": {
+            "fine_trim": 126013,
+            "lock": 52752,
+            "accumulator": 265
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.233591465464706,
+          "terminal_error_mm": 4.363824341029776,
+          "command_energy": 0.4318596649509147,
+          "accumulator_valve_energy": 0.5170913044666947,
+          "observer_coefficient_m3_s_pa": 1.4998722978962251e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179806,
+          "hold_mode_counts": {
+            "fine_trim": 126011,
+            "lock": 52679,
+            "accumulator": 336
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.1890403516177086,
+          "rmse_mm": 9.259338384891516,
+          "terminal_error_mm": 4.3711727906413085,
+          "command_energy": 0.43271770518378383,
+          "accumulator_valve_energy": 1.3441397447251076,
+          "observer_coefficient_m3_s_pa": 1.499766522403596e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179690,
+          "hold_mode_counts": {
+            "fine_trim": 125589,
+            "lock": 52788,
+            "accumulator": 645
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.04897865875225227,
+          "rmse_mm": 9.24662219808399,
+          "terminal_error_mm": 3.7890023920509885,
+          "command_energy": 0.4314584432255963,
+          "accumulator_valve_energy": 0.6192446128242611,
+          "observer_coefficient_m3_s_pa": 1.499835798066396e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179781,
+          "hold_mode_counts": {
+            "fine_trim": 125929,
+            "lock": 52766,
+            "accumulator": 331
+          }
+        }
+      ]
+    },
+    "mass_1p3x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.03498053691395331,
+        "std": 0.03499798846080586,
+        "ci95_low": 0.0022217878126087123,
+        "ci95_high": 0.06773928601529791
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.234332970478011,
+        "std": 0.0031062599728303975,
+        "ci95_low": 9.231425455058734,
+        "ci95_high": 9.237240485897289
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.226129766887754,
+        "std": 0.23183838124182923,
+        "ci95_low": 4.009124856115003,
+        "ci95_high": 4.443134677660506
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4159059989317678,
+        "std": 0.00198752958778852,
+        "ci95_low": 0.41404563535199296,
+        "ci95_high": 0.4177663625115426
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.16351231185718648,
+        "std": 0.06155529115276632,
+        "ci95_low": 0.10589544793393753,
+        "ci95_high": 0.22112917578043545
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.5004343369363297e-12,
+        "std": 5.98311332448527e-16,
+        "ci95_low": 1.4998743067264185e-12,
+        "ci95_high": 1.500994367146241e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7085488596419703,
+        "lock": 0.2900404227014964,
+        "accumulator": 0.0014107176565332535
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.08249325010872832,
+          "rmse_mm": 9.234406813223016,
+          "terminal_error_mm": 3.8979506610642423,
+          "command_energy": 0.41511158953293587,
+          "accumulator_valve_energy": 0.12318199370917088,
+          "observer_coefficient_m3_s_pa": 1.5013055873953304e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179796,
+          "hold_mode_counts": {
+            "fine_trim": 126994,
+            "lock": 51813,
+            "accumulator": 232
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.019447704682540312,
+          "rmse_mm": 9.232896559071213,
+          "terminal_error_mm": 4.24652328737335,
+          "command_energy": 0.4129989408284685,
+          "accumulator_valve_energy": 0.11497233786173054,
+          "observer_coefficient_m3_s_pa": 1.5001392543991178e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179815,
+          "hold_mode_counts": {
+            "fine_trim": 126845,
+            "lock": 52024,
+            "accumulator": 209
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.231744108020694,
+          "terminal_error_mm": 4.104682492318323,
+          "command_energy": 0.41827316811241555,
+          "accumulator_valve_energy": 0.16662338201543156,
+          "observer_coefficient_m3_s_pa": 1.500630041145666e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179795,
+          "hold_mode_counts": {
+            "fine_trim": 126898,
+            "lock": 51926,
+            "accumulator": 233
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.06069418830939588,
+          "rmse_mm": 9.239626634261032,
+          "terminal_error_mm": 4.438642108208768,
+          "command_energy": 0.41690882383281797,
+          "accumulator_valve_energy": 0.2675742364825908,
+          "observer_coefficient_m3_s_pa": 1.4996951578205076e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179702,
+          "hold_mode_counts": {
+            "fine_trim": 126835,
+            "lock": 51889,
+            "accumulator": 329
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.012267541469102028,
+          "rmse_mm": 9.232990737814095,
+          "terminal_error_mm": 4.442850285474087,
+          "command_energy": 0.4162374723522011,
+          "accumulator_valve_energy": 0.14520960921700868,
+          "observer_coefficient_m3_s_pa": 1.5004016439210282e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179794,
+          "hold_mode_counts": {
+            "fine_trim": 126784,
+            "lock": 52018,
+            "accumulator": 260
+          }
+        }
+      ]
+    },
+    "viscous_0p7x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.03889850579993359,
+        "std": 0.05016120199387636,
+        "ci95_low": -0.008053284945968762,
+        "ci95_high": 0.08585029654583595
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.230356093293008,
+        "std": 0.003790235553425476,
+        "ci95_low": 9.226808364380853,
+        "ci95_high": 9.233903822205162
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.299768237224933,
+        "std": 0.20942158918611653,
+        "ci95_low": 4.1037458485600595,
+        "ci95_high": 4.495790625889807
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4221293320575426,
+        "std": 0.0012893154146559698,
+        "ci95_low": 0.42092250955034305,
+        "ci95_high": 0.42333615456474216
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.5228545713091836,
+        "std": 0.2203143326111921,
+        "ci95_low": 0.3166363781258019,
+        "ci95_high": 0.7290727644925652
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.4997967326125604e-12,
+        "std": 3.9293296236566386e-16,
+        "ci95_low": 1.4994289402652317e-12,
+        "ci95_high": 1.5001645249598891e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7059706644236602,
+        "lock": 0.29202649160492256,
+        "accumulator": 0.0020028439714173053
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.231628823176449,
+          "terminal_error_mm": 4.411175793482435,
+          "command_energy": 0.4200728050223562,
+          "accumulator_valve_energy": 0.6342702181821166,
+          "observer_coefficient_m3_s_pa": 1.4999603210191947e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179697,
+          "hold_mode_counts": {
+            "fine_trim": 126181,
+            "lock": 52439,
+            "accumulator": 414
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.1246959523900637,
+          "rmse_mm": 9.224045366891469,
+          "terminal_error_mm": 4.419756475807002,
+          "command_energy": 0.4221548790078308,
+          "accumulator_valve_energy": 0.5773030591092622,
+          "observer_coefficient_m3_s_pa": 1.499425602570421e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179744,
+          "hold_mode_counts": {
+            "fine_trim": 126391,
+            "lock": 52312,
+            "accumulator": 339
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.02831574213302268,
+          "rmse_mm": 9.23409689820217,
+          "terminal_error_mm": 4.475022326796085,
+          "command_energy": 0.42361081989847577,
+          "accumulator_valve_energy": 0.8037312533781831,
+          "observer_coefficient_m3_s_pa": 1.49953226848434e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179692,
+          "hold_mode_counts": {
+            "fine_trim": 126379,
+            "lock": 52184,
+            "accumulator": 462
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.006268687905319759,
+          "rmse_mm": 9.230235449626647,
+          "terminal_error_mm": 3.9637317150376106,
+          "command_energy": 0.42221223999923385,
+          "accumulator_valve_energy": 0.292586800323348,
+          "observer_coefficient_m3_s_pa": 1.4996641228379117e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179789,
+          "hold_mode_counts": {
+            "fine_trim": 126537,
+            "lock": 52288,
+            "accumulator": 234
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.035212146571261815,
+          "rmse_mm": 9.231773928568304,
+          "terminal_error_mm": 4.229154875001528,
+          "command_energy": 0.42259591635981625,
+          "accumulator_valve_energy": 0.3063815255530077,
+          "observer_coefficient_m3_s_pa": 1.5004013481509338e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179782,
+          "hold_mode_counts": {
+            "fine_trim": 126516,
+            "lock": 52207,
+            "accumulator": 344
+          }
+        }
+      ]
+    },
+    "viscous_1p3x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.014239782746805485,
+        "std": 0.013501522139410286,
+        "ci95_low": 0.0016021142491855888,
+        "ci95_high": 0.02687745124442538
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.23190566076617,
+        "std": 0.008530850788064787,
+        "ci95_low": 9.223920630400777,
+        "ci95_high": 9.239890691131563
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.139781374844976,
+        "std": 0.15376747571304086,
+        "ci95_low": 3.995852241247147,
+        "ci95_high": 4.283710508442804
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42298915822831995,
+        "std": 0.0029781452011188947,
+        "ci95_low": 0.42020156054852514,
+        "ci95_high": 0.42577675590811476
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.2784273009293392,
+        "std": 0.2734329195695194,
+        "ci95_low": 0.02248915127661566,
+        "ci95_high": 0.5343654505820628
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.500193792810019e-12,
+        "std": 6.991930370675411e-16,
+        "ci95_low": 1.4995393355031267e-12,
+        "ci95_high": 1.5008482501169112e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7070706168051419,
+        "lock": 0.29124489235120515,
+        "accumulator": 0.0016844908436528876
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.006251104178678357,
+          "rmse_mm": 9.229414368789575,
+          "terminal_error_mm": 4.396470265348674,
+          "command_energy": 0.4192751647364203,
+          "accumulator_valve_energy": 0.14045259645350186,
+          "observer_coefficient_m3_s_pa": 1.5009552592709474e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179827,
+          "hold_mode_counts": {
+            "fine_trim": 126644,
+            "lock": 52142,
+            "accumulator": 252
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.006045225811435184,
+          "rmse_mm": 9.218707940497524,
+          "terminal_error_mm": 4.03251749284289,
+          "command_energy": 0.4270374394582383,
+          "accumulator_valve_energy": 0.14362477143849908,
+          "observer_coefficient_m3_s_pa": 1.5001607060886888e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179814,
+          "hold_mode_counts": {
+            "fine_trim": 126597,
+            "lock": 52243,
+            "accumulator": 213
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.03604233984427774,
+          "rmse_mm": 9.241491806705461,
+          "terminal_error_mm": 4.0989910540429335,
+          "command_energy": 0.4247347825893732,
+          "accumulator_valve_energy": 0.7654359215818216,
+          "observer_coefficient_m3_s_pa": 1.5007830008567318e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179691,
+          "hold_mode_counts": {
+            "fine_trim": 126357,
+            "lock": 52194,
+            "accumulator": 465
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.01874636306514743,
+          "rmse_mm": 9.235272230498483,
+          "terminal_error_mm": 4.1548125043076585,
+          "command_energy": 0.4217432347037152,
+          "accumulator_valve_energy": 0.20071028846183125,
+          "observer_coefficient_m3_s_pa": 1.499817286713674e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179760,
+          "hold_mode_counts": {
+            "fine_trim": 126646,
+            "lock": 52070,
+            "accumulator": 344
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.0041138808344887146,
+          "rmse_mm": 9.234641957339807,
+          "terminal_error_mm": 4.0161155576827205,
+          "command_energy": 0.4221551696538528,
+          "accumulator_valve_energy": 0.14191292671104214,
+          "observer_coefficient_m3_s_pa": 1.4992527111200518e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179791,
+          "hold_mode_counts": {
+            "fine_trim": 126744,
+            "lock": 52081,
+            "accumulator": 234
+          }
+        }
+      ]
+    },
+    "stiffness_0p7x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.017929677399541877,
+        "std": 0.020898859420642672,
+        "ci95_low": -0.0016320323550575756,
+        "ci95_high": 0.037491387154141326
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.253045134240756,
+        "std": 0.003181466808167026,
+        "ci95_low": 9.250067223865715,
+        "ci95_high": 9.256023044615796
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.246728610527362,
+        "std": 0.15539870989749147,
+        "ci95_low": 4.101272612280332,
+        "ci95_high": 4.392184608774392
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4196376159886193,
+        "std": 0.0015814245408839757,
+        "ci95_low": 0.41815737406512865,
+        "ci95_high": 0.42111785791211
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 6.418676173888062e-05,
+        "std": 0.00014352596250371966,
+        "ci95_low": -7.01561305805965e-05,
+        "ci95_high": 0.00019852965405835774
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.4999834346174854e-12,
+        "std": 1.7269657350956483e-17,
+        "ci95_low": 1.4999672699063946e-12,
+        "ci95_high": 1.4999995993285762e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.9999988830572064,
+        "lock": 0.0,
+        "accumulator": 1.1169427935409432e-06
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.003214833939890749,
+          "rmse_mm": 9.25177413972232,
+          "terminal_error_mm": 4.478091061222489,
+          "command_energy": 0.420158202102249,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 1.4999805681247603e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 179033,
+            "lock": 0,
+            "accumulator": 0
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.05258741815095114,
+          "rmse_mm": 9.248288295842142,
+          "terminal_error_mm": 4.309807910987451,
+          "command_energy": 0.41939880608954333,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 1.4999777258836433e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 179074,
+            "lock": 0,
+            "accumulator": 0
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.253896182015533,
+          "terminal_error_mm": 4.187678006384477,
+          "command_energy": 0.41764293890874643,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 1.5000134581967386e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 179074,
+            "lock": 0,
+            "accumulator": 0
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.018635350940821027,
+          "rmse_mm": 9.254603927115442,
+          "terminal_error_mm": 4.191866087709107,
+          "command_energy": 0.421948339934801,
+          "accumulator_valve_energy": 0.0003209338086944031,
+          "observer_coefficient_m3_s_pa": 1.4999694912324027e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179999,
+          "hold_mode_counts": {
+            "fine_trim": 179059,
+            "lock": 0,
+            "accumulator": 1
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.01521078396604647,
+          "rmse_mm": 9.256663126508345,
+          "terminal_error_mm": 4.066199986333285,
+          "command_energy": 0.4190397929077569,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 1.4999759296498828e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 179060,
+            "lock": 0,
+            "accumulator": 0
+          }
+        }
+      ]
+    },
+    "stiffness_1p3x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.024747434524963197,
+        "std": 0.029414066601681943,
+        "ci95_low": -0.00278466289640247,
+        "ci95_high": 0.05227953194632887
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.207705293402546,
+        "std": 0.008857516479102243,
+        "ci95_low": 9.199414498052267,
+        "ci95_high": 9.215996088752824
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.220347347116659,
+        "std": 0.16735281635539848,
+        "ci95_low": 4.063702089389077,
+        "ci95_high": 4.376992604844242
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4219595939388075,
+        "std": 0.0020493191860216677,
+        "ci95_low": 0.4200413941794517,
+        "ci95_high": 0.4238777936981633
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.017149128233107873,
+        "std": 0.0031234142502357875,
+        "ci95_low": 0.01422555610045158,
+        "ci95_high": 0.020072700365764164
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.4993976928951237e-12,
+        "std": 7.460301011909442e-16,
+        "ci95_low": 1.498699395250551e-12,
+        "ci95_high": 1.5000959905396964e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.0,
+        "lock": 0.8672815064430845,
+        "accumulator": 0.1327184935569155
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.005941220408978154,
+          "rmse_mm": 9.206766593117752,
+          "terminal_error_mm": 4.03310677873786,
+          "command_energy": 0.42072808767817244,
+          "accumulator_valve_energy": 0.01963314660633469,
+          "observer_coefficient_m3_s_pa": 1.4992820594764172e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179768,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 154241,
+            "accumulator": 24792
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.033047616681214365,
+          "rmse_mm": 9.196616679911813,
+          "terminal_error_mm": 4.050596022212916,
+          "command_energy": 0.423197048613668,
+          "accumulator_valve_energy": 0.017479954162492387,
+          "observer_coefficient_m3_s_pa": 1.499083936026515e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179776,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 155176,
+            "accumulator": 23902
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.07241034243909983,
+          "rmse_mm": 9.203482656613435,
+          "terminal_error_mm": 4.384358262525534,
+          "command_energy": 0.42277101156822816,
+          "accumulator_valve_energy": 0.011732447680135354,
+          "observer_coefficient_m3_s_pa": 1.4995894065399405e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179826,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 154878,
+            "accumulator": 24180
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.012337993095523636,
+          "rmse_mm": 9.220309262835867,
+          "terminal_error_mm": 4.28055486118134,
+          "command_energy": 0.42407662790117734,
+          "accumulator_valve_energy": 0.01835552363502853,
+          "observer_coefficient_m3_s_pa": 1.498504249147825e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179774,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 157545,
+            "accumulator": 21518
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.211351274533857,
+          "terminal_error_mm": 4.353120810925648,
+          "command_energy": 0.41902519393279153,
+          "accumulator_valve_energy": 0.018544569081548407,
+          "observer_coefficient_m3_s_pa": 1.5005288132849209e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179787,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 154638,
+            "accumulator": 24431
+          }
+        }
+      ]
+    },
+    "position_noise_0p5x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.04334649039555716,
+        "std": 0.056913185276132046,
+        "ci95_low": -0.009925278612169963,
+        "ci95_high": 0.09661825940328428
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.238738625072767,
+        "std": 0.0055127741523570434,
+        "ci95_low": 9.23357856893092,
+        "ci95_high": 9.243898681214613
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.301182757697575,
+        "std": 0.16664058697122588,
+        "ci95_low": 4.145204159533151,
+        "ci95_high": 4.457161355861999
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4163120417778893,
+        "std": 0.002997863399543543,
+        "ci95_low": 0.41350598750834944,
+        "ci95_high": 0.4191180960474291
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.29896358096607034,
+        "std": 0.16988650043871473,
+        "ci95_low": 0.1399467491898712,
+        "ci95_high": 0.45798041274226947
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.5002599556665078e-12,
+        "std": 4.575966485225783e-16,
+        "ci95_low": 1.4998316369414085e-12,
+        "ci95_high": 1.500688274391607e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7066604111861396,
+        "lock": 0.29180141083426886,
+        "accumulator": 0.0015381779795914947
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.041677702250941806,
+          "rmse_mm": 9.236594206924146,
+          "terminal_error_mm": 4.445662229507041,
+          "command_energy": 0.41523593841033385,
+          "accumulator_valve_energy": 0.23479191450538617,
+          "observer_coefficient_m3_s_pa": 1.5000037123466099e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179787,
+          "hold_mode_counts": {
+            "fine_trim": 126479,
+            "lock": 52263,
+            "accumulator": 296
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.231608775782734,
+          "terminal_error_mm": 4.059095478304242,
+          "command_energy": 0.4143275090620988,
+          "accumulator_valve_energy": 0.20703586481139546,
+          "observer_coefficient_m3_s_pa": 1.5007260500511256e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179810,
+          "hold_mode_counts": {
+            "fine_trim": 126537,
+            "lock": 52274,
+            "accumulator": 212
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.240744869781464,
+          "terminal_error_mm": 4.252045162254026,
+          "command_energy": 0.41742533657767583,
+          "accumulator_valve_energy": 0.29022462883691386,
+          "observer_coefficient_m3_s_pa": 1.5007232005041788e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179790,
+          "hold_mode_counts": {
+            "fine_trim": 126443,
+            "lock": 52350,
+            "accumulator": 263
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.13896627169879272,
+          "rmse_mm": 9.246597109203197,
+          "terminal_error_mm": 4.470508995741307,
+          "command_energy": 0.4210084047883065,
+          "accumulator_valve_energy": 0.5925873609377098,
+          "observer_coefficient_m3_s_pa": 1.4996851333670755e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179730,
+          "hold_mode_counts": {
+            "fine_trim": 126489,
+            "lock": 52189,
+            "accumulator": 377
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.03608847802805126,
+          "rmse_mm": 9.238148163672284,
+          "terminal_error_mm": 4.278601922681258,
+          "command_energy": 0.41356302005103124,
+          "accumulator_valve_energy": 0.17017813573894658,
+          "observer_coefficient_m3_s_pa": 1.5001616820635496e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179794,
+          "hold_mode_counts": {
+            "fine_trim": 126665,
+            "lock": 52149,
+            "accumulator": 229
+          }
+        }
+      ]
+    },
+    "position_noise_2p0x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.019477881738894087,
+        "std": 0.027905529483954125,
+        "ci95_low": -0.006642197703065306,
+        "ci95_high": 0.04559796118085348
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.224551332879408,
+        "std": 0.012808149025266755,
+        "ci95_low": 9.212562674135741,
+        "ci95_high": 9.236539991623074
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.240179108278108,
+        "std": 0.31151785530421783,
+        "ci95_low": 3.9485927711396656,
+        "ci95_high": 4.53176544541655
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42440358122771793,
+        "std": 0.004169493063751077,
+        "ci95_low": 0.42050086043825935,
+        "ci95_high": 0.4283063020171765
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.41385511226796085,
+        "std": 0.5506389033218909,
+        "ci95_low": -0.10155284323674868,
+        "ci95_high": 0.9292630677726703
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.500494560001955e-12,
+        "std": 6.601751242989437e-16,
+        "ci95_low": 1.4998766241658975e-12,
+        "ci95_high": 1.5011124958380124e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7069656493880128,
+        "lock": 0.2916735099744703,
+        "accumulator": 0.0013608406375169686
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.224564001347979,
+          "terminal_error_mm": 4.09895532177984,
+          "command_energy": 0.42222407510501675,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 1.5000552744139224e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 126707,
+            "lock": 52275,
+            "accumulator": 0
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.022798818177904856,
+          "rmse_mm": 9.20549174097009,
+          "terminal_error_mm": 4.634427102302496,
+          "command_energy": 0.4230425493511183,
+          "accumulator_valve_energy": 0.5826412037043284,
+          "observer_coefficient_m3_s_pa": 1.5013826441482627e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179738,
+          "hold_mode_counts": {
+            "fine_trim": 126495,
+            "lock": 52175,
+            "accumulator": 366
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.24127619448163,
+          "terminal_error_mm": 3.9127731414623224,
+          "command_energy": 0.4318424726178624,
+          "accumulator_valve_energy": 1.3021916943633212,
+          "observer_coefficient_m3_s_pa": 1.5004290418906847e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179649,
+          "hold_mode_counts": {
+            "fine_trim": 126186,
+            "lock": 52217,
+            "accumulator": 609
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.008053634214688632,
+          "rmse_mm": 9.223420035247887,
+          "terminal_error_mm": 4.050613656297886,
+          "command_energy": 0.42244117138560167,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 1.5008876910699687e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 126839,
+            "lock": 52106,
+            "accumulator": 0
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.06653695630187695,
+          "rmse_mm": 9.228004692349451,
+          "terminal_error_mm": 4.504126319547996,
+          "command_energy": 0.42246763767899015,
+          "accumulator_valve_energy": 0.18444266327215467,
+          "observer_coefficient_m3_s_pa": 1.499718148486936e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179784,
+          "hold_mode_counts": {
+            "fine_trim": 126532,
+            "lock": 52285,
+            "accumulator": 243
+          }
+        }
+      ]
+    },
+    "leakage_0p5x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.020888671599161857,
+        "std": 0.020071279238974046,
+        "ci95_low": 0.002101591836880065,
+        "ci95_high": 0.03967575136144365
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.225038304837055,
+        "std": 0.005583967534178201,
+        "ci95_low": 9.2198116104044,
+        "ci95_high": 9.230264999269709
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.274782240450858,
+        "std": 0.2726232148480219,
+        "ci95_low": 4.0196019890369845,
+        "ci95_high": 4.529962491864732
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42076900739387985,
+        "std": 0.003450920009239399,
+        "ci95_low": 0.4175388839575548,
+        "ci95_high": 0.4239991308302049
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.0027270268347301297,
+        "std": 0.0041982254638838565,
+        "ci95_low": -0.0012025880000271637,
+        "ci95_high": 0.006656641669487423
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 7.499780394613682e-13,
+        "std": 5.558974514973945e-17,
+        "ci95_low": 7.49926006456214e-13,
+        "ci95_high": 7.500300724665224e-13
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.9999966487898222,
+        "lock": 0.0,
+        "accumulator": 3.3512101778487242e-06
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.03185905051250604,
+          "rmse_mm": 9.22474259276658,
+          "terminal_error_mm": 3.9494359555581893,
+          "command_energy": 0.4219709476748522,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 7.500330914929537e-13,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 179025,
+            "lock": 0,
+            "accumulator": 0
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.04477354693704916,
+          "rmse_mm": 9.220701787520174,
+          "terminal_error_mm": 4.480355666111602,
+          "command_energy": 0.4231282668996571,
+          "accumulator_valve_energy": 0.001083855720250893,
+          "observer_coefficient_m3_s_pa": 7.499332877545246e-13,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179999,
+          "hold_mode_counts": {
+            "fine_trim": 179061,
+            "lock": 0,
+            "accumulator": 1
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.027810760546254087,
+          "rmse_mm": 9.227166099490129,
+          "terminal_error_mm": 4.005816687129515,
+          "command_energy": 0.42081098460017996,
+          "accumulator_valve_energy": 0.0025512784533997545,
+          "observer_coefficient_m3_s_pa": 7.499815817159079e-13,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179999,
+          "hold_mode_counts": {
+            "fine_trim": 179024,
+            "lock": 0,
+            "accumulator": 1
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.233296460359364,
+          "terminal_error_mm": 4.494467302374239,
+          "command_energy": 0.4230984856771699,
+          "accumulator_valve_energy": 0.01,
+          "observer_coefficient_m3_s_pa": 7.499110387178836e-13,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179999,
+          "hold_mode_counts": {
+            "fine_trim": 179045,
+            "lock": 0,
+            "accumulator": 1
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.219284584049035,
+          "terminal_error_mm": 4.443835591080747,
+          "command_energy": 0.41483635211754005,
+          "accumulator_valve_energy": 0.0,
+          "observer_coefficient_m3_s_pa": 7.500311976255712e-13,
+          "observer_detection_delay_s": null,
+          "observer_updates": 180000,
+          "hold_mode_counts": {
+            "fine_trim": 179041,
+            "lock": 0,
+            "accumulator": 0
+          }
+        }
+      ]
+    },
+    "leakage_2p0x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.00839815407730482,
+        "std": 0.010967498411176602,
+        "ci95_low": -0.0018676224579234277,
+        "ci95_high": 0.018663930612533068
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.23014003138683,
+        "std": 0.004622992880331993,
+        "ci95_low": 9.225812826580938,
+        "ci95_high": 9.234467236192721
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.183611890950522,
+        "std": 0.27215688723706066,
+        "ci95_low": 3.9288681306002307,
+        "ci95_high": 4.438355651300814
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42336901031597823,
+        "std": 0.0026313287846654364,
+        "ci95_low": 0.4209060390638866,
+        "ci95_high": 0.4258319815680699
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.015697530518178758,
+        "std": 0.0062720524158772035,
+        "ci95_low": 0.009826776212619091,
+        "ci95_high": 0.021568284823738425
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 3.0001271228980432e-12,
+        "std": 5.197246534863244e-16,
+        "ci95_low": 2.999640651238553e-12,
+        "ci95_high": 3.0006135945575334e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.0,
+        "lock": 0.9984698088824802,
+        "accumulator": 0.0015301911175197946
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.22981928068699,
+          "terminal_error_mm": 4.485813334165478,
+          "command_energy": 0.4226250440342579,
+          "accumulator_valve_energy": 0.011434301447912706,
+          "observer_coefficient_m3_s_pa": 3.0006147252396558e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179805,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178799,
+            "accumulator": 271
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.02605252614767961,
+          "rmse_mm": 9.223256305691747,
+          "terminal_error_mm": 4.039122764582348,
+          "command_energy": 0.4245434730653265,
+          "accumulator_valve_energy": 0.010932717677667854,
+          "observer_coefficient_m3_s_pa": 3.0001366916793303e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179819,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178806,
+            "accumulator": 270
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.235965070156267,
+          "terminal_error_mm": 4.1159284565848715,
+          "command_energy": 0.4259397693430213,
+          "accumulator_valve_energy": 0.023267526711837128,
+          "observer_coefficient_m3_s_pa": 3.0000884687904665e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179804,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178782,
+            "accumulator": 270
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.011713525392531565,
+          "rmse_mm": 9.232078187519395,
+          "terminal_error_mm": 3.842420966819693,
+          "command_energy": 0.4245748698554057,
+          "accumulator_valve_energy": 0.02181673943525119,
+          "observer_coefficient_m3_s_pa": 2.9992912367492614e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179792,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178765,
+            "accumulator": 291
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.004224718846312925,
+          "rmse_mm": 9.229581312879743,
+          "terminal_error_mm": 4.434773932600223,
+          "command_energy": 0.4191618952818794,
+          "accumulator_valve_energy": 0.011036367318224891,
+          "observer_coefficient_m3_s_pa": 3.000504492031501e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179817,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178791,
+            "accumulator": 268
+          }
+        }
+      ]
+    },
+    "leakage_5p0x": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.016108698516070774,
+        "std": 0.01185451748755977,
+        "ci95_low": 0.005012656109880137,
+        "ci95_high": 0.02720474092226141
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.231063441063451,
+        "std": 0.0071046801668664915,
+        "ci95_low": 9.224413332149554,
+        "ci95_high": 9.237713549977348
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.312827336344471,
+        "std": 0.1247370170893519,
+        "ci95_low": 4.196071236174418,
+        "ci95_high": 4.429583436514524
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42768213925696374,
+        "std": 0.003023917255004753,
+        "ci95_low": 0.4248516981082999,
+        "ci95_high": 0.43051258040562757
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.02251826916941423,
+        "std": 0.009224192118261221,
+        "ci95_low": 0.013884258800414814,
+        "ci95_high": 0.031152279538413645
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 7.50013385645151e-12,
+        "std": 2.425128097050686e-15,
+        "ci95_low": 7.497863892766056e-12,
+        "ci95_high": 7.502403820136962e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.0,
+        "lock": 0.36717564925998325,
+        "accumulator": 0.6328243507400168
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.229072215745713,
+          "terminal_error_mm": 4.244582248379758,
+          "command_energy": 0.4228878906096988,
+          "accumulator_valve_energy": 0.02613492508941372,
+          "observer_coefficient_m3_s_pa": 7.501866410180039e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179747,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 65785,
+            "accumulator": 113264
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.009253571803702343,
+          "rmse_mm": 9.220929477923091,
+          "terminal_error_mm": 4.402760737347133,
+          "command_energy": 0.4309398409788247,
+          "accumulator_valve_energy": 0.010470436914675033,
+          "observer_coefficient_m3_s_pa": 7.4981915594206e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179809,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 65698,
+            "accumulator": 113379
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.028630765565806904,
+          "rmse_mm": 9.236341997708037,
+          "terminal_error_mm": 4.433929635819234,
+          "command_energy": 0.4270656004186768,
+          "accumulator_valve_energy": 0.015871182378351834,
+          "observer_coefficient_m3_s_pa": 7.502777440223529e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179785,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 65822,
+            "accumulator": 113234
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.02603691704494704,
+          "rmse_mm": 9.23917410110376,
+          "terminal_error_mm": 4.352408465950031,
+          "command_energy": 0.42913341695706303,
+          "accumulator_valve_energy": 0.026575185445820906,
+          "observer_coefficient_m3_s_pa": 7.50076089935276e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179742,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 65672,
+            "accumulator": 113369
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.016622238165897585,
+          "rmse_mm": 9.229799412836659,
+          "terminal_error_mm": 4.130455594226201,
+          "command_energy": 0.4283839473205555,
+          "accumulator_valve_energy": 0.03353961601880966,
+          "observer_coefficient_m3_s_pa": 7.497072973080617e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179727,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 65737,
+            "accumulator": 113290
+          }
+        }
+      ]
+    },
+    "accumulator_flow_0p5x_14kn": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 5.861477902936785,
+        "std": 0.302621764332974,
+        "ci95_low": 5.578218467569743,
+        "ci95_high": 6.144737338303827
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.227546443689432,
+        "std": 0.004089250810262188,
+        "ci95_low": 9.223718831098044,
+        "ci95_high": 9.23137405628082
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.219006726751873,
+        "std": 0.27371904792478424,
+        "ci95_low": 3.962800755792465,
+        "ci95_high": 4.475212697711282
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.42014660256094255,
+        "std": 0.003398743658585197,
+        "ci95_low": 0.41696531713089374,
+        "ci95_high": 0.42332788799099136
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.0765038378273159,
+        "std": 0.00563296434289536,
+        "ci95_low": 0.07123128149704615,
+        "ci95_high": 0.08177639415758566
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.5001332330812442e-12,
+        "std": 4.575689105654022e-16,
+        "ci95_low": 1.4997049403193738e-12,
+        "ci95_high": 1.5005615258431146e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.0,
+        "lock": 0.9998045184171577,
+        "accumulator": 0.0001954815828423022
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 5.729479259973635,
+          "rmse_mm": 9.229574785350168,
+          "terminal_error_mm": 4.097957361404059,
+          "command_energy": 0.42231318611172064,
+          "accumulator_valve_energy": 0.07263560679171818,
+          "observer_coefficient_m3_s_pa": 1.4999069001835091e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179992,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179027,
+            "accumulator": 8
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 6.1538700737682195,
+          "rmse_mm": 9.22240902393808,
+          "terminal_error_mm": 3.833858677176505,
+          "command_energy": 0.42266217590366956,
+          "accumulator_valve_energy": 0.07266636499866665,
+          "observer_coefficient_m3_s_pa": 1.4995118775768195e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179980,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179014,
+            "accumulator": 34
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 6.186430409738264,
+          "rmse_mm": 9.224538149144731,
+          "terminal_error_mm": 4.223961505726736,
+          "command_energy": 0.4226423612611287,
+          "accumulator_valve_energy": 0.08228442607765367,
+          "observer_coefficient_m3_s_pa": 1.5004049546672297e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179986,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178981,
+            "accumulator": 71
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 5.47733335609335,
+          "rmse_mm": 9.232681145073911,
+          "terminal_error_mm": 4.39529817198403,
+          "command_energy": 0.4178212888352891,
+          "accumulator_valve_energy": 0.0830325210602081,
+          "observer_coefficient_m3_s_pa": 1.5001379617618953e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179991,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 178992,
+            "accumulator": 54
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 5.760276415110455,
+          "rmse_mm": 9.228529114940265,
+          "terminal_error_mm": 4.543957917468033,
+          "command_energy": 0.41529400069290473,
+          "accumulator_valve_energy": 0.07190027020833291,
+          "observer_coefficient_m3_s_pa": 1.5007044712167681e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179992,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179036,
+            "accumulator": 8
+          }
+        }
+      ]
+    },
+    "accumulator_flow_1p5x_14kn": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 0.2727376869296583,
+        "std": 0.19787783393984695,
+        "ci95_low": 0.08752046160219676,
+        "ci95_high": 0.4579549122571198
+      },
+      "rmse_mm": {
+        "n": 5,
+        "mean": 9.226611727079703,
+        "std": 0.004037334419953633,
+        "ci95_low": 9.222832709167013,
+        "ci95_high": 9.230390744992393
+      },
+      "terminal_error_mm": {
+        "n": 5,
+        "mean": 4.231772795292,
+        "std": 0.27160030694689397,
+        "ci95_low": 3.9775500041425733,
+        "ci95_high": 4.485995586441426
+      },
+      "command_energy": {
+        "n": 5,
+        "mean": 0.4199333396705495,
+        "std": 0.0033520683251634965,
+        "ci95_low": 0.41679574319532436,
+        "ci95_high": 0.4230709361457747
+      },
+      "accumulator_valve_energy": {
+        "n": 5,
+        "mean": 0.043992404034136796,
+        "std": 0.005466840861552383,
+        "ci95_low": 0.038875342281826895,
+        "ci95_high": 0.0491094657864467
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 5,
+        "mean": 1.5002025149328016e-12,
+        "std": 5.08893429240727e-16,
+        "ci95_low": 1.4997261814947674e-12,
+        "ci95_high": 1.5006788483708358e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.0,
+        "lock": 0.9999754251724426,
+        "accumulator": 2.4574827557317994e-05
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.35120964829904455,
+          "rmse_mm": 9.228903655809395,
+          "terminal_error_mm": 3.993804531074341,
+          "command_energy": 0.42213208990998446,
+          "accumulator_valve_energy": 0.04,
+          "observer_coefficient_m3_s_pa": 1.5004580992576783e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179996,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179031,
+            "accumulator": 4
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.38621789592185873,
+          "rmse_mm": 9.22142714697003,
+          "terminal_error_mm": 4.304567007009652,
+          "command_energy": 0.42243251249883784,
+          "accumulator_valve_energy": 0.04,
+          "observer_coefficient_m3_s_pa": 1.4995461060804352e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179996,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179044,
+            "accumulator": 4
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.223194782352698,
+          "terminal_error_mm": 4.6732924951939925,
+          "command_energy": 0.42237551539513357,
+          "accumulator_valve_energy": 0.04996202017068394,
+          "observer_coefficient_m3_s_pa": 1.500898814723768e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179995,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179047,
+            "accumulator": 5
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.14001495429866173,
+          "rmse_mm": 9.230628631818732,
+          "terminal_error_mm": 4.090779414937574,
+          "command_energy": 0.4174610956154025,
+          "accumulator_valve_energy": 0.05,
+          "observer_coefficient_m3_s_pa": 1.499979917611821e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179995,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179041,
+            "accumulator": 5
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.48624593612872635,
+          "rmse_mm": 9.228904418447662,
+          "terminal_error_mm": 4.096420528244438,
+          "command_energy": 0.41526548493338916,
+          "accumulator_valve_energy": 0.04,
+          "observer_coefficient_m3_s_pa": 1.5001296369903057e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 179996,
+          "hold_mode_counts": {
+            "fine_trim": 0,
+            "lock": 179040,
+            "accumulator": 4
+          }
+        }
+      ]
+    }
+  },
+  "leakage_step_ablation": {
+    "leakage_step_1x_to_8x_observer": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 20,
+        "mean": 0.021856754794077893,
+        "std": 0.026829928487165502,
+        "ci95_low": 0.009300106049788393,
+        "ci95_high": 0.034413403538367394
+      },
+      "rmse_mm": {
+        "n": 20,
+        "mean": 9.23660476860808,
+        "std": 0.005532557397347135,
+        "ci95_low": 9.234015481799904,
+        "ci95_high": 9.239194055416256
+      },
+      "terminal_error_mm": {
+        "n": 20,
+        "mean": 4.182888888079142,
+        "std": 0.2683107143159293,
+        "ci95_low": 4.057317051553145,
+        "ci95_high": 4.308460724605139
+      },
+      "command_energy": {
+        "n": 20,
+        "mean": 0.4228998397059079,
+        "std": 0.0024907280386554493,
+        "ci95_low": 0.42173415649829477,
+        "ci95_high": 0.424065522913521
+      },
+      "accumulator_valve_energy": {
+        "n": 20,
+        "mean": 0.38884722088963863,
+        "std": 0.18430855006060506,
+        "ci95_low": 0.30258915558069105,
+        "ci95_high": 0.4751052861985862
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 20,
+        "mean": 1.2000952592235244e-11,
+        "std": 3.147213258994685e-15,
+        "ci95_low": 1.1999479668017967e-11,
+        "ci95_high": 1.200242551645252e-11
+      },
+      "observer_detection_delay_s": {
+        "n": 20,
+        "mean": 0.254999999999999,
+        "std": 0.005129891760424749,
+        "ci95_low": 0.25259916434504404,
+        "ci95_high": 0.257400835654954
+      },
+      "hold_mode_fraction": {
+        "fine_trim": 0.02612627808120406,
+        "lock": 0.00030885624333627294,
+        "accumulator": 0.9735648656754596
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.025597528864940156,
+          "rmse_mm": 9.23644131474667,
+          "terminal_error_mm": 4.196223013879785,
+          "command_energy": 0.42473018778832744,
+          "accumulator_valve_energy": 0.4487474132454798,
+          "observer_coefficient_m3_s_pa": 1.2000651484164017e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179705,
+          "hold_mode_counts": {
+            "fine_trim": 4643,
+            "lock": 64,
+            "accumulator": 174328
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.226084574852136,
+          "terminal_error_mm": 4.571039443174829,
+          "command_energy": 0.42388026508829485,
+          "accumulator_valve_energy": 0.20887644282314538,
+          "observer_coefficient_m3_s_pa": 1.1998387778917685e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179819,
+          "hold_mode_counts": {
+            "fine_trim": 4771,
+            "lock": 77,
+            "accumulator": 174200
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.22757637906878,
+          "terminal_error_mm": 4.4706156299414435,
+          "command_energy": 0.4237064875427787,
+          "accumulator_valve_energy": 0.18815451898534952,
+          "observer_coefficient_m3_s_pa": 1.2007556209865998e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179785,
+          "hold_mode_counts": {
+            "fine_trim": 4740,
+            "lock": 12,
+            "accumulator": 174300
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.238159735677879,
+          "terminal_error_mm": 4.035203827157108,
+          "command_energy": 0.41964980467993895,
+          "accumulator_valve_energy": 0.3174786271940487,
+          "observer_coefficient_m3_s_pa": 1.200318271808334e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179772,
+          "hold_mode_counts": {
+            "fine_trim": 4710,
+            "lock": 12,
+            "accumulator": 174324
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.07389515024197602,
+          "rmse_mm": 9.23525206376345,
+          "terminal_error_mm": 3.7477669377363187,
+          "command_energy": 0.4175051240325101,
+          "accumulator_valve_energy": 0.38858929492561606,
+          "observer_coefficient_m3_s_pa": 1.2003016828699583e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179695,
+          "hold_mode_counts": {
+            "fine_trim": 4649,
+            "lock": 73,
+            "accumulator": 174322
+          }
+        },
+        {
+          "seed": 2031,
+          "hold_started": true,
+          "hold_drop_mm": 0.0604379798071486,
+          "rmse_mm": 9.23363895267218,
+          "terminal_error_mm": 4.511731719226475,
+          "command_energy": 0.42393183002953067,
+          "accumulator_valve_energy": 0.2445737521681094,
+          "observer_coefficient_m3_s_pa": 1.2001010733607858e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179786,
+          "hold_mode_counts": {
+            "fine_trim": 4742,
+            "lock": 79,
+            "accumulator": 174229
+          }
+        },
+        {
+          "seed": 2032,
+          "hold_started": true,
+          "hold_drop_mm": 0.017242127996308643,
+          "rmse_mm": 9.242919913495799,
+          "terminal_error_mm": 4.055376300449831,
+          "command_energy": 0.42433180846184765,
+          "accumulator_valve_energy": 0.6316398794156467,
+          "observer_coefficient_m3_s_pa": 1.2004388631198022e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179678,
+          "hold_mode_counts": {
+            "fine_trim": 4550,
+            "lock": 84,
+            "accumulator": 174422
+          }
+        },
+        {
+          "seed": 2033,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.242317282054456,
+          "terminal_error_mm": 4.00077754539968,
+          "command_energy": 0.4244890605412396,
+          "accumulator_valve_energy": 0.4352918101795912,
+          "observer_coefficient_m3_s_pa": 1.2002759686927374e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179764,
+          "hold_mode_counts": {
+            "fine_trim": 4680,
+            "lock": 77,
+            "accumulator": 174292
+          }
+        },
+        {
+          "seed": 2034,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.235794524585696,
+          "terminal_error_mm": 4.575759358984133,
+          "command_energy": 0.42256741784354496,
+          "accumulator_valve_energy": 0.36307818199930786,
+          "observer_coefficient_m3_s_pa": 1.1997530739318982e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179757,
+          "hold_mode_counts": {
+            "fine_trim": 4719,
+            "lock": 12,
+            "accumulator": 174309
+          }
+        },
+        {
+          "seed": 2035,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.240244582899894,
+          "terminal_error_mm": 3.8492699056100754,
+          "command_energy": 0.42602088420066714,
+          "accumulator_valve_energy": 0.47221075080112673,
+          "observer_coefficient_m3_s_pa": 1.2003076974836424e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179756,
+          "hold_mode_counts": {
+            "fine_trim": 4671,
+            "lock": 74,
+            "accumulator": 174301
+          }
+        },
+        {
+          "seed": 2036,
+          "hold_started": true,
+          "hold_drop_mm": 0.04778845635367013,
+          "rmse_mm": 9.234916557749068,
+          "terminal_error_mm": 3.782120586005855,
+          "command_energy": 0.4217729605929533,
+          "accumulator_valve_energy": 0.2972570674669254,
+          "observer_coefficient_m3_s_pa": 1.1997932998290825e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179771,
+          "hold_mode_counts": {
+            "fine_trim": 4733,
+            "lock": 12,
+            "accumulator": 174299
+          }
+        },
+        {
+          "seed": 2037,
+          "hold_started": true,
+          "hold_drop_mm": 0.01301506468492919,
+          "rmse_mm": 9.239531165866532,
+          "terminal_error_mm": 4.016390080589072,
+          "command_energy": 0.42168848684064925,
+          "accumulator_valve_energy": 0.4016661999118223,
+          "observer_coefficient_m3_s_pa": 1.2002699320109723e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179751,
+          "hold_mode_counts": {
+            "fine_trim": 4688,
+            "lock": 12,
+            "accumulator": 174362
+          }
+        },
+        {
+          "seed": 2038,
+          "hold_started": true,
+          "hold_drop_mm": 0.008922537153510657,
+          "rmse_mm": 9.236296407000554,
+          "terminal_error_mm": 4.393828374372966,
+          "command_energy": 0.42312825389271913,
+          "accumulator_valve_energy": 0.31042190745627174,
+          "observer_coefficient_m3_s_pa": 1.1998465677299384e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179751,
+          "hold_mode_counts": {
+            "fine_trim": 4680,
+            "lock": 101,
+            "accumulator": 174291
+          }
+        },
+        {
+          "seed": 2039,
+          "hold_started": true,
+          "hold_drop_mm": 0.018573451918635353,
+          "rmse_mm": 9.236265491401928,
+          "terminal_error_mm": 4.177603776816474,
+          "command_energy": 0.4250469642758931,
+          "accumulator_valve_energy": 0.5749771481093109,
+          "observer_coefficient_m3_s_pa": 1.2003688487186068e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179719,
+          "hold_mode_counts": {
+            "fine_trim": 4605,
+            "lock": 50,
+            "accumulator": 174367
+          }
+        },
+        {
+          "seed": 2040,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.24678177858097,
+          "terminal_error_mm": 4.242845062615075,
+          "command_energy": 0.42167980862241716,
+          "accumulator_valve_energy": 0.8690999912272142,
+          "observer_coefficient_m3_s_pa": 1.1996617370910345e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179649,
+          "hold_mode_counts": {
+            "fine_trim": 4483,
+            "lock": 58,
+            "accumulator": 174489
+          }
+        },
+        {
+          "seed": 2041,
+          "hold_started": true,
+          "hold_drop_mm": 0.05584524805418711,
+          "rmse_mm": 9.237964777413628,
+          "terminal_error_mm": 3.972593606663355,
+          "command_energy": 0.42250981416642036,
+          "accumulator_valve_energy": 0.1267077447595437,
+          "observer_coefficient_m3_s_pa": 1.199999589183139e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179838,
+          "hold_mode_counts": {
+            "fine_trim": 4793,
+            "lock": 107,
+            "accumulator": 174178
+          }
+        },
+        {
+          "seed": 2042,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.229085691065334,
+          "terminal_error_mm": 4.4727311594658925,
+          "command_energy": 0.4252489212041193,
+          "accumulator_valve_energy": 0.2143023708692714,
+          "observer_coefficient_m3_s_pa": 1.200285037729166e-11,
+          "observer_detection_delay_s": 0.25,
+          "observer_updates": 179782,
+          "hold_mode_counts": {
+            "fine_trim": 4740,
+            "lock": 69,
+            "accumulator": 174231
+          }
+        },
+        {
+          "seed": 2043,
+          "hold_started": true,
+          "hold_drop_mm": 0.07311381035413067,
+          "rmse_mm": 9.228935590656715,
+          "terminal_error_mm": 4.046499148823712,
+          "command_energy": 0.4170611658717362,
+          "accumulator_valve_energy": 0.1984784105988221,
+          "observer_coefficient_m3_s_pa": 1.200184059184661e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179806,
+          "hold_mode_counts": {
+            "fine_trim": 4768,
+            "lock": 70,
+            "accumulator": 174203
+          }
+        },
+        {
+          "seed": 2044,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.241454333454685,
+          "terminal_error_mm": 4.494958348657708,
+          "command_energy": 0.42590718871816746,
+          "accumulator_valve_energy": 0.46592506459752575,
+          "observer_coefficient_m3_s_pa": 1.1994325609669069e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179731,
+          "hold_mode_counts": {
+            "fine_trim": 4636,
+            "lock": 12,
+            "accumulator": 174429
+          }
+        },
+        {
+          "seed": 2045,
+          "hold_started": true,
+          "hold_drop_mm": 0.04270374045212133,
+          "rmse_mm": 9.242434255155214,
+          "terminal_error_mm": 4.044443936013053,
+          "command_energy": 0.4231403597244037,
+          "accumulator_valve_energy": 0.6194678410586438,
+          "observer_coefficient_m3_s_pa": 1.1999073734650546e-11,
+          "observer_detection_delay_s": 0.259999999999998,
+          "observer_updates": 179696,
+          "hold_mode_counts": {
+            "fine_trim": 4556,
+            "lock": 51,
+            "accumulator": 174415
+          }
+        }
+      ]
+    },
+    "leakage_step_1x_to_8x_nominal_prior": {
+      "hold_entry_rate": 1.0,
+      "hold_drop_mm": {
+        "n": 20,
+        "mean": 0.021856754794077893,
+        "std": 0.026829928487165502,
+        "ci95_low": 0.009300106049788393,
+        "ci95_high": 0.034413403538367394
+      },
+      "rmse_mm": {
+        "n": 20,
+        "mean": 9.235899578878056,
+        "std": 0.0058062588835137985,
+        "ci95_low": 9.233182197303462,
+        "ci95_high": 9.238616960452651
+      },
+      "terminal_error_mm": {
+        "n": 20,
+        "mean": 4.358549288562177,
+        "std": 0.2297488340716961,
+        "ci95_low": 4.251024760115209,
+        "ci95_high": 4.4660738170091445
+      },
+      "command_energy": {
+        "n": 20,
+        "mean": 0.42275903656267894,
+        "std": 0.0026308171515666804,
+        "ci95_low": 0.42152779038554217,
+        "ci95_high": 0.4239902827398157
+      },
+      "accumulator_valve_energy": {
+        "n": 20,
+        "mean": 0.4209630739142227,
+        "std": 0.231604634108036,
+        "ci95_low": 0.3125700142966591,
+        "ci95_high": 0.5293561335317863
+      },
+      "observer_coefficient_m3_s_pa": {
+        "n": 20,
+        "mean": 1.5000000000000007e-12,
+        "std": 6.215840344804275e-28,
+        "ci95_low": 1.5000000000000005e-12,
+        "ci95_high": 1.5000000000000009e-12
+      },
+      "observer_detection_delay_s": null,
+      "hold_mode_fraction": {
+        "fine_trim": 0.7064286897127952,
+        "lock": 0.2916737760205844,
+        "accumulator": 0.0018975342666204594
+      },
+      "rows": [
+        {
+          "seed": 2026,
+          "hold_started": true,
+          "hold_drop_mm": 0.025597528864940156,
+          "rmse_mm": 9.235609957702149,
+          "terminal_error_mm": 4.018842075745043,
+          "command_energy": 0.4243504092246647,
+          "accumulator_valve_energy": 0.4015836029037169,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126557,
+            "lock": 52161,
+            "accumulator": 317
+          }
+        },
+        {
+          "seed": 2027,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.225680073637635,
+          "terminal_error_mm": 4.481174472419469,
+          "command_energy": 0.42368866599654725,
+          "accumulator_valve_energy": 0.22596371801055049,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126545,
+            "lock": 52267,
+            "accumulator": 236
+          }
+        },
+        {
+          "seed": 2028,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.225777983341864,
+          "terminal_error_mm": 4.3988298843438685,
+          "command_energy": 0.42326078049271176,
+          "accumulator_valve_energy": 0.19493377532607747,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126584,
+            "lock": 52177,
+            "accumulator": 291
+          }
+        },
+        {
+          "seed": 2029,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.238192306153799,
+          "terminal_error_mm": 4.413253358036995,
+          "command_energy": 0.4196055873533211,
+          "accumulator_valve_energy": 0.3556053957716335,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126492,
+            "lock": 52193,
+            "accumulator": 361
+          }
+        },
+        {
+          "seed": 2030,
+          "hold_started": true,
+          "hold_drop_mm": 0.07389515024197602,
+          "rmse_mm": 9.234696323241694,
+          "terminal_error_mm": 4.523068712455281,
+          "command_energy": 0.41738210120166835,
+          "accumulator_valve_energy": 0.4126306953796883,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126468,
+            "lock": 52232,
+            "accumulator": 344
+          }
+        },
+        {
+          "seed": 2031,
+          "hold_started": true,
+          "hold_drop_mm": 0.0604379798071486,
+          "rmse_mm": 9.231895712395701,
+          "terminal_error_mm": 4.671923262622779,
+          "command_energy": 0.4234985162331841,
+          "accumulator_valve_energy": 0.2445737521681094,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126466,
+            "lock": 52342,
+            "accumulator": 242
+          }
+        },
+        {
+          "seed": 2032,
+          "hold_started": true,
+          "hold_drop_mm": 0.017242127996308643,
+          "rmse_mm": 9.239635735094812,
+          "terminal_error_mm": 4.158382969325358,
+          "command_energy": 0.4235769142439935,
+          "accumulator_valve_energy": 0.6072191318315432,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126531,
+            "lock": 52136,
+            "accumulator": 389
+          }
+        },
+        {
+          "seed": 2033,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.241093553975587,
+          "terminal_error_mm": 4.494957345786144,
+          "command_energy": 0.42462216682802445,
+          "accumulator_valve_energy": 0.4251498005785303,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126366,
+            "lock": 52372,
+            "accumulator": 320
+          }
+        },
+        {
+          "seed": 2034,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.239758112170929,
+          "terminal_error_mm": 4.452770087378433,
+          "command_energy": 0.4244540285891506,
+          "accumulator_valve_energy": 0.7892294288694846,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126394,
+            "lock": 52124,
+            "accumulator": 522
+          }
+        },
+        {
+          "seed": 2035,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.239245290504407,
+          "terminal_error_mm": 4.640406617662518,
+          "command_energy": 0.4257455334537014,
+          "accumulator_valve_energy": 0.47888006074944417,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126419,
+            "lock": 52301,
+            "accumulator": 326
+          }
+        },
+        {
+          "seed": 2036,
+          "hold_started": true,
+          "hold_drop_mm": 0.04778845635367013,
+          "rmse_mm": 9.23393938991919,
+          "terminal_error_mm": 4.420884223314547,
+          "command_energy": 0.421451045868517,
+          "accumulator_valve_energy": 0.2972570674669254,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126694,
+            "lock": 52038,
+            "accumulator": 312
+          }
+        },
+        {
+          "seed": 2037,
+          "hold_started": true,
+          "hold_drop_mm": 0.01301506468492919,
+          "rmse_mm": 9.23750571996569,
+          "terminal_error_mm": 3.9571533246883783,
+          "command_energy": 0.42110180345373965,
+          "accumulator_valve_energy": 0.3444528522234137,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126564,
+            "lock": 52088,
+            "accumulator": 410
+          }
+        },
+        {
+          "seed": 2038,
+          "hold_started": true,
+          "hold_drop_mm": 0.008922537153510657,
+          "rmse_mm": 9.234663974883835,
+          "terminal_error_mm": 4.664031694388782,
+          "command_energy": 0.42247945683986504,
+          "accumulator_valve_energy": 0.24503622924858495,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126471,
+            "lock": 52343,
+            "accumulator": 258
+          }
+        },
+        {
+          "seed": 2039,
+          "hold_started": true,
+          "hold_drop_mm": 0.018573451918635353,
+          "rmse_mm": 9.236098838238346,
+          "terminal_error_mm": 4.37591156095557,
+          "command_energy": 0.4249360922576825,
+          "accumulator_valve_energy": 0.5979562169477555,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126284,
+            "lock": 52312,
+            "accumulator": 426
+          }
+        },
+        {
+          "seed": 2040,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.246985762201845,
+          "terminal_error_mm": 3.9731435596785936,
+          "command_energy": 0.42190297453745934,
+          "accumulator_valve_energy": 0.9834101630751921,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126386,
+            "lock": 52143,
+            "accumulator": 501
+          }
+        },
+        {
+          "seed": 2041,
+          "hold_started": true,
+          "hold_drop_mm": 0.05584524805418711,
+          "rmse_mm": 9.23725014319313,
+          "terminal_error_mm": 4.369373983558633,
+          "command_energy": 0.42222655459374275,
+          "accumulator_valve_energy": 0.1267077447595437,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126570,
+            "lock": 52317,
+            "accumulator": 191
+          }
+        },
+        {
+          "seed": 2042,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.228673713960761,
+          "terminal_error_mm": 4.374649779974482,
+          "command_energy": 0.4250060697365889,
+          "accumulator_valve_energy": 0.2143023708692714,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126563,
+            "lock": 52233,
+            "accumulator": 244
+          }
+        },
+        {
+          "seed": 2043,
+          "hold_started": true,
+          "hold_drop_mm": 0.07311381035413067,
+          "rmse_mm": 9.227248460005148,
+          "terminal_error_mm": 4.444347912657964,
+          "command_energy": 0.41663801335626005,
+          "accumulator_valve_energy": 0.1984784105988221,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126608,
+            "lock": 52217,
+            "accumulator": 216
+          }
+        },
+        {
+          "seed": 2044,
+          "hold_started": true,
+          "hold_drop_mm": 0.0,
+          "rmse_mm": 9.244155817869819,
+          "terminal_error_mm": 4.402162049930158,
+          "command_energy": 0.42715024152528835,
+          "accumulator_valve_energy": 0.7925558440455436,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126409,
+            "lock": 52124,
+            "accumulator": 544
+          }
+        },
+        {
+          "seed": 2045,
+          "hold_started": true,
+          "hold_drop_mm": 0.04270374045212133,
+          "rmse_mm": 9.239884709104759,
+          "terminal_error_mm": 3.9357188963205503,
+          "command_energy": 0.4221037754674689,
+          "accumulator_valve_energy": 0.48333521746062263,
+          "observer_coefficient_m3_s_pa": 1.5e-12,
+          "observer_detection_delay_s": null,
+          "observer_updates": 0,
+          "hold_mode_counts": {
+            "fine_trim": 126324,
+            "lock": 52353,
+            "accumulator": 345
+          }
+        }
+      ]
+    }
+  }
+}

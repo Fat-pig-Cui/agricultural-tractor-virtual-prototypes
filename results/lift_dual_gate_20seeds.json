@@ -1,0 +1,1028 @@
+[
+  {
+    "controller": "hybrid",
+    "leakage_scale": 1.0,
+    "velocity_gate_mode": "filtered",
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.024010824285999877,
+    "max_hold_drop_mm": 0.07869128191712038,
+    "mean_rmse_mm": 9.223192200794802,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_drop_mm": 0.027219242491716145,
+        "rmse_mm": 9.234106110522166,
+        "max_velocity_mps": 0.11427698068199504,
+        "hold_start_time_s": 8.65
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.213125091037584,
+        "max_velocity_mps": 0.10510108000769126,
+        "hold_start_time_s": 8.52
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.21504887375828,
+        "max_velocity_mps": 0.12434182989722758,
+        "hold_start_time_s": 8.48
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.225165698849981,
+        "max_velocity_mps": 0.12107017414005472,
+        "hold_start_time_s": 8.540000000000001
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_drop_mm": 0.07869128191712038,
+        "rmse_mm": 9.224474193589318,
+        "max_velocity_mps": 0.11185991895061863,
+        "hold_start_time_s": 8.56
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_drop_mm": 0.06983411874844636,
+        "rmse_mm": 9.220082300991669,
+        "max_velocity_mps": 0.12001341810461363,
+        "hold_start_time_s": 8.5
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_drop_mm": 0.018843153448411254,
+        "rmse_mm": 9.222489976061318,
+        "max_velocity_mps": 0.12673906094107185,
+        "hold_start_time_s": 8.44
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.226155311410322,
+        "max_velocity_mps": 0.12467187835670812,
+        "hold_start_time_s": 8.51
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.224215206389944,
+        "max_velocity_mps": 0.13355892815037207,
+        "hold_start_time_s": 8.6
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.222622816215855,
+        "max_velocity_mps": 0.12383911955242853,
+        "hold_start_time_s": 8.540000000000001
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_drop_mm": 0.049060752999874335,
+        "rmse_mm": 9.220962113867625,
+        "max_velocity_mps": 0.1368767237262198,
+        "hold_start_time_s": 8.56
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_drop_mm": 0.013655811932133943,
+        "rmse_mm": 9.224888729366322,
+        "max_velocity_mps": 0.14781955617234005,
+        "hold_start_time_s": 8.38
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_drop_mm": 0.010542830619075794,
+        "rmse_mm": 9.220797528912012,
+        "max_velocity_mps": 0.13353252742085642,
+        "hold_start_time_s": 8.28
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_drop_mm": 0.020172908208826446,
+        "rmse_mm": 9.221898764568834,
+        "max_velocity_mps": 0.1266479827839344,
+        "hold_start_time_s": 8.78
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.23437053333086,
+        "max_velocity_mps": 0.12571434196145853,
+        "hold_start_time_s": 8.700000000000001
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_drop_mm": 0.062202423067314605,
+        "rmse_mm": 9.224868135949233,
+        "max_velocity_mps": 0.1017651557750046,
+        "hold_start_time_s": 8.22
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.216452121727476,
+        "max_velocity_mps": 0.13191763850267407,
+        "hold_start_time_s": 8.6
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_drop_mm": 0.07790519937928009,
+        "rmse_mm": 9.216316398129308,
+        "max_velocity_mps": 0.13276242712530503,
+        "hold_start_time_s": 8.59
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_drop_mm": 0.0,
+        "rmse_mm": 9.2260066250946,
+        "max_velocity_mps": 0.13493527945901368,
+        "hold_start_time_s": 8.23
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_drop_mm": 0.05208876290779818,
+        "rmse_mm": 9.22979748612331,
+        "max_velocity_mps": 0.10208415132395081,
+        "hold_start_time_s": 8.78
+      }
+    ]
+  },
+  {
+    "controller": "hybrid",
+    "leakage_scale": 1.0,
+    "velocity_gate_mode": "raw",
+    "hold_trigger_rate": 0.0,
+    "mean_hold_drop_mm": null,
+    "max_hold_drop_mm": 0.0,
+    "mean_rmse_mm": 8.635364542628574,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.633715971001918,
+        "max_velocity_mps": 0.11427698068199504,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2027,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.627670704074914,
+        "max_velocity_mps": 0.10510108000769126,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2028,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.6287385959519,
+        "max_velocity_mps": 0.12434182989722758,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2029,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.640571204049387,
+        "max_velocity_mps": 0.12107017414005472,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2030,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.632086634289143,
+        "max_velocity_mps": 0.11185991895061863,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2031,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634370692330972,
+        "max_velocity_mps": 0.12001341810461363,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2032,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63669995527497,
+        "max_velocity_mps": 0.12673906094107185,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2033,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64162581357115,
+        "max_velocity_mps": 0.12467187835670812,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2034,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634306929994544,
+        "max_velocity_mps": 0.13355892815037207,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2035,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.637164639329683,
+        "max_velocity_mps": 0.12383911955242853,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2036,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.635754459248645,
+        "max_velocity_mps": 0.1368767237262198,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2037,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.637275265732372,
+        "max_velocity_mps": 0.14781955617234005,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2038,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634615135991874,
+        "max_velocity_mps": 0.13353252742085642,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2039,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.632285269972662,
+        "max_velocity_mps": 0.1266479827839344,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2040,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.642542502721906,
+        "max_velocity_mps": 0.12571434196145853,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2041,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64047976743188,
+        "max_velocity_mps": 0.1017651557750046,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2042,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63198057632791,
+        "max_velocity_mps": 0.13191763850267407,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2043,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.627603182218376,
+        "max_velocity_mps": 0.13276242712530503,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2044,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63920560365729,
+        "max_velocity_mps": 0.13493527945901368,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2045,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.638597949399948,
+        "max_velocity_mps": 0.10208415132395081,
+        "hold_start_time_s": null
+      }
+    ]
+  },
+  {
+    "controller": "hybrid",
+    "leakage_scale": 1.0,
+    "velocity_gate_mode": "dual",
+    "hold_trigger_rate": 0.0,
+    "mean_hold_drop_mm": null,
+    "max_hold_drop_mm": 0.0,
+    "mean_rmse_mm": 8.635364542628574,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.633715971001918,
+        "max_velocity_mps": 0.11427698068199504,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2027,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.627670704074914,
+        "max_velocity_mps": 0.10510108000769126,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2028,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.6287385959519,
+        "max_velocity_mps": 0.12434182989722758,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2029,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.640571204049387,
+        "max_velocity_mps": 0.12107017414005472,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2030,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.632086634289143,
+        "max_velocity_mps": 0.11185991895061863,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2031,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634370692330972,
+        "max_velocity_mps": 0.12001341810461363,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2032,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63669995527497,
+        "max_velocity_mps": 0.12673906094107185,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2033,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64162581357115,
+        "max_velocity_mps": 0.12467187835670812,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2034,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634306929994544,
+        "max_velocity_mps": 0.13355892815037207,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2035,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.637164639329683,
+        "max_velocity_mps": 0.12383911955242853,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2036,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.635754459248645,
+        "max_velocity_mps": 0.1368767237262198,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2037,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.637275265732372,
+        "max_velocity_mps": 0.14781955617234005,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2038,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634615135991874,
+        "max_velocity_mps": 0.13353252742085642,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2039,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.632285269972662,
+        "max_velocity_mps": 0.1266479827839344,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2040,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.642542502721906,
+        "max_velocity_mps": 0.12571434196145853,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2041,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64047976743188,
+        "max_velocity_mps": 0.1017651557750046,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2042,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63198057632791,
+        "max_velocity_mps": 0.13191763850267407,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2043,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.627603182218376,
+        "max_velocity_mps": 0.13276242712530503,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2044,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63920560365729,
+        "max_velocity_mps": 0.13493527945901368,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2045,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.638597949399948,
+        "max_velocity_mps": 0.10208415132395081,
+        "hold_start_time_s": null
+      }
+    ]
+  },
+  {
+    "controller": "hybrid",
+    "leakage_scale": 10.0,
+    "velocity_gate_mode": "filtered",
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.43989566251328444,
+    "max_hold_drop_mm": 0.8147358900580381,
+    "mean_rmse_mm": 8.590640532930141,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_drop_mm": 0.5499688579305162,
+        "rmse_mm": 8.586387399156344,
+        "max_velocity_mps": 0.1129789232542042,
+        "hold_start_time_s": 8.65
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_drop_mm": 0.32167926590453977,
+        "rmse_mm": 8.585441944461287,
+        "max_velocity_mps": 0.12224785156157215,
+        "hold_start_time_s": 8.5
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_drop_mm": 0.16153415242115,
+        "rmse_mm": 8.590754902283324,
+        "max_velocity_mps": 0.11644908884877746,
+        "hold_start_time_s": 8.48
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_drop_mm": 0.8147358900580381,
+        "rmse_mm": 8.590850245234464,
+        "max_velocity_mps": 0.11556830205607904,
+        "hold_start_time_s": 8.39
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_drop_mm": 0.3952575275037451,
+        "rmse_mm": 8.585878342122248,
+        "max_velocity_mps": 0.11249878309432744,
+        "hold_start_time_s": 8.32
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_drop_mm": 0.6893921039750617,
+        "rmse_mm": 8.594652052849618,
+        "max_velocity_mps": 0.10547853451056718,
+        "hold_start_time_s": 8.34
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_drop_mm": 0.5775684270573067,
+        "rmse_mm": 8.592462562088887,
+        "max_velocity_mps": 0.13702080971067362,
+        "hold_start_time_s": 8.46
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_drop_mm": 0.30658702715291586,
+        "rmse_mm": 8.596561825450005,
+        "max_velocity_mps": 0.1146408540111558,
+        "hold_start_time_s": 8.43
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_drop_mm": 0.13531698111146628,
+        "rmse_mm": 8.593320313040886,
+        "max_velocity_mps": 0.14161258698532858,
+        "hold_start_time_s": 8.71
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_drop_mm": 0.28477897469914026,
+        "rmse_mm": 8.595231245833926,
+        "max_velocity_mps": 0.10902607770273462,
+        "hold_start_time_s": 8.540000000000001
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_drop_mm": 0.34736648172351003,
+        "rmse_mm": 8.586175334635055,
+        "max_velocity_mps": 0.14043372409006308,
+        "hold_start_time_s": 8.4
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_drop_mm": 0.44848392851015717,
+        "rmse_mm": 8.589414631509687,
+        "max_velocity_mps": 0.14972607130288262,
+        "hold_start_time_s": 8.52
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_drop_mm": 0.5410515118047798,
+        "rmse_mm": 8.596393229700166,
+        "max_velocity_mps": 0.13331582157442032,
+        "hold_start_time_s": 8.44
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_drop_mm": 0.5680767188609992,
+        "rmse_mm": 8.580887921646175,
+        "max_velocity_mps": 0.12367869993904626,
+        "hold_start_time_s": 8.8
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_drop_mm": 0.36528242908195896,
+        "rmse_mm": 8.590937825299775,
+        "max_velocity_mps": 0.1241576225173354,
+        "hold_start_time_s": 8.71
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_drop_mm": 0.603499551023956,
+        "rmse_mm": 8.5940460836421,
+        "max_velocity_mps": 0.11321707460680222,
+        "hold_start_time_s": 8.59
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_drop_mm": 0.500065265177041,
+        "rmse_mm": 8.590181587667319,
+        "max_velocity_mps": 0.12968636115160642,
+        "hold_start_time_s": 8.65
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_drop_mm": 0.36800945926790396,
+        "rmse_mm": 8.582786425190257,
+        "max_velocity_mps": 0.0977673197986859,
+        "hold_start_time_s": 8.47
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_drop_mm": 0.41231957279902476,
+        "rmse_mm": 8.596841685876136,
+        "max_velocity_mps": 0.1180542520159666,
+        "hold_start_time_s": 8.27
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_drop_mm": 0.4069391242024767,
+        "rmse_mm": 8.593605100915177,
+        "max_velocity_mps": 0.10353723283514511,
+        "hold_start_time_s": 8.38
+      }
+    ]
+  },
+  {
+    "controller": "hybrid",
+    "leakage_scale": 10.0,
+    "velocity_gate_mode": "raw",
+    "hold_trigger_rate": 0.0,
+    "mean_hold_drop_mm": null,
+    "max_hold_drop_mm": 0.0,
+    "mean_rmse_mm": 8.638204729881119,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634411861056991,
+        "max_velocity_mps": 0.1129789232542042,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2027,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.633694170875728,
+        "max_velocity_mps": 0.12224785156157215,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2028,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63817870535192,
+        "max_velocity_mps": 0.11644908884877746,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2029,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64082427032124,
+        "max_velocity_mps": 0.11556830205607904,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2030,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.631814256038624,
+        "max_velocity_mps": 0.11249878309432744,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2031,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.642412696653285,
+        "max_velocity_mps": 0.10547853451056718,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2032,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.639607154789763,
+        "max_velocity_mps": 0.13702080971067362,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2033,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.645023993235045,
+        "max_velocity_mps": 0.1146408540111558,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2034,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.639733777069289,
+        "max_velocity_mps": 0.14161258698532858,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2035,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64176777293743,
+        "max_velocity_mps": 0.10902607770273462,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2036,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634937500045941,
+        "max_velocity_mps": 0.14043372409006308,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2037,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.635620737326313,
+        "max_velocity_mps": 0.14972607130288262,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2038,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64202857753372,
+        "max_velocity_mps": 0.13331582157442032,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2039,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.628002495483111,
+        "max_velocity_mps": 0.12367869993904626,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2040,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.642009569496874,
+        "max_velocity_mps": 0.1241576225173354,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2041,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.641916975322177,
+        "max_velocity_mps": 0.11321707460680222,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2042,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63891855237483,
+        "max_velocity_mps": 0.12968636115160642,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2043,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.628902589069618,
+        "max_velocity_mps": 0.0977673197986859,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2044,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64332499157781,
+        "max_velocity_mps": 0.1180542520159666,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2045,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64096395106268,
+        "max_velocity_mps": 0.10353723283514511,
+        "hold_start_time_s": null
+      }
+    ]
+  },
+  {
+    "controller": "hybrid",
+    "leakage_scale": 10.0,
+    "velocity_gate_mode": "dual",
+    "hold_trigger_rate": 0.0,
+    "mean_hold_drop_mm": null,
+    "max_hold_drop_mm": 0.0,
+    "mean_rmse_mm": 8.638204729881119,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634411861056991,
+        "max_velocity_mps": 0.1129789232542042,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2027,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.633694170875728,
+        "max_velocity_mps": 0.12224785156157215,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2028,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63817870535192,
+        "max_velocity_mps": 0.11644908884877746,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2029,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64082427032124,
+        "max_velocity_mps": 0.11556830205607904,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2030,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.631814256038624,
+        "max_velocity_mps": 0.11249878309432744,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2031,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.642412696653285,
+        "max_velocity_mps": 0.10547853451056718,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2032,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.639607154789763,
+        "max_velocity_mps": 0.13702080971067362,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2033,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.645023993235045,
+        "max_velocity_mps": 0.1146408540111558,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2034,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.639733777069289,
+        "max_velocity_mps": 0.14161258698532858,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2035,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64176777293743,
+        "max_velocity_mps": 0.10902607770273462,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2036,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.634937500045941,
+        "max_velocity_mps": 0.14043372409006308,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2037,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.635620737326313,
+        "max_velocity_mps": 0.14972607130288262,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2038,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64202857753372,
+        "max_velocity_mps": 0.13331582157442032,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2039,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.628002495483111,
+        "max_velocity_mps": 0.12367869993904626,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2040,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.642009569496874,
+        "max_velocity_mps": 0.1241576225173354,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2041,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.641916975322177,
+        "max_velocity_mps": 0.11321707460680222,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2042,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.63891855237483,
+        "max_velocity_mps": 0.12968636115160642,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2043,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.628902589069618,
+        "max_velocity_mps": 0.0977673197986859,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2044,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64332499157781,
+        "max_velocity_mps": 0.1180542520159666,
+        "hold_start_time_s": null
+      },
+      {
+        "seed": 2045,
+        "hold_started": false,
+        "hold_drop_mm": null,
+        "rmse_mm": 8.64096395106268,
+        "max_velocity_mps": 0.10353723283514511,
+        "hold_start_time_s": null
+      }
+    ]
+  }
+]

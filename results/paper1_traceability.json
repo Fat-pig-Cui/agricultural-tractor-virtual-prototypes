@@ -1,0 +1,120 @@
+{
+  "assumption_register_sha256": "c3d273261f6fbb34147a228ade34bc40795ad1ba66b37c55965c3316a1737209",
+  "execution_defaults": {
+    "controller_defaults": {
+      "anti_windup_pid": {
+        "integral": 0.0,
+        "kd": 0.08,
+        "ki": 1.2,
+        "kp": 9.0,
+        "previous": 0.0
+      },
+      "boundary_layer_smc": {
+        "gain": 16.0,
+        "layer_m": 0.004,
+        "velocity_gain": 1.1
+      },
+      "di_smac_kernel": {
+        "boundary_m": 0.003,
+        "gain": 14.0
+      },
+      "pressure_observer": {
+        "confidence": 0.0,
+        "hold_leakage_retention": 0.08,
+        "hold_pressure_rate_s": 4.0,
+        "leakage_estimate": 1.5e-12,
+        "nominal_leakage_m3_s_pa": 1.5e-12,
+        "residual_rms": 0.0,
+        "smoothing": 0.08,
+        "temperature_leakage_gain_per_c": 0.018,
+        "tracking_pressure_rate_s": 18.0,
+        "update_count": 0,
+        "valve_pressure_gain_pa": 8000000.0
+      }
+    },
+    "experiment_config": {
+      "accumulator_closed_loop": true,
+      "accumulator_enabled": true,
+      "accumulator_flow_scale": 1.0,
+      "accumulator_pressure_deficit_threshold_pa": 80000.0,
+      "duration_s": 1800.0,
+      "filtered_velocity_gate_enabled": true,
+      "hold_enabled": true,
+      "hold_supervisor_hysteresis": 0.15,
+      "leakage_observer_enabled": true,
+      "leakage_scale": 1.0,
+      "leakage_step_multiplier": 1.0,
+      "leakage_step_time_s": null,
+      "load_after_step_n": 7000.0,
+      "load_feedforward_enabled": true,
+      "lock_valve_leakage_scale": 0.0,
+      "mass_scale": 1.0,
+      "noise_scale": 1.0,
+      "pressure_feedforward_enabled": true,
+      "reference_m": 0.35,
+      "repeats": 20,
+      "stiffness_scale": 1.0,
+      "temperature_end_c": 40.0,
+      "temperature_start_c": 25.0,
+      "velocity_gate_mode": "filtered",
+      "velocity_gate_tolerance_mps": 0.003,
+      "viscous_scale": 1.0
+    },
+    "hold_supervisor_defaults": {
+      "accumulator_enabled": true,
+      "accumulator_threshold": 8e-06,
+      "hysteresis": 0.15,
+      "initial_mode": "fine_trim",
+      "lock_threshold": 2e-06
+    },
+    "implementation_scope": "The source hashes identify the exact run_definition implementation, including its reference trajectory, hold-entry dwell, and filter literals."
+  },
+  "lift_parameters": {
+    "acc_charge_m3_s": 6e-05,
+    "acc_flow_m3_s_pa": 2e-12,
+    "acc_precharge_pa": 12000000.0,
+    "acc_volume_m3": 0.004,
+    "bulk_modulus_pa": 1200000000.0,
+    "chamber_volume_m3": 0.004,
+    "coulomb_n": 850.0,
+    "cylinder_area_m2": 0.012,
+    "dt_s": 0.01,
+    "hold_leakage_retention": 0.08,
+    "hold_pressure_rate_s": 4.0,
+    "leakage_m3_s_pa": 1.5e-12,
+    "mass_kg": 1200.0,
+    "minimum_common_pressure_pa": 1000000.0,
+    "relief_pressure_pa": 21000000.0,
+    "sensor_std_m": 0.0015,
+    "stiffness_n_m": 18000.0,
+    "stroke_m": 0.85,
+    "temperature_leakage_gain_per_c": 0.018,
+    "tracking_pressure_rate_s": 18.0,
+    "valve_pressure_gain_pa": 8000000.0,
+    "viscous_n_s_m": 2200.0
+  },
+  "manifest_sha256": "a13ef59ba18071290f71088934352b6b702006f247a76c4627bf65a0f447fb22",
+  "source_class_counts": {
+    "measurement_setting": 1,
+    "numerical_setting": 1,
+    "reduced_order_coefficient": 6,
+    "virtual_hydraulic_input": 9,
+    "virtual_mechanical_input": 5
+  },
+  "traceability_version": "paper1-v1.0",
+  "tracked_file_sha256": {
+    "MDPI_template_ACS/paper1_hitch_control_mdpi.tex": "e9c05c4a6e92270dd52f9fbcfbaa85876af9fc69464ae14476f0e20d4ff7108b",
+    "code/config/parameters.py": "979fce5d26b5ddec130d948190701772cae264466c0974a6c49f3fb880226643",
+    "code/lift_control/controllers.py": "3d8f75e193650f96b08d8cb0dbacfe6dcd8d66d5f5cb6e2afb74d12eda9939b7",
+    "code/lift_control/experiments.py": "8f910751c25a32d351bab325b3ca1ad9108fbe9b955a70063d488767e59cd69a",
+    "code/lift_control/hydraulic_model.py": "e00d1bc67f0de0d2c73f387da24992fa736e725833393f24d0c3a3e61ad887d6",
+    "papers/submission/paper1_assumption_register.md": "c3d273261f6fbb34147a228ade34bc40795ad1ba66b37c55965c3316a1737209",
+    "papers/submission/paper1_parameter_manifest.csv": "a13ef59ba18071290f71088934352b6b702006f247a76c4627bf65a0f447fb22",
+    "tools/export_paper1_traceability.py": "1e16685dfaee3f45b516a8d3e1a22062f5e90bd206425e62dd0c966b3141fec9"
+  },
+  "validation": {
+    "all_lift_parameters_covered": true,
+    "historical_unused_fields_absent": true,
+    "manifest_values_match_code": true
+  }
+}

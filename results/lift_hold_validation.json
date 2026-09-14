@@ -1,0 +1,1178 @@
+{
+  "filtered_gate_no_lock_leak": {
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.021856754794077893,
+    "max_hold_drop_mm": 0.07389515024197602,
+    "mean_settling_error_mm": 4.26695737365192,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.025597528864940156,
+        "settling_error_mm": 4.3471150972087536,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.548663777566464,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.9310686792556337,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.113107562391194,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.07389515024197602,
+        "settling_error_mm": 4.7083119181722255,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.0604379798071486,
+        "settling_error_mm": 4.0061015802010385,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.017242127996308643,
+        "settling_error_mm": 3.803508977925474,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.807837321215368,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.386097509825271,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.3399893522398925,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.04778845635367013,
+        "settling_error_mm": 4.128305543348699,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.01301506468492919,
+        "settling_error_mm": 4.713654446726389,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.008922537153510657,
+        "settling_error_mm": 3.878544799641115,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.018573451918635353,
+        "settling_error_mm": 4.188473450872476,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.451010849944481,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.05584524805418711,
+        "settling_error_mm": 4.574189592374934,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.574483381476979,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.07311381035413067,
+        "settling_error_mm": 4.525123614097792,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.3097885735136625,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.04270374045212133,
+        "settling_error_mm": 4.003771445040549,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  },
+  "raw_gate_no_lock_leak": {
+    "hold_trigger_rate": 0.0,
+    "mean_hold_drop_mm": 0.0,
+    "max_hold_drop_mm": 0.0,
+    "mean_settling_error_mm": 2.6497623528929233,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.5750678847192288,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.7134264288398158,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.704388348285791,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.5750870792692337,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.5647719039838535,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.7210305759108877,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.548679483177718,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.7866369748998365,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.5475120559539377,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.626371920140813,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.5374652144629084,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.11238214412507,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.421165702282013,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.6903454728131604,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.5109803232198358,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.425459377729977,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.668740220044874,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.583603164648174,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.897986060225455,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": false,
+        "hold_start_time_s": null,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 2.78414672312588,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  },
+  "filtered_gate_lock_leak_0.5x": {
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.022933787050530285,
+    "max_hold_drop_mm": 0.07629321368657349,
+    "mean_settling_error_mm": 4.163623088770293,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.026408385678300395,
+        "settling_error_mm": 4.053498098040064,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.281625120793054,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.8871241684060864,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.23075533793077,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.07629321368657349,
+        "settling_error_mm": 4.0636013126137405,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.06513602980579014,
+        "settling_error_mm": 4.006018870075623,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.01804264072235995,
+        "settling_error_mm": 4.013635925575187,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.031138959831038,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.591149672802997,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.622687570733475,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.04842460444315355,
+        "settling_error_mm": 4.523464856762582,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.013335438284078904,
+        "settling_error_mm": 4.0100348211341,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.00973268388626547,
+        "settling_error_mm": 3.7796653651361867,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.0193731800637309,
+        "settling_error_mm": 4.378817901877552,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.462972023971778,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.059023829723892085,
+        "settling_error_mm": 4.139193507649297,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.20822081166955,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.07550950247631194,
+        "settling_error_mm": 3.9239329059150285,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.222788533285615,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.04739623224014888,
+        "settling_error_mm": 3.8421360112021463,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  },
+  "filtered_gate_lock_leak_1x": {
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.024010824285999877,
+    "max_hold_drop_mm": 0.07869128191712038,
+    "mean_settling_error_mm": 4.1487220501914255,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.027219242491716145,
+        "settling_error_mm": 4.397947249444645,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.046913570085575,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.064811868650542,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.536557614028991,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.07869128191712038,
+        "settling_error_mm": 4.506031894009999,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.06983411874844636,
+        "settling_error_mm": 4.017574061935758,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.018843153448411254,
+        "settling_error_mm": 4.197390657483979,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.15002279683857,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.912437490513676,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.835868315459401,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.049060752999874335,
+        "settling_error_mm": 3.9772226832743285,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.013655811932133943,
+        "settling_error_mm": 4.034107811062782,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.010542830619075794,
+        "settling_error_mm": 4.219141822334905,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.020172908208826446,
+        "settling_error_mm": 4.0211985587083054,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.132420233319722,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.062202423067314605,
+        "settling_error_mm": 4.203937017849658,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.152065102495217,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.07790519937928009,
+        "settling_error_mm": 3.984839211043756,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.10096168652363,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.05208876290779818,
+        "settling_error_mm": 4.482991358765065,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  },
+  "filtered_gate_lock_leak_2x": {
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.026304926394923878,
+    "max_hold_drop_mm": 0.08348743273561832,
+    "mean_settling_error_mm": 4.064520298617235,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.028840956118492134,
+        "settling_error_mm": 4.063938694037706,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.075854975870097,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.082946043514058,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.185797017461468,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.08348743273561832,
+        "settling_error_mm": 4.1592042445186,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.07923041346646897,
+        "settling_error_mm": 4.040450854251143,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.020444178900458354,
+        "settling_error_mm": 4.002527002161749,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.099655378804301,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.091790521024318,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.9708620781943593,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.05033305151541656,
+        "settling_error_mm": 4.052000493170505,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.014296559374848972,
+        "settling_error_mm": 3.9456242372316597,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.01216312408458542,
+        "settling_error_mm": 4.1377898003684415,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.021772364498962027,
+        "settling_error_mm": 3.9709782639107405,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.990774359958038,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.06855964477564536,
+        "settling_error_mm": 4.016536303242058,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0028002540177207713,
+        "settling_error_mm": 4.01743030003987,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.08269660752746599,
+        "settling_error_mm": 4.224718647136916,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 4.144277131591934,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.061473940882794675,
+        "settling_error_mm": 4.017249625856756,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  },
+  "filtered_gate_lock_leak_5x": {
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.03751738933806259,
+    "max_hold_drop_mm": 0.12643597977268772,
+    "mean_settling_error_mm": 3.8448110088384326,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.0337060969988201,
+        "settling_error_mm": 3.776935258441916,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.0013562111270126742,
+        "settling_error_mm": 3.7734312102954415,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.831726912186084,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.948036398787713,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.12471770454081099,
+        "settling_error_mm": 3.8779229575887086,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.12643597977268772,
+        "settling_error_mm": 3.7819824910803046,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.025247255256710677,
+        "settling_error_mm": 3.9541591815320243,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.912083169570868,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.8489711974556418,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.7432248029527493,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.0541499582783489,
+        "settling_error_mm": 3.8315466012959765,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.016218802876222238,
+        "settling_error_mm": 3.8218318519147587,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.01702400448122532,
+        "settling_error_mm": 3.8994540067014416,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.026570733369535304,
+        "settling_error_mm": 3.9368542331851275,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.004675174392010373,
+        "settling_error_mm": 3.721243312490019,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.10196091971109711,
+        "settling_error_mm": 3.89813174836362,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.02662929076857612,
+        "settling_error_mm": 3.918454176807973,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.10202524725300144,
+        "settling_error_mm": 3.782186011541455,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.8424040903872747,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.08963040793519284,
+        "settling_error_mm": 3.795640564189573,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  },
+  "filtered_gate_lock_leak_10x": {
+    "hold_trigger_rate": 1.0,
+    "mean_hold_drop_mm": 0.08709545967502952,
+    "max_hold_drop_mm": 0.24208274033465926,
+    "mean_settling_error_mm": 3.3561077607458607,
+    "rows": [
+      {
+        "seed": 2026,
+        "hold_started": true,
+        "hold_start_time_s": 8.65,
+        "hold_drop_mm": 0.08846735541012674,
+        "settling_error_mm": 3.366245338296714,
+        "max_velocity_mps": 0.11427698068199504
+      },
+      {
+        "seed": 2027,
+        "hold_started": true,
+        "hold_start_time_s": 8.52,
+        "hold_drop_mm": 0.017720414201616297,
+        "settling_error_mm": 3.3413354376335413,
+        "max_velocity_mps": 0.10510108000769126
+      },
+      {
+        "seed": 2028,
+        "hold_started": true,
+        "hold_start_time_s": 8.48,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.4107530195131575,
+        "max_velocity_mps": 0.12434182989722758
+      },
+      {
+        "seed": 2029,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.4094081558176392,
+        "max_velocity_mps": 0.12107017414005472
+      },
+      {
+        "seed": 2030,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.24208274033465926,
+        "settling_error_mm": 3.275866862419985,
+        "max_velocity_mps": 0.11185991895061863
+      },
+      {
+        "seed": 2031,
+        "hold_started": true,
+        "hold_start_time_s": 8.5,
+        "hold_drop_mm": 0.22606619323572996,
+        "settling_error_mm": 3.4003580410762457,
+        "max_velocity_mps": 0.12001341810461363
+      },
+      {
+        "seed": 2032,
+        "hold_started": true,
+        "hold_start_time_s": 8.44,
+        "hold_drop_mm": 0.05770662111004299,
+        "settling_error_mm": 3.566552009674262,
+        "max_velocity_mps": 0.12673906094107185
+      },
+      {
+        "seed": 2033,
+        "hold_started": true,
+        "hold_start_time_s": 8.51,
+        "hold_drop_mm": 0.005877039248147753,
+        "settling_error_mm": 3.216488907062831,
+        "max_velocity_mps": 0.12467187835670812
+      },
+      {
+        "seed": 2034,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.4061432898072064,
+        "max_velocity_mps": 0.13355892815037207
+      },
+      {
+        "seed": 2035,
+        "hold_started": true,
+        "hold_start_time_s": 8.540000000000001,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.3285523989235455,
+        "max_velocity_mps": 0.12383911955242853
+      },
+      {
+        "seed": 2036,
+        "hold_started": true,
+        "hold_start_time_s": 8.56,
+        "hold_drop_mm": 0.060511506937255266,
+        "settling_error_mm": 3.49394729940089,
+        "max_velocity_mps": 0.1368767237262198
+      },
+      {
+        "seed": 2037,
+        "hold_started": true,
+        "hold_start_time_s": 8.38,
+        "hold_drop_mm": 0.019422545955549708,
+        "settling_error_mm": 3.260966442918123,
+        "max_velocity_mps": 0.14781955617234005
+      },
+      {
+        "seed": 2038,
+        "hold_started": true,
+        "hold_start_time_s": 8.28,
+        "hold_drop_mm": 0.03526230279549125,
+        "settling_error_mm": 3.511110347763191,
+        "max_velocity_mps": 0.13353252742085642
+      },
+      {
+        "seed": 2039,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.12659129519471124,
+        "settling_error_mm": 3.1499561062633408,
+        "max_velocity_mps": 0.1266479827839344
+      },
+      {
+        "seed": 2040,
+        "hold_started": true,
+        "hold_start_time_s": 8.700000000000001,
+        "hold_drop_mm": 0.12768950481367725,
+        "settling_error_mm": 3.2258392568786376,
+        "max_velocity_mps": 0.12571434196145853
+      },
+      {
+        "seed": 2041,
+        "hold_started": true,
+        "hold_start_time_s": 8.22,
+        "hold_drop_mm": 0.18228770265354965,
+        "settling_error_mm": 3.4241627990864165,
+        "max_velocity_mps": 0.1017651557750046
+      },
+      {
+        "seed": 2042,
+        "hold_started": true,
+        "hold_start_time_s": 8.6,
+        "hold_drop_mm": 0.2069659377611499,
+        "settling_error_mm": 3.42780921658431,
+        "max_velocity_mps": 0.13191763850267407
+      },
+      {
+        "seed": 2043,
+        "hold_started": true,
+        "hold_start_time_s": 8.59,
+        "hold_drop_mm": 0.14161397475442872,
+        "settling_error_mm": 3.3108301925325323,
+        "max_velocity_mps": 0.13276242712530503
+      },
+      {
+        "seed": 2044,
+        "hold_started": true,
+        "hold_start_time_s": 8.23,
+        "hold_drop_mm": 0.0,
+        "settling_error_mm": 3.375008228174492,
+        "max_velocity_mps": 0.13493527945901368
+      },
+      {
+        "seed": 2045,
+        "hold_started": true,
+        "hold_start_time_s": 8.78,
+        "hold_drop_mm": 0.20364405909445438,
+        "settling_error_mm": 3.220821865090151,
+        "max_velocity_mps": 0.10208415132395081
+      }
+    ]
+  }
+}
