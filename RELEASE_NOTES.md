@@ -1,6 +1,8 @@
-# v1.0.0
+# v1.0.1
 
-Initial archival release supporting two English submissions to AgriEngineering.
+Zenodo-ready archival release supporting two English submissions to
+AgriEngineering. This version adds the public GitHub repository URL to the
+two manuscript data-availability statements.
 
 - Includes the current manuscript sources and compiled PDFs.
 - Includes reproducible virtual-prototype code, parameters, figures, and
