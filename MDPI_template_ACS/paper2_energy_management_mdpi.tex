@@ -17,8 +17,8 @@
 \copyrightyear{2026}
 \Title{Strictly Causal Energy-Management Benchmarking for a Hybrid Agricultural Tractor: Map Sensitivity and Controller Feasibility}
 \newcommand{\orcidauthorA}{0009-0005-1928-6218}
-\Author{Chenyu Cui$^{1}$, Zhenhua Zhu$^{1}$, Lihan Wang$^{1}$, Zaiwang Lu$^{1}$ and Yucheng Zhang$^{1,}$*\orcidA{}}
-\AuthorNames{Chenyu Cui, Zhenhua Zhu, Lihan Wang, Zaiwang Lu and Yucheng Zhang}
+\Author{Chenyu Cui$^{1}$, Peng Wang$^{1}$, Lihan Wang$^{1}$ and Yucheng Zhang$^{1,}$*\orcidA{}}
+\AuthorNames{Chenyu Cui, Peng Wang, Lihan Wang and Yucheng Zhang}
 \address{%
 $^{1}$ \quad Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences, Beijing 100190, China}
 \corres{Correspondence: zhangyucheng@ict.ac.cn}
@@ -203,7 +203,7 @@ This is a theoretical simulation, so target-platform calibration and field measu
 \section{Conclusions}
 This study established a strict causal comparison of map-aware ECMS, a public-phase policy, deterministic MPC, scenario MPC, and terminal-set scenario MPC in a hybrid-tractor virtual prototype. The common protocol requires a $10^{-4}$ terminal-SOC error, the same applied engine dynamics, common electrical and proxy-machine limits, and same-seed OOL pairing. The terminal-set formulation achieved 20/20 zero-external-fallback and zero-terminal-set-violation paths on both declared maps, but increased fuel use by 0.704\% on the literature-shaped map and 3.219\% on the steep-island map. A predeclared horizon--preview map selected history-only $H=8$ on new development seeds; its 20/20 holdout fuel changes remained $-0.168\%$ and $-2.079\%$. Under the same maps, frozen ECMS changed fuel use by $-0.251\%$ and $+10.491\%$, respectively. A separate full-information, $\pm0.01$-SOC oracle reached 21.611\% raw and 19.828\% terminal-energy-normalized reduction only on the declared steep low-load virtual map; it is an approximately 20\% headroom diagnostic, not an online result. Therefore, the evidence supports a conditional recursive-feasibility construction, map-sensitivity audit, a measured horizon--preview boundary, and an explicitly bounded idealized envelope, not a generic MPC advantage or a hardware-performance estimate. The defined virtual component maps are sufficient for this theoretical study; matched measurements are needed only before extending its conclusions to a physical platform.
 
-\authorcontributions{Conceptualization, C.C.; Methodology, C.C.; Software, C.C.; Formal analysis, C.C.; Visualization, C.C.; Writing---original draft preparation, C.C.; Resources, C.C.; Validation, Z.Z.; Investigation, L.W.; Writing---review and editing, Z.L. and Y.Z.; Supervision, Z.L. and Y.Z.; Project administration, Y.Z.; Funding acquisition, Y.Z.}
+\authorcontributions{Conceptualization, C.C.; Methodology, C.C.; Software, C.C.; Formal analysis, C.C.; Visualization, C.C.; Writing---original draft preparation, C.C.; Resources, C.C.; Validation, P.W.; Investigation, L.W.; Writing---review and editing, Y.Z.; Supervision, Y.Z.; Project administration, Y.Z.; Funding acquisition, Y.Z.}
 \funding{This work has received funding from the Science and Technology Project of the Ministry of Agriculture and Rural Affairs of China.}
 \institutionalreview{Not applicable.}
 \informedconsent{Not applicable.}

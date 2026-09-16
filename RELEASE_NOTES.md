@@ -3,7 +3,10 @@
 - Removes the unassigned MDPI-template DOI
   `10.3390/agriengineering1010000` from both submitted-manuscript footers.
 - Rebuilds both manuscript PDFs without changing their submission-mode status
-  text, author metadata, study content, or page counts.
+  text, study content, or page counts.
+- Updates the author roster to Chenyu Cui, Peng Wang, Lihan Wang, and Yucheng
+  Zhang; Peng Wang holds the Validation role in both manuscripts and archive
+  metadata.
 - This local update needs a new archived release before the public Zenodo
   snapshot can represent these exact files; the v1.0.1 DOI below remains the
   previous immutable snapshot.

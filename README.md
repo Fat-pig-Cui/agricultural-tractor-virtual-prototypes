@@ -97,6 +97,6 @@ statements cite both the repository and this version DOI.
 
 ## Authors
 
-Chenyu Cui; Zhenhua Zhu; Lihan Wang; Zaiwang Lu; Yucheng Zhang.
+Chenyu Cui; Peng Wang; Lihan Wang; Yucheng Zhang.
 
 Correspondence: zhangyucheng@ict.ac.cn
