@@ -103,7 +103,7 @@
   },
   "traceability_version": "paper1-v1.0",
   "tracked_file_sha256": {
-    "MDPI_template_ACS/paper1_hitch_control_mdpi.tex": "6de116d7e9d84ae8c3a0a831c69ee4f8c98fbf23b97677b79bd690787c9fb406",
+    "MDPI_template_ACS/paper1_hitch_control_mdpi.tex": "daee5fa3855f0460d5e8d9891de89127b12acd6b44ba55a3d49188c09759b9c3",
     "code/config/parameters.py": "979fce5d26b5ddec130d948190701772cae264466c0974a6c49f3fb880226643",
     "code/lift_control/controllers.py": "3d8f75e193650f96b08d8cb0dbacfe6dcd8d66d5f5cb6e2afb74d12eda9939b7",
     "code/lift_control/experiments.py": "8f910751c25a32d351bab325b3ca1ad9108fbe9b955a70063d488767e59cd69a",

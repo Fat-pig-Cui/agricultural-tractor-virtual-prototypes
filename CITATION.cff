@@ -3,6 +3,7 @@ message: "If you use this archive, please cite the associated manuscript and thi
 type: software
 title: "Reproducibility archive for two agricultural-tractor virtual-prototype studies"
 version: 1.0.1
+doi: 10.5281/zenodo.22754510
 date-released: 2026-09-14
 abstract: "Source code, declared virtual-model inputs, results, figures, and manuscript sources for theoretical studies of electrohydraulic hitch control and hybrid-tractor energy management."
 authors:

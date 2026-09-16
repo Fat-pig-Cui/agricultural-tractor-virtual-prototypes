@@ -102,15 +102,15 @@ def diagram_paper1():
 
     group(ax, 0.35, 3.18, 4.25, 1.30, "Dual-mode controller")
     box(
-        ax, 0.58, 3.92, 3.80, 0.34, "Leakage-flow / pressure-deficit supervisor",
+        ax, 0.58, 3.76, 3.80, 0.30, "Leakage-flow / pressure-deficit supervisor",
         fc="#FFF2CC", ec="#BF9000", fs=7.85,
     )
     box(
-        ax, 0.58, 3.38, 1.68, 0.38, "Tracking mode\n(SMC / DI-SMAC)",
+        ax, 0.58, 3.31, 1.68, 0.34, "Tracking mode\n(SMC / DI-SMAC)",
         fc="#E2EFDA", ec="#538135", fs=7.7,
     )
     box(
-        ax, 2.70, 3.38, 1.68, 0.38, "Hold mode\n(trim / lock / accumulator)",
+        ax, 2.70, 3.31, 1.68, 0.34, "Hold mode\n(trim / lock / accumulator)",
         fc="#E2EFDA", ec="#538135", fs=7.0,
     )
 

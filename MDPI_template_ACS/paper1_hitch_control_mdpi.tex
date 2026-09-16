@@ -1,6 +1,11 @@
 \documentclass[agriengineering,article,submit,moreauthors]{Definitions/mdpi}
 \graphicspath{{../papers/figures/}}
 \setlength{\headheight}{20pt}
+% Suppress the MDPI template's unassigned, metadata-derived DOI in submit mode.
+\AtBeginDocument{%
+  \rfoot{}%
+  \fancypagestyle{plain}{\rfoot{}}%
+}
 \firstpage{1}
 \makeatletter
 \setcounter{page}{\@firstpage}
@@ -208,7 +213,7 @@ This study presents a reproducible dual-mode hitch-control virtual prototype tha
 \funding{This work has received funding from the Science and Technology Project of the Ministry of Agriculture and Rural Affairs of China.}
 \institutionalreview{Not applicable.}
 \informedconsent{Not applicable.}
-\dataavailability{The virtual-prototype source code, reproduction scripts, machine-readable parameter manifest, assumption register, traceability exporter, and JSON outputs supporting these results are publicly available at \url{https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes}. The Zenodo version DOI for the archival release will be added before publication.}
+\dataavailability{The virtual-prototype source code, reproduction scripts, machine-readable parameter manifest, assumption register, traceability exporter, and JSON outputs supporting these results are publicly available at \url{https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes}. The immutable Zenodo archival release is available at \url{https://doi.org/10.5281/zenodo.22754510}.}
 \acknowledgments{During preparation of this manuscript, the authors used OpenAI Codex for English translation, language editing, and development of plotting scripts. The authors must review and edit all output and take full responsibility for the content before submission.}
 \conflictsofinterest{The authors declare no conflicts of interest.}
 

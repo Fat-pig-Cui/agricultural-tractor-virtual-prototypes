@@ -90,11 +90,10 @@ fuel-economy estimate.
 ## Citation and archival DOI
 
 Use CITATION.cff when citing this software archive. The public repository is
-https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes and is
-prepared for Zenodo GitHub archiving through .zenodo.json. After the repository
-is linked in Zenodo, publish the GitHub v1.0.1 release and replace the
-placeholder DOI in the two manuscript data-availability statements with the
-resulting version DOI.
+https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes. The
+immutable Zenodo archival release for GitHub v1.0.1 is available at
+https://doi.org/10.5281/zenodo.22754510. The manuscript data-availability
+statements cite both the repository and this version DOI.
 
 ## Authors
 
