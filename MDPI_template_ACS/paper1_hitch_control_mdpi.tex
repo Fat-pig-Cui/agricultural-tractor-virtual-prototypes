@@ -57,7 +57,7 @@ p_{acc}=\max\left(1.01d,\;p_{acc,0}\frac{V_{acc,0}}{V_{acc,0}+V_{out}}\right).
 This is a virtual compensation branch with a bounded recharge proxy. It is not a calibrated representation of a particular accumulator, lock valve, or hydraulic circuit.
 
 \subsection{Parameter provenance and assumption register}
-All 22 plant parameters used by the reported virtual prototype are listed in the machine-readable file \texttt{paper1\_parameter\_manifest.csv}. Each row has a stable identifier, code identifier, numerical value, unit, source class, model role, and stress-test coverage. The companion Chinese assumption register records the scope and prohibited physical interpretation of each modelling choice. The file \texttt{export\_paper1\_traceability.py} checks every manifest value against \texttt{LiftParameters}, snapshots the experiment and controller defaults, and exports SHA-256 fingerprints before reproduction. Table~\ref{tab:provenance} summarizes the source classes. No value is represented as a manufacturer data-sheet value or a calibrated physical measurement in version \texttt{paper1-v1.0}.
+All 22 plant parameters used by the reported virtual prototype are listed in the machine-readable file \texttt{paper1\_parameter\_manifest.csv}. Each row has a stable identifier, code identifier, numerical value, unit, source class, model role, and stress-test coverage. The companion assumption register records the scope and prohibited physical interpretation of each modelling choice. The file \texttt{export\_paper1\_traceability.py} checks every manifest value against \texttt{LiftParameters}, snapshots the experiment and controller defaults, and exports SHA-256 fingerprints before reproduction. Table~\ref{tab:provenance} summarizes the source classes. No value is represented as a manufacturer data-sheet value or a calibrated physical measurement.
 
 \begin{table}[H]
 \centering
@@ -214,7 +214,6 @@ This study presents a reproducible dual-mode hitch-control virtual prototype tha
 \institutionalreview{Not applicable.}
 \informedconsent{Not applicable.}
 \dataavailability{The virtual-prototype source code, reproduction scripts, machine-readable parameter manifest, assumption register, traceability exporter, and JSON outputs supporting these results are publicly available at \url{https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes}. The immutable Zenodo archival release is available at \url{https://doi.org/10.5281/zenodo.22754510}.}
-\acknowledgments{During preparation of this manuscript, the authors used OpenAI Codex for English translation, language editing, and development of plotting scripts. The authors must review and edit all output and take full responsibility for the content before submission.}
 \conflictsofinterest{The authors declare no conflicts of interest.}
 
 \begin{thebibliography}{9}
