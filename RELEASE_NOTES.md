@@ -7,9 +7,12 @@
 - Updates the author roster to Chenyu Cui, Peng Wang, Lihan Wang, and Yucheng
   Zhang; Peng Wang holds the Validation role in both manuscripts and archive
   metadata.
-- This local update needs a new archived release before the public Zenodo
-  snapshot can represent these exact files; the v1.0.1 DOI below remains the
-  previous immutable snapshot.
+- Expands the manuscript background and related-work sections with
+  DOI-verified literature, and changes the manuscript data-availability links
+  to the Zenodo concept DOI `10.5281/zenodo.22754509`.
+- This `v1.0.2` candidate needs a new archived release before the public Zenodo
+  snapshot represents these exact files; the v1.0.1 version DOI below remains
+  the previous immutable snapshot.
 
 # v1.0.1
 
