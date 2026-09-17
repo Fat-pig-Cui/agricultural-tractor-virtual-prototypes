@@ -1,4 +1,4 @@
-# Unreleased local update
+# v1.0.2
 
 - Removes the unassigned MDPI-template DOI
   `10.3390/agriengineering1010000` from both submitted-manuscript footers.
@@ -10,9 +10,10 @@
 - Expands the manuscript background and related-work sections with
   DOI-verified literature, and changes the manuscript data-availability links
   to the Zenodo concept DOI `10.5281/zenodo.22754509`.
-- This `v1.0.2` candidate needs a new archived release before the public Zenodo
-  snapshot represents these exact files; the v1.0.1 version DOI below remains
-  the previous immutable snapshot.
+- This GitHub release is the source snapshot for the next Zenodo version. The
+  concept DOI `10.5281/zenodo.22754509` will resolve to that new immutable
+  record after it is published; the v1.0.1 version DOI below remains the
+  previous immutable snapshot.
 
 # v1.0.1
 
