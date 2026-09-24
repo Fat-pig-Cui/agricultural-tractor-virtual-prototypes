@@ -2,6 +2,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from dataclasses import replace
+from time import perf_counter
 from config.parameters import PowertrainParameters
 from common.profiles import (terrain_profile, high_variability_profile,
                               agri_workcycle_profile, low_load_agri_workcycle_profile,
@@ -427,6 +428,7 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             motor_peak_w=model.p.motor_peak_w)
         dp_reference, dp_soc_reference = dp_solver.solve_with_soc(reference_demands, config.initial_soc, model.p.dt_s)
     demands, commands, shortages, currents = [], [], [], []
+    decision_elapsed_s: list[float] = []
     fallback_count = 0
     ramp_envelope_infeasibility_count = 0
     safety_filter_activation_count = 0
@@ -449,6 +451,7 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
         # Fair protocol: the accessory load is part of the demand seen by
         # every controller; the plant is not given a separate accessory.
         served_demand = demand + config.accessory_for_all_w
+        decision_started = perf_counter()
         prediction = predictor.update(point, demand)
         terminal_target_soc = min(model.p.soc_max,
                                   config.initial_soc + config.online_terminal_soc_reserve)
@@ -614,6 +617,7 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
                 command = type(command)(max(engine_low, min(engine_high,
                                                            max(command.engine_power_w, floor_w))),
                                         command.objective, command.feasible)
+        decision_elapsed_s.append(perf_counter() - decision_started)
         accessory = 0.0
         # Legacy asymmetric behavior (fair flag off): only ``realistic_ool``
         # carries the accessory inside the plant model.
@@ -677,6 +681,8 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             regen_power_w=regen_power, external_battery_bus_w=regen_bus_w)
         constraint_violations.append(violations)
         currents.append(abs(state.battery_current_a))
+    decision_ms = sorted(value * 1000.0 for value in decision_elapsed_s)
+    decision_p95_index = min(len(decision_ms) - 1, int(0.95 * len(decision_ms)))
     return {"fuel_l": model.equivalent_fuel_l(state),
             "final_soc": state.soc,
             "soc_error": state.soc - config.initial_soc,
@@ -712,6 +718,12 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             "start_stop_transition_count": start_stop_transitions,
             "max_regen_curtailment_w": max(regen_curtailments_w, default=0.0),
             "total_regen_curtailment_wh": sum(regen_curtailments_w) * model.p.dt_s / 3600.0,
+            "decision_timing_ms": {
+                "sample_count": len(decision_ms),
+                "mean": sum(decision_ms) / max(len(decision_ms), 1),
+                "p95": decision_ms[decision_p95_index] if decision_ms else 0.0,
+                "maximum": max(decision_ms, default=0.0),
+            },
             "demands_w": demands, "commands_w": commands, "dp_reference_w": dp_reference,
             "dp_soc_reference": dp_soc_reference,
             "baseline_type": ("theoretical_instantaneous" if controller_name == "ool" else

@@ -1,6 +1,6 @@
 {
   "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
-  "description": "<p>Source code, declared virtual-model inputs, reproduction scripts, result JSON files, figures, and English manuscript sources for two theoretical simulation studies: electrohydraulic tractor-hitch position holding and strictly causal hybrid-tractor energy-management benchmarking.</p><p>All evidence is conditional on declared virtual models. The archive contains no field, vehicle, bench, or calibrated component-map measurements.</p>",
+  "description": "<p>Source code, declared virtual-model inputs, reproduction scripts, result JSON files, figures, and English manuscript sources for two theoretical simulation studies: electrohydraulic tractor-hitch position holding and strictly causal hybrid-tractor energy-management benchmarking.</p><p>Version 1.0.3 adds the hitch controller-interface audit and frozen energy-management storage/forecast sensitivity audits used by the current Machines and Energies submissions.</p><p>All evidence is conditional on declared virtual models. The archive contains no field, vehicle, bench, or calibrated component-map measurements.</p>",
   "creators": [
     {
       "name": "Cui, Chenyu",
@@ -9,10 +9,6 @@
     },
     {
       "name": "Wang, Peng",
-      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
-    },
-    {
-      "name": "Wang, Lihan",
       "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
     },
     {

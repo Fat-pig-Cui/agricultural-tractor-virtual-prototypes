@@ -1,4 +1,4 @@
-\documentclass[agriengineering,article,submit,moreauthors]{Definitions/mdpi}
+\documentclass[energies,article,submit,moreauthors]{Definitions/mdpi}
 \graphicspath{{../papers/figures/}}
 \setlength{\headheight}{20pt}
 % Suppress the MDPI template's unassigned, metadata-derived DOI in submit mode.
@@ -15,7 +15,7 @@
 \articlenumber{0}
 \pubyear{2026}
 \copyrightyear{2026}
-\Title{Strictly Causal Energy-Management Benchmarking for a Hybrid Agricultural Tractor: Map Sensitivity and Controller Feasibility}
+\Title{A Feasibility-First Virtual Benchmark for Causal Energy Management in a Hybrid Agricultural Tractor}
 \newcommand{\orcidauthorA}{0009-0005-1928-6218}
 \Author{Chenyu Cui$^{1}$, Peng Wang$^{1}$ and Yucheng Zhang$^{1,}$*\orcidA{}}
 \AuthorNames{Chenyu Cui, Peng Wang and Yucheng Zhang}
@@ -26,8 +26,8 @@ $^{1}$ \quad Prospective Research Laboratory, Institute of Computing Technology,
 \daterevised{}
 \dateaccepted{}
 \datepublished{}
-\abstract{Reported fuel savings for hybrid agricultural tractors can be dominated by terminal-energy accounting, component-map assumptions, and whether an online controller is truly feasible. This theoretical simulation compares a map-aware equivalent-consumption minimization strategy (ECMS), a public-phase causal policy, deterministic model predictive control (MPC), scenario MPC, and terminal-set safeguarded scenario MPC in a reproducible parameterized OS-ECVT virtual prototype. Every online method shares a defined 300 kW virtual powertrain, a 60 kW stable engine-power floor, a 40 kW s$^{-1}$ applied-output ramp, 150 kW motor and battery-bus limits, proxy MG limits, and a terminal state-of-charge (SOC) error no larger than $10^{-4}$. Ten predeclared ECMS factors are selected on six development seeds and frozen before a 20-seed, 600 s stochastic-cycle test; no controller observes future samples from an evaluated seed. The terminal-set MPC projects its action into the measured-load ramp/electrical set and requires its successor SOC to remain in a terminal-energy viability envelope. Under a literature-shaped efficiency map, ECMS increased paired fuel use by 0.251\% (95\% CI: 0.238\%--0.264\%), the phase policy saved 0.010\% (0.006\%--0.015\%), and terminal-set MPC increased fuel use by 0.704\% (0.653\%--0.756\%) while achieving 20/20 zero-external-fallback, zero-terminal-set-violation paths. Under a deliberately specified steep low-load efficiency-island sensitivity, frozen ECMS saved 10.491\% (10.445\%--10.538\%) on all 20 pairs, whereas all MPC variants remained fuel-inferior. A predeclared horizon--preview mechanism map selected the same eight-sample history-only terminal-set MPC on new development seeds; its 20-seed holdout fuel changes were $-0.168\%$ and $-2.079\%$, respectively. Thus, the terminal-set structure makes the safety policy auditable rather than relying on a fallback outside the controller when the candidate set is empty, but does not itself yield fuel savings; virtual controller rankings remain conditional on the declared component maps.}
-\keyword{hybrid electric tractor; energy management; ECMS; model predictive control; state of charge; map sensitivity; virtual prototype}
+\abstract{Virtual fuel-saving claims for hybrid agricultural tractors are inseparable from terminal-energy accounting, component-map assumptions, and online feasibility. This study presents a feasibility-first benchmark for causal energy management in a parameterized OS-ECVT virtual prototype. It compares map-aware equivalent-consumption minimization (ECMS), a public-phase policy, deterministic model predictive control (MPC), scenario MPC, and terminal-set safeguarded scenario MPC under one information set, one applied-actuator model, and one out-of-loop baseline. The 300 kW virtual platform imposes a 60 kW stable engine-power floor, a 40 kW s$^{-1}$ applied ramp, 150 kW motor and battery-bus limits, proxy MG limits, and a terminal SOC error no larger than $10^{-4}$. Under a literature-shaped map, terminal-set MPC was certified on 20/20 stochastic paths with zero external fallback and zero terminal-set violations, but increased paired fuel use by 0.704\% (95\% CI: 0.653\%--0.756\%). An independent cross-cycle audit found the same feasibility--fuel trade-off on deterministic and stochastic agricultural cycles, while a high-variability cycle exceeded the declared battery-power envelope and was reported as invalid rather than repaired. A continuous seven-level virtual map sweep showed that ECMS savings changed from 12.543\% to a 1.075\% fuel increase as the declared low-load efficiency rose from 0.08 to 0.35; terminal-set MPC remained fuel-inferior throughout. Frozen storage-capacity and causal-forecast sensitivity audits preserved strict feasibility but did not recover a positive MPC fuel result. The separately reported full-information oracle is excluded from this abstract and from all causal-controller statistics. The benchmark therefore identifies conditional feasibility, map sensitivity, and accounting boundaries rather than a generic MPC fuel advantage.}
+\keyword{hybrid agricultural tractor; energy management; terminal state of charge; ECMS; model predictive control; component-map sensitivity; virtual powertrain}
 \begin{document}
 
 \section{Introduction}
@@ -50,7 +50,9 @@ The broader hybrid-vehicle literature supplies the principal method families use
 
 This work addresses that comparison gap with a shared strict protocol for map-aware ECMS, a public-phase causal policy, deterministic MPC, scenario MPC, and terminal-set safeguarded scenario MPC. The terminal-set construction exposes safety-filter activations rather than silently relying on a controller-external fallback. The paper also reports a full-information oracle only as an explicitly idealized headroom diagnostic. The scope is deliberately limited to simulation: the component maps are defined virtual-model inputs, not claims of field, vehicle, or bench measurement.
 
-The contributions are as follows: (i) a reproducible OS-ECVT virtual prototype with a strict terminal-energy and hard-constraint rule; (ii) a common causal comparison of map-aware ECMS, a public-phase policy, deterministic MPC, scenario MPC, and terminal-set safeguarded scenario MPC; (iii) development/test separation for the only tuned ECMS parameter; (iv) an auditable conditional recursive-feasibility construction that separates internal safety-filter interventions from fallback applied outside the controller; (v) an explicitly labeled map-mechanism sensitivity on the same 300 kW virtual hardware; and (vi) a predeclared horizon--preview mechanism map with an additional development/holdout split. Offline dynamic programming is not included in the online statistics because it has access to future demand.
+For an energy-systems audience, the central contribution is therefore an auditable accounting protocol as much as a controller comparison. The protocol keeps the plant, terminal SOC rule, applied engine dynamics, and baseline identical across methods, while recording every internal feasibility intervention. This prevents an apparently favorable fuel number from being produced by unequal residual battery energy or by an unreported post-optimization repair. The resulting negative MPC finding is useful as a conditional energy-management boundary: it identifies the declared map, information set, and finite candidate structure for which feasibility was obtained without a fuel advantage.
+
+The contributions are as follows: (i) a feasibility-first, reproducible OS-ECVT virtual benchmark with a strict terminal-energy and hard-constraint rule; (ii) a common causal comparison of map-aware ECMS, a public-phase policy, deterministic MPC, scenario MPC, and terminal-set safeguarded scenario MPC; (iii) development/test separation for the only tuned ECMS parameter; (iv) an auditable conditional recursive-feasibility construction that separates internal safety-filter interventions from fallback applied outside the controller; (v) an explicitly labeled map-mechanism sensitivity on the same 300 kW virtual hardware; (vi) a predeclared horizon--preview mechanism map with an additional development/holdout split; and (vii) an independent cross-cycle demand-envelope audit that reports invalid high-variability paths instead of converting them into favorable fuel statistics. The resulting paper is a boundary study, not a claim of generic MPC fuel superiority. Offline dynamic programming is not included in the online statistics because it has access to future demand.
 
 \section{Materials and Methods}
 \subsection{Powertrain and demand models}
@@ -109,10 +111,14 @@ The primary arm uses a literature-shaped engine map derived from the published D
 
 The stochastic disturbance scale is 0.25 and its 10 s random-walk targets are continuously interpolated, consistent with the actuator-rate limit. Seeds 2200--2205 form the development set. Ten predeclared ECMS factors ($\lambda=0.5,0.75,1.0,1.25,1.5,2.0,2.5,3.0,4.0,5.0$) are eligible only if all six development runs are strictly valid, and the lowest mean-fuel eligible factor is frozen. The resulting factor is evaluated once on the disjoint 20-seed test set (2220--2239), together with the unmodified phase policy and frozen MPC settings. No test-set result is used to choose a controller setting.
 
+To test the boundary of the declared platform rather than silently exclude difficult demand, an independent cross-cycle audit used 20 seeds (2026--2045), the literature-shaped map, the common 18 kW accessory load, terminal-SOC tolerance $10^{-4}$, and no offline SOC reference. It evaluated the deterministic agricultural work cycle, the stochastic agricultural cycle, and a high-variability cycle with the engineering OOL, map-aware ECMS, and terminal-set MPC. The audit was not used to retune a controller. A cycle was reported as invalid when the common battery-power or other hard constraint failed; invalid paths were not converted into fuel-saving pairs.
+
 \subsection{Predeclared MPC mechanism map}
 The frozen framework comparison identifies one implementation point, but cannot establish whether its fuel result is specific to horizon or forecast information. A separate, predeclared mechanism map therefore uses new development seeds 2400--2405 and new holdout seeds 2420--2439. It evaluates terminal-set scenario MPC at horizons $H=4,8,12$ under two causal information conditions: a history-only predictor, and the same predictor augmented by the public zero-disturbance task phase and the present demand measurement. The phase condition contains no future realization from an evaluated seed. The scenario count, terminal weight, 300 kW platform, two maps, dynamic OOL baseline, $10^{-4}$ SOC rule, and all hard limits are unchanged.
 
 Within each map, only settings certified on all six development paths are eligible; the eligible setting with the greatest mean direct-fuel saving is frozen and evaluated once on all 20 holdout paths. Certification additionally requires zero fallback outside the controller, zero forecast ramp-envelope infeasibility, and zero terminal-set violations. Internal safety-filter activations and elapsed runtime are retained as outcome measures, not used to exclude a path. All six development cells are reported, so the holdout result cannot be interpreted as a post hoc choice of a favorable horizon or preview policy.
+
+Two additional frozen sensitivity audits test virtual inputs that otherwise could be mistaken for hidden sources of the negative result. The first uses 12 new seeds (2500--2511) and changes battery capacity only (120, 200, and 280 kWh), retaining the 150 kW motor/bus limits, literature-shaped map, ECMS factor $\lambda=2.0$, and terminal-set MPC $H=8$ with five scenarios. The second retains the 200 kWh platform and changes only the causal predictor's residual-persistence gain (0, 0.5, and 1.0). Neither capacity nor gain is selected by its outcome. For every online decision, the implementation records wall-clock time from causal prediction through candidate selection, safety projection, and terminal-energy correction. These local Python timings characterize the finite-set implementation only; they are not an embedded real-time certification.
 
 \section{Results}
 \subsection{Strict controller-framework comparison}
@@ -145,6 +151,34 @@ Steep-island sensitivity & Terminal-set scenario MPC & 20/20 & 20 & 619 & $-3.21
 \end{tabular}
 \end{table}
 
+\subsection{Frozen storage and causal-forecast sensitivities}
+Table~\ref{tab:store-forecast} reports the independent 12-seed audits. Changing battery capacity from 120 to 280 kWh did not change the strict-valid or certified rate: ECMS and terminal-set MPC were certified on all pairs, but both remained fuel-inferior. The terminal-set MPC fuel change ranged from $-0.732\%$ to $-0.501\%$; the fixed ECMS result remained $-0.275\%$. Thus, the primary negative MPC result is not explained by the single 200 kWh energy-capacity input within this declared family.
+
+Likewise, causal residual persistence did not recover a positive MPC result. It changed the mean number of safety projections from 37.25 to 0.42 per path, but the fuel change remained between $-0.690\%$ and $-0.725\%$. This is evidence about the three declared predictor settings rather than a universal forecast-robustness result. Across these executions, the largest per-run P95 decision time was 1.71 ms and the largest observed individual local Python decision was 84.39 ms, both below the 100 ms simulation sample interval. These timing figures include the finite candidate search and safety projection, but are deliberately not used as evidence of embedded implementation readiness.
+
+\begin{table}[H]
+\centering
+\caption{Frozen virtual storage and causal-forecast sensitivity audit on 12 new seeds. Negative saving denotes increased fuel use relative to the same-seed dynamic OOL. No row was used for retuning.}
+\label{tab:store-forecast}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}X l r r r@{}}
+\toprule
+Audit & Controller & Certified & Saving vs. OOL (\%) & Mean filter steps/path \\
+\midrule
+120 kWh battery & ECMS & 12/12 & $-0.275$ & 0.00 \\
+120 kWh battery & Terminal-set MPC & 12/12 & $-0.732$ & 37.00 \\
+200 kWh battery & ECMS & 12/12 & $-0.275$ & 0.00 \\
+200 kWh battery & Terminal-set MPC & 12/12 & $-0.690$ & 37.25 \\
+280 kWh battery & ECMS & 12/12 & $-0.275$ & 0.00 \\
+280 kWh battery & Terminal-set MPC & 12/12 & $-0.501$ & 34.67 \\
+Residual gain 0.0 & Terminal-set MPC & 12/12 & $-0.690$ & 37.25 \\
+Residual gain 0.5 & Terminal-set MPC & 12/12 & $-0.709$ & 4.08 \\
+Residual gain 1.0 & Terminal-set MPC & 12/12 & $-0.725$ & 0.42 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\linewidth]{paper2_controller_framework.png}
@@ -152,10 +186,68 @@ Steep-island sensitivity & Terminal-set scenario MPC & 20/20 & 20 & 619 & $-3.21
 \label{fig:framework}
 \end{figure}
 
-\subsection{Horizon--preview mechanism map}
-Figure~\ref{fig:mechanism} rules out a positive terminal-set MPC result as an artifact of the original eight-sample, public-phase setting within the declared mechanism grid. On the literature-shaped map, history-only $H=8$ was the best eligible development setting ($-0.171\%$) and was frozen. Its 20/20 certified holdout result was $-0.168\%$ (95\% CI: $-0.190$ to $-0.146\%$), with no safety-filter activations and a mean runtime of 4.108 s per 600 s virtual path. The public-phase variants were more fuel-inferior and activated the filter 13.5--34.5 times per development path. History-only $H=4$ was certified on only one of six development paths.
+\subsection{Virtual efficiency-map sensitivity}
+The strict framework comparison was complemented by a fixed-controller map sweep to quantify how the low-load efficiency assumption changes the causal ranking. We froze the ECMS factor ($\lambda=2.0$), terminal-set MPC horizon ($H=8$), five causal scenarios, terminal weight, public nominal phase preview, 300 kW platform, and all constraints. Seven low-load efficiency levels from 0.08 to 0.35 were evaluated on 20 new seeds (2260--2279); no level was used to tune a controller. At the steepest virtual map (0.08), map-aware ECMS saved 12.543\% (95\% CI: 12.511--12.575\%), whereas terminal-set MPC increased fuel use by 3.464\% (95\% CI: 2.645--4.282\%). At 0.25, ECMS saved 3.269\% and MPC increased fuel use by 0.918\%; at 0.35, ECMS increased fuel use by 1.075\% and MPC increased fuel use by 0.248\%. The continuous trend is produced by an explicit low-load-island parameterization of both the idle and first-20\% load columns, rather than by clipping higher settings to a base-grid row. Every tested controller pair was strictly valid and certified. Figure~\ref{fig:map-sensitivity} therefore identifies the low-load map shape as a first-order virtual mechanism, while showing that the recursive-feasibility construction does not become fuel-positive within this declared map family.
 
-The same selection occurred on the steep-island map: history-only $H=8$ was the closest eligible development setting to OOL ($-2.034\%$), yet its independent 20/20 holdout result was $-2.079\%$ (95\% CI: $-2.106$ to $-2.051\%$), with no filter activations and 5.059 s mean runtime. Increasing the horizon or adding the public phase did not yield a positive certified result; phase-preview $H=12$ was certified on only five of six development paths. The screen is not a claim about all MPC formulations or all cycle classes. It establishes, for the six prespecified causal settings and two declared maps, that forecast information and a longer finite horizon did not recover a fuel advantage after strict terminal-energy and feasibility accounting.
+To test whether the strict $10^{-4}$ terminal-SOC rule alone caused the negative ranking, we repeated the literature-shaped-map protocol at tolerances $10^{-4}$, $5\times10^{-4}$, and $10^{-3}$ on 20 new seeds (2280--2299). All ECMS and terminal-set MPC runs remained strictly valid and certified at every tolerance. ECMS changed by $-0.258\%$ (95\% CI: $-0.281$ to $-0.235\%$), while terminal-set MPC changed by $-0.703\%$ (95\% CI: $-0.765$ to $-0.642\%$) at all three tolerances. The negative MPC result is therefore not removed by this terminal-accounting relaxation within the tested virtual protocol.
+
+\subsection{Independent cross-cycle demand-envelope audit}
+Table~\ref{tab:cross-cycle} reports the independent audit using the same strict validity and certification rules. On the deterministic agricultural cycle, all three controllers were certified, but ECMS and terminal-set MPC increased fuel by 0.431\% and 0.137\%, respectively. On the stochastic agricultural cycle, terminal-set MPC remained certified on all 20 seeds and increased fuel by 0.768\%; ECMS was strictly valid on 14/20 seeds and its valid pairs increased fuel by 0.391\%. The high-variability cycle exceeded the current virtual battery-power envelope on all 20 seeds for all three controllers. Those paths are deliberately reported as a platform-demand boundary, not removed from the audit and not used to imply a controller advantage.
+
+\begin{table}[H]
+\centering
+\caption{Independent cross-cycle demand-envelope audit on the literature-shaped virtual map. Negative values denote fuel increases relative to the same-seed engineering OOL. A dash indicates that no strict-valid pair exists.}
+\label{tab:cross-cycle}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrr}
+\toprule
+Cycle & Controller & Strict valid & Certified & Saving vs. OOL (\%) \\
+\midrule
+Agricultural & Engineering OOL & 20/20 & 20/20 & -- \\
+Agricultural & Map-aware ECMS & 20/20 & 20/20 & $-0.431$ \\
+Agricultural & Terminal-set MPC & 20/20 & 20/20 & $-0.137$ \\
+Stochastic agricultural & Engineering OOL & 20/20 & 20/20 & -- \\
+Stochastic agricultural & Map-aware ECMS & 14/20 & 14/20 & $-0.391$ \\
+Stochastic agricultural & Terminal-set MPC & 20/20 & 20/20 & $-0.768$ \\
+High-variability & Engineering OOL & 0/20 & 0/20 & -- \\
+High-variability & Map-aware ECMS & 0/20 & 0/20 & -- \\
+High-variability & Terminal-set MPC & 0/20 & 0/20 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We then performed a separate capability screen without retuning any controller. The high-variability cycle was shortened to 300 s and evaluated on 12 predeclared seeds while the motor peak and battery-bus limits were changed together from 150 to 225 kW. At 175 kW, the engineering OOL and terminal-set MPC became valid on all 12 paths, but ECMS remained invalid; at 200 kW the same pattern remained. At 225 kW all three controllers were valid, while terminal-set MPC still increased fuel by 0.320\% and ECMS increased fuel by 0.468\% relative to the matched OOL. This capability screen therefore identifies an admissible virtual demand boundary rather than a hidden controller tuning opportunity (Table~\ref{tab:power-boundary}).
+
+\begin{table}[H]
+\centering
+\caption{High-variability capability screen with paired motor-peak and battery-bus limits. The 12 seeds and 300 s cycle were frozen before the screen; negative savings denote fuel increases.}
+\label{tab:power-boundary}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rrrrr}
+\toprule
+Paired limit (kW) & OOL valid & ECMS valid & Terminal-set MPC valid & Valid-pair saving (\%) \\
+\midrule
+150 & 0/12 & 0/12 & 0/12 & -- \\
+175 & 12/12 & 0/12 & 12/12 & $-0.283$ (MPC) \\
+200 & 12/12 & 0/12 & 12/12 & $-0.334$ (MPC) \\
+225 & 12/12 & 12/12 & 12/12 & $-0.468$ (ECMS), $-0.320$ (MPC) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{paper2_map_sensitivity_grid.png}
+\caption{Fixed-controller sensitivity to the virtual low-load efficiency parameter on 20 independent seeds per level. Error bars are 95\% confidence intervals. The ECMS factor, MPC horizon, causal information set, terminal-SOC rule, and hardware limits were frozen before the sweep.}
+\label{fig:map-sensitivity}
+\end{figure}
+
+\subsection{Horizon--preview mechanism map}
+Figure~\ref{fig:mechanism} rules out a positive terminal-set MPC result as an artifact of the original eight-sample, public-phase setting within the declared mechanism grid. On the literature-shaped map, history-only $H=8$ was the best eligible development setting ($-0.171\%$) and was frozen. Its 20/20 certified holdout result was $-0.168\%$ (95\% CI: $-0.190$ to $-0.146\%$), with no safety-filter activations. The public-phase variants were more fuel-inferior and activated the filter 13.5--34.5 times per development path. History-only $H=4$ was certified on only one of six development paths.
+
+The same selection occurred on the steep-island map: history-only $H=8$ was the closest eligible development setting to OOL ($-2.034\%$), yet its independent 20/20 holdout result was $-2.079\%$ (95\% CI: $-2.106$ to $-2.051\%$), with no filter activations. Increasing the horizon or adding the public phase did not yield a positive certified result; phase-preview $H=12$ was certified on only five of six development paths. The screen is not a claim about all MPC formulations or all cycle classes. It establishes, for the six prespecified causal settings and two declared maps, that forecast information and a longer finite horizon did not recover a fuel advantage after strict terminal-energy and feasibility accounting.
 
 \begin{figure}[H]
 \centering
@@ -211,12 +303,18 @@ The steep-island arm supplies a more informative mechanism result than a control
 
 The horizon--preview map separates the central negative result from a single arbitrary MPC setting. Both development procedures selected history-only $H=8$, and both independent holdout results remained negative with 20/20 certification. The failure of public-phase variants to improve fuel use is particularly informative: in this finite-set implementation, the additional phase prior caused more safety projections without an offsetting map-aware load-shifting gain. This does not prove that preview is universally detrimental. It bounds the conclusion to the declared horizons, predictor, cycle, virtual maps, and terminal-set construction, while ruling out an unsupported claim that modest causal preview or a longer tested horizon restores MPC fuel savings.
 
-The full-information oracle makes the same distinction from another direction. The approximately 20\% energy-normalized value requires both the declared steep low-load map and future knowledge of the entire smooth nominal task; the literature-shaped counterpart did not survive continuous terminal-SOC replay. It measures virtual headroom, not a causal-controller target. Reporting both raw and normalized values is necessary because the task-level terminal band otherwise permits unequal residual battery energy.
+The full-information oracle makes the same distinction from another direction. The approximately 20\% energy-normalized value requires both the declared steep low-load map and future knowledge of the entire smooth nominal task; the literature-shaped counterpart did not survive continuous terminal-SOC replay. It measures virtual headroom, not a causal-controller target. The fixed-map sweep reinforces this interpretation: changing only the low-load efficiency parameter moves ECMS savings from approximately 10.46\% to 3.27\%, while the terminal-set MPC remains fuel-inferior throughout the tested family. Reporting both raw and normalized values is necessary because the task-level terminal band otherwise permits unequal residual battery energy.
 
-This is a theoretical simulation, so target-platform calibration and field measurements are not prerequisites for the internal validity of its declared virtual model. The 300 kW component maps, battery model, planetary relation, MG constraints, and stochastic cycle are defined model inputs and must be preserved with the source code and parameter tables. The literature-shaped map uses the load trend of a 155 kW Deutz engine only as a transparent reference shape before rescaling; the steep island is a deliberately specified mechanism map. Their absence of target-platform calibration limits only external generalization, not the stated conditional virtual-model findings. The remaining methodological priorities are component-map parameter ranges and sensitivity coverage, explicit admissible-demand bounds for the conditional terminal-set guarantee, and a public versioned code/data archive. Any future engineering-performance study would additionally require matched measured maps, drivetrain limits, and field cycles.
+An independent strict cross-cycle audit further bounds the claim. With the literature-shaped map, common 18 kW accessory load, terminal-SOC tolerance $10^{-4}$, and no offline SOC reference, all controllers were certified on the deterministic agricultural work cycle, but ECMS and terminal-set MPC increased fuel by 0.431\% and 0.137\%, respectively. On the stochastic agricultural cycle, terminal-set MPC remained certified on all 20 seeds and increased fuel by 0.768\%; ECMS was strictly valid on 14/20 seeds and its valid pairs still increased fuel by 0.391\%. The high-variability cycle exposed a declared platform boundary: all 20 seeds violated the current battery-power envelope, so no fuel-saving claim is made for that cycle. This audit is therefore evidence of conditional feasibility and an explicit demand-envelope limitation, not evidence that the causal MPC generalizes to arbitrary cycles.
+
+The paired-capability screen sharpened this limitation: raising both motor and battery-bus limits to 175 kW restored strict validity for OOL and terminal-set MPC, while ECMS required 225 kW for all 12 screened paths. The restored paths remained fuel-inferior for the causal controllers. Thus, the high-variability result is best interpreted as a declared platform-demand boundary, not as evidence that additional electrical headroom creates an MPC fuel advantage.
+
+The frozen capacity and predictor audits make the component and forecast assumptions more explicit. Across 120--280 kWh, all 12 terminal-set MPC paths per capacity were certified but fuel-inferior; changing causal residual persistence changed safety-filter frequency without changing the sign of the fuel result. These tests do not exhaust virtual battery, motor, or forecast uncertainty, but they rule out two convenient explanations for the reported negative result within a predeclared input family. The recorded decision-time distribution also distinguishes finite-set computational cost from a claim of embedded readiness: local Python timings are reproducible implementation diagnostics, not a latency guarantee for a vehicle controller.
+
+This is a theoretical simulation, so the defined 300 kW component maps, battery model, planetary relation, MG constraints, and stochastic cycle are sufficient inputs for the stated virtual-model findings. The literature-shaped map uses the load trend of a 155 kW Deutz engine only as a transparent reference shape before rescaling; the steep island and the seven-level sweep are deliberately specified mechanism maps. The remaining methodological priorities are broader virtual map families, explicit admissible-demand bounds for the conditional terminal-set guarantee, and a public versioned code/data archive. Real-machine calibration would be a separate study rather than a prerequisite for reproducing or assessing the present theoretical results.
 
 \section{Conclusions}
-This study established a strict causal comparison of map-aware ECMS, a public-phase policy, deterministic MPC, scenario MPC, and terminal-set scenario MPC in a hybrid-tractor virtual prototype. The common protocol requires a $10^{-4}$ terminal-SOC error, the same applied engine dynamics, common electrical and proxy-machine limits, and same-seed OOL pairing. The terminal-set formulation achieved 20/20 zero-external-fallback and zero-terminal-set-violation paths on both declared maps, but increased fuel use by 0.704\% on the literature-shaped map and 3.219\% on the steep-island map. A predeclared horizon--preview map selected history-only $H=8$ on new development seeds; its 20/20 holdout fuel changes remained $-0.168\%$ and $-2.079\%$. Under the same maps, frozen ECMS changed fuel use by $-0.251\%$ and $+10.491\%$, respectively. A separate full-information, $\pm0.01$-SOC oracle reached 21.611\% raw and 19.828\% terminal-energy-normalized reduction only on the declared steep low-load virtual map; it is an approximately 20\% headroom diagnostic, not an online result. Therefore, the evidence supports a conditional recursive-feasibility construction, map-sensitivity audit, a measured horizon--preview boundary, and an explicitly bounded idealized envelope, not a generic MPC advantage or a hardware-performance estimate. The defined virtual component maps are sufficient for this theoretical study; matched measurements are needed only before extending its conclusions to a physical platform.
+This study established a feasibility-first causal benchmark for map-aware ECMS, a public-phase policy, deterministic MPC, scenario MPC, and terminal-set scenario MPC in a hybrid-tractor virtual prototype. The common protocol requires a $10^{-4}$ terminal-SOC error, the same applied engine dynamics, common electrical and proxy-machine limits, and same-seed OOL pairing. The terminal-set formulation achieved 20/20 zero-external-fallback and zero-terminal-set-violation paths on both declared maps, but increased fuel use by 0.704\% on the literature-shaped map and 3.219\% on the steep-island map. A predeclared horizon--preview map selected history-only $H=8$ on new development seeds; its 20/20 holdout fuel changes remained $-0.168\%$ and $-2.079\%$. A continuous seven-level virtual map sweep showed ECMS changes from 12.543\% savings at low-load efficiency 0.08 to 1.075\% increased fuel use at 0.35, while terminal-set MPC remained fuel-inferior. Independent cross-cycle, electrical-capability, storage-capacity, and causal-predictor audits all retained the feasibility--fuel trade-off within their stated virtual input families. A separate full-information, $\pm0.01$-SOC oracle reached 21.611\% raw and 19.828\% terminal-energy-normalized reduction only on the declared steep low-load virtual map; it is an approximately 20\% headroom diagnostic, not an online result. Therefore, the evidence supports conditional recursive feasibility, map-sensitivity and demand-envelope audits, a measured horizon--preview boundary, and an explicitly bounded idealized envelope, not generic MPC fuel superiority or a hardware-performance estimate.
 
 \authorcontributions{Conceptualization, C.C.; Methodology, C.C.; Software, C.C.; Formal analysis, C.C.; Visualization, C.C.; Writing---original draft preparation, C.C.; Resources, C.C.; Validation, P.W.; Investigation, C.C.; Writing---review and editing, Y.Z.; Supervision, Y.Z.; Project administration, Y.Z.; Funding acquisition, Y.Z.}
 \funding{This work has received funding from the Science and Technology Project of the Ministry of Agriculture and Rural Affairs of China.}

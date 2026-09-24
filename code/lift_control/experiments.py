@@ -35,6 +35,24 @@ class ExperimentConfig:
     temperature_start_c: float = 25.0
     temperature_end_c: float = 40.0
     velocity_gate_tolerance_mps: float = 0.003
+    # Fine-trim gains after the commanded motion.  The defaults reproduce the
+    # original virtual protocol; explicit scans can test steady-state accuracy
+    # without changing the plant or entry criterion.
+    hold_fine_trim_position_gain: float = 80.0
+    hold_fine_trim_velocity_gain: float = 12.0
+    hold_fine_trim_scale: float = 0.08
+    # Measurement perturbations used only by robustness audits.  Defaults
+    # preserve the nominal virtual-prototype protocol.
+    position_sensor_bias_m: float = 0.0
+    pressure_measurement_bias_pa: float = 0.0
+    pressure_measurement_noise_std_pa: float = 0.0
+    pressure_measurement_filter_time_s: float = 0.0
+    load_measurement_bias_n: float = 0.0
+    load_measurement_noise_std_n: float = 0.0
+    observer_valve_gain_scale: float = 1.0
+    observer_tracking_rate_scale: float = 1.0
+    observer_hold_rate_scale: float = 1.0
+    observer_temperature_gain_scale: float = 1.0
 
 
 def run_definition(controller_name: str, config: ExperimentConfig = ExperimentConfig(), seed: int = 2026) -> dict[str, float]:
@@ -70,15 +88,19 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
     # plant's hidden leakage multiplier to the controller.
     observer = PressureObserver(
         nominal_leakage_m3_s_pa=base_parameters.leakage_m3_s_pa,
-        temperature_leakage_gain_per_c=parameters.temperature_leakage_gain_per_c,
-        valve_pressure_gain_pa=parameters.valve_pressure_gain_pa,
-        tracking_pressure_rate_s=parameters.tracking_pressure_rate_s,
-        hold_pressure_rate_s=parameters.hold_pressure_rate_s,
+        temperature_leakage_gain_per_c=(parameters.temperature_leakage_gain_per_c
+                                        * config.observer_temperature_gain_scale),
+        valve_pressure_gain_pa=(parameters.valve_pressure_gain_pa
+                                * config.observer_valve_gain_scale),
+        tracking_pressure_rate_s=(parameters.tracking_pressure_rate_s
+                                  * config.observer_tracking_rate_scale),
+        hold_pressure_rate_s=(parameters.hold_pressure_rate_s
+                              * config.observer_hold_rate_scale),
         hold_leakage_retention=parameters.hold_leakage_retention)
     supervisor = HybridHoldSupervisor(hysteresis=config.hold_supervisor_hysteresis,
                                       accumulator_enabled=config.accumulator_enabled)
     pid = AntiWindupPID(); smc = BoundaryLayerSMC(); dismac = DI_SMACKernel()
-    errors, commands = [], []
+    errors, steady_errors, commands = [], [], []
     velocities = []
     acc_valve_energy = 0.0
     acc_valve_integral = 0.0
@@ -98,13 +120,23 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
     observer_confidence_min = 1.0
     observer_leakage_max = 0.0
     observer_detection_delay_s = None
+    filtered_pressure_delta = max(
+        state.p_a_pa - state.p_b_pa + config.pressure_measurement_bias_pa, 0.0)
+    pressure_filter_alpha = (
+        model.p.dt_s / (config.pressure_measurement_filter_time_s + model.p.dt_s)
+        if config.pressure_measurement_filter_time_s > 0.0 else 1.0)
     for step in range(int(config.duration_s / model.p.dt_s)):
         temperature = (config.temperature_start_c
                        + (config.temperature_end_c - config.temperature_start_c)
                        * step / max(config.duration_s / model.p.dt_s, 1.0))
-        measured_x = state.x_m + rng.gauss(0.0, model.p.sensor_std_m)
+        measured_x = (state.x_m + config.position_sensor_bias_m
+                      + rng.gauss(0.0, model.p.sensor_std_m))
         x_hat = measured_x
-        pressure_delta = max(state.p_a_pa - state.p_b_pa, 0.0)
+        raw_pressure_delta = max(
+            state.p_a_pa - state.p_b_pa + config.pressure_measurement_bias_pa
+            + rng.gauss(0.0, config.pressure_measurement_noise_std_pa), 0.0)
+        filtered_pressure_delta += pressure_filter_alpha * (raw_pressure_delta - filtered_pressure_delta)
+        pressure_delta = filtered_pressure_delta
         leak_hat = observer.flow_estimate(pressure_delta, temperature)
         observer_confidence_min = min(observer_confidence_min, observer.confidence)
         observer_leakage_max = max(observer_leakage_max, abs(leak_hat))
@@ -124,10 +156,15 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             reference_velocity = 0.0
             reference_acceleration = 0.0
         load = 9000.0 if time_s < 10.0 else config.load_after_step_n
-        desired_pressure = (load + parameters.stiffness_n_m * smooth_reference
+        # Keep the nominal random-number sequence unchanged: this optional
+        # interface channel samples only when an actual load-noise level is set.
+        load_noise = (rng.gauss(0.0, config.load_measurement_noise_std_n)
+                      if config.load_measurement_noise_std_n > 0.0 else 0.0)
+        measured_load = load + config.load_measurement_bias_n + load_noise
+        desired_pressure = (measured_load + parameters.stiffness_n_m * smooth_reference
                             + parameters.coulomb_n + parameters.mass_kg * reference_acceleration
                             + parameters.viscous_n_s_m * (reference_velocity - state.v_mps)) / parameters.cylinder_area_m2
-        pressure_error = desired_pressure - (state.p_a_pa - state.p_b_pa)
+        pressure_error = desired_pressure - pressure_delta
         pressure_feedforward = (pressure_error / parameters.valve_pressure_gain_pa
                                 if config.pressure_feedforward_enabled else 0.0)
         if controller_name == "pid":
@@ -148,8 +185,10 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
         # prevents controller-specific switching chatter from blocking the
         # hold-entry gate.
         if progress >= 1.0:
-            feedback = 80.0 * (smooth_reference - x_hat) - 12.0 * state.v_mps
-        feedback_scale = 0.18 if progress < 1.0 else 0.08
+            feedback = (config.hold_fine_trim_position_gain * (smooth_reference - x_hat)
+                        - config.hold_fine_trim_velocity_gain * state.v_mps)
+        feedback_scale = (0.18 if progress < 1.0
+                          else config.hold_fine_trim_scale)
         command = pressure_feedforward + feedback_scale * feedback
         hold_mode = hold_start_step is not None and config.hold_enabled
         hold_policy = None
@@ -162,11 +201,11 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
         # for the pressure loop to re-converge after a step.  Without
         # feedforward the controller keeps the pre-step nominal load, so the
         # pressure loop must recover the new equilibrium on its own.
-        hold_load = load if config.load_feedforward_enabled else nominal_load
+        hold_load = measured_load if config.load_feedforward_enabled else nominal_load
         if hold_mode:
             required_pressure = (hold_load + parameters.stiffness_n_m * state.x_m
                                  + parameters.coulomb_n) / parameters.cylinder_area_m2
-            pressure_deficit = max(required_pressure - (state.p_a_pa - state.p_b_pa), 0.0)
+            pressure_deficit = max(required_pressure - pressure_delta, 0.0)
             hold_policy = supervisor.update(leak_hat)
             # Stored fluid is also a fast response path for a measured load
             # step.  A leakage-only mode trigger left the accumulator idle
@@ -187,7 +226,7 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             # policy, not permission to abandon pressure balance.  The
             # accumulator discharge (below) is the dedicated compensation
             # path; the main valve stays on fine-trim in every mode.
-            command = ((hold_pressure - (state.p_a_pa - state.p_b_pa))
+            command = ((hold_pressure - pressure_delta)
                        / parameters.valve_pressure_gain_pa)
             command += 0.04 * max(-1.0, min(1.0, config.reference_m - state.x_m) / hold_tolerance_m)
             # Closed-loop accumulator discharge: the discharge valve opens on
@@ -231,10 +270,19 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
                            acc_valve=acc_valve,
                            leakage_multiplier=leakage_multiplier)
         if config.leakage_observer_enabled:
+            pressure_after_noise = (
+                rng.gauss(0.0, config.pressure_measurement_noise_std_pa)
+                if config.pressure_measurement_noise_std_pa > 0.0 else 0.0)
+            raw_pressure_after = max(
+                state.p_a_pa - state.p_b_pa + config.pressure_measurement_bias_pa
+                + pressure_after_noise, 0.0)
+            pressure_after = (filtered_pressure_delta + pressure_filter_alpha
+                              * (raw_pressure_after - filtered_pressure_delta))
+            filtered_pressure_delta = pressure_after
             observer.update_transition(
-                pressure_before_pa=state_before.p_a_pa - state_before.p_b_pa,
-                pressure_after_pa=state.p_a_pa - state.p_b_pa,
-                position_before_m=state_before.x_m,
+                pressure_before_pa=pressure_delta,
+                pressure_after_pa=pressure_after,
+                position_before_m=measured_x,
                 command=command,
                 load_n=load,
                 dt=model.p.dt_s,
@@ -266,9 +314,12 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
                               state.p_acc_pa, state.acc_oil_m3)
         filtered_velocity = 0.92 * filtered_velocity + 0.08 * state.v_mps
         error = config.reference_m - state.x_m
-        errors.append(error); commands.append(command)
+        errors.append(error)
+        if time_s >= trajectory_time_s:
+            steady_errors.append(error)
+        commands.append(command)
         velocities.append(state.v_mps)
-        pressure_error = desired_pressure - (state.p_a_pa - state.p_b_pa)
+        pressure_error = desired_pressure - pressure_delta
         if config.velocity_gate_mode == "dual":
             gate_ok = (abs(state.v_mps) <= velocity_tolerance_mps and
                        abs(filtered_velocity) <= velocity_tolerance_mps)
@@ -287,7 +338,16 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
         if hold_start_position is not None:
             min_hold_position = min(state.x_m, min_hold_position if min_hold_position is not None else state.x_m)
     hold_drop = None if hold_start_position is None else max(0.0, hold_start_position - min_hold_position)
+    steady_abs = [abs(error) for error in steady_errors]
+    steady_sorted = sorted(steady_abs)
+    steady_p95 = (steady_sorted[min(len(steady_sorted) - 1,
+                                    int(0.95 * len(steady_sorted)))
+                   ] if steady_sorted else 0.0)
     return {"rmse_m": (sum(error * error for error in errors) / len(errors)) ** 0.5,
+            "steady_rmse_m": (sum(error * error for error in steady_errors)
+                               / len(steady_errors)) ** 0.5 if steady_errors else 0.0,
+            "steady_max_abs_error_m": max(steady_abs, default=0.0),
+            "steady_p95_abs_error_m": steady_p95,
             "max_error_m": max(abs(error) for error in errors),
             "dynamic_max_error_m": max((abs(error) for error in errors[:int(trajectory_time_s / model.p.dt_s)]), default=0.0),
             "settling_error_m": abs(errors[-1]),

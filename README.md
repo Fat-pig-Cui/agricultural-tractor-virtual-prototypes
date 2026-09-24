@@ -17,17 +17,19 @@ not a calibrated physical platform.
 ## Release scope
 
 The archive intentionally includes only evidence supporting the current
-submission manuscripts:
+Machines and Energies submission manuscripts:
 
 - the two English LaTeX sources and compiled PDFs;
 - current manuscript figures;
 - source code under code/;
 - scripts used for the reported experiments and figures;
 - declared paper-1 parameter and assumption records;
-- result JSON files used to support the current conclusions.
+- result JSON files used to support the current conclusions, including the
+  paper-1 controller-interface audit and paper-2 frozen input sensitivities.
 
-Historical draft material and diagnostics excluded from the manuscripts,
-including invalid terminal-SOC fuel figures, are not part of this release.
+Obsolete bulk parameter screens and historical draft artifacts are not part of
+this release. The explicitly declared oracle diagnostic remains included
+because the Energies manuscript reports its valid and rejected boundaries.
 
 ## Reproducing the reported results
 
@@ -50,12 +52,13 @@ Run the paper-specific workflows from the repository root:
 python3 tools/verify_release.py
 ~~~
 
-The paper-2 workflow includes the 20-path causal benchmark and the
-horizon-preview mechanism map, so it can take several minutes. It writes
-outputs under results/ and figures under papers/figures/.
+The paper-2 workflow includes the 20-path causal benchmark, the
+horizon-preview mechanism map, and the 12-path frozen storage/forecast audit,
+so it can take several minutes. It writes outputs under results/ and figures
+under papers/figures/.
 
 To compile the supplied manuscript sources, install a TeX distribution with
-XeLaTeX and run:
+PDFLaTeX and run:
 
 ~~~bash
 ./build_manuscripts.sh
@@ -65,9 +68,11 @@ XeLaTeX and run:
 
 Paper 1 meets its stated virtual-model numerical screen under the declared
 filtered-gate protocol: the 20-seed hybrid result has a 9.236 mm full-run RMSE
-and a 0.022 mm mean 1800 s hold drop. This is not a claim that every point in
-the commanded 200 mm initial motion lies within +/-10 mm, nor a physical-hitch
-performance result.
+and a 0.022 mm mean 1800 s hold drop. Its independent controller-interface
+audit retains unfiltered 0.1 MPa pressure-noise instability and bounds the
+declared filtered combined mismatch to an 8.97 mm worst steady error. These
+are not claims that every point in the commanded 200 mm initial motion lies
+within +/-10 mm, nor physical-hitch performance results.
 
 Paper 2 separates strictly causal controller statistics from an idealized
 offline diagnostic. The only raw value above 20% is 21.611% for a deliberately
@@ -96,8 +101,12 @@ the latest public archival version. Version-specific DOIs are retained in the
 release notes; the manuscript data-availability statements cite the repository
 and the concept DOI.
 
+Version 1.0.3 is the GitHub release source for the current manuscript sources
+and result files. Zenodo assigns an immutable version DOI after ingesting this
+release; the manuscripts cite the stable concept DOI.
+
 ## Authors
 
-Chenyu Cui; Peng Wang; Lihan Wang; Yucheng Zhang.
+Chenyu Cui; Peng Wang; Yucheng Zhang.
 
 Correspondence: zhangyucheng@ict.ac.cn

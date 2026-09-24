@@ -1,6 +1,6 @@
 # Licensing
 
-Copyright 2026 Chenyu Cui, Peng Wang, Lihan Wang, and Yucheng Zhang.
+Copyright 2026 Chenyu Cui, Peng Wang, and Yucheng Zhang.
 
 The manuscript sources, figures, result files, and documentation in this
 release are made available under the Creative Commons Attribution 4.0

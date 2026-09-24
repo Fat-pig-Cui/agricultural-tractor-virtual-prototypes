@@ -1,3 +1,22 @@
+# v1.0.3
+
+- Removes Lihan Wang from both manuscript author lists and transfers the
+  Investigation role to Chenyu Cui.
+- Updates the current CRediT, CFF, license, Zenodo, and README metadata to the
+  three-author roster. Earlier GitHub and Zenodo versions remain immutable
+  historical snapshots.
+- Adds the Machines and Energies manuscript sources and PDFs used for the
+  current submissions, replacing the earlier generic-journal source aliases
+  as the release-verification targets.
+- Adds the paper-1 20-seed controller-interface/observer audit, including the
+  retained unfiltered-pressure-noise failure boundary and a declared filtered
+  combined-mismatch condition.
+- Adds the paper-2 frozen 120--280 kWh storage-capacity and causal-predictor
+  sensitivity audits; neither changes the sign of the certified MPC result.
+- Corrects all active archive references to the Zenodo concept DOI
+  `10.5281/zenodo.22754509`. The version DOI `10.5281/zenodo.22754510` remains
+  the immutable v1.0.1 record and is not the concept DOI.
+
 # v1.0.2
 
 - Removes the unassigned MDPI-template DOI

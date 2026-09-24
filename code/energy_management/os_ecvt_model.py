@@ -64,15 +64,15 @@ class RealisticDieselMap(EfficiencyMap):
             (0.19, 0.30, 0.38, 0.41, 0.40, 0.37),
             (0.17, 0.27, 0.35, 0.38, 0.37, 0.34),
         )
-        # Scale the idle column to expose the requested low-load sensitivity.
+        # Scale the low-load island continuously around the default 0.25
+        # reference.  Every requested level therefore changes both the idle
+        # and first 20% load columns; no upper-level plateau is introduced by
+        # clipping a base-grid entry.
         rows = [list(row) for row in base]
         for row in rows:
             row[0] = self.low_load_efficiency
-            # Treat the first 20% load column as part of the low-load island
-            # as well. This makes the sensitivity parameter physically
-            # meaningful for a realistic OOL held at its minimum stable
-            # power, rather than changing only the exact zero-power point.
-            row[1] = min(row[1], self.low_load_efficiency + 0.08)
+            row[1] = max(row[0], min(self.peak,
+                                     self.low_load_efficiency + (row[1] - 0.25)))
         load = min(1.0, max(0.0, abs(power_w) / 300000.0))
         ri = min(range(len(rpm_grid)), key=lambda i: abs(rpm_grid[i] - rpm))
         if rpm <= rpm_grid[0]:
