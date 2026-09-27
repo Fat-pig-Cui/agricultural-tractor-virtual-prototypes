@@ -1,3 +1,10 @@
+# v1.0.6
+
+- Refines the Energies manuscript Figure 1 box labels from 17 pt to 15.5 pt
+  and the feedback label from 14.5 pt to 13.2 pt after page-scale review.
+- Retains the two- and three-line label layout, with no text clipping, border
+  contact, arrow overlap, page-count change, or scientific-content change.
+
 # v1.0.5
 
 - Increases the Energies manuscript Figure 1 box labels from the 9.2 pt

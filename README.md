@@ -109,7 +109,7 @@ the latest public archival version. Version-specific DOIs are retained in the
 release notes; the manuscript data-availability statements cite the repository
 and the concept DOI.
 
-Version 1.0.5 is the GitHub release source for the current manuscript sources
+Version 1.0.6 is the GitHub release source for the current manuscript sources
 and result files. Zenodo assigns an immutable version DOI after ingesting this
 release; the manuscripts cite the stable concept DOI.
 

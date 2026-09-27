@@ -1,6 +1,6 @@
 {
   "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
-  "description": "<p>Source code, declared virtual-model inputs, reproduction scripts, result JSON files, figures, and English manuscript sources for two theoretical simulation studies: electrohydraulic tractor-hitch position holding and strictly causal hybrid-tractor energy management.</p><p>Version 1.0.5 improves the print readability of the Energies manuscript's primary controller-architecture figure without changing its structure, results, or evidence boundaries.</p><p>All evidence is conditional on declared virtual models. The archive contains no field, vehicle, bench, or calibrated component-map measurements.</p>",
+  "description": "<p>Source code, declared virtual-model inputs, reproduction scripts, result JSON files, figures, and English manuscript sources for two theoretical simulation studies: electrohydraulic tractor-hitch position holding and strictly causal hybrid-tractor energy management.</p><p>Version 1.0.6 refines the print sizing of the Energies manuscript's primary controller-architecture figure after page-scale visual review, without changing its structure, results, or evidence boundaries.</p><p>All evidence is conditional on declared virtual models. The archive contains no field, vehicle, bench, or calibrated component-map measurements.</p>",
   "creators": [
     {
       "name": "Cui, Chenyu",
