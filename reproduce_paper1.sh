@@ -4,6 +4,9 @@ set -euo pipefail
 archive_root="$(cd "$(dirname "$0")" && pwd)"
 cd "$archive_root"
 
+python3 tools/run_paper1_v2_mode_scan.py
+python3 tools/run_paper1_two_chamber_v2.py
+python3 tools/run_paper1_v2_independent_audit.py
 python3 tools/run_paper1_statistics.py
 python3 tools/run_lift_hold_validation.py
 python3 tools/run_lift_ablation.py
@@ -18,3 +21,4 @@ python3 tools/export_paper1_traceability.py --check
 python3 tools/draw_diagrams.py
 python3 tools/plot_paper1_figures.py
 python3 tools/plot_lift_combined_stress.py
+python3 tools/plot_v2_submission_figures.py

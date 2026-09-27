@@ -1,0 +1,46 @@
+group,code_identifier,frozen_value,unit,source_class,model_role,stress_or_selection_coverage
+plant,dt_s,0.01,s,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+plant,mass_kg,1200.0,kg,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,piston_area_m2,0.012,m2,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+plant,chamber_dead_volume_m3,0.004,m3,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+plant,stroke_m,0.85,m,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,effective_bulk_modulus_pa,200000000.0,Pa,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,supply_pressure_pa,21000000.0,Pa,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,tank_pressure_pa,200000.0,Pa,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,relief_pressure_pa,22000000.0,Pa,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,fluid_density_kg_m3,850.0,kg/m3,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,valve_discharge_coefficient,0.62,dimensionless,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,valve_max_area_m2,5e-06,m2,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,valve_deadzone,0.03,dimensionless,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,valve_time_constant_s,0.05,s,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,internal_leakage_m3_s_pa,5e-14,m3/(s Pa),researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",5x leakage audit
+plant,temperature_leakage_gain_per_c,0.018,1/degC,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+plant,viscous_n_s_m,2200.0,N s/m,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,coulomb_n,850.0,N,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,stribeck_n,350.0,N,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,stribeck_velocity_m_s,0.004,m/s,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,stiffness_n_m,18000.0,N/m,researcher-defined theoretical virtual input,mechanical virtual plant,fixed in reported V2 experiments
+plant,sensor_position_std_m,0.0015,m,researcher-defined theoretical virtual input,controller-facing measurement interface,2x sensor-noise audit and +2 mm bias boundary
+plant,sensor_pressure_std_pa,50000.0,Pa,researcher-defined theoretical virtual input,controller-facing measurement interface,2x sensor-noise and +0.1 MPa bias audits
+plant,accumulator_precharge_pa,8000000.0,Pa,researcher-defined theoretical virtual input,stored-energy state or constraint,fixed in reported V2 experiments
+plant,accumulator_shell_volume_m3,0.004,m3,researcher-defined theoretical virtual input,stored-energy state or constraint,fixed in reported V2 experiments
+plant,accumulator_initial_pressure_pa,14000000.0,Pa,researcher-defined theoretical virtual input,stored-energy state or constraint,fixed in reported V2 experiments
+plant,accumulator_polytropic_index,1.2,dimensionless,researcher-defined theoretical virtual input,stored-energy state or constraint,fixed in reported V2 experiments
+plant,accumulator_valve_coefficient_m3_s_pa_sqrt,5e-08,m3/(s sqrt(Pa)),researcher-defined theoretical virtual input,stored-energy state or constraint,0.5x flow audit
+protocol_and_supervisor,duration_s,300.0,s,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,seed,4100,dimensionless,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,post_step_load_n,14000.0,N,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,load_step_time_s,60.0,s,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,leakage_scale,1.0,dimensionless,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+protocol_and_supervisor,temperature_start_c,25.0,degC,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,temperature_end_c,50.0,degC,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,position_bias_m,0.0,m,researcher-defined theoretical virtual input,controller-facing measurement interface,fixed in reported V2 experiments
+protocol_and_supervisor,pressure_bias_pa,0.0,Pa,researcher-defined theoretical virtual input,controller-facing measurement interface,fixed in reported V2 experiments
+protocol_and_supervisor,position_noise_scale,1.0,dimensionless,researcher-defined theoretical virtual input,numerical or protocol setting,fixed in reported V2 experiments
+protocol_and_supervisor,pressure_noise_scale,1.0,dimensionless,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+protocol_and_supervisor,accumulator_flow_scale,1.0,dimensionless,researcher-defined theoretical virtual input,stored-energy state or constraint,fixed in reported V2 experiments
+protocol_and_supervisor,mode_dwell_s,8.0,s,researcher-defined theoretical virtual input,controller or supervisor setting,"development scan: 4, 8, 12 s"
+protocol_and_supervisor,lock_pressure_deficit_pa,100000.0,Pa,researcher-defined theoretical virtual input,"hydraulic flow, loss, or pressure constraint",fixed in reported V2 experiments
+protocol_and_supervisor,accumulator_pressure_deficit_pa,300000.0,Pa,researcher-defined theoretical virtual input,stored-energy state or constraint,"development scan: 0.18, 0.30, 0.45 MPa"
+protocol_and_supervisor,lock_error_m,0.0025,m,researcher-defined theoretical virtual input,controller or supervisor setting,fixed in reported V2 experiments
+protocol_and_supervisor,accumulator_error_m,0.004,m,researcher-defined theoretical virtual input,stored-energy state or constraint,"development scan: 2.5, 4, 6 mm"

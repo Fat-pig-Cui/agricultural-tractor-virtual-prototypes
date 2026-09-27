@@ -15,7 +15,7 @@
 \articlenumber{0}
 \pubyear{2026}
 \copyrightyear{2026}
-\Title{A Dual-Mode Electrohydraulic Hitch Control Architecture for Long-Term Position Holding in Agricultural Machinery: A Parameterized Virtual-Prototype Stress Test}
+\Title{Observer-Based Hybrid Position Holding for an Electrohydraulic Agricultural Hitch: A Two-Chamber Virtual-Prototype Stress Test}
 \newcommand{\orcidauthorA}{0009-0005-1928-6218}
 \Author{Chenyu Cui$^{1}$, Peng Wang$^{1}$ and Yucheng Zhang$^{1,}$*\orcidA{}}
 \AuthorNames{Chenyu Cui, Peng Wang and Yucheng Zhang}
@@ -26,8 +26,8 @@ $^{1}$ \quad Prospective Research Laboratory, Institute of Computing Technology,
 \daterevised{}
 \dateaccepted{}
 \datepublished{}
-\abstract{Long-duration position holding is a machinery-control requirement for electrohydraulic three-point hitches because a small retained loss can become a large implement-position error during operation. This study develops a dual-mode electrohydraulic control architecture for a heavy agricultural-machinery hitch and evaluates it in a reproducible, parameterized virtual prototype. The model evolves a reduced pressure-difference state, reconstructs paired virtual pressure outputs for controller access, and includes command saturation, friction, temperature-dependent virtual leakage, position noise, a lock-mode loss path, and an accumulator charging/discharge branch. A known-input pressure-transition residual updates a model-level leakage coefficient. During tracking, a boundary-layer sliding-mode controller is combined with pressure feedforward. After the reference is reached, a hysteretic supervisor selects bounded valve trimming, locking, or accumulator compensation; load feedforward updates the holding-pressure target. Twenty seeded simulations were performed for an 1800 s hold, alongside a declared one-at-a-time assumption-range screen and a 32-case Cartesian interaction surface. Under a filtered-velocity entry criterion, the complete controller had a full-run root-mean-square error of 9.24 mm and a mean hold drop of 0.022 mm. In a 14 kN load-step test, accumulator closed-loop compensation and load feedforward reduced mean drop from 20.85 mm and 96.59 mm, respectively, to 1.75 mm. All 640 Cartesian virtual runs passed a predeclared 10 mm, 1800 s drop screen. A separate controller-facing measurement audit retained the failure of unfiltered 0.1 MPa pressure noise and found an 8.97 mm worst steady error for a declared combined mismatch with 0.05 MPa noise and a 200 ms pressure filter. These results quantify architecture-level behavior and internal consistency for a machine-control design screen, not physical-machine performance. The unfiltered velocity gate did not enter hold in the present simulations, and the hydraulic inputs are declared virtual-model definitions rather than target-machine measurements.}
-\keyword{agricultural machinery; electrohydraulic actuator; three-point hitch; position control; virtual prototype; stress testing; supervisory control}
+\abstract{Long-duration position holding in an electrohydraulic agricultural hitch requires a controller to distinguish tracking transients from retained leakage and load disturbances. This study develops an observer-based hybrid holding controller and evaluates it in a two-chamber nonlinear virtual prototype. The plant includes chamber-pressure continuity, directional-valve orifice flow, spool dynamics, internal leakage, temperature dependence, friction, relief limits, and a finite gas--oil accumulator. An interface observer estimates position rate and implement load from noisy position and chamber-pressure measurements; the controller does not access true plant velocity, load, or leakage. A hysteretic supervisor with an 8 s minimum dwell selects fine trim, lock, or accumulator compensation. On 20 frozen 1800 s runs, the proposed controller passed the combined 10 mm accuracy/hold screen on 20/20 paths, with a 1.85 mm mean position drop, 2.10 mm worst drop, and 8.90 mm worst post-transition error. A matched PID--accumulator chain also passed 20/20, but had a 3.44 mm mean drop, 26.8 mode switches, and 25.54 mL mean accumulator-oil use, compared with 13.1 switches and 1.02 mL for the proposed controller; its lower 0.25 mm transition RMSE identifies a tracking--holding trade-off. PID--lock and sliding-mode--lock failed after the load step with approximately 16 mm mean drop. Five-times leakage, doubled sensor noise, and half accumulator flow remained within the declared screen; a +2 mm position bias produced a 10.61 mm worst transition error and is retained as an interface boundary. These results support an auditable theoretical design-screening method, not a calibrated hydraulic-machine performance claim.}
+\keyword{agricultural machinery; electrohydraulic actuator; two-chamber model; three-point hitch; position holding; interface observer; virtual prototype; hybrid supervision}
 \begin{document}
 
 \section{Introduction}
@@ -39,20 +39,20 @@ Recent tractor research has also reported hitch-position estimation using an EKF
 
 For a holding study, the evaluation protocol must also be separated from the eventual acceptance claim. A small average drop can arise because a controller has not entered its hold mode, because the disturbance is unrealistically smooth, or because an internal pressure state is available without sensor error. Conversely, a conservative velocity gate can prevent a nominally stable controller from being evaluated at all. Reporting the entry criterion, time horizon, load disturbance, and parameter range is therefore as important as reporting a single position error. This distinction is especially important for a theoretical model, where repeatable seeded noise provides an internal stress test but cannot substitute for independent trials on a hydraulic machine.
 
-This work therefore investigates a narrow, simulation-based question: can a leakage-informed state supervisor coordinate tracking, bounded valve trim, locking, and accumulator compensation under explicitly stated assumptions? The goal is not to estimate the field performance of a particular hitch. Instead, the virtual prototype makes its loss paths, internal pressure access, parameter classes, and stress conditions inspectable so that a reviewer can distinguish internal model consistency from physical validation.
+This work therefore investigates a narrow, simulation-based question: can an observer-based supervisor coordinate tracking, bounded valve trim, locking, and finite accumulator compensation while using only noisy position and chamber-pressure measurements? The goal is not to estimate the field performance of a particular hitch. Instead, the virtual prototype makes its loss paths, pressure interface, mode transitions, parameter classes, and stress conditions inspectable so that a reviewer can distinguish internal model consistency from physical validation.
 
 \section{Related Work}
 Prior work on tractor hitches can be grouped into system development, agricultural-operation coordination, and electrohydraulic servo control. System-development studies describe the sensing, hydraulic, and control choices required for electrohydraulic hitches \cite{sun2022}, while component studies such as the valve-flow analysis of Kumar et al. \cite{kumar2021} provide physically useful evidence for a specific valve. Coordinated depth and speed control addresses a different but complementary agricultural objective: it connects the hitch command to operation quality and economy \cite{sun2025}. None of these results makes a calibrated hydraulic data set available for the virtual prototype studied here, so they are used to position the problem rather than to identify its numerical parameters.
 
 In electrohydraulic motion control, reduced servo models are commonly used to expose the coupling among pressure, valve flow, load, and position before a specific machine is identified \cite{jelali2003}. Sliding-mode and adaptive methods then manage nonlinearities and disturbances \cite{bai2010,tang2011,jin2013}. Tractor-specific work similarly combines draft and position objectives \cite{liu2023}, and estimator-based work can improve the availability of hitch-position information \cite{kim2025}. However, a conventional tracking comparison does not directly test whether a controller should trim, lock, or draw from a hydraulic accumulator once the reference is reached. That decision depends on the assumed retained loss and on the entry criterion for the hold state.
 
-The present study contributes at this supervisory level. It separates cylinder and lock-path losses in a reduced-order model, exposes a pressure-transition residual as a model-level leakage proxy, and reports both a filtered entry result and the failure of the original raw-velocity gate. The resulting evidence is deliberately limited to a parameterized virtual prototype. It supplies an auditable long-duration stress-test workflow, not a claim that the described policy has been calibrated or validated on a physical tractor.
+The present study contributes at this supervisory level. Its primary plant conserves two chamber pressures, includes finite accumulator state and explicit valve/spool limits, and exposes only noisy controller-facing measurements. Four complete control chains share the same observer and tracking bandwidth, so their differences arise from the hold strategy rather than privileged state access. Development-only supervisor selection is separated from 20 frozen 30 min holdout paths, and adverse sensor-bias outcomes are retained. The evidence is deliberately limited to a parameterized virtual prototype and an auditable long-duration stress-test workflow.
 
-For a machinery and mechatronics readership, the architectural contribution is the explicit separation of motion control, hold-state supervision, and stored-fluid compensation. This separation makes the actuator interfaces and failure-sensitive transitions visible: a reviewer can inspect which branch is active, which pressure signal is assumed available, and how a load step is absorbed. The study therefore treats the virtual prototype as a design-screening instrument for an electrohydraulic machine, with the same distinction between model-consistency evidence and hardware validation retained throughout the paper.
+For a machinery and mechatronics readership, the architectural contribution is the explicit separation of motion control, measured-state observation, hold-state supervision, and stored-fluid compensation. This separation makes the actuator interfaces and failure-sensitive transitions visible: a reviewer can inspect which branch is active, which pressure signal is assumed available, how often the mode changes, and how a load step is absorbed. The study therefore treats the virtual prototype as a design-screening instrument for an electrohydraulic machine, with the same distinction between model-consistency evidence and hardware validation retained throughout the paper.
 
 \section{Materials and Methods}
-\subsection{Electrohydraulic hitch model}
-The plant is a reduced-order pressure-difference virtual surrogate, not a two-chamber fluid-conservation model. Let $x$, $v$, and $d$ denote piston position, velocity, and virtual pressure difference. At each explicit 10 ms step, the implementation evaluates
+\subsection{Legacy reduced-order hitch model}
+The earlier benchmark plant is a reduced-order pressure-difference virtual surrogate, not a two-chamber fluid-conservation model. Let $x$, $v$, and $d$ denote piston position, velocity, and virtual pressure difference. At each explicit 10 ms step, the implementation evaluates
 \begin{equation}
  d_{k+1}=\Pi_{[0,p_{\mathrm{rel}}]}\left[d_k+\Delta t\left\{a_m(d_k^\star-d_k)-g_m\mathcal{L}(d_k,T_k;C_l,g_T)+\frac{\beta_e}{V}q_{\mathrm{acc},k}\right\}\right],
 \end{equation}
@@ -70,33 +70,50 @@ p_{acc}=\max\left(1.01d,\;p_{acc,0}\frac{V_{acc,0}}{V_{acc,0}+V_{out}}\right).
 This is a virtual compensation branch with a bounded recharge proxy. It is not a calibrated representation of a particular accumulator, lock valve, or hydraulic circuit.
 
 \subsection{Parameter provenance and assumption register}
-All 22 plant parameters used by the reported virtual prototype are listed in the machine-readable file \texttt{paper1\_parameter\_manifest.csv}. Each row has a stable identifier, code identifier, numerical value, unit, source class, model role, and stress-test coverage. The companion assumption register records the scope and prohibited physical interpretation of each modelling choice. The file \texttt{export\_paper1\_traceability.py} checks every manifest value against \texttt{LiftParameters}, snapshots the experiment and controller defaults, and exports SHA-256 fingerprints before reproduction. Table~\ref{tab:provenance} summarizes the source classes. No value is represented as a manufacturer data-sheet value or a calibrated physical measurement.
+All 45 V2 plant, protocol, and supervisor parameters are exported directly from the frozen Python dataclasses to \texttt{paper1\_v2\_parameter\_manifest.csv}. Each row records its code identifier, numerical value, unit, source class, model role, and stress or selection coverage. The exporter is rerun before packaging so that the manifest cannot silently diverge from the executable defaults. Table~\ref{tab:provenance} summarizes the model-role classes. Every value is labelled as a researcher-defined theoretical virtual input; none is represented as a manufacturer data-sheet value or calibrated physical measurement.
 
 \begin{table}[H]
 \centering
-\caption{Traceable parameter source classes for the paper-1 virtual prototype.}
+\caption{Traceable V2 parameter roles exported from the frozen virtual prototype.}
 \label{tab:provenance}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lcl}
 \toprule
 Source class & Count & Interpretation \\
 \midrule
-Virtual hydraulic input & 9 & Researcher-defined virtual cylinder, loss, pressure-limit, and accumulator inputs \\
-Virtual mechanical input & 5 & Researcher-defined inertia, friction, stiffness, and stroke inputs \\
-Reduced-order coefficient & 6 & Command-to-pressure, mode-relaxation, thermal, and pressure-reconstruction settings \\
-Numerical setting & 1 & Explicit integration interval \\
-Measurement setting & 1 & Seeded position-noise standard deviation \\
+Hydraulic flow/loss/pressure & 14 & chamber, valve, leakage, and pressure-limit inputs \\
+Mechanical virtual plant & 7 & inertia, friction, stiffness, and stroke inputs \\
+Stored-energy state/constraint & 8 & finite accumulator and related protocol inputs \\
+Measurement interface & 4 & position/pressure noise and declared bias inputs \\
+Controller, supervisor, and protocol & 12 & thresholds, dwell, horizon, load, and numerical settings \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
+
+\subsection{V2 two-chamber plant and interface observer}
+The primary V2 plant replaces the reduced pressure-difference surrogate with two chamber states. For chamber volumes $V_A(x)$ and $V_B(x)$, the pressure equations are
+\begin{equation}
+ \dot p_A=\frac{\beta_e}{V_A(x)}(q_A+q_{acc}-A\dot x-q_l),\qquad
+ \dot p_B=\frac{\beta_e}{V_B(x)}(A\dot x-q_B+q_l),
+\end{equation}
+where $q_A$ and $q_B$ are directional orifice flows from the commanded spool, $q_l=C_l(T)(p_A-p_B)$ is internal leakage, and $q_{acc}$ is limited by a finite gas--oil accumulator state. The spool follows a first-order lag with a dead zone. Mechanical motion uses $m\ddot x=A(p_A-p_B)-F_L-c\dot x-F_f(\dot x)-kx$. Relief pressure and stroke boundaries are enforced at every 10 ms step. All hydraulic coefficients are parameterized virtual inputs; none is a target-machine data-sheet or calibration value.
+
+The controller receives noisy position and chamber-pressure measurements. An interface observer updates position rate and load using the measured innovation and pressure balance; a leakage estimate is retained only as a diagnostic. The true plant velocity, load, and leakage are never passed to the control law. The hybrid supervisor enters hold after a 1 s position/velocity gate and applies an 8 s minimum mode dwell. A pressure deficit above 0.30 MPa or a position error above 4 mm can request accumulator compensation, while a low-error, low-velocity condition requests lock. These settings were selected on five development seeds by requiring all paths to pass and then minimizing accumulator-oil use, mode switching, and hold drop in that order. They were fixed before the holdout runs.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\linewidth]{paper1_v2_architecture.png}
+\caption{Primary V2 architecture. All controllers use the same noisy position/chamber-pressure interface and observer; the proposed supervisor selects fine trim, lock, or finite-accumulator support.}
+\label{fig:v2-architecture}
+\end{figure}
 
 \subsection{Assumption ranges and stress screens}
 Table~\ref{tab:assumptions} lists selected values with dedicated stress screens. Except for position noise, the listed ranges are deterministic one-at-a-time settings rather than estimated probability distributions. They test whether the conclusions are locally fragile within the virtual model; they do not quantify uncertainty of a physical hitch.
 
 \begin{table}[H]
 \centering
-\caption{Selected virtual-prototype inputs and one-at-a-time stress settings. Full provenance and all nominal values are in \texttt{paper1\_parameter\_manifest.csv}; none is an identified physical measurement.}
+\caption{Selected V2 virtual-prototype inputs and one-at-a-time stress settings. Full provenance and all nominal values are in \texttt{paper1\_v2\_parameter\_manifest.csv}; none is an identified physical measurement.}
 \label{tab:assumptions}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{llll}
@@ -106,16 +123,16 @@ Quantity & Nominal value & Stress settings & Role in model \\
 Moving mass $m$ & 1200 kg & $0.7m$, $1.3m$ & actuator inertia \\
 Viscous coefficient $c$ & 2200 N s m$^{-1}$ & $0.7c$, $1.3c$ & mechanical damping \\
 Hitch stiffness $k$ & 18 000 N m$^{-1}$ & $0.7k$, $1.3k$ & load-position relation \\
-Cylinder leakage $C_l$ & $1.5\times10^{-12}$ m$^3$ s$^{-1}$ Pa$^{-1}$ & $0.5C_l$, $2C_l$, $5C_l$ & pressure loss \\
+Cylinder leakage $C_l$ & $5.0\times10^{-14}$ m$^3$ s$^{-1}$ Pa$^{-1}$ & $5C_l$ & chamber-to-chamber loss \\
 Position-noise SD & 1.5 mm & 0.5, 2.0$\times$ & measured position \\
-Accumulator flow coefficient & $2.0\times10^{-12}$ m$^3$ s$^{-1}$ Pa$^{-1}$ & 0.5, 1.5$\times$ at 14 kN & compensation branch \\
+Accumulator valve coefficient & $5.0\times10^{-8}$ m$^3$ s$^{-1}$ Pa$^{-1/2}$ & 0.5$\times$ at 14 kN & finite compensation branch \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
 
-\subsection{Control architecture}
-Figure~\ref{fig:architecture} shows the architecture. During the commanded motion, the controller combines a pressure-balance feedforward term with PID, DI-SMAC, or boundary-layer sliding-mode feedback. When the accumulator is inactive, the known command and load define a leakage-free pressure-rate prediction $\dot{\Delta p}^{(0)}_k$. The pressure-transition residual gives a non-negative coefficient candidate,
+\subsection{Legacy control architecture}
+Figure~\ref{fig:architecture} shows the earlier reduced-order architecture retained as a historical benchmark. During the commanded motion, the controller combines a pressure-balance feedforward term with PID, DI-SMAC, or boundary-layer sliding-mode feedback. When the accumulator is inactive, the known command and load define a leakage-free pressure-rate prediction $\dot{\Delta p}^{(0)}_k$. The pressure-transition residual gives a non-negative coefficient candidate,
 \begin{equation}
  C^*_{l,k}=\frac{A\max\{a_m(d_k^\star-d_k)-(d_{k+1}-d_k)/\Delta t,0\}}{g_m d_k[1+g_T\max(T_k-25,0)]},
 \end{equation}
@@ -143,12 +160,51 @@ Thus, for $0<\alpha<1$, the proxy is ultimately bounded by the virtual-model inv
 Equation~\eqref{eq:drop} is a parameterized criterion, not proof of a physical-hardware requirement.
 
 \subsection{Simulation protocol and statistics}
-The virtual prototype was simulated at 10 ms for 1800 s. Position followed a smooth 0.15 m to 0.35 m reference over 8 s. The load was 9 kN for the first 10 s and 7 kN afterwards; oil temperature rose from 25 to 40 $^\circ$C; position-noise standard deviation was 1.5 mm. Twenty seeds (2026--2045) were used for the primary, temperature-load, and leakage-step protocols. The one-at-a-time range screen used five fixed seeds (2026--2030), because it is a deterministic assumption check rather than a field-trial estimator. The complete hybrid controller was compared with anti-windup PID, DI-SMAC, and boundary-layer SMC; all methods used the same plant, reference, noise sequence, and common hold supervisor. This shared-supervisor comparison is an ablation of the tracking branch, not an end-to-end ranking of independently designed hold controllers.
+The legacy virtual prototype was simulated at 10 ms for 1800 s. The primary V2 protocol uses the same sample interval and horizon, but compares four complete control chains on the two-chamber plant: PID--lock, sliding-mode--lock, PID--accumulator, and observer hybrid. All four chains share the same controller-facing measurements, observer output, and tracking-stage bandwidth; their hold actions remain independent. Development seeds 4100--4104 were used only for the V2 dwell/hysteresis scan; frozen holdout seeds 4120--4139 were not used for selection. Position followed a smooth 0.15 m to 0.35 m reference over 8 s, the load changed from 9 to 14 kN at 60 s, and temperature rose from 25 to 50 $^\circ$C. The pass screen requires hold entry, maximum hold drop no greater than 10 mm, maximum post-transition absolute error no greater than 10 mm, and zero relief activation.
 
 The outcome metrics were full-run RMSE, terminal position error, hold-entry time, 1800 s position drop, command energy, and hold-entry rate. The filtered velocity gate, raw velocity gate, and their conjunction were evaluated separately. Ablations removed load feedforward, accumulator closed-loop compensation, the leakage proxy, hysteresis, or the hold structure. A 14 kN step, leakage multipliers, and a 60 s cylinder-leakage step from one to eight times nominal were used as virtual stress tests.
 
 \section{Results}
-\subsection{Nominal tracking and holding}
+\subsection{V2 complete-chain comparison}
+The V2 results are summarized in Table~\ref{tab:v2-lift}. The observer hybrid entered hold on all 20 frozen paths and passed the combined criterion on 20/20, with a mean hold drop of 1.85 mm and a worst hold drop of 2.10 mm. PID--lock and sliding-mode--lock both failed the 10 mm screen after the load step, with mean drops of 16.04 and 15.99 mm. The matched PID--accumulator chain passed 20/20 and achieved a lower transition RMSE, but its mean hold drop was 3.44 mm. Thus, the primary claim is a holding-efficiency trade-off against a credible active baseline, rather than a universal pass/fail separation.
+
+To test whether the nominal V2 result was tied to the original holdout seeds, an independent post-freeze audit used 20 new nominal seeds (4200--4219) and separate ten-seed stress groups. The observer hybrid passed 20/20 nominal paths, with a 1.89 mm mean and 2.12 mm worst hold drop and a 8.60 mm worst post-transition error. The five-times-leakage, doubled-noise, and half-accumulator-flow groups each passed 10/10; their worst hold drops were 2.26, 2.48, and 2.40 mm, respectively. These runs were not used for supervisor selection and therefore extend reproducibility evidence without changing the frozen controller or the declared virtual-machine boundary.
+
+\begin{table}[H]
+\centering
+\caption{Frozen V2 two-chamber comparison on 20 independent 1800 s paths.}
+\label{tab:v2-lift}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Controller & Hold entry & Pass screen & Mean drop (mm) & Worst drop (mm) & Worst post-transition error (mm) \\
+\midrule
+PID--lock & 20/20 & 0/20 & 16.04 & 16.14 & 15.38 \\
+Sliding-mode--lock & 20/20 & 0/20 & 15.99 & 16.11 & 16.62 \\
+PID--accumulator & 20/20 & 20/20 & 3.44 & 3.87 & 7.43 \\
+Observer hybrid & 20/20 & 20/20 & 1.85 & 2.10 & 8.90 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The observer hybrid used a mean of 13.1 mode switches over 1800 s after the 8 s dwell rule was frozen, compared with 26.8 for PID--accumulator. Mean finite-accumulator oil use was 1.02 mL for the observer hybrid and 25.54 mL for PID--accumulator. Their mean post-transition RMSE values were 1.22 and 0.25 mm, respectively, so reduced drift and actuator use are not presented as a simultaneous improvement in every tracking metric. No run reached the relief boundary.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\linewidth]{paper1_v2_results.png}
+\caption{Frozen 30 min V2 comparison. Bars show mean hold drop (left) and worst post-transition error (right); diamonds mark the worst hold-drop path. The dashed line is the declared 10 mm screen.}
+\label{fig:v2-lift-results}
+\end{figure}
+
+\subsection{V2 interface and parameter stress boundaries}
+The observer hybrid passed all 10/10 paths at five-times internal leakage, doubled position/pressure noise, and half accumulator flow. Their worst hold drops were 2.23, 2.67, and 1.98 mm, respectively. Accumulator support was essentially inactive in the nominal, leakage, and half-flow cases but increased to 61.98 mL on average under doubled sensor noise, exposing the cost of noisy mode triggering. A $+2$ mm position bias retained hold entry but produced a worst post-transition error of 10.61 mm, so the nominal 10 mm precision screen is conditional on the declared measurement interface. The V2 plant therefore converts the earlier ideal-pressure concern into an explicit observer and sensor boundary rather than removing the limitation.
+
+\subsection{Legacy reduced-order benchmark}
+For continuity with the earlier virtual-prototype study, this subsection retains the reduced-order benchmark and its associated sensitivity audits as a historical secondary analysis. It is not used to select or validate the primary V2 controller above; its purpose is to document how the earlier surrogate behaves and where its interface assumptions fail.
+
+\subsubsection{Nominal tracking and holding}
 Table~\ref{tab:main} gives the 20-seed results under the filtered-velocity definition. The controllers have similar RMSE because they share the pressure feedforward and hold supervisor. The approximately 200 mm dynamic maximum error is the initial 0.20 m commanded displacement and must not be interpreted as steady-state tracking error. The hybrid controller had 4.27 mm terminal error and 0.022 mm mean hold drop.
 
 \begin{table}[H]
@@ -171,7 +227,7 @@ Dual-mode hybrid & $9.236\pm0.006$ & $4.267\pm0.296$ & $8.523\pm0.157$ & $0.022\
 
 The raw-velocity and dual-gate definitions produced zero hold entries in all 20 runs. This is a material result: filter delay is part of the present hold-entry behavior, so the filtered result cannot be treated as a direct safety statement for a real hitch.
 
-\subsection{Leakage and load-step stress tests}
+\subsubsection{Leakage and load-step stress tests}
 Figure~\ref{fig:leak} shows the lock-valve leakage-path sensitivity. The mean drop remained below 0.088 mm at ten times the assumed lock-path leakage. This margin only describes the low-leakage parameterization. It cannot replace temperature-dependent lock-valve measurements.
 
 \begin{figure}[H]
@@ -190,7 +246,7 @@ The more discriminating ablation is the 14 kN load step (Figure~\ref{fig:ablatio
 \label{fig:ablation}
 \end{figure}
 
-\subsection{Assumption-range and virtual leakage-step screens}
+\subsubsection{Assumption-range and virtual leakage-step screens}
 Figure~\ref{fig:assumption-proxy} summarizes selected one-at-a-time stress settings. Across the mass, damping, stiffness, position-noise, and cylinder-leakage settings in Table~\ref{tab:assumptions}, all five-seed cases entered hold and their mean 1800 s drop was below 0.060 mm. At the 14 kN step, the assumed accumulator-flow coefficient was consequential: 0.5$\times$ and 1.5$\times$ its nominal value gave mean drops of 5.86 mm and 0.273 mm, respectively. These are model-structure sensitivities, not confidence bounds on a real hydraulic circuit.
 
 For a virtual cylinder-leakage step at 60 s from one to eight times the nominal coefficient, the pressure-transition proxy reached 90\% of the new coefficient in $0.255\pm0.005$ s ($n=20$) and ended at $1.200\times10^{-11}$ m$^3$ s$^{-1}$ Pa$^{-1}$; a fixed nominal prior remained at $1.5\times10^{-12}$ m$^3$ s$^{-1}$ Pa$^{-1}$. Both cases entered hold in 20/20 runs and had the same 0.022 mm mean drop. Thus, the test demonstrates internal state-transition and supervisory-mode consistency, not an independent position-holding advantage or physical leakage identification.
@@ -202,12 +258,12 @@ For a virtual cylinder-leakage step at 60 s from one to eight times the nominal 
 \label{fig:assumption-proxy}
 \end{figure}
 
-\subsection{Temperature-load envelope and raw-velocity threshold}
+\subsubsection{Temperature-load envelope and raw-velocity threshold}
 The controller was next evaluated over a parameterized temperature-load envelope: constant oil temperatures of 25, 40, and 50 $^\circ$C were crossed with post-step loads of 7, 10, and 14 kN ($n=20$ per case). The filtered 3 mm s$^{-1}$ velocity gate entered hold in all nine cases. Figure~\ref{fig:envelope} shows that the highest mean 1800 s position drop was 1.93 mm (95\% CI: 1.74--2.11 mm) at 50 $^\circ$C and 14 kN. The result broadens the declared virtual operating envelope; its leakage and thermal inputs define internal model conditions rather than a physical temperature or load validation.
 
 The same protocol was also evaluated with an unfiltered velocity signal. At raw thresholds of 3 and 5 mm s$^{-1}$, none of the 20 runs entered hold. Relaxing the raw threshold to 10 mm s$^{-1}$ produced 20/20 entries and a 0.031 mm mean drop (95\% CI: 0.016--0.047 mm). This sensitivity result identifies a candidate signal-processing design trade-off; it does not validate the original 3 mm s$^{-1}$ requirement or establish an acceptable hardware safety threshold.
 
-\subsection{Transition-separated accuracy audit}
+\subsubsection{Transition-separated accuracy audit}
 Because the commanded motion spans 200 mm, the all-time RMSE is dominated by the planned transition and is not a steady-state precision metric. We therefore recomputed accuracy after the 8 s reference transition. In the nominal virtual condition, the 20-seed mean post-transition RMSE was 4.25 mm, the mean 95th-percentile absolute error was 4.53 mm, and the mean per-seed maximum absolute error was 9.54 mm; the worst seed reached 10.61 mm. Doubling the position-noise standard deviation gave a mean maximum absolute error of 8.89 mm and a worst seed of 11.62 mm. These values support a statistical virtual accuracy description, but not a universal hard $\pm10$ mm guarantee.
 
 \begin{figure}[H]
@@ -217,7 +273,7 @@ Because the commanded motion spans 200 mm, the all-time RMSE is dominated by the
 \label{fig:envelope}
 \end{figure}
 
-\subsection{Cartesian virtual stress surface}
+\subsubsection{Cartesian virtual stress surface}
 To test interactions that are not visible in one-at-a-time screens, we evaluated the complete controller on a predeclared Cartesian surface crossing mass (0.7 and 1.3 times nominal), cylinder leakage (1 and 5 times nominal), constant temperature (25 and 50 $^\circ$C), post-step load (7 and 14 kN), and accumulator-flow coefficient (0.5 and 1.0 times nominal). The 32 cases used the same 20 noise seeds as the primary experiment, but no case was selected for tuning. All 640 runs entered hold and passed the 10 mm, 1800 s screen. The worst case was the combination of 0.7$\times$ mass, 1$\times$ leakage, 50 $^\circ$C, 14 kN, and 0.5$\times$ accumulator flow, with a mean drop of 7.99 mm (95\% CI: 7.77--8.21 mm). Figure~\ref{fig:combined-stress} is a deterministic virtual coverage surface, not a probability statement about physical machines.
 
 \begin{figure}[H]
@@ -227,7 +283,7 @@ To test interactions that are not visible in one-at-a-time screens, we evaluated
 \label{fig:combined-stress}
 \end{figure}
 
-\subsection{Measurement-interface and observer-mismatch audit}
+\subsubsection{Measurement-interface and observer-mismatch audit}
 The nominal pressure signal in the primary protocol is a virtual interface, so a separate 20-seed audit (seeds 2060--2079) changed controller-facing measurements and observer coefficients while keeping the plant fixed. A $+2$ mm position bias retained hold entry but raised the worst steady error to 12.67 mm. More importantly, unfiltered 0.1 MPa Gaussian pressure noise caused post-entry instability: every run entered hold before its steady error reached the 500 mm virtual-stroke boundary. This failure is retained in Table~\ref{tab:measurement-audit}; it is not counted as a successful hold merely because entry occurred.
 
 A declared 200 ms first-order pressure filter provided a restricted mitigation test. With 0.05 MPa pressure noise, all 20 runs entered hold and the worst steady error was 9.72 mm. The combined filtered case adds a $+2$ mm position bias, $+0.1$ MPa pressure bias, 0.05 MPa pressure noise, a $+0.5$ kN load-measurement bias, and conservative observer gain/rate mismatches; it entered hold in all 20 runs with an 8.97 mm worst steady error. These results define an interface-specific virtual boundary. They neither identify a hardware sensor budget nor convert the nominal result into a universal $\pm10$ mm guarantee.
@@ -252,22 +308,22 @@ Combined filtered mismatch & 20/20 & 2.50 & 2.90 & 8.97 \\
 \end{table}
 
 \section{Discussion}
-The simulation does not support a claim that the hybrid law has intrinsically better nominal tracking than PID or DI-SMAC. Its differentiated value is an explicit holding architecture and its behavior in the load-step and temperature-load tests. The 14 kN ablation supports the modeled load-feedforward and accumulator branches. By contrast, the fixed-prior and leakage-proxy runs had identical hold drops in the leakage-step screen. The proxy should therefore be interpreted as a transparent model-state and supervisory-mode diagnostic, not as evidence of a general observer-performance benefit.
+The primary V2 comparison does not support a claim that the observer hybrid dominates every metric. The matched PID--accumulator chain has lower post-transition RMSE and also passes the declared 10 mm screen. The observer hybrid instead reduces mean hold drop by 46.3\%, halves the mean mode-switch count, and reduces nominal accumulator-oil use by approximately 96\% relative to that active baseline. Its differentiated value is therefore the coordination of low-activity holding modes, not intrinsically superior trajectory tracking.
 
-The central modelling choices are the declared leakage paths, accumulator properties, friction, load measurement, and virtual pressure interface. The 20 repetitions perturb position-sensor noise and the 32-case surface tests deterministic parameter interactions; neither is a probability distribution or a physical-machine trial. The pressure-transition proxy is deliberately evaluated against the same virtual model that produces its state transition, so its rapid response is an internal-consistency result. The independent audit makes the observability boundary sharper: the raw 0.1 MPa pressure-noise case is unstable, whereas the explicitly filtered 0.05 MPa and combined mismatch cases remain bounded only within the stated virtual interface. The raw-velocity hold gate likewise remains a signal-processing design boundary: the 10 mm s$^{-1}$ result is a relaxed virtual setting, not a replacement safety criterion.
+The central V2 modelling choices are the two chamber volumes, valve coefficients, leakage paths, accumulator properties, friction, and controller-facing pressure interface. The 20 holdout paths perturb seeded measurements but do not constitute a probability distribution or physical-machine trial. Five-times leakage and half accumulator flow remained inside the numerical screen, while the doubled-noise case increased accumulator use and mode switching. The retained +2 mm position-bias failure is especially important: it shows that a low simulated hold drop does not establish a hardware accuracy guarantee without a sensing-error budget.
 
 A separate fine-trim scan tested whether the load-step result was an artifact of the post-transition gain choice. Increasing the fine-trim gains by 1.5 times reduced the mean 14 kN hold drop from 1.75 to 0.73 mm, but increased the nominal mean maximum post-transition error from 9.54 to 9.92 mm and its worst seed to 11.60 mm. The 2-times setting reduced the 14 kN mean drop to 0.29 mm but produced a 13.04 mm nominal worst seed. The reported controller therefore retains the baseline gains and reports this trade-off rather than selecting a gain solely for the load-step metric.
 
 The measurement audit is not used to select gains or censor unfavorable outcomes. It instead shows what must be true of a future sensing implementation before the nominal virtual architecture can be transferred: a raw pressure-noise interface at the tested 0.1 MPa level is not admissible, while the declared filtered 0.05 MPa interface is a bounded virtual condition. This preserves the distinction between an architecture-level stress test and physical validation, while making the controller's information assumptions inspectable.
 
 \section{Conclusions}
-This study presents a reproducible dual-mode hitch-control virtual prototype that combines pressure feedforward, a model-level leakage proxy, a hysteretic hold supervisor, accumulator compensation, and load feedforward. Under the declared parameterization, the complete controller meets the numerical position-holding screen, attenuates a 14 kN load-step disturbance, remains within 1.93 mm mean drop in the one-at-a-time temperature-load envelope, and passes all 640 runs of the Cartesian virtual stress surface, whose worst mean drop is 7.99 mm. The transition-separated audit gives a 4.25 mm nominal post-transition RMSE, but the worst seeded maximum error is 10.61 mm; therefore, the result is a statistical virtual accuracy characterization rather than a universal hard $\pm10$ mm guarantee. The original strict raw-velocity gate never entered hold; only a relaxed 10 mm s$^{-1}$ raw threshold entered all virtual runs. The independent measurement audit further retains an unfiltered 0.1 MPa pressure-noise instability and bounds a declared filtered combined mismatch to an 8.97 mm worst steady error. The contribution is a parameterized theoretical method and reproducible stress-test workflow; the reported boundaries belong to the declared virtual model and do not require real-machine calibration for their internal validity.
+This study presents an observer-based hybrid holding controller on a two-chamber electrohydraulic virtual prototype. On 20 frozen 30 min paths, it passed the declared 10 mm accuracy/hold screen, limited the worst hold drop to 2.10 mm, and reduced mean drop, mode switching, and accumulator use relative to a matched PID--accumulator baseline, while accepting a higher transition RMSE. PID--lock and sliding-mode--lock exceeded the hold screen after the load step. Five-times leakage, doubled sensor noise, and half accumulator flow remained within the numerical screen, whereas a +2 mm position bias produced a 10.61 mm worst error and is retained as a failure boundary. The contribution is a parameterized theoretical method and reproducible stress-test workflow; the reported values belong to the declared virtual model and are not a calibrated machine-performance or universal $\pm10$ mm guarantee.
 
 \authorcontributions{Conceptualization, C.C.; Methodology, C.C.; Software, C.C.; Formal analysis, C.C.; Visualization, C.C.; Writing---original draft preparation, C.C.; Resources, C.C.; Validation, P.W.; Investigation, C.C.; Writing---review and editing, Y.Z.; Supervision, Y.Z.; Project administration, Y.Z.; Funding acquisition, Y.Z.}
 \funding{This work has received funding from the Science and Technology Project of the Ministry of Agriculture and Rural Affairs of China.}
 \institutionalreview{Not applicable.}
 \informedconsent{Not applicable.}
-\dataavailability{The virtual-prototype source code, reproduction scripts, machine-readable parameter manifest, assumption register, traceability exporter, and JSON outputs supporting these results are publicly available at \url{https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes}. The versioned Zenodo archive is accessible through the concept DOI \url{https://doi.org/10.5281/zenodo.22754509}, which resolves to the latest published archive version.}
+\dataavailability{The V2 virtual-prototype source code, reproduction scripts, parameter manifests, and frozen JSON outputs are provided with the submission as Supplementary Materials. The existing public project archive is available at \url{https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes}; its version history is indexed by the Zenodo concept DOI \url{https://doi.org/10.5281/zenodo.22754509}. A new version containing the V2 supplementary files will be deposited before publication.}
 \conflictsofinterest{The authors declare no conflicts of interest.}
 
 \begin{thebibliography}{9}

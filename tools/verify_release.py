@@ -17,6 +17,22 @@ REQUIRED = (
     "MDPI_template_ACS/paper1_hitch_control_machines.pdf",
     "MDPI_template_ACS/paper2_energy_management_energies.tex",
     "MDPI_template_ACS/paper2_energy_management_energies.pdf",
+    "manifests/paper1_v2_parameter_manifest.csv",
+    "manifests/paper2_v2_parameter_manifest.csv",
+    "code/lift_control/hydraulic_v2.py",
+    "code/lift_control/lift_v2_experiment.py",
+    "code/energy_management/viability_ecms_v2.py",
+    "results/paper1_two_chamber_v2.json",
+    "results/paper1_v2_independent_audit.json",
+    "results/paper1_v2_mode_scan.json",
+    "results/paper2_viability_ecms_v2.json",
+    "results/paper2_v2_crosscycle_audit.json",
+    "results/paper2_v2_map_capacity_audit.json",
+    "results/paper2_controller_framework_frozen_benchmark.json",
+    "papers/figures/paper1_v2_architecture.png",
+    "papers/figures/paper1_v2_results.png",
+    "papers/figures/paper2_v2_architecture.png",
+    "papers/figures/paper2_v2_results.png",
     "results/paper1_statistics_20seeds.json",
     "results/lift_steady_accuracy_scan.json",
     "results/lift_fine_trim_scan.json",
@@ -58,6 +74,18 @@ def main() -> None:
     audit_checks = measurement_audit.get("acceptance_checks")
     if not isinstance(audit_checks, dict) or not all(audit_checks.values()):
         raise RuntimeError("paper-1 measurement-interface audit did not pass")
+
+    paper1_v2 = load_result("paper1_two_chamber_v2.json")
+    paper1_v2_summary = paper1_v2.get("holdout", {}).get("observer_hybrid", {}).get("summary", {})
+    if paper1_v2_summary.get("count") != 20 or paper1_v2_summary.get("pass_count") != 20:
+        raise RuntimeError("paper-1 V2 frozen holdout is incomplete")
+
+    paper2_v2 = load_result("paper2_viability_ecms_v2.json")
+    paper2_v2_summary = paper2_v2.get("holdout", {}).get("viability_ecms", {}).get("summary", {})
+    if (paper2_v2_summary.get("count") != 20
+            or paper2_v2_summary.get("strict_valid_count") != 20
+            or paper2_v2_summary.get("mean_energy_normalized_saving_pct", 0.0) <= 0.0):
+        raise RuntimeError("paper-2 V2 frozen holdout is incomplete or non-positive")
 
     sensitivity = load_result("paper2_store_forecast_sensitivity.json")
     if len(sensitivity.get("seeds", [])) != 12:

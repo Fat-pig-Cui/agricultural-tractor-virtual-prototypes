@@ -1,0 +1,285 @@
+{
+  "purpose": "Development-only V2 mode-switch scan.",
+  "candidates": [
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 21.268535492782735,
+      "mean_mode_switches": 5.0,
+      "mean_hold_drop_mm": 0.9962835648242407,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 15.500077836793498,
+      "mean_mode_switches": 3.4,
+      "mean_hold_drop_mm": 1.2216823048028846,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 15.500077836793498,
+      "mean_mode_switches": 3.4,
+      "mean_hold_drop_mm": 1.2216823048028846,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 21.268535492782735,
+      "mean_mode_switches": 5.0,
+      "mean_hold_drop_mm": 0.9962835648242407,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7730050015400622,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7730050015400622,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 21.268535492782735,
+      "mean_mode_switches": 5.0,
+      "mean_hold_drop_mm": 0.9962835648242407,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7730050015400622,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 4.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7730050015400622,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 25.437072881414217,
+      "mean_mode_switches": 5.0,
+      "mean_hold_drop_mm": 0.8449710493581897,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 17.98217543231241,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.2304534487873608,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 17.98217543231241,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.2304534487873608,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 25.437072881414217,
+      "mean_mode_switches": 5.0,
+      "mean_hold_drop_mm": 0.8449710493581897,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7544851806775896,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7544851806775896,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 25.437072881414217,
+      "mean_mode_switches": 5.0,
+      "mean_hold_drop_mm": 0.8449710493581897,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7544851806775896,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 8.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.7544851806775896,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 30.455809889294063,
+      "mean_mode_switches": 4.6,
+      "mean_hold_drop_mm": 0.8609973358787993,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 20.816755250808747,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.1878449893710785,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.0025,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 20.816755250808747,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.1878449893710785,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 30.455809889294063,
+      "mean_mode_switches": 4.6,
+      "mean_hold_drop_mm": 0.8609973358787993,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.8034070914489053,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.004,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.8034070914489053,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 180000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 30.455809889294063,
+      "mean_mode_switches": 4.6,
+      "mean_hold_drop_mm": 0.8609973358787993,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 300000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.8034070914489053,
+      "worst_post_transition_error_mm": 8.521660489720418
+    },
+    {
+      "dwell_s": 12.0,
+      "accumulator_error_m": 0.006,
+      "accumulator_pressure_deficit_pa": 450000.0,
+      "pass_count": 5,
+      "mean_accumulator_oil_used_ml": 0.0,
+      "mean_mode_switches": 3.0,
+      "mean_hold_drop_mm": 1.8034070914489053,
+      "worst_post_transition_error_mm": 8.521660489720418
+    }
+  ],
+  "selected": {
+    "dwell_s": 8.0,
+    "accumulator_error_m": 0.004,
+    "accumulator_pressure_deficit_pa": 300000.0,
+    "pass_count": 5,
+    "mean_accumulator_oil_used_ml": 0.0,
+    "mean_mode_switches": 3.0,
+    "mean_hold_drop_mm": 1.7544851806775896,
+    "worst_post_transition_error_mm": 8.521660489720418
+  }
+}

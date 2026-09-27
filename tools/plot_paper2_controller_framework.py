@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 ROOT = Path(__file__).parents[1]
-RESULT = ROOT / "results" / "paper2_controller_framework_benchmark.json"
+RESULT = ROOT / "results" / "paper2_controller_framework_frozen_benchmark.json"
 OUTS = (ROOT / "papers" / "figures" / "paper2_controller_framework.png",
         ROOT / "MDPI_template_ACS" / "paper2_controller_framework.png")
 
@@ -25,8 +25,7 @@ def controller_rows(data: dict[str, object]) -> list[tuple[str, dict[str, object
         ("Phase\npolicy", controllers["nominal_phase_policy"]["summary"]),
         ("Det.\nMPC", controllers["deterministic_mpc"]["summary"]),
         ("Scenario\nMPC", controllers["scenario_mpc"]["summary"]),
-        ("Terminal-set\nMPC",
-         controllers["terminal_set_scenario_mpc"]["summary"]),
+        ("Terminal-set\nMPC", controllers["terminal_set_scenario_mpc"]["summary"]),
     ]
 
 
@@ -37,15 +36,16 @@ def panel(ax, title: str, data: dict[str, object], color: str, ylim: tuple[float
     lower = [float(summary["saving_pct"]["ci95_low"]) for _, summary in rows]
     upper = [float(summary["saving_pct"]["ci95_high"]) for _, summary in rows]
     certified = [int(round(float(summary["certified_rate"]) * 20)) for _, summary in rows]
-    x = list(range(len(rows)))
+    x = [0.0, 1.0, 2.0, 3.15, 4.55]
     bars = ax.bar(x, means, yerr=[[mean - low for mean, low in zip(means, lower)],
                                   [high - mean for mean, high in zip(means, upper)]],
-                  capsize=2.8, width=0.64, color=color, edgecolor="#2f2f2f", linewidth=0.45)
+                  capsize=2.8, width=0.62, color=color, edgecolor="#2f2f2f", linewidth=0.45)
     for bar, count in zip(bars, certified):
         if count < 20:
             bar.set_hatch("//")
     ax.axhline(0.0, color="#303030", linewidth=0.8)
-    ax.set_xticks(x, labels)
+    ax.set_xticks(x, labels, fontsize=8.3)
+    ax.set_xlim(-0.55, 5.10)
     ax.set_ylim(*ylim)
     ax.set_title(title, fontsize=9.2, pad=7)
     ax.grid(axis="y", alpha=0.2)

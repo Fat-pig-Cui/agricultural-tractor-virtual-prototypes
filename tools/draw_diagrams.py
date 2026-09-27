@@ -46,7 +46,7 @@ def group(ax, x, y, w, h, title, *, fc="#F5F8FC", ec=BLUE):
     ax.add_patch(patch)
     ax.text(
         x + 0.16, y + h - 0.18, title,
-        ha="left", va="top", fontsize=10.3, fontweight="bold", color=TEXT,
+        ha="left", va="top", fontsize=12.5, fontweight="bold", color=TEXT,
     )
 
 
@@ -65,7 +65,7 @@ def arrow(ax, start, end, *, label=None, label_xy=None, style="->", dashed=False
             (start[1] + end[1]) / 2,
         )
         ax.text(
-            x, y, label, ha="center", va="center", fontsize=7.8, color=LABEL,
+            x, y, label, ha="center", va="center", fontsize=10.8, color=LABEL,
             bbox={"boxstyle": "round,pad=0.10", "fc": "white", "ec": "none", "alpha": 0.96},
         )
 
@@ -93,47 +93,55 @@ def diagram_paper1():
 
     box(
         ax, 0.35, 5.05, 2.35, 0.62, "Position reference\nand trajectory",
-        fc="#FDEBD0", ec="#C55A11", fs=9.4,
+        fc="#FDEBD0", ec="#C55A11", fs=12.0,
     )
     box(
         ax, 7.30, 5.05, 2.35, 0.62, "Implement load / temperature\n(external disturbances)",
-        fc="#FDEBD0", ec="#C55A11", fs=8.35,
+        fc="#FDEBD0", ec="#C55A11", fs=11.0,
     )
 
     group(ax, 0.35, 3.18, 4.25, 1.30, "Dual-mode controller")
     box(
         ax, 0.58, 3.76, 3.80, 0.30, "Leakage-flow / pressure-deficit supervisor",
-        fc="#FFF2CC", ec="#BF9000", fs=7.85,
+        fc="#FFF2CC", ec="#BF9000", fs=10.5,
     )
     box(
         ax, 0.58, 3.31, 1.68, 0.34, "Tracking mode\n(SMC / DI-SMAC)",
-        fc="#E2EFDA", ec="#538135", fs=7.7,
+        fc="#E2EFDA", ec="#538135", fs=10.2,
     )
     box(
         ax, 2.70, 3.31, 1.68, 0.34, "Hold mode\n(trim / lock / accumulator)",
-        fc="#E2EFDA", ec="#538135", fs=7.0,
+        fc="#E2EFDA", ec="#538135", fs=9.7,
     )
 
     group(ax, 5.40, 3.18, 4.25, 1.30, "Model-level leakage proxy")
     box(
-        ax, 5.63, 3.38, 1.76, 0.38, "Pressure-transition\nresidual", fc="#DEEBF7", ec="#2E75B6", fs=7.35,
+        ax, 5.63, 3.38, 1.76, 0.38, "Pressure-transition\nresidual", fc="#DEEBF7", ec="#2E75B6", fs=10.0,
     )
     box(
-        ax, 7.86, 3.38, 1.56, 0.38, "Leakage-coefficient\nproxy", fc="#DEEBF7", ec="#2E75B6", fs=7.15,
+        ax, 7.86, 3.38, 1.56, 0.38, "Leakage-coefficient\nproxy", fc="#DEEBF7", ec="#2E75B6", fs=10.0,
     )
 
     box(
         ax, 2.70, 1.93, 4.60, 0.50, "Virtual states: position and ideal chamber pressures",
-        fc="#F2F2F2", ec="#555555", fs=8.25,
+        fc="#F2F2F2", ec="#555555", fs=10.7,
     )
     box(
         ax, 2.70, 0.67, 6.05, 0.72, "Electrohydraulic hitch plant\n(proportional valve / cylinder / linkage)",
-        fc="#E7E7E7", ec="#404040", fs=8.15,
+        fc="#E7E7E7", ec="#404040", fs=10.7,
     )
 
     arrow(ax, (1.53, 5.05), (1.53, 4.48), label="reference", label_xy=(1.53, 4.75))
-    arrow(ax, (8.48, 5.05), (8.48, 1.39), label="disturbance", label_xy=(8.48, 4.74))
-    arrow(ax, (2.22, 3.18), (3.72, 1.39), label="control command", label_xy=(2.47, 2.30))
+    ax.plot(
+        [8.48, 8.48, 9.82, 9.82], [5.05, 4.78, 4.78, 1.72],
+        color=BLUE, linewidth=1.45,
+    )
+    ax.text(
+        9.15, 4.86, "disturbance", ha="center", va="center", fontsize=10.8, color=LABEL,
+        bbox={"boxstyle": "round,pad=0.10", "fc": "white", "ec": "none", "alpha": 0.96},
+    )
+    arrow(ax, (9.82, 1.72), (8.55, 1.39))
+    arrow(ax, (2.22, 3.18), (3.72, 1.39), label="control command", label_xy=(1.85, 2.55))
     arrow(ax, (5.00, 1.39), (5.00, 1.93), label="state / pressure", label_xy=(5.00, 1.65))
     arrow(ax, (6.30, 2.43), (6.30, 3.18), label="residual", label_xy=(6.75, 2.78))
     arrow(

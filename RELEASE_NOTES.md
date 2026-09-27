@@ -1,3 +1,20 @@
+# v1.0.4
+
+- Synchronizes the current Machines and Energies manuscripts and compiled PDFs
+  with the submission-ready 2026-09-27 sources.
+- Adds the primary paper-1 two-chamber V2 model, 20-path holdout, independent
+  stress audit, mode-selection record, exported parameter manifest, and V2
+  architecture/result figures.
+- Adds the primary paper-2 viability-shielded adaptive ECMS model, 20-path
+  holdout, cross-cycle and map/capacity audits, exported parameter manifest,
+  and V2 architecture/result figures.
+- Pins the controller-comparison figure to the complete frozen benchmark JSON
+  used by the manuscript while retaining the later exploratory result file as
+  a separate artifact.
+- Corrects minor figure-label and annotation collisions in both manuscripts;
+  no evidence boundary is relaxed and the approximately 20% result remains an
+  idealized full-information diagnostic.
+
 # v1.0.3
 
 - Removes Lihan Wang from both manuscript author lists and transfers the
