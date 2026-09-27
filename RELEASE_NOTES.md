@@ -1,3 +1,12 @@
+# v1.0.5
+
+- Increases the Energies manuscript Figure 1 box labels from the 9.2 pt
+  plotting default to 17 pt and the feedback label to 14.5 pt.
+- Reflows long labels across two or three lines so the enlarged text remains
+  inside its boxes with no arrow, border, or caption overlap.
+- Rebuilds the 16-page Energies PDF; the controller structure, numerical
+  results, and simulation-only evidence boundaries are unchanged.
+
 # v1.0.4
 
 - Synchronizes the current Machines and Energies manuscripts and compiled PDFs
