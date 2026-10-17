@@ -1,0 +1,40 @@
+{
+  "task": {
+    "family": "comparators",
+    "group": "pid_accumulator_10",
+    "chain": "pid_accumulator",
+    "seed": 4300,
+    "substeps": 10,
+    "overrides": {}
+  },
+  "row": {
+    "controller": "pid_accumulator",
+    "seed": 4300,
+    "hold_started": true,
+    "hold_start_time_s": 11.85,
+    "final_mode": "LOCK",
+    "mode_switches": 39,
+    "hold_drop_mm": 3.1829209907485723,
+    "post_transition_rmse_mm": 0.24307398985497716,
+    "post_transition_max_abs_error_mm": 6.85041146383708,
+    "terminal_error_mm": -0.14523369758212556,
+    "command_energy": 4.532662717290992,
+    "command_total_variation": 1600.0198520920962,
+    "accumulator_valve_energy": 0.03407385233487782,
+    "accumulator_oil_used_ml": 30.787841096661072,
+    "peak_pressure_mpa": 11.488574756627255,
+    "relief_activation_count": 0,
+    "final_position_m": 0.3501452336975821,
+    "observer_final_load_n": 13998.574387362636,
+    "observer_final_leakage_m3_s_pa": 9.732108660437223e-12,
+    "stroke_boundary_samples": 0,
+    "accumulator_active_time_s": 7.15,
+    "minimum_accumulator_pressure_mpa": 13.796607314631242,
+    "final_accumulator_pressure_mpa": 13.796607314631242,
+    "mode_times_s": {
+      "TRACK": 12.85,
+      "LOCK": 1785.1100000000001,
+      "ACCUMULATOR": 2.04
+    }
+  }
+}

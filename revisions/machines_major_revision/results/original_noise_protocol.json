@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    [
+      4160,
+      true
+    ],
+    [
+      4161,
+      true
+    ],
+    [
+      4162,
+      true
+    ],
+    [
+      4163,
+      true
+    ],
+    [
+      4164,
+      true
+    ],
+    [
+      4165,
+      true
+    ],
+    [
+      4166,
+      true
+    ],
+    [
+      4167,
+      true
+    ],
+    [
+      4168,
+      true
+    ],
+    [
+      4169,
+      true
+    ],
+    [
+      4160,
+      false
+    ]
+  ],
+  "representative": "first original stress seed 4160; no favorable-path selection"
+}

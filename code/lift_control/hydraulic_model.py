@@ -1,4 +1,13 @@
-"""Reduced-order pressure-difference lift surrogate for algorithmic simulation."""
+"""Historical pressure-difference surrogate, distinct from physical V2 flow laws.
+
+The archived identifier ``leakage_m3_s_pa`` denotes a virtual decay parameter
+kappa with units m^2/s in the implemented pressure-rate equation. It is not
+a physical m^3/(s Pa) leakage coefficient. Likewise the archived state field
+``leakage_m3_s`` is kappa times pressure, not a physical volume flow. Names
+and numbers are retained for exact historical replay; see the corrected
+Machines major-revision interpretation. Use hydraulic_v2 for the primary
+dimensionally consistent chamber-flow plant.
+"""
 from __future__ import annotations
 from dataclasses import dataclass
 from config.parameters import LiftParameters

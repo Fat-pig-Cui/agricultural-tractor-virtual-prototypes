@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
@@ -51,6 +52,7 @@ def load_result(name: str) -> dict[str, object]:
 
 
 def main() -> None:
+    verify_current_revision()
     missing = [path for path in REQUIRED if not (ROOT / path).is_file()]
     if missing:
         raise RuntimeError("missing release files: " + ", ".join(missing))
@@ -114,6 +116,66 @@ def main() -> None:
             raise RuntimeError(f"removed authors remain in {manuscript.name}: {residual}")
 
     print("release verification passed")
+
+
+def verify_current_revision():
+    from materialize_release_data import process, digest
+    assert process(check_only=True) == 11
+    entries = []
+    for line in (ROOT / 'MANIFEST.sha256').read_text().splitlines():
+        expected, name = line.split('  ', 1)
+        path = ROOT / name
+        path.resolve().relative_to(ROOT)
+        assert digest(path) == expected, name
+        assert path.stat().st_size < 100_000_000, name
+        entries.append(name)
+    assert len(entries) == len(set(entries))
+    assert not any(re.search(r'(^|/)(evidence|submission_packages|patents|qa)(/|$)|response_reviewer|Response_to_Reviewer|major_revision_message|More_info_reviewer', name) for name in entries)
+    sync = json.loads((ROOT / 'manifests/local_sync_sources.json').read_text())
+    assert sync['version'] == '1.1.0'
+    for entry in sync['byte_identical_copies']:
+        assert digest(ROOT / entry['target']) == entry['sha256'], entry['target']
+    p1 = ROOT / 'revisions/machines_major_revision/results'
+    protocol = json.loads((p1 / 'strengthening_protocol.json').read_text())
+    strength = json.loads((p1 / 'strengthening_audit.json').read_text())
+    assert len(protocol['tasks']) == 70
+    for name, expected in protocol['source_sha256'].items():
+        assert digest(ROOT / name) == expected, name
+    from run_paper1_major_revision import summarize
+    assert len(strength['groups']) == 14
+    assert sum(len(g['rows']) for g in strength['groups'].values()) == 70
+    for g in strength['groups'].values():
+        assert [r['seed'] for r in g['rows']] == protocol['seeds']
+        assert summarize(g['rows']) == g['summary']
+        assert g['summary']['passed'] == 5
+    p2 = ROOT / 'revisions/energies_major_revision/results'
+    result = json.loads((p2 / 'ablation_and_comparison.json').read_text())
+    code_path = ROOT / 'code/energy_management/viability_ecms_v2.py'
+    provenance = json.loads((p2 / 'revision_provenance.json').read_text())
+    assert provenance['final_code_sha256'] == digest(code_path)
+    # The recorded post-run change only names full-rate logs accurately.
+    # Reconstruct the original bytes; never rewrite the frozen protocol hash.
+    source = code_path.read_text()
+    naming = '("trajectory_full" if capture_full_trajectory else "trajectory_30s"): trajectory'
+    assert source.count(naming) == 1
+    import hashlib
+    original_source = source.replace(naming, '"trajectory_30s": trajectory')
+    assert hashlib.sha256(original_source.encode()).hexdigest() == result['protocol']['source_sha256']
+    from run_paper2_major_revision import evaluate, ECMSSettings, ControllerFeatures, PARAMS
+    for arm, saving in [('full', 5.950644), ('without_adaptation', 7.090609)]:
+        data = result['holdout'][arm]
+        summary = data['summary']
+        assert summary['paired_valid_count'] == 20
+        assert abs(summary['mean_saving_pct'] - saving) < 0.000001
+        frozen = data['rows'][0]
+        replay = evaluate((frozen['label'], frozen['seed'], data['mode'],
+                           ECMSSettings(**data['settings']), ControllerFeatures(**data['features']),
+                           PARAMS, 'literature', 'stochastic'))
+        for key, value in frozen.items():
+            if key != 'decision_timing_ms':
+                assert replay[key] == value, (arm, key)
+    assert 'version: 1.1.0' in (ROOT / 'CITATION.cff').read_text()
+    print(f'v1.1.0 current revision and {len(entries)} release hashes verified')
 
 
 if __name__ == "__main__":

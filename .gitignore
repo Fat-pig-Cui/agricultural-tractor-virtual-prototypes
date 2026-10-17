@@ -8,3 +8,14 @@ __pycache__/
 *.toc
 *.synctex.gz
 MDPI_template_ACS/missfont.log
+revisions/machines_major_revision/results/integration_1.json
+revisions/machines_major_revision/results/integration_10.json
+revisions/machines_major_revision/results/trajectory_nominal.json
+revisions/machines_major_revision/results/trajectory_pid.json
+revisions/machines_major_revision/results/both_noise_2.json
+revisions/machines_major_revision/results/pressure_noise_1.json
+revisions/machines_major_revision/results/pressure_noise_2.json
+revisions/machines_major_revision/results/pressure_noise_4.json
+revisions/machines_major_revision/results/pressure_noise_10.json
+revisions/machines_major_revision/results/pressure_noise_20.json
+revisions/machines_major_revision/results/original_noise_diagnostics.json

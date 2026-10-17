@@ -1,0 +1,32 @@
+[
+  {
+    "seed": 4300,
+    "pressure_rmse_mpa": 0.06382458332326729,
+    "pressure_max_difference_mpa": 0.15098503763021043,
+    "hold_drop_difference_mm": 0.19902419982292807
+  },
+  {
+    "seed": 4301,
+    "pressure_rmse_mpa": 0.06424661874393665,
+    "pressure_max_difference_mpa": 0.1656918470259754,
+    "hold_drop_difference_mm": 0.11197656619860163
+  },
+  {
+    "seed": 4302,
+    "pressure_rmse_mpa": 0.06396787679837544,
+    "pressure_max_difference_mpa": 0.15828986799829714,
+    "hold_drop_difference_mm": 0.2394411456635437
+  },
+  {
+    "seed": 4303,
+    "pressure_rmse_mpa": 0.06329041801719089,
+    "pressure_max_difference_mpa": 0.15434105485980076,
+    "hold_drop_difference_mm": -0.03260445805541856
+  },
+  {
+    "seed": 4304,
+    "pressure_rmse_mpa": 0.06331958436048843,
+    "pressure_max_difference_mpa": 0.15223954721536792,
+    "hold_drop_difference_mm": 0.23574515393826045
+  }
+]

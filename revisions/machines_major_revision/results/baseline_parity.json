@@ -1,0 +1,22 @@
+[
+  {
+    "controller": "observer_hybrid",
+    "seed": 4120,
+    "all_original_fields_identical": true
+  },
+  {
+    "controller": "pid_accumulator",
+    "seed": 4120,
+    "all_original_fields_identical": true
+  },
+  {
+    "controller": "pid_lock",
+    "seed": 4120,
+    "all_original_fields_identical": true
+  },
+  {
+    "controller": "smc_lock",
+    "seed": 4120,
+    "all_original_fields_identical": true
+  }
+]

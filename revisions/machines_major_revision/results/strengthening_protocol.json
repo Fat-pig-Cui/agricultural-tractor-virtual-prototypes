@@ -1,0 +1,944 @@
+{
+  "duration_s": 1800,
+  "controller_period_s": 0.01,
+  "seeds": [
+    4300,
+    4301,
+    4302,
+    4303,
+    4304
+  ],
+  "integration": "classical RK4 with endpoint pressure/stroke projections; no event root finding",
+  "selection": "All tasks fixed before execution; no retuning, no best-case selection",
+  "initialization": "Each plant starts at its own declared force-balance initial state; observer initialization unchanged",
+  "controller": "Nominal controller/observer coefficients remain fixed under true-plant overrides",
+  "joint_scope": "All eight vertices of the selected three-parameter box; not its interior or a certified robust invariant set",
+  "pass_rule": "Hold entry, drop<=10 mm, post-transition max absolute error<=10 mm, zero relief and stroke samples",
+  "tasks": [
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_10",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_10",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_10",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_10",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_10",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_10",
+      "chain": "pid_accumulator",
+      "seed": 4300,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_10",
+      "chain": "pid_accumulator",
+      "seed": 4301,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_10",
+      "chain": "pid_accumulator",
+      "seed": 4302,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_10",
+      "chain": "pid_accumulator",
+      "seed": 4303,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_10",
+      "chain": "pid_accumulator",
+      "seed": 4304,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_10",
+      "chain": "pid_accumulator_matched",
+      "seed": 4300,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_10",
+      "chain": "pid_accumulator_matched",
+      "seed": 4301,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_10",
+      "chain": "pid_accumulator_matched",
+      "seed": 4302,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_10",
+      "chain": "pid_accumulator_matched",
+      "seed": 4303,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_10",
+      "chain": "pid_accumulator_matched",
+      "seed": 4304,
+      "substeps": 10,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_20",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_20",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_20",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_20",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "observer_hybrid_20",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_20",
+      "chain": "pid_accumulator",
+      "seed": 4300,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_20",
+      "chain": "pid_accumulator",
+      "seed": 4301,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_20",
+      "chain": "pid_accumulator",
+      "seed": 4302,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_20",
+      "chain": "pid_accumulator",
+      "seed": 4303,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_20",
+      "chain": "pid_accumulator",
+      "seed": 4304,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_20",
+      "chain": "pid_accumulator_matched",
+      "seed": 4300,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_20",
+      "chain": "pid_accumulator_matched",
+      "seed": 4301,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_20",
+      "chain": "pid_accumulator_matched",
+      "seed": 4302,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_20",
+      "chain": "pid_accumulator_matched",
+      "seed": 4303,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "comparators",
+      "group": "pid_accumulator_matched_20",
+      "chain": "pid_accumulator_matched",
+      "seed": 4304,
+      "substeps": 20,
+      "overrides": {}
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_7_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        0.7,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 840.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_7",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_7_13",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        0.7,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 1540.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_7",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        0.7
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 12600.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4300,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4301,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4302,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4303,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    },
+    {
+      "family": "joint",
+      "group": "joint_13_13_13",
+      "chain": "observer_hybrid",
+      "seed": 4304,
+      "substeps": 10,
+      "scales": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "overrides": {
+        "mass_kg": 1560.0,
+        "viscous_n_s_m": 2860.0,
+        "stiffness_n_m": 23400.0
+      }
+    }
+  ],
+  "source_sha256": {
+    "tools/run_paper1_strengthening_audit.py": "a6a7a0a165dfb3759a895b74bc28c736eeb7b3e2beecd43e2f3978edc9b14968",
+    "code/lift_control/lift_v2_experiment.py": "4bfaaf2e0693d6b0214f14a520b820d95a76e0f3d68b0fe633f91d5b7823eda2",
+    "code/lift_control/hydraulic_v2.py": "18e9e52f981381e3318b3cacd10ba2904a235e58e6ad5d82cac583812b3b682b"
+  }
+}

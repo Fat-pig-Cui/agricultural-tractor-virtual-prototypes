@@ -1,0 +1,14 @@
+{
+  "submitted_tex_sha256": "5b42800b0fc95458891e861c6fefc70a510f9086d047eb890597911f6ea03e7b",
+  "exact_fuel_replay_max_difference_l": 0.0,
+  "final_code_sha256": "0b504a74def2847a9aefba9198d32089febe54643e6f867f88a45b6f3e57e797",
+  "runtime_notes": "Timing is host dependent; primary results exclude timing claims. Post-run metadata/trajectory-key changes do not change control logic.",
+  "adaptive_minus_fixed": {
+    "mean": -1.1399650860781034,
+    "ci95": [
+      -1.6600948082676876,
+      -0.6198353638885192
+    ],
+    "n": 20
+  }
+}

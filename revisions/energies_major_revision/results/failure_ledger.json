@@ -1,0 +1,121 @@
+[
+  {
+    "audit": "high_variability",
+    "arm": "baseline",
+    "seed": 0,
+    "type": "hard_action_failure",
+    "detail": "no feasible power-split action (step=159, demand_w=249442.4, engine_w=80000.0, on_s=159.0, off_s=0.0)"
+  },
+  {
+    "audit": "high_variability",
+    "arm": "controller",
+    "seed": 0,
+    "type": "hard_action_failure",
+    "detail": "no feasible power-split action (step=159, demand_w=249442.4, engine_w=85000.0, on_s=159.0, off_s=0.0)"
+  },
+  {
+    "audit": "map_literature",
+    "arm": "baseline",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0009749260178892882
+  },
+  {
+    "audit": "map_0.15",
+    "arm": "baseline",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0009749260178892882
+  },
+  {
+    "audit": "map_0.15",
+    "arm": "controller",
+    "seed": 5204,
+    "type": "hard_action_failure",
+    "detail": "no feasible power-split action (step=390, demand_w=335363.7, engine_w=240000.0, on_s=360.0, off_s=0.0)"
+  },
+  {
+    "audit": "map_0.15",
+    "arm": "controller",
+    "seed": 5206,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.002448654950862328
+  },
+  {
+    "audit": "map_0.25",
+    "arm": "baseline",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0009749260178892882
+  },
+  {
+    "audit": "map_0.25",
+    "arm": "controller",
+    "seed": 5204,
+    "type": "hard_action_failure",
+    "detail": "no feasible power-split action (step=390, demand_w=335363.7, engine_w=240000.0, on_s=360.0, off_s=0.0)"
+  },
+  {
+    "audit": "map_0.25",
+    "arm": "controller",
+    "seed": 5206,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.002447804013739785
+  },
+  {
+    "audit": "map_0.35",
+    "arm": "baseline",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0009749260178892882
+  },
+  {
+    "audit": "map_0.35",
+    "arm": "controller",
+    "seed": 5204,
+    "type": "hard_action_failure",
+    "detail": "no feasible power-split action (step=390, demand_w=335363.7, engine_w=240000.0, on_s=361.0, off_s=0.0)"
+  },
+  {
+    "audit": "map_0.35",
+    "arm": "controller",
+    "seed": 5206,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0024630769063072044
+  },
+  {
+    "audit": "capacity_120000",
+    "arm": "baseline",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.008208017556097347
+  },
+  {
+    "audit": "capacity_120000",
+    "arm": "baseline",
+    "seed": 5206,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.005608054237391524
+  },
+  {
+    "audit": "capacity_120000",
+    "arm": "controller",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.004733833212352989
+  },
+  {
+    "audit": "capacity_120000",
+    "arm": "controller",
+    "seed": 5206,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0021545085229300875
+  },
+  {
+    "audit": "capacity_200000",
+    "arm": "baseline",
+    "seed": 5204,
+    "type": "terminal_SOC_invalid",
+    "detail": -0.0009749260178892882
+  }
+]

@@ -1,0 +1,445 @@
+{
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040,
+    2041,
+    2042,
+    2043,
+    2044,
+    2045
+  ],
+  "config": {
+    "protocol": "literature_reference",
+    "map": "LiteratureBSFCMap",
+    "engine_rated_w": 300000.0,
+    "battery_capacity_wh": 200000.0,
+    "soc_tolerance": 0.01
+  },
+  "controllers": {
+    "ool": {
+      "fuel_l": {
+        "n": 20.0,
+        "mean": 6.0198624830214,
+        "std": 0.0,
+        "ci95_low": 6.0198624830214,
+        "ci95_high": 6.0198624830214
+      },
+      "final_soc": {
+        "n": 20.0,
+        "mean": 0.5557736299880938,
+        "std": 0.0,
+        "ci95_low": 0.5557736299880938,
+        "ci95_high": 0.5557736299880938
+      },
+      "soc_error": {
+        "n": 20.0,
+        "mean": 0.00577362998809372,
+        "std": 0.0,
+        "ci95_low": 0.00577362998809372,
+        "ci95_high": 0.00577362998809372
+      },
+      "max_shortage_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_motor_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg2_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "fallback_count": {
+        "n": 20.0,
+        "mean": 0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "valid_rate": 1.0
+    },
+    "realistic_ool": {
+      "fuel_l": {
+        "n": 20.0,
+        "mean": 5.727395583722818,
+        "std": 0.0,
+        "ci95_low": 5.727395583722818,
+        "ci95_high": 5.727395583722818
+      },
+      "final_soc": {
+        "n": 20.0,
+        "mean": 0.5541973730030908,
+        "std": 0.0,
+        "ci95_low": 0.5541973730030908,
+        "ci95_high": 0.5541973730030908
+      },
+      "soc_error": {
+        "n": 20.0,
+        "mean": 0.004197373003090754,
+        "std": 0.0,
+        "ci95_low": 0.004197373003090754,
+        "ci95_high": 0.004197373003090754
+      },
+      "max_shortage_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_motor_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg2_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "fallback_count": {
+        "n": 20.0,
+        "mean": 0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "valid_rate": 1.0
+    },
+    "power_following": {
+      "fuel_l": {
+        "n": 20.0,
+        "mean": 5.3714605042205665,
+        "std": 0.0,
+        "ci95_low": 5.3714605042205665,
+        "ci95_high": 5.3714605042205665
+      },
+      "final_soc": {
+        "n": 20.0,
+        "mean": 0.5379015979008421,
+        "std": 0.0,
+        "ci95_low": 0.5379015979008421,
+        "ci95_high": 0.5379015979008421
+      },
+      "soc_error": {
+        "n": 20.0,
+        "mean": -0.012098402099157912,
+        "std": 0.0,
+        "ci95_low": -0.012098402099157912,
+        "ci95_high": -0.012098402099157912
+      },
+      "max_shortage_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_motor_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg2_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "fallback_count": {
+        "n": 20.0,
+        "mean": 0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "valid_rate": 0.0
+    },
+    "ecms": {
+      "fuel_l": {
+        "n": 20.0,
+        "mean": 5.463317022526864,
+        "std": 0.0,
+        "ci95_low": 5.463317022526864,
+        "ci95_high": 5.463317022526864
+      },
+      "final_soc": {
+        "n": 20.0,
+        "mean": 0.5416882074850642,
+        "std": 0.0,
+        "ci95_low": 0.5416882074850642,
+        "ci95_high": 0.5416882074850642
+      },
+      "soc_error": {
+        "n": 20.0,
+        "mean": -0.008311792514935856,
+        "std": 0.0,
+        "ci95_low": -0.008311792514935856,
+        "ci95_high": -0.008311792514935856
+      },
+      "max_shortage_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_motor_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg2_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "fallback_count": {
+        "n": 20.0,
+        "mean": 0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "valid_rate": 1.0
+    },
+    "deterministic_mpc": {
+      "fuel_l": {
+        "n": 20.0,
+        "mean": 5.291601448283241,
+        "std": 0.0,
+        "ci95_low": 5.291601448283241,
+        "ci95_high": 5.291601448283241
+      },
+      "final_soc": {
+        "n": 20.0,
+        "mean": 0.551468679616454,
+        "std": 0.0,
+        "ci95_low": 0.551468679616454,
+        "ci95_high": 0.551468679616454
+      },
+      "soc_error": {
+        "n": 20.0,
+        "mean": 0.0014686796164539162,
+        "std": 0.0,
+        "ci95_low": 0.0014686796164539162,
+        "ci95_high": 0.0014686796164539162
+      },
+      "max_shortage_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_motor_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg2_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "fallback_count": {
+        "n": 20.0,
+        "mean": 2,
+        "std": 0.0,
+        "ci95_low": 2.0,
+        "ci95_high": 2.0
+      },
+      "valid_rate": 1.0
+    },
+    "robust_mpc": {
+      "fuel_l": {
+        "n": 20.0,
+        "mean": 5.188094487883212,
+        "std": 0.0,
+        "ci95_low": 5.188094487883212,
+        "ci95_high": 5.188094487883212
+      },
+      "final_soc": {
+        "n": 20.0,
+        "mean": 0.5512689865691138,
+        "std": 0.0,
+        "ci95_low": 0.5512689865691138,
+        "ci95_high": 0.5512689865691138
+      },
+      "soc_error": {
+        "n": 20.0,
+        "mean": 0.0012689865691137836,
+        "std": 0.0,
+        "ci95_low": 0.0012689865691137836,
+        "ci95_high": 0.0012689865691137836
+      },
+      "max_shortage_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_motor_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_power_violation_w": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg1_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "max_mg2_speed_violation_rpm": {
+        "n": 20.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "fallback_count": {
+        "n": 20.0,
+        "mean": 4,
+        "std": 0.0,
+        "ci95_low": 4.0,
+        "ci95_high": 4.0
+      },
+      "valid_rate": 1.0
+    }
+  },
+  "paired_savings_vs_realistic_ool_pct": {
+    "deterministic_mpc": {
+      "n": 20.0,
+      "mean": 7.608940731771671,
+      "std": 0.0,
+      "ci95_low": 7.608940731771671,
+      "ci95_high": 7.608940731771671
+    },
+    "robust_mpc": {
+      "n": 20.0,
+      "mean": 9.416166352683812,
+      "std": 0.0,
+      "ci95_low": 9.416166352683812,
+      "ci95_high": 9.416166352683812
+    }
+  }
+}

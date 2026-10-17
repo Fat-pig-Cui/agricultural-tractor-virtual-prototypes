@@ -65,9 +65,23 @@ def _pressure_command(target_delta_pa: float, measured_delta_pa: float,
                          + 0.05 * memory.pressure_integral))
 
 
-def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[str, object]:
+def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
+                plant_overrides: dict | None = None, integration_substeps: int = 1,
+                observer_variant: str = "shared", baseline_dwell_s: float = 0.0,
+                trace_interval_s: float | None = None,
+                integration_scheme: str = "euler") -> dict[str, object]:
+    """Replay frozen control code with optional, explicitly labelled audit arms.
+
+    The controller and Gaussian samples remain at 10 ms when only the plant
+    integration is refined. Defaults preserve the submitted numerical path.
+    """
+    if integration_substeps < 1 or int(integration_substeps) != integration_substeps:
+        raise ValueError("integration_substeps must be a positive integer")
+    if integration_scheme not in ("euler", "rk4"):
+        raise ValueError("integration_scheme must be euler or rk4")
     rng = Random(config.seed)
-    base = HydraulicV2Parameters()
+    control_params = HydraulicV2Parameters()
+    base = replace(control_params, **(plant_overrides or {}))
     params = replace(
         base,
         sensor_position_std_m=base.sensor_position_std_m * config.position_noise_scale,
@@ -77,9 +91,11 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
             * config.accumulator_flow_scale),
     )
     plant = TwoChamberHydraulicPlant(params)
+    integration_plant = (plant if integration_substeps == 1 else
+        TwoChamberHydraulicPlant(replace(params, dt_s=params.dt_s/integration_substeps)))
     state = plant.initial_state()
-    observer = InterfaceObserver(params.dt_s, params.piston_area_m2,
-                                 params.stiffness_n_m)
+    observer = InterfaceObserver(params.dt_s, control_params.piston_area_m2,
+                                 control_params.stiffness_n_m)
     observer.x_hat = state.x_m
     observer.p_a_hat_pa = state.p_a_pa
     observer.p_b_hat_pa = state.p_b_pa
@@ -97,6 +113,12 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
     accumulator_initial_oil = (params.accumulator_shell_volume_m3
                                - state.accumulator_gas_volume_m3)
     previous_command = 0.0
+    previous_measured_x = state.x_m
+    trace = []
+    stroke_hits = 0
+    minimum_accumulator_pressure = plant.accumulator_pressure(state)
+    accumulator_active_samples = 0
+    mode_samples = {}
 
     for step in range(step_count):
         time_s = step * params.dt_s
@@ -109,6 +131,16 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
             state, params, rng, config.pressure_bias_pa, config.position_bias_m)
         observer.update(measured_x, measured_p_a, measured_p_b,
                         previous_command, plant)
+        if observer_variant == "raw":
+            observer.x_hat = measured_x
+            observer.v_hat = (measured_x - previous_measured_x) / params.dt_s
+            observer.p_a_hat_pa, observer.p_b_hat_pa = measured_p_a, measured_p_b
+            observer.load_hat_n = 9000.0
+        elif observer_variant == "fixed_load":
+            observer.load_hat_n = 9000.0
+        elif observer_variant != "shared":
+            raise ValueError("observer_variant must be shared, fixed_load, or raw")
+        previous_measured_x = measured_x
         error = reference - observer.x_hat
         measured_delta = observer.p_a_hat_pa - observer.p_b_hat_pa
         velocity_error = reference_velocity - observer.v_hat
@@ -132,27 +164,27 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
             desired_acceleration = (reference_acceleration + 650.0 * error
                                     + 90.0 * velocity_error
                                     + 20.0 * memory.position_integral)
-            target_force = (estimated_load + params.stiffness_n_m * reference
-                            + params.viscous_n_s_m * reference_velocity
-                            + params.mass_kg * desired_acceleration)
-            target_delta = target_force / params.piston_area_m2
+            target_force = (estimated_load + control_params.stiffness_n_m * reference
+                            + control_params.viscous_n_s_m * reference_velocity
+                            + control_params.mass_kg * desired_acceleration)
+            target_delta = target_force / control_params.piston_area_m2
         elif controller == "smc_lock":
             sliding = 18.0 * error + velocity_error
             desired_acceleration = (reference_acceleration + 650.0 * error
                                     + 90.0 * velocity_error)
             robust_force = 1200.0 * tanh(sliding / 0.006)
-            target_force = (estimated_load + params.stiffness_n_m * reference
-                            + params.viscous_n_s_m * reference_velocity
-                            + params.mass_kg * desired_acceleration
+            target_force = (estimated_load + control_params.stiffness_n_m * reference
+                            + control_params.viscous_n_s_m * reference_velocity
+                            + control_params.mass_kg * desired_acceleration
                             + robust_force)
-            target_delta = target_force / params.piston_area_m2
+            target_delta = target_force / control_params.piston_area_m2
         elif controller == "observer_hybrid":
             desired_acceleration = (reference_acceleration + 650.0 * error
                                     + 90.0 * velocity_error)
-            target_force = (estimated_load + params.stiffness_n_m * reference
-                            + params.viscous_n_s_m * reference_velocity
-                            + params.mass_kg * desired_acceleration)
-            target_delta = target_force / params.piston_area_m2
+            target_force = (estimated_load + control_params.stiffness_n_m * reference
+                            + control_params.viscous_n_s_m * reference_velocity
+                            + control_params.mass_kg * desired_acceleration)
+            target_delta = target_force / control_params.piston_area_m2
         else:
             raise ValueError(f"unknown controller: {controller}")
 
@@ -165,8 +197,12 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
                 new_mode = "LOCK"
             elif controller == "pid_accumulator":
                 new_mode = "ACCUMULATOR" if error > 0.002 else "LOCK"
+                if baseline_dwell_s and memory.mode_dwell_steps * params.dt_s < baseline_dwell_s:
+                    new_mode = memory.mode
                 command = max(-0.08, min(0.08, command))
                 accumulator_valve = max(0.0, min(1.0, 80.0 * max(error - 0.001, 0.0)))
+                if baseline_dwell_s and new_mode != "ACCUMULATOR":
+                    accumulator_valve = 0.0
             else:
                 pressure_deficit = target_delta - measured_delta
                 if memory.mode == "ACCUMULATOR":
@@ -204,12 +240,30 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
                 memory.mode_dwell_steps = 0
                 memory.switches += 1
 
-        result = plant.step(state, command, load_n, temperature_c,
-                            accumulator_valve=accumulator_valve,
-                            leakage_scale=config.leakage_scale)
-        state = result.state
+        for _ in range(integration_substeps):
+            if integration_scheme == "rk4":
+                result = integration_plant.step_rk4(
+                    state, command, load_n, temperature_c,
+                    accumulator_valve=accumulator_valve,
+                    leakage_scale=config.leakage_scale)
+            else:
+                result = integration_plant.step(
+                    state, command, load_n, temperature_c,
+                    accumulator_valve=accumulator_valve,
+                    leakage_scale=config.leakage_scale)
+            state = result.state
+            relief_count += int(result.relief_active)
+            stroke_hits += int(state.x_m <= 0.0 or state.x_m >= params.stroke_m)
+        p_acc = plant.accumulator_pressure(state)
+        minimum_accumulator_pressure = min(minimum_accumulator_pressure, p_acc)
+        accumulator_active_samples += int(accumulator_valve > 0)
+        mode_samples[memory.mode] = mode_samples.get(memory.mode, 0) + 1
+        if trace_interval_s is not None and step % max(1, round(trace_interval_s/params.dt_s)) == 0:
+            trace.append(dict(t_s=time_s, x_m=state.x_m, error_mm=(reference-state.x_m)*1000,
+                p_a_mpa=state.p_a_pa/1e6, p_b_mpa=state.p_b_pa/1e6,
+                p_acc_mpa=p_acc/1e6, command=command, accumulator_valve=accumulator_valve,
+                mode=memory.mode, load_estimate_n=observer.load_hat_n))
         previous_command = command
-        relief_count += int(result.relief_active)
         errors.append(reference - state.x_m)
         if time_s >= 8.0:
             post_transition_errors.append(reference - state.x_m)
@@ -225,7 +279,7 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
     post_abs = [abs(value) for value in post_transition_errors]
     accumulator_final_oil = (params.accumulator_shell_volume_m3
                              - state.accumulator_gas_volume_m3)
-    return {
+    output = {
         "controller": controller,
         "seed": config.seed,
         "hold_started": memory.hold_started,
@@ -248,4 +302,12 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config()) -> dict[
         "final_position_m": state.x_m,
         "observer_final_load_n": observer.load_hat_n,
         "observer_final_leakage_m3_s_pa": observer.leakage_hat_m3_s_pa,
+        "stroke_boundary_samples": stroke_hits,
+        "accumulator_active_time_s": accumulator_active_samples*params.dt_s,
+        "minimum_accumulator_pressure_mpa": minimum_accumulator_pressure/1e6,
+        "final_accumulator_pressure_mpa": plant.accumulator_pressure(state)/1e6,
+        "mode_times_s": {k:v*params.dt_s for k,v in mode_samples.items()},
     }
+    if trace_interval_s is not None:
+        output["trace"] = trace
+    return output

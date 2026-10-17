@@ -1,0 +1,127 @@
+{
+  "method": "event-clipped classical RK4 plant update; controller, observer and noise remain at 10 ms",
+  "seeds": [
+    4300,
+    4301,
+    4302,
+    4303,
+    4304
+  ],
+  "substeps": [
+    10,
+    20
+  ],
+  "summary": {
+    "10": {
+      "plant_step_ms": 1.0,
+      "n": 5,
+      "passed": 5,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 1.628443446424066,
+        "sd": 0.05780157324809915,
+        "min": 1.5545922073920138,
+        "max": 1.6883266158332355
+      },
+      "post_transition_rmse_mm": {
+        "n": 5,
+        "mean": 1.1777915240731938,
+        "sd": 0.029374848586376543,
+        "min": 1.1271050281201138,
+        "max": 1.2001385182485163
+      },
+      "post_transition_max_abs_error_mm": {
+        "n": 5,
+        "mean": 8.503130904490352,
+        "sd": 0.22066629105516267,
+        "min": 8.231191294148399,
+        "max": 8.747433703926944
+      },
+      "peak_pressure_mpa": {
+        "n": 5,
+        "mean": 11.22528277490206,
+        "sd": 0.0007391409868467345,
+        "min": 11.224432437589593,
+        "max": 11.226086663156895
+      },
+      "stroke_boundary_samples": {
+        "n": 5,
+        "mean": 0.0,
+        "sd": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "20": {
+      "plant_step_ms": 0.5,
+      "n": 5,
+      "passed": 5,
+      "hold_drop_mm": {
+        "n": 5,
+        "mean": 1.585116488795557,
+        "sd": 0.059302702501400885,
+        "min": 1.4997908896355883,
+        "max": 1.6591989266648843
+      },
+      "post_transition_rmse_mm": {
+        "n": 5,
+        "mean": 1.1924371087021572,
+        "sd": 0.022645395903042348,
+        "min": 1.17047764885602,
+        "max": 1.2256323069436115
+      },
+      "post_transition_max_abs_error_mm": {
+        "n": 5,
+        "mean": 8.502220493082723,
+        "sd": 0.22306422943482276,
+        "min": 8.226913743087149,
+        "max": 8.747099079269905
+      },
+      "peak_pressure_mpa": {
+        "n": 5,
+        "mean": 11.224271923294634,
+        "sd": 0.0008267420546828316,
+        "min": 11.223129067689813,
+        "max": 11.224942691024133
+      },
+      "stroke_boundary_samples": {
+        "n": 5,
+        "mean": 0.0,
+        "sd": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    }
+  },
+  "coarse_1ms_minus_fine_0_5ms": [
+    {
+      "seed": 4300,
+      "hold_drop_difference_mm": 0.09235280036867799,
+      "max_error_difference_mm": 0.003312072562046353
+    },
+    {
+      "seed": 4301,
+      "hold_drop_difference_mm": 0.014529675415653198,
+      "max_error_difference_mm": -0.0023973524396758705
+    },
+    {
+      "seed": 4302,
+      "hold_drop_difference_mm": 0.03303687985095616,
+      "max_error_difference_mm": 0.004277551061250051
+    },
+    {
+      "seed": 4303,
+      "hold_drop_difference_mm": 0.083136328554001,
+      "max_error_difference_mm": -0.0009748388025148103
+    },
+    {
+      "seed": 4304,
+      "hold_drop_difference_mm": -0.006420896046743785,
+      "max_error_difference_mm": 0.00033462465703948396
+    }
+  ],
+  "mean_absolute_hold_drop_difference_mm": 0.045895316047206425,
+  "mean_absolute_max_error_difference_mm": 0.002259287904505314,
+  "elapsed_s": 445.85917472839355,
+  "interpretation": "This audit tests numerical convergence of the refined plant arm. It does not change the primary 10 ms Euler comparison and does not establish physical-model validity or global switched stability."
+}

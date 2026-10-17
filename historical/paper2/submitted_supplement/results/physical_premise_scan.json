@@ -1,0 +1,238 @@
+{
+  "baseline_lowload022": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0
+    },
+    "baseline_fuel_l": 0.4635152133820704,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.435507144871343,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 6.042534894672522,
+        "soc_error": 7.621556171621968e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.43053857521817923,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 7.114467273528066,
+        "soc_error": -6.984004594090543e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "lowload018": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0
+    },
+    "baseline_fuel_l": 0.494574161982303,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.4562796992018103,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 7.74291617398787,
+        "soc_error": 7.621565106474826e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.4503153661212339,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 8.948869403867635,
+        "soc_error": -6.990447431687308e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "lowload015": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0
+    },
+    "baseline_fuel_l": 0.5248164762378223,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.47762684663993354,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 8.991644076453245,
+        "soc_error": 7.621495632492703e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.47048795899944434,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 10.351907704543722,
+        "soc_error": -6.983610260968831e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "lowload012": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0
+    },
+    "baseline_fuel_l": 0.5642048455702938,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.5066547101725383,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 10.200219982085464,
+        "soc_error": 7.621521344258753e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.4982051974021707,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 11.69781661506491,
+        "soc_error": -5.566601289697104e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "battery150kWh": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0,
+      "battery_capacity_wh": 150000.0
+    },
+    "baseline_fuel_l": 0.49457416198231446,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.45658860062696205,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 7.680458114330434,
+        "soc_error": 5.179099447083502e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.4480851887493718,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 9.39979821157844,
+        "soc_error": -3.953906051790135e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "battery150kW": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0,
+      "battery_capacity_wh": 150000.0,
+      "battery_power_limit_w": 150000.0,
+      "motor_peak_w": 150000.0
+    },
+    "baseline_fuel_l": 0.49457416198231446,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.45658860062696205,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 7.680458114330434,
+        "soc_error": 5.179099447083502e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.4480851887493718,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 9.39979821157844,
+        "soc_error": -3.953906051790135e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "lowload_cycle": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "low_load_agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0
+    },
+    "baseline_fuel_l": 0.277745747934625,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.266348863542256,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 4.103351528193884,
+        "soc_error": 8.454697662418909e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.25784391891834524,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 7.165484679522141,
+        "soc_error": -1.9784894575325396e-05,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  },
+  "lowload_cycle_strong": {
+    "config": {
+      "duration_s": 60.0,
+      "profile_name": "low_load_agri_workcycle",
+      "accessory_for_all_w": 18000.0,
+      "mpc_terminal_weight": 2000000.0
+    },
+    "baseline_fuel_l": 0.3741865028385413,
+    "controllers": {
+      "deterministic_mpc": {
+        "fuel_l": 0.3696586347292269,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 1.2100565025639576,
+        "soc_error": 8.452350527377028e-06,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      },
+      "robust_mpc": {
+        "fuel_l": 0.35548342056289833,
+        "valid": true,
+        "saving_vs_realistic_ool_pct": 4.99833161639003,
+        "soc_error": -1.9863946333908977e-05,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
-  "description": "<p>Source code, declared virtual-model inputs, reproduction scripts, result JSON files, figures, and English manuscript sources for two theoretical simulation studies: electrohydraulic tractor-hitch position holding and strictly causal hybrid-tractor energy management.</p><p>Version 1.0.6 refines the print sizing of the Energies manuscript's primary controller-architecture figure after page-scale visual review, without changing its structure, results, or evidence boundaries.</p><p>All evidence is conditional on declared virtual models. The archive contains no field, vehicle, bench, or calibrated component-map measurements.</p>",
+  "description": "<p>两篇农业拖拉机理论仿真论文的源代码、声明模型输入、复现脚本、冻结结果、图表和英文稿件。</p><p>v1.1.0同步Machines和Energies大修科学材料。论文一补充统一细步长RK4的主动PID对照及质量、阻尼、刚度联合角点；论文二补充相同防护固定ECMS、组件消融和模型/执行检查，采用软SOC防护的谨慎定位。大轨迹无损压缩并提供还原及散列校验。</p><p>全部证据依赖声明的虚拟模型；没有实车、台架或组件地图标定数据，不提供全局稳定性或递归可行性保证。约20%的燃油诊断使用理想条件及完整未来信息，与当前在线统计分开。</p>",
   "creators": [
     {
       "name": "Cui, Chenyu",

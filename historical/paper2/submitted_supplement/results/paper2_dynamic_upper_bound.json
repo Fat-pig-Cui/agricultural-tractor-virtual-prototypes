@@ -1,0 +1,165 @@
+{
+  "purpose": "Offline dynamic-feasibility diagnostic; not an online-controller result or a formal upper bound.",
+  "constraints": {
+    "minimum_engine_w": 60000.0,
+    "engine_ramp_w_per_s": 40000.0,
+    "battery_power_limit_w": 150000.0,
+    "motor_peak_w": 150000.0,
+    "terminal_soc_tolerance": 0.01
+  },
+  "baseline": {
+    "fuel_l": 7.452606549601051,
+    "soc_error": 0.007940604095393322,
+    "valid": true,
+    "max_shortage_w": 0.0,
+    "max_motor_power_violation_w": 0.0,
+    "max_mg1_power_violation_w": 0.0,
+    "max_battery_power_violation_w": 0.0,
+    "max_mg1_speed_violation_rpm": 0.0,
+    "max_mg2_speed_violation_rpm": 0.0,
+    "max_engine_ramp_violation_w": 0.0
+  },
+  "trials": [
+    {
+      "start": "ool_phase_mean",
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "iterations": 20,
+      "targets_w": [
+        59980.09792571221,
+        23830.56860263386,
+        120172.67603027902,
+        164460.27550011693,
+        207359.18912097567,
+        78978.46444546002,
+        3767.5970068260003,
+        51424.73512765142
+      ],
+      "summary": {
+        "fuel_l": 7.020148793464054,
+        "soc_error": -2.900346629530759e-12,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_battery_power_violation_w": 9921.415726148465,
+        "max_mg1_power_violation_w": 0.0,
+        "max_mg1_speed_violation_rpm": 0.0,
+        "max_mg2_speed_violation_rpm": 0.0,
+        "max_engine_ramp_violation_w": 0.0
+      },
+      "strict_valid": false
+    },
+    {
+      "start": "mean_load",
+      "optimizer_success": false,
+      "optimizer_message": "Singular matrix C in LSQ subproblem",
+      "iterations": 17,
+      "targets_w": [
+        17999.999998462634,
+        44365.457452759125,
+        116386.40506056539,
+        229519.83552212964,
+        208093.8313061701,
+        109724.00161146947,
+        18000.0,
+        18000.0
+      ],
+      "summary": {
+        "fuel_l": 7.060898214359161,
+        "soc_error": -4.1446217413643183e-07,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_battery_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0,
+        "max_mg1_speed_violation_rpm": 0.0,
+        "max_mg2_speed_violation_rpm": 0.0,
+        "max_engine_ramp_violation_w": 0.0
+      },
+      "strict_valid": true
+    },
+    {
+      "start": "moderate_island",
+      "optimizer_success": false,
+      "optimizer_message": "Singular matrix C in LSQ subproblem",
+      "iterations": 11,
+      "targets_w": [
+        60000.00010744928,
+        46.77815779336204,
+        140552.02998517698,
+        59091.577676729765,
+        176837.23380437185,
+        91767.44271806443,
+        48.17402911947496,
+        90000.0
+      ],
+      "summary": {
+        "fuel_l": 7.046575773773094,
+        "soc_error": -1.8135513948025483e-05,
+        "max_shortage_w": 73809.42450000026,
+        "max_motor_power_violation_w": 73809.42450000026,
+        "max_battery_power_violation_w": 160846.13373005495,
+        "max_mg1_power_violation_w": 0.0,
+        "max_mg1_speed_violation_rpm": 0.0,
+        "max_mg2_speed_violation_rpm": 0.0,
+        "max_engine_ramp_violation_w": 0.0
+      },
+      "strict_valid": false
+    },
+    {
+      "start": "deterministic_coordinate_search",
+      "optimizer_success": true,
+      "optimizer_message": "deterministic penalized coordinate search",
+      "iterations": 512,
+      "targets_w": [
+        75000.0,
+        103547.12453748388,
+        90172.69685282516,
+        171454.97520353802,
+        207500.0,
+        118440.22439740767,
+        116298.97447042729,
+        120000.0
+      ],
+      "summary": {
+        "fuel_l": 6.640060224005831,
+        "soc_error": 0.00017240590646727671,
+        "max_shortage_w": 0.0,
+        "max_motor_power_violation_w": 0.0,
+        "max_battery_power_violation_w": 0.0,
+        "max_mg1_power_violation_w": 0.0,
+        "max_mg1_speed_violation_rpm": 0.0,
+        "max_mg2_speed_violation_rpm": 0.0,
+        "max_engine_ramp_violation_w": 1.4551915228366852e-11
+      },
+      "strict_valid": true
+    }
+  ],
+  "best_strict_trial": {
+    "start": "deterministic_coordinate_search",
+    "optimizer_success": true,
+    "optimizer_message": "deterministic penalized coordinate search",
+    "iterations": 512,
+    "targets_w": [
+      75000.0,
+      103547.12453748388,
+      90172.69685282516,
+      171454.97520353802,
+      207500.0,
+      118440.22439740767,
+      116298.97447042729,
+      120000.0
+    ],
+    "summary": {
+      "fuel_l": 6.640060224005831,
+      "soc_error": 0.00017240590646727671,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 1.4551915228366852e-11
+    },
+    "strict_valid": true
+  },
+  "best_feasible_diagnostic_saving_vs_realistic_ool_pct": 10.902847482787308
+}

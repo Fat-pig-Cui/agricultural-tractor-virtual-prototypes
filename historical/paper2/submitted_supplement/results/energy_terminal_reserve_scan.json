@@ -1,0 +1,2534 @@
+{
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040,
+    2041,
+    2042,
+    2043,
+    2044,
+    2045
+  ],
+  "protocol": {
+    "cycle": "stochastic_agri_workcycle",
+    "duration_s": 600.0,
+    "disturbance_scale": 0.25,
+    "offline_soc_reference": false,
+    "terminal_soc_tolerance": 0.01,
+    "validity_target_soc": 0.55,
+    "note": "The reserve alters online targeting only; validity remains relative to the initial SOC. Virtual-prototype result only."
+  },
+  "reserves": [
+    {
+      "reserve_soc": 0.0,
+      "rows": {
+        "deterministic_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 7.846648611410552,
+            "soc_error": 4.477195377328158e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 7.906804733103579,
+            "soc_error": 4.568712084429549e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 7.987614141123602,
+            "soc_error": 5.060342310958532e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.033770836105358,
+            "soc_error": 5.523015438546608e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 7.944893852348364,
+            "soc_error": 4.8572079381914435e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.059916316644326,
+            "soc_error": 6.2862673246844025e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 7.902942220596345,
+            "soc_error": 5.126386812825956e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.188340342347221,
+            "soc_error": 3.3289067605801748e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 7.942804735558495,
+            "soc_error": 4.756235215119808e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 7.98211998536891,
+            "soc_error": 4.98616682143016e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 7.831446423542642,
+            "soc_error": 5.4841023675589184e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 7.829072790918733,
+            "soc_error": 5.245013820487365e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 7.9763154263985285,
+            "soc_error": 4.968246465120174e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 7.829828845608822,
+            "soc_error": 6.0876554784927706e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.309945058252255,
+            "soc_error": 3.2004814951580585e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 7.9875771232892,
+            "soc_error": 5.369575089342327e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.072513380982848,
+            "soc_error": 5.173863414031921e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 7.953041179511318,
+            "soc_error": 4.631466744120516e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.168432609465372,
+            "soc_error": 5.060757449326658e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.02694615093654,
+            "soc_error": 4.894383686226966e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ],
+        "robust_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 7.814496366640595,
+            "soc_error": -1.8608334229064383e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 7.869163264858714,
+            "soc_error": -2.07258912920949e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 7.9186245042661,
+            "soc_error": -3.368130446435025e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 7.99208128870265,
+            "soc_error": -3.2451106514175265e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 7.881092389918414,
+            "soc_error": -3.485369240774361e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.007802554189249,
+            "soc_error": -2.176363553818561e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 7.852239791323161,
+            "soc_error": -3.3128725571707207e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.133985112544323,
+            "soc_error": -1.951313217118944e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 7.878474868309239,
+            "soc_error": -3.598642517532724e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 7.930882512087906,
+            "soc_error": -3.4324408233477044e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 7.7783987781478725,
+            "soc_error": -3.2639681828428024e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 7.770477667908592,
+            "soc_error": -3.2183757103787514e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 7.919399925916442,
+            "soc_error": -3.4475526250465904e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 7.778390385672035,
+            "soc_error": -2.4095833668358324e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.233504230928448,
+            "soc_error": -1.9106438684524107e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 7.937159759630882,
+            "soc_error": -3.1259865220789607e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.032183170549041,
+            "soc_error": -3.277241617416493e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 7.912174941609229,
+            "soc_error": -2.1738822121308843e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.117021183364425,
+            "soc_error": -3.367879942484109e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 7.985591871389927,
+            "soc_error": -3.5120032202407003e-06,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ]
+      },
+      "summaries": {
+        "deterministic_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 7.989048738175652,
+            "std": 0.12693389330046828,
+            "ci95_low": 7.929642530191104,
+            "ci95_high": 8.0484549461602
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 4.954299104698023e-06,
+            "std": 7.35272761292727e-07,
+            "ci95_low": 4.610184814597953e-06,
+            "ci95_high": 5.298413394798093e-06
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -0.365687803902073,
+            "std": 0.009860404830014564,
+            "ci95_low": -0.37030256237920484,
+            "ci95_high": -0.3610730454249412
+          }
+        },
+        "robust_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 7.937157228397862,
+            "std": 0.12381635122981523,
+            "ci95_low": 7.879210058246586,
+            "ci95_high": 7.995104398549139
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": -2.9105391413819516e-06,
+            "std": 6.438349474072302e-07,
+            "ci95_low": -3.211859709111306e-06,
+            "ci95_high": -2.6092185736525972e-06
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": 0.28571815298922026,
+            "std": 0.1374810610855061,
+            "ci95_low": 0.221375775264706,
+            "ci95_high": 0.35006053071373455
+          }
+        }
+      }
+    },
+    {
+      "reserve_soc": 0.0025,
+      "rows": {
+        "deterministic_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 7.953565274972299,
+            "soc_error": 0.0025044773905827933,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.01429868250486,
+            "soc_error": 0.0025045690454206238,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.093566989061593,
+            "soc_error": 0.002505060334647924,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.14090926552668,
+            "soc_error": 0.002505523020032152,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.051965920985252,
+            "soc_error": 0.002504857225739676,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.166302807686947,
+            "soc_error": 0.0025062861923462743,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.010027997898046,
+            "soc_error": 0.0025051263787467803,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.292492068194981,
+            "soc_error": 0.002503332484375398,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.049636505201665,
+            "soc_error": 0.002504756259286478,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.089210773298532,
+            "soc_error": 0.0025049861727332035,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 7.938665339296544,
+            "soc_error": 0.002505504166423811,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 7.936249754175794,
+            "soc_error": 0.002505244988675215,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.083211797897562,
+            "soc_error": 0.002504968255012785,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 7.936900149946567,
+            "soc_error": 0.0025060874311985115,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.411063386805084,
+            "soc_error": 0.0025032271816931573,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.094350122185757,
+            "soc_error": 0.0025053695569954293,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.179031133609145,
+            "soc_error": 0.002505173845096298,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.059111992776298,
+            "soc_error": 0.0025046318953000357,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.274833529553838,
+            "soc_error": 0.002505060752315602,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.133782999336871,
+            "soc_error": 0.0025048944063115197,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ],
+        "robust_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.017141022779878,
+            "soc_error": 0.002498137228903796,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.07052602631958,
+            "soc_error": 0.0024979484536724605,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.131855410557655,
+            "soc_error": 0.0024966318426308254,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.1979970070633,
+            "soc_error": 0.0024967659619394844,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.107769958389872,
+            "soc_error": 0.0024965160286911647,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.211968196617619,
+            "soc_error": 0.002497824022103856,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.069919644270719,
+            "soc_error": 0.0024966871390156298,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.336927900274485,
+            "soc_error": 0.0024980469188107257,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.100500054541751,
+            "soc_error": 0.0024964063356595068,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.14695855959864,
+            "soc_error": 0.0024965674501665758,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.002720513381004,
+            "soc_error": 0.002496736258657317,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 7.997120844696694,
+            "soc_error": 0.0024967816782541785,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.136387598763068,
+            "soc_error": 0.002496552343896674,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 7.999339258949338,
+            "soc_error": 0.002497590317107612,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.456428027618006,
+            "soc_error": 0.0024980868895998487,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.146397606754427,
+            "soc_error": 0.002496633852140162,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.226191177158503,
+            "soc_error": 0.0024967231844796878,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.125860138468841,
+            "soc_error": 0.0024978230529194567,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.332231936431869,
+            "soc_error": 0.0024966322015359532,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.185554666405515,
+            "soc_error": 0.0024964880727010863,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ]
+      },
+      "summaries": {
+        "deterministic_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.095458824545716,
+            "std": 0.12581090820185434,
+            "ci95_low": 8.03657818372528,
+            "ci95_high": 8.154339465366151
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.0025049568491466835,
+            "std": 7.322419588296069e-07,
+            "ci95_low": 0.0025046141532994973,
+            "ci95_high": 0.00250529954499387
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -0.45493778075555474,
+            "std": 0.02678947267628692,
+            "ci95_low": -0.46747549581513054,
+            "ci95_high": -0.44240006569597895
+          }
+        },
+        "robust_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.149989777452038,
+            "std": 0.12112568145452879,
+            "ci95_low": 8.093301865046131,
+            "ci95_high": 8.206677689857946
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.0024970789616443,
+            "std": 6.504266924402227e-07,
+            "ci95_low": 0.002496774556080387,
+            "ci95_high": 0.002497383367208213
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -1.132650434525279,
+            "std": 0.11893689073765237,
+            "ci95_low": -1.1883139731159635,
+            "ci95_high": -1.0769868959345945
+          }
+        }
+      }
+    },
+    {
+      "reserve_soc": 0.005,
+      "rows": {
+        "deterministic_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.065063048334178,
+            "soc_error": 0.00500447755548028,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.125555115250592,
+            "soc_error": 0.005004569494733047,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.203302777691764,
+            "soc_error": 0.005005060329235866,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.251969322211357,
+            "soc_error": 0.005005523027256764,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.163619364141436,
+            "soc_error": 0.005004857256269535,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.276879743313618,
+            "soc_error": 0.005006286094612178,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.121548080174554,
+            "soc_error": 0.005005126365597912,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.399191296693097,
+            "soc_error": 0.005003357889135862,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.160365967751462,
+            "soc_error": 0.0050047562911498256,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.200648251544575,
+            "soc_error": 0.005004986179075743,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.050027684041918,
+            "soc_error": 0.0050055041735170835,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 8.047729501975933,
+            "soc_error": 0.005005244958732669,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.19493217959076,
+            "soc_error": 0.005004968264487042,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 8.048332564476883,
+            "soc_error": 0.005006087330253317,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.514924316821869,
+            "soc_error": 0.005003249401357546,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.205238260416891,
+            "soc_error": 0.005005369540009852,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.289759987751044,
+            "soc_error": 0.005005173816364672,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.168291697530947,
+            "soc_error": 0.0050046324671610964,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.383461592982263,
+            "soc_error": 0.005005060743530798,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.245047768106373,
+            "soc_error": 0.0050048944294944775,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ],
+        "robust_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.123949409421927,
+            "soc_error": 0.004998137816116133,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.186642925983898,
+            "soc_error": 0.004997920032237868,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.256208174781532,
+            "soc_error": 0.00499663172625886,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.310949963077418,
+            "soc_error": 0.00499675534743127,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.217592047655707,
+            "soc_error": 0.004996518425858243,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.319807493167167,
+            "soc_error": 0.0049978220000217455,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.184184893443575,
+            "soc_error": 0.00499668713804069,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.450000559128378,
+            "soc_error": 0.00499804414322369,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.215124888305347,
+            "soc_error": 0.004996401342479806,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.249540587403246,
+            "soc_error": 0.004996567436271415,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.112825282205776,
+            "soc_error": 0.004996723383172141,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 8.116111001523205,
+            "soc_error": 0.00499678164064854,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.247715438438943,
+            "soc_error": 0.004996552311951619,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 8.107436947900013,
+            "soc_error": 0.004997588844652734,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.566543171025158,
+            "soc_error": 0.0049980914099091445,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.25609680580806,
+            "soc_error": 0.004996635059995369,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.33811568467837,
+            "soc_error": 0.004996722934175968,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.232934182291398,
+            "soc_error": 0.004997830784869262,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.431752435223645,
+            "soc_error": 0.004996632292035841,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.298312284539948,
+            "soc_error": 0.0049964881671366035,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ]
+      },
+      "summaries": {
+        "deterministic_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.205794426040075,
+            "std": 0.1242003093141929,
+            "ci95_low": 8.147667560039055,
+            "ci95_high": 8.263921292041095
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.005004959280372779,
+            "std": 7.264762725609817e-07,
+            "ci95_low": 0.005004619282918817,
+            "ci95_high": 0.00500529927782674
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -0.5129803082271057,
+            "std": 0.049359688866769905,
+            "ci95_low": -0.5360810882207585,
+            "ci95_high": -0.489879528233453
+          }
+        },
+        "robust_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.261092208800136,
+            "std": 0.11995619079099722,
+            "ci95_low": 8.20495162858256,
+            "ci95_high": 8.317232789017712
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.004997076611824347,
+            "std": 6.497069575805662e-07,
+            "ci95_low": 0.004996772543102846,
+            "ci95_high": 0.004997380680545848
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -1.191251737037838,
+            "std": 0.11719475342614635,
+            "ci95_low": -1.2460999396392607,
+            "ci95_high": -1.1364035344364152
+          }
+        }
+      }
+    },
+    {
+      "reserve_soc": 0.0075,
+      "rows": {
+        "deterministic_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.175278301932986,
+            "soc_error": 0.007504477792537156,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.234838589739683,
+            "soc_error": 0.007504570028494473,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.312389182635815,
+            "soc_error": 0.007505060315562639,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.360219648413299,
+            "soc_error": 0.007505523036216211,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.27399182074535,
+            "soc_error": 0.007504857287542466,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.385147507190242,
+            "soc_error": 0.0075062856937855305,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.231796016887099,
+            "soc_error": 0.0075051263531086265,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.503425151276838,
+            "soc_error": 0.007503375875899554,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.270223813866581,
+            "soc_error": 0.007504756301155324,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.311040480260186,
+            "soc_error": 0.007504986183799689,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.160292998291371,
+            "soc_error": 0.007505504178050071,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 8.158101103465363,
+            "soc_error": 0.007505244942318079,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.30546449852403,
+            "soc_error": 0.007504968269616441,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 8.158651038657888,
+            "soc_error": 0.007506087262742267,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.618587664577147,
+            "soc_error": 0.0075032565638452065,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.314788293639465,
+            "soc_error": 0.007505369520438565,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.397553921980546,
+            "soc_error": 0.007505173736119364,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.27651316115365,
+            "soc_error": 0.0075046328441585874,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.489830145484644,
+            "soc_error": 0.007505060727886592,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.353919452470631,
+            "soc_error": 0.007504894463119416,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ],
+        "robust_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.231644959688442,
+            "soc_error": 0.00749813505391117,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.30073552002128,
+            "soc_error": 0.007497943018309194,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.366257968586414,
+            "soc_error": 0.007496631825460787,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.423290733466319,
+            "soc_error": 0.007496756639602253,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.330305414433875,
+            "soc_error": 0.007496513654290937,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.435213606537987,
+            "soc_error": 0.007497821976748975,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.295991616877235,
+            "soc_error": 0.007496687133584534,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.564263506844393,
+            "soc_error": 0.007498045513561924,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.328580594767946,
+            "soc_error": 0.007496399931133602,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.360944038959188,
+            "soc_error": 0.007496567456445669,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.221933169601009,
+            "soc_error": 0.007496723274377892,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 8.231675425931908,
+            "soc_error": 0.007496781799811725,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.360489972477906,
+            "soc_error": 0.0074965523090252395,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 8.215893129456004,
+            "soc_error": 0.007497591592119823,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.67751149844426,
+            "soc_error": 0.007498082981837184,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.368216279946841,
+            "soc_error": 0.0074968738743932395,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.450081736861407,
+            "soc_error": 0.00749672294071746,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.339850093271524,
+            "soc_error": 0.007497830649276893,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.53194364414559,
+            "soc_error": 0.007496632095146283,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.415567492018262,
+            "soc_error": 0.007496488132618051,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ]
+      },
+      "summaries": {
+        "deterministic_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.31460263955964,
+            "std": 0.12240484965149806,
+            "ci95_low": 8.257316064889615,
+            "ci95_high": 8.371889214229665
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.007504960568819813,
+            "std": 7.234294082883843e-07,
+            "ci95_low": 0.007504621997325837,
+            "ci95_high": 0.007505299140313789
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -0.42902054314509463,
+            "std": 0.05640542305980293,
+            "ci95_low": -0.4554187903477959,
+            "ci95_high": -0.40262229594239335
+          }
+        },
+        "robust_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.372519520116892,
+            "std": 0.11977958288685782,
+            "ci95_low": 8.316461593992816,
+            "ci95_high": 8.428577446240968
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.007497089092618642,
+            "std": 6.444684762906233e-07,
+            "ci95_low": 0.007496787475553676,
+            "ci95_high": 0.007497390709683608
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -1.1292050686172495,
+            "std": 0.1163848057873809,
+            "ci95_low": -1.1836742084117733,
+            "ci95_high": -1.0747359288227256
+          }
+        }
+      }
+    },
+    {
+      "reserve_soc": 0.01,
+      "rows": {
+        "deterministic_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.282989325125635,
+            "soc_error": 0.010004478087505264,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.342072780365696,
+            "soc_error": 0.010004569105813932,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.420035117116836,
+            "soc_error": 0.01000506036341342,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.466098271917001,
+            "soc_error": 0.010005523086082602,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.38258860658509,
+            "soc_error": 0.010004857316937343,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.49061708281809,
+            "soc_error": 0.010006284970835999,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.34008613923434,
+            "soc_error": 0.010005126341313897,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.606673498922346,
+            "soc_error": 0.010003377899360011,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.377858829710338,
+            "soc_error": 0.010004756350306288,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.419485852340332,
+            "soc_error": 0.010004986191062715,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.268846914323815,
+            "soc_error": 0.010005504183415614,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 8.266611828441086,
+            "soc_error": 0.010005244924455425,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.414216455376513,
+            "soc_error": 0.010004968277540827,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 8.266971978058725,
+            "soc_error": 0.010006087148231813,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.72219196583691,
+            "soc_error": 0.010003255485157014,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.422151112826251,
+            "soc_error": 0.010005369407630749,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.501979608342618,
+            "soc_error": 0.010005173478227936,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.382954463268915,
+            "soc_error": 0.010004632075071629,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.593736233121387,
+            "soc_error": 0.010005060737955263,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.460619922093894,
+            "soc_error": 0.010004894518433116,
+            "valid": false,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ],
+        "robust_mpc": [
+          {
+            "seed": 2026,
+            "fuel_l": 8.318191415910032,
+            "soc_error": 0.009998135096090488,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2027,
+            "fuel_l": 8.381371984353168,
+            "soc_error": 0.00999787990590384,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2028,
+            "fuel_l": 8.446516676510099,
+            "soc_error": 0.009996631742589579,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2029,
+            "fuel_l": 8.503866491097693,
+            "soc_error": 0.009996764945348069,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2030,
+            "fuel_l": 8.421312574005235,
+            "soc_error": 0.009996518098105422,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2031,
+            "fuel_l": 8.517029890555655,
+            "soc_error": 0.009997819677251996,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2032,
+            "fuel_l": 8.37560535766397,
+            "soc_error": 0.009996687134699478,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2033,
+            "fuel_l": 8.64679262749189,
+            "soc_error": 0.009998050298132166,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2034,
+            "fuel_l": 8.416187908840724,
+            "soc_error": 0.009996401414191558,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2035,
+            "fuel_l": 8.446677674007159,
+            "soc_error": 0.009996567412346224,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2036,
+            "fuel_l": 8.314917911103628,
+            "soc_error": 0.009996723739142288,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2037,
+            "fuel_l": 8.317858920908407,
+            "soc_error": 0.009996781596179116,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2038,
+            "fuel_l": 8.443069387774857,
+            "soc_error": 0.009996552415323934,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2039,
+            "fuel_l": 8.301709339178602,
+            "soc_error": 0.00999759091505259,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2040,
+            "fuel_l": 8.749144748433254,
+            "soc_error": 0.009998092262280989,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2041,
+            "fuel_l": 8.44369028009613,
+            "soc_error": 0.009996641217302371,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2042,
+            "fuel_l": 8.54193635429947,
+            "soc_error": 0.009996723256327833,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2043,
+            "fuel_l": 8.412868827385772,
+            "soc_error": 0.009997824261631538,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2044,
+            "fuel_l": 8.612492881811784,
+            "soc_error": 0.009996632119610216,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          },
+          {
+            "seed": 2045,
+            "fuel_l": 8.495183640640363,
+            "soc_error": 0.0099964881757445,
+            "valid": true,
+            "max_shortage_w": 0.0,
+            "max_motor_power_violation_w": 0.0,
+            "max_mg1_power_violation_w": 0.0,
+            "max_mg1_speed_violation_rpm": 0.0,
+            "max_mg2_speed_violation_rpm": 0.0
+          }
+        ]
+      },
+      "summaries": {
+        "deterministic_mpc": {
+          "valid_rate": 0.0,
+          "valid_runs": 0,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.42143929929129,
+            "std": 0.12083090667145198,
+            "ci95_low": 8.364889344144997,
+            "ci95_high": 8.477989254437583
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.010004960497437543,
+            "std": 7.232788140967643e-07,
+            "ci95_low": 0.010004621996423008,
+            "ci95_high": 0.010005298998452077
+          },
+          "paired_saving_vs_realistic_ool_pct": null
+        },
+        "robust_mpc": {
+          "valid_rate": 1.0,
+          "valid_runs": 20,
+          "fuel_l": {
+            "n": 20,
+            "mean": 8.455321244603395,
+            "std": 0.1171399062872025,
+            "ci95_low": 8.400498710958141,
+            "ci95_high": 8.510143778248649
+          },
+          "soc_error": {
+            "n": 20,
+            "mean": 0.00999707528416271,
+            "std": 6.464203039980018e-07,
+            "ci95_low": 0.009996772753624756,
+            "ci95_high": 0.009997377814700665
+          },
+          "paired_saving_vs_realistic_ool_pct": {
+            "n": 20,
+            "mean": -0.7267792385290749,
+            "std": 0.12792501532118483,
+            "ci95_low": -0.7866493005668612,
+            "ci95_high": -0.6669091764912886
+          }
+        }
+      }
+    }
+  ]
+}

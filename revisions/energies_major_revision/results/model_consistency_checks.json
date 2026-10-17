@@ -1,0 +1,40 @@
+{
+  "kind": "algebraic_and_numerical_verification_not_empirical_validation",
+  "seed": 5240,
+  "sampled_states": 1200,
+  "tested_actions": 42084,
+  "feasible_actions": 28093,
+  "rejected_by_reason": {
+    "battery bus": 2500,
+    "MG2 power": 7561,
+    "MG1 power": 3930
+  },
+  "max_absolute_residuals": {
+    "planetary_speed_rpm": 0.0,
+    "mechanical_power_w": 5.820766091346741e-11,
+    "battery_power_w": 7.421476766467094e-10,
+    "electrical_balance_w": 0.0,
+    "soc_update": 0.0
+  },
+  "battery_boundary_points": {
+    "-180000.0": {
+      "current_a": -271.80832396322154,
+      "loss_w": 3324.589423906302
+    },
+    "0.0": {
+      "current_a": 0.0,
+      "loss_w": 0.0
+    },
+    "180000.0": {
+      "current_a": 282.4460134990267,
+      "loss_w": 3589.908774367157
+    }
+  },
+  "derived_scales": {
+    "capacity_ah": 307.6923076923077,
+    "bus_to_engine_ratio": 0.6,
+    "battery_rated_engine_hours": 0.6666666666666666,
+    "reserve_trigger_w": 117000.0,
+    "ideal_peak_bsfc_g_kwh": 200.73603211776515
+  }
+}

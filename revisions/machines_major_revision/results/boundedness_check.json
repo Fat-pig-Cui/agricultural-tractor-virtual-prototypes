@@ -1,0 +1,19 @@
+{
+  "H": 221.95121951219514,
+  "eigenvalues": [
+    [
+      -6.2324450980237e-06,
+      0.0
+    ],
+    [
+      -0.9177733065416779,
+      73.08208411174536
+    ],
+    [
+      -0.9177733065416779,
+      -73.08208411174536
+    ]
+  ],
+  "all_negative_real": true,
+  "scope": "Frozen volumes only; not a nonlinear switched stability proof"
+}

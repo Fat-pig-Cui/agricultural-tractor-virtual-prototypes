@@ -1,0 +1,14 @@
+\begin{table}[H]
+\centering\small
+\caption{Frozen 20-path V2 comparison with between-seed sample SD and two-sided Student-t 95\% interval for mean hold drop.}\label{tab:comparison}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Controller & Pass & Drop mean$\pm$SD (mm) & Mean-drop 95\% CI (mm) & Worst error (mm) \\
+\midrule
+PID--lock & 0/20 & 16.04$\pm$0.06 & 16.01--16.07 & 15.38 \\
+SMC--lock & 0/20 & 15.99$\pm$0.06 & 15.97--16.02 & 16.62 \\
+PID--accumulator & 20/20 & 3.44$\pm$0.25 & 3.32--3.56 & 7.43 \\
+Observer hybrid & 20/20 & 1.85$\pm$0.16 & 1.78--1.92 & 8.90 \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,448 @@
+\documentclass[machines,article,submit,pdftex,moreauthors]{Definitions/mdpi}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\graphicspath{{figures/}}
+\setlength{\headheight}{20pt}
+% Date-free manuscript copy: retain only journal identity and pagination.
+\AtBeginDocument{%
+  \renewcommand{\today}{}%
+  \renewcommand{\cright}{}%
+  \renewcommand{\leftcolDates}{}%
+  \renewcommand{\leftcolUpdateCitation}{}%
+  \fancyhf{}%
+  \fancyhead[L]{\footnotesize\emph{\journalname}}%
+  \fancyhead[R]{\footnotesize\thepage{} of \pageref*{LastPage}}%
+  \fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyhead[L]{\footnotesize\emph{\journalname}}%
+  }%
+}
+\hreflink{}
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{}
+\copyrightyear{}
+\Title{Observer-Based Hybrid Position Holding for an Electrohydraulic Agricultural Hitch: A Two-Chamber Virtual-Prototype Stress Test}
+\newcommand{\orcidauthorA}{0009-0005-1928-6218}
+\Author{Chenyu Cui$^{1}$, Peng Wang$^{1}$ and Yucheng Zhang$^{1,}$*\orcidA{}}
+\AuthorNames{Chenyu Cui, Peng Wang and Yucheng Zhang}
+\address{%
+$^{1}$ \quad Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences, Beijing 100190, China}
+\corres{Correspondence: zhangyucheng@ict.ac.cn}
+\datereceived{}
+\daterevised{}
+\dateaccepted{}
+\datepublished{}
+\abstract{Long-duration holding in an electrohydraulic agricultural hitch requires balancing displacement error, valve activity and finite hydraulic storage. An observer-based supervisor is evaluated in a symmetric two-chamber virtual plant with spool dynamics, leakage and dry friction. All coefficients are theoretical inputs. Four control chains share noisy position and pressure sensing; a hysteretic supervisor selects locking, fine trim or accumulator support. On 20 frozen 1800 s paths, the hybrid and PID--accumulator both satisfied the 10 mm holding and post-transition accuracy screen. Hybrid mean and worst hold drops were 1.85 and 2.10 mm, while PID--accumulator had lower tracking RMSE. Crossed observer-removal tests show that filtering and effective-load adaptation affect holding and stored-fluid use. Dwell sensitivity and a matched-timer baseline demonstrate that reduced mode switching cannot be credited to supervisory logic independently of timer and discharge gating. Paired RK4 comparisons at 1.0 and 0.5 ms retain the holding--tracking trade-off against both active PID arms, while the coarse baseline remains explicitly reported. Mechanical-mismatch tests pass; position bias and high pressure noise expose failures that small hold drop alone would miss. Mode-wise numerical boundedness and a local frozen-volume argument are provided with explicit scope limits. The results support reproducible virtual-controller screening, without a global nonlinear stability or physical accuracy guarantee.}
+\keyword{agricultural machinery; electrohydraulic actuator; two-chamber model; three-point hitch; position holding; interface observer; virtual prototype; hybrid supervision}
+\begin{document}
+
+\section{Introduction}
+Rear hitches must accomplish two tasks with fundamentally different time scales: move an implement to a commanded position and maintain that position after motion has ended. Position holding is not merely the final portion of a tracking transient. It governs implement-depth retention, hydraulic energy consumption, and valve activity while the tractor operates under a quasi-static load. During this phase, cylinder and lock-valve leakage, load changes, temperature, sensor noise, and the available hydraulic storage can all produce a slow position drift. A controller optimized only for tracking can therefore generate unnecessary valve activity or fail to distinguish a persistent loss path from a transient disturbance.
+
+Tool design also influences the operating conditions that hitch control seeks to maintain. Syromyatnikov et al. studied flat-blade parameters for soil loosening \cite{syromyatnikov2022}, and examined tillage-quality indicators for a unit with a flexible working body \cite{syromyatnikov2023}. These studies motivate attention to implement working conditions, but do not establish a quantitative relation between the present virtual holding error and soil quality. This study evaluates actuator position; soil--tool interaction and agronomic outcomes are outside its model.
+
+The practical importance of this distinction is increasing as tractor hitches are integrated with automated depth control and coordinated traction functions. A recent review of tractor electrohydraulic hitch systems documents the breadth of position, draft, and mixed-control architectures used in agricultural machinery \cite{sun2022}. At the component level, the flow characteristics of a tractor electrohydraulic hitch valve have been modelled and experimentally validated \cite{kumar2021}; at the system level, coordinated hitch-depth and travel-speed control has been studied as an efficiency-oriented agricultural operation \cite{sun2025}. These studies motivate a clear representation of the hydraulic and supervisory mechanisms that govern a transition from commanded motion to holding.
+
+Recent tractor research has also reported hitch-position estimation using an EKF--Transformer architecture \cite{kim2025} and robust draft/position control with differential and integral sliding modes \cite{liu2023}. More generally, electrohydraulic servo research provides established sliding-mode and adaptive-control designs \cite{bai2010,tang2011,jin2013}. These contributions establish useful control ingredients, but their performance evidence has different objectives from a long-hold stress test: many studies emphasize trajectory tracking, draft regulation, or a specific hardware configuration rather than the entry logic, retained leakage path, and storage-assisted response during an extended hold.
+
+For a holding study, the evaluation protocol must be distinguished from any claim of physical performance. A small average drop can arise because a controller has not entered its hold mode, because the disturbance is unrealistically smooth, or because a noise-free internal pressure state is available to the controller. Conversely, a conservative velocity gate can prevent hold entry even when position tracking is stable. Reporting the entry criterion, time horizon, load disturbance, and parameter range is therefore as important as reporting position error. Simulation verification and physical validation address different questions \cite{sargent2013}: repeatable seeded noise can test a model's internal behavior, but cannot establish the performance of a hydraulic machine.
+
+This work therefore investigates a narrow, simulation-based question: can an observer-based supervisor coordinate tracking, bounded valve trim, locking, and finite accumulator compensation while using only noisy position and chamber-pressure measurements? The goal is not to estimate the field performance of a particular hitch. Instead, the virtual prototype makes its loss paths, pressure interface, mode transitions, parameter classes, and stress conditions inspectable so that a reviewer can distinguish internal model consistency from physical validation.
+
+\section{Related Work}
+\subsection{Hitch control and electrohydraulic motion regulation}
+Research on tractor hitches covers system development, coordination of agricultural operations, and actuator control. Reviews describe the sensing and hydraulic architectures used in position, draft, and mixed control \cite{sun2022}. Valve-flow studies provide component-specific experimental evidence \cite{kumar2021}, while coordinated depth and speed control links hitch commands to operating efficiency \cite{sun2025}. Tractor-specific sliding-mode control \cite{liu2023} and hitch-position estimation \cite{kim2025} address complementary regulation and sensing tasks. These sources establish the application context; their measurements are not used to calibrate the virtual prototype in this study.
+
+Hydraulic servo models describe the coupling between flow, pressure, mechanical load, and displacement \cite{jelali2003}. Adaptive robust motion control of hydraulic actuators \cite{yao2000}, adaptive sliding-mode control with unknown parameters \cite{guan2008}, and nonlinear adaptive suspension control \cite{alleyne1995} provide established approaches to nonlinear regulation. Force control requires attention to the pressure--load relationship \cite{alleyne2000}, while backstepping designs can explicitly include valve dynamics \cite{choux2010}. Valve dead-zone compensation is another distinct source of motion-control improvement \cite{deng2017}. These methods inform the actuator-level context, but a comparison of tracking error alone does not evaluate long-duration hold entry, switching activity, and finite stored-fluid use.
+
+Recent studies also illustrate the diversity of electrohydraulic control problems. Feng et al. combined disturbance observation with sliding-mode spool-position control \cite{feng2025}. Wang and Song studied clearance compensation using a Hopfield neural network \cite{wang2024}, and Hanaffi et al. evaluated optimized fractional-order PID position tracking through hardware-in-the-loop implementation \cite{hanaffi2026}. Their objectives and validation settings differ from the present 30 min holding protocol. The proposed supervisor is therefore evaluated against complete PID--lock, sliding-mode--lock, and PID--accumulator control chains rather than presented as a replacement for all actuator-level control methods.
+
+\subsection{Observation, hydraulic storage, and mode supervision}
+Disturbance-observer-based control \cite{chen2016} and active disturbance rejection \cite{han2009} provide a broader context for estimating unmeasured effects from controller-facing signals. Hydraulic leakage detection using an extended Kalman filter is a related diagnostic problem \cite{an2005}; it should be distinguished from reconstructing an internal coefficient from an exact virtual-model transition. Here, velocity and effective-load estimates enter the V2 control law, whereas a residual-based leakage diagnostic is unused by feedback and is not identified with a physical leakage coefficient. The earlier reduced-order leakage proxy is retained separately to make this distinction explicit.
+
+Low-speed behavior also depends on mechanical and fluid assumptions. Friction modeling and compensation are well-established topics \cite{wit1995,olsson1998}, and experimental work shows that an oil--air mixture's effective bulk modulus depends on its physical conditions \cite{gholizadeh2013}. Reviews of pump-controlled cylinder drives further show why actuator architecture matters when interpreting hydraulic efficiency \cite{ketelsen2019}. The present valve-controlled model uses researcher-defined friction, bulk-modulus, leakage, and accumulator inputs. Accordingly, reduced accumulator-oil use is reported as a controller-activity metric; it is not converted into an unmeasured system-energy saving.
+
+Hybrid-system theory separates continuous dynamics from discrete mode transitions \cite{goebel2009}. Stability analyses of switched systems \cite{liberzon1999} and average dwell time \cite{hespanha1999} motivate explicit switching rules, but a numerical minimum dwell time alone does not prove closed-loop stability. In this study, hysteresis and an 8 s dwell constraint limit mode activity in the evaluated simulations. The revision distinguishes a corrected legacy coefficient-proxy bound, bounded states of the projected numerical V2 model, and a local frozen-volume mode analysis. None is a global stability guarantee for the nonlinear switched hydraulic system.
+
+\subsection{Scope of the present contribution}
+The contribution is the coordination and evaluation of low-activity holding modes under a shared measurement interface. The primary plant maintains separate chamber-pressure states, finite accumulator storage, and explicit spool and pressure limits. All four control chains use the same observer and tracking bandwidth. Supervisor selection on five development seeds is separated from 20 frozen holdout runs, and adverse sensor-bias outcomes remain in the results. Following the distinction between verification and validation \cite{sargent2013}, the evidence concerns the specified virtual prototype. The deterministic stress tests examine selected perturbations; they do not estimate variance-based sensitivity indices or a physical failure probability \cite{saltelli2010}.
+
+
+\section{Materials and Methods}
+\subsection{Two-chamber virtual plant and modeling boundary}
+The primary V2 model has separate chamber pressures, piston position and velocity, spool position, and accumulator gas volume. All coefficients are declared theoretical inputs. With $A=0.012$ m$^2$, $V_0=0.004$ m$^3$, and stroke $L=0.85$ m, the chamber volumes are $V_A=V_0+Ax$ and $V_B=V_0+A(L-x)$. The implemented continuity equations are
+\begin{equation}
+\dot p_A=\frac{\beta_e}{V_A}(q_A+q_{acc}-Av-q_l),\quad
+\dot p_B=\frac{\beta_e}{V_B}(Av-q_B+q_l),\quad
+q_l=C_l(T)(p_A-p_B).
+\label{eq:continuity}
+\end{equation}
+Here $C_l(T)=C_{l,25}[1+0.018\max(T-25,0)]$, with $C_{l,25}=5\times10^{-14}$ m$^3$ s$^{-1}$ Pa$^{-1}$. Each term inside a parenthesis is a volume flow in m$^3$ s$^{-1}$ and each pressure derivative is in Pa s$^{-1}$. Mechanical motion satisfies
+\begin{equation}
+m\dot v=A(p_A-p_B)-F_L-kx-cv-F_d(v),\qquad \dot x=v,
+\label{eq:mechanical}
+\end{equation}
+where $m=1200$ kg, $k=18000$ N m$^{-1}$, $c=2200$ N s m$^{-1}$, and $F_d(v)=\operatorname{sgn}(v)[850+350\max(1-|v|/0.004,0)]$ N. The code sets the sign to zero for $|v|<10^{-7}$ m s$^{-1}$; it does not solve a set-valued static-friction law.
+
+Equal chamber areas define a symmetric virtual actuator. They do not describe the geometry of a conventional single-rod hitch cylinder. For a single rod, $A_A\ne A_B$, the force becomes $A_Ap_A-A_Bp_B$, volumes become $V_{A0}+A_Ax$ and $V_{B0}+A_B(L-x)$, and the pressure-balance target and observer must also change \cite{yao2000,ketelsen2019}. Those changes affect available force, flow demand, common-pressure coupling, and accumulator discharge. We retain symmetry to isolate supervisory mechanisms under a single declared plant; no transfer of the reported millimeter results to an asymmetric cylinder is assumed.
+
+The spool obeys $\dot z=(u-z)/0.05$ with $u\in[-1,1]$. Its effective opening is $a=5\times10^{-6}\max[(|z|-0.03)/0.97,0]$ m$^2$. Define $Q(a,\Delta p)=0.62a\sqrt{2\max(\Delta p,0)/850}$. For $z\ge0$, $(q_A,q_B)=(Q(a,p_s-p_A),Q(a,p_B-p_t))$; for $z<0$, $(q_A,q_B)=(-Q(a,p_A-p_t),-Q(a,p_s-p_B))$. Supply, tank, and relief pressures are 21, 0.2, and 22 MPa. Pressures are projected to $[p_t,p_{rel}]$ after every numerical integration substep; stroke exits are projected and velocity is reset. These projections are numerical boundary rules, not modeled relief-flow or cavitation dynamics.
+
+The finite accumulator uses $p_gV_g^{1.2}=\mathrm{constant}$, shell volume 4 L, precharge 8 MPa, and initial pressure 14 MPa. Its discharge is $q_{acc}=u_{acc}5\times10^{-8}\sqrt{\max(p_g-p_A,0)}$, capped by available oil per integration step, and $\dot V_g=q_{acc}$. There is no recharge branch in V2. Initial chamber common pressure is 5 MPa, the initial differential balances the 9 kN load and spring at $x=0.15$ m, and initial velocity and spool are zero. The full original parameter manifest and the separate revision-override ledger accompany the code.
+
+\subsection{Measurement interface and implemented observer}
+At controller period $h_c=0.01$ s, measured position and the two measured pressures contain independent zero-mean Gaussian samples with standard deviations 1.5 mm and 0.05 MPa, respectively. Bias and noise changes are explicit stress inputs. Let $r_k=x^m_k-\hat x_k$. In the order used by the code,
+\begin{align}
+\hat x_{k+1}&=\hat x_k+h_c\hat v_k+0.08r_k,&
+\hat v_{k+1}&=\hat v_k+(0.0005/h_c)r_k,\\
+\hat p_{j,k+1}&=\hat p_{j,k}+0.18(p^m_{j,k}-\hat p_{j,k}),&j&\in\{A,B\},\\
+\hat a_k&=(\hat v_{k+1}-\hat v_k)/h_c,&
+F_k^{raw}&=A(\hat p_{A,k+1}-\hat p_{B,k+1})-k\hat x_{k+1}-1200\hat a_k,\\
+\hat F_{k+1}&=\hat F_k+0.005(F_k^{raw}-\hat F_k).
+\label{eq:observer}
+\end{align}
+The control law uses $\hat x_{k+1}$, $\hat v_{k+1}$ and the filtered pressures. The load estimate is clipped to $[3000,20000]$ N before use. The observer retains nominal mass and stiffness in plant-mismatch tests; it is not retuned using the altered true parameters. The clipped load estimate is an effective pressure-balance estimate and can absorb friction/model mismatch; it is not an unbiased identified implement mass.
+
+The original code also stores a residual-based quantity under a leakage-estimate identifier. Its candidate is proportional to a positive pressure-filter residual divided by pressure difference; it neither accounts for chamber-volume dynamics nor separates piston, valve, and accumulator flows. It is not a consistent estimator of physical $C_l$. No controller branch reads that quantity. We retain its archived value only for source continuity and withdraw any physical leakage-identification interpretation. Feedback uses filtered position/pressure and the effective load estimate. Incorporating a physical leakage estimate would require a separately justified identifiable flow/pressure estimator \cite{an2005}; it cannot be inferred from this diagnostic alone.
+
+\subsection{Control laws and complete switching rules}
+All four original control chains share the observer. Define $e=x_r-\hat x$, $e_v=\dot x_r-\hat v$ and $I_p=\operatorname{clip}_{[-0.05,0.05]}(I_p+h_ce)$. The common tracking acceleration is $a^\star=\ddot x_r+650e+90e_v$, and the PID chains add $20I_p$. The differential-pressure target and inner command are
+\begin{align}
+d^\star&=\{\operatorname{clip}_{[3000,20000]}(\hat F)+kx_r+c\dot x_r+ma^\star+F_{smc}\}/A,\\
+I_d&=\operatorname{clip}_{[-0.3,0.3]}\{I_d+h_c(d^\star-\hat d)/10^6\},\\
+u&=\operatorname{clip}_{[-1,1]}\{0.70(d^\star-\hat d)/10^6+0.05I_d\},\qquad \hat d=\hat p_A-\hat p_B.
+\label{eq:controller}
+\end{align}
+Only the sliding-mode chain adds $F_{smc}=1200\tanh(s/0.006)$ N, where $s=18e+e_v$. For a constant reference this is $s=18(x_r-\hat x)-\hat v$. Velocity enters through the derivative of tracking error. This boundary-layer term alone does not establish a reaching or stability theorem for the saturated full hydraulic loop.
+
+Hold entry requires $t\ge8$ s, $|e|\le10$ mm and $|\hat v|\le3$ mm s$^{-1}$ continuously for 1 s. On entry the hybrid initializes FINE\_TRIM and resets the dwell timer. PID--lock and sliding-mode--lock then command $u=0$. PID--accumulator keeps $u\in[-0.08,0.08]$, requests ACCUMULATOR when $e>2$ mm and otherwise LOCK, and continuously commands $u_{acc}=\operatorname{clip}_{[0,1]}[80\max(e-0.001,0)]$. Its mode label does not gate this discharge in the original implementation; switch count and actuator effort therefore measure different things.
+
+For the hybrid define $D=d^\star-\hat d$. If currently in ACCUMULATOR, support is requested when $D>0.05$ MPa or $e>1.5$ mm; otherwise the thresholds are $D>0.30$ MPa or $e>4$ mm. If currently in LOCK, lock is requested when $|e|<3.125$ mm, $|\hat v|<1.5$ mm s$^{-1}$ and $D<0.345$ MPa; otherwise these limits are 2.5 mm, 1.5 mm s$^{-1}$ and 0.10 MPa. After 8 s in the current mode, support has priority, then lock, then FINE\_TRIM. Before the timer expires, the current mode is retained. LOCK commands $u=u_{acc}=0$; both active modes clip $u$ to $[-0.10,0.10]$. ACCUMULATOR additionally applies
+\begin{equation}
+u_{acc}=\operatorname{clip}_{[0,1]}[1.5\max(D,0)/10^6+60\max(e-0.001,0)].
+\label{eq:acc-command}
+\end{equation}
+Every discrete mode change resets its timer; pressure and position states remain continuous before numerical boundary projections. There is no recharge and no leakage-diagnostic input to switching.
+
+The original development grid crossed dwell times $\{4,8,12\}$ s, support-error thresholds $\{2.5,4,6\}$ mm, and pressure-deficit thresholds $\{0.18,0.30,0.45\}$ MPa: 27 candidates, each on seeds 4100--4104 for 300 s. Candidates were ranked by pass count first, then oil use, switch count and hold drop. The selected tuple $(8\ \mathrm{s},4\ \mathrm{mm},0.30\ \mathrm{MPa})$ remains fixed. Its search ledger is supplied; additional sensitivity runs do not select new gains.
+
+\begin{figure}[H]
+\centering\includegraphics[width=\linewidth]{revision_architecture.pdf}
+\caption{Implemented feedback and audit interfaces. The primary four chains share filtered observer outputs. Separate audit arms remove load adaptation or replace the observer by a raw interface; no controller receives true plant velocity or load.}\label{fig:architecture}
+\end{figure}
+
+\subsection{Mode-wise boundedness and its limits}
+The first result concerns the implemented projected numerical model. All pressure states lie in $[p_t,p_{rel}]$, $x\in[0,L]$, the spool lies in $[-1,1]$ for integration step $h\le0.05$ s, and accumulator volume lies between its initial gas volume and shell volume. Consequently accumulator pressure is finite. Let $|F_L|\le\bar F$, $|F_d|\le1200$ N and $B=A(p_{rel}-p_t)+\bar F+kL+1200$. Before a stroke reset, the velocity update in LOCK, FINE\_TRIM or ACCUMULATOR satisfies
+\begin{equation}
+|v_{n+1}|\le\rho|v_n|+hB/m,\qquad \rho=|1-hc/m|<1\quad(0<h<2m/c).
+\label{eq:discrete-bound}
+\end{equation}
+A stroke reset reduces $|v|$ to zero. Iteration gives $|v_n|\le\rho^n|v_0|+hB/[m(1-\rho)]$. This establishes bounded numerical plant states under bounded load for each mode and arbitrary switching. It relies on explicit pressure/stroke projections and is too loose to establish the 10 mm accuracy screen, absence of relief, physical safety, or convergence. Gaussian measurement noise has no deterministic finite amplitude bound; clipped controls still satisfy this numerical plant-state bound, but no deterministic observer-accuracy bound is asserted.
+
+A complementary local argument removes the numerical projections and freezes volumes at a declared operating position $\bar x$. Put $H=1/V_A(\bar x)+1/V_B(\bar x)$ and $d=p_A-p_B$. The mechanical-pressure subsystem for $y=(x-x_r,v,d)^T$ has the form $\dot y=My+w$, where
+\begin{equation}
+M=\begin{bmatrix}0&1&0\\-k/m&-c/m&A/m\\0&-\beta_e HA&-\beta_e HC_l\end{bmatrix}.
+\label{eq:local-matrix}
+\end{equation}
+The bounded forcing $w$ contains load/reference terms, bounded dry friction, and, in FINE\_TRIM, spool/accumulator flows. For a closed, settled spool in LOCK these flow terms vanish. With $\ell=\beta_e HC_l>0$ and $K_h=\beta_e HA^2$, the characteristic polynomial multiplied by $m$ is $m\lambda^3+(m\ell+c)\lambda^2+(c\ell+k+K_h)\lambda+k\ell$. Its coefficients are positive and $(m\ell+c)(c\ell+k+K_h)>mk\ell$; the Routh criterion makes $M$ Hurwitz. Thus $P>0$ solving $M^TP+PM=-I$ gives
+\begin{equation}
+\dot V\le-\tfrac12\|y\|^2+2\|P\|^2\|w\|^2,\qquad V=y^TPy.
+\label{eq:local-bound}
+\end{equation}
+This is a bounded-input result for a frozen-volume approximation in either mode. In FINE\_TRIM the saturated orifice flows are bounded when pressure remains in a specified physical interval, even though they depend on feedback. Volume variation contributes additional terms and must remain a bounded perturbation in a local operating neighborhood. The argument does not prove that the unprojected nonlinear system stays in that neighborhood. LOCK is not assumed to have a zero-error equilibrium under sustained internal leakage. No global nonlinear or switched-system stability, common Lyapunov function, or precise holding guarantee follows from the 8 s dwell rule \cite{liberzon1999,hespanha1999,goebel2009}.
+
+\subsection{Legacy loss operator and corrected dimensional interpretation}
+The original manuscript also described a historical pressure-difference surrogate. Its exact loss term is $\mathcal L=\kappa[1+g_T\max(T-25,0)]\max(d,0)/A$ in $\dot d=a_m(d^\star-d)-g_m\mathcal L+(\beta_e/V)q_{acc}$. The numerical parameter formerly labeled $C_l$ has units m$^2$ s$^{-1}$ in this equation, not m$^3$ s$^{-1}$ Pa$^{-1}$. Writing $\kappa$ makes $\mathcal L$ a pressure rate (Pa s$^{-1}$). This is a correction of the model interpretation, not a physically valid hydraulic leakage law. V2 uses the dimensionally consistent flow law in Equation~\eqref{eq:continuity}.
+
+When accumulator flow is zero, pressure is not projected and $g_md_k>0$, inversion gives
+\begin{equation}
+\kappa_k^*=\frac{A\max[a_m(d_k^\star-d_k)-(d_{k+1}-d_k)/h,0]}{g_md_k[1+g_T\max(T_k-25,0)]},\qquad [\kappa_k^*]=\mathrm{m^2\,s^{-1}}.
+\label{eq:legacy-proxy}
+\end{equation}
+For $\hat\kappa_{k+1}=(1-\alpha)\hat\kappa_k+\alpha\kappa_k^*$ with $0<\alpha\le1$ (historical smoothing $\alpha=0.08$), let $\widetilde\kappa_k=\hat\kappa_k-\kappa_k$. Bounded inversion error $|\kappa_k^*-\kappa_k|\le\bar\epsilon$ and coefficient increment $|\kappa_{k+1}-\kappa_k|\le\nu h$ yield
+\begin{equation}
+|\widetilde\kappa_{k+1}|\le(1-\alpha)|\widetilde\kappa_k|+\alpha\bar\epsilon+\nu h,
+\quad \limsup|\widetilde\kappa_k|\le\bar\epsilon+\nu h/\alpha.
+\label{eq:time-varying}
+\end{equation}
+The constant-coefficient case has $\nu=0$; a jump invalidates a rate bound at that step and creates a new transient. Old numerical outputs and their original identifiers remain frozen for traceability, but physical leakage-identification and flow-unit interpretations are withdrawn. Historical stress and measurement-interface results are summarized in S1, separate from primary V2 evidence.
+
+\subsection{Frozen evaluation and additional tests}
+The original V2 protocol uses 1800 s, a smooth 0.15 to 0.35 m reference over 8 s, a 9 to 14 kN load step at 60 s, and a 25 to 50 $^\circ$C temperature ramp. Seeds 4120--4139 form the original test set; seeds 4200--4219 form the existing independent audit. Pass requires hold entry, hold drop at most 10 mm, maximum absolute error after 8 s at most 10 mm, and zero relief activation. Hold drop starts at actual hold entry, so the 1800 s total simulation is not 1800 s entirely within hold. We also count stroke-boundary hits in new tests.
+
+The additional-audit protocol is fixed in its machine-readable ledger before execution. Observer-interface comparisons use seeds 4300--4309; all sensitivity families use 4300--4304 and preserve the original controller. One arm fixes the load estimate at 9 kN while retaining filters; a second uses raw position, finite-difference velocity and raw pressures with that fixed load. These are interface-removal controls, not an optimally retuned alternative observer. They cross both hybrid and PID--accumulator supervision. Dwell sensitivity uses 0, 2, 4, 8, 12 and 16 s. A separate PID--accumulator arm applies an 8 s mode latch and gates discharge by its latched support mode; this is a matched-timer diagnostic and changes that baseline's continuous actuation semantics explicitly. An additional frozen five-seed replay checks each of the other three chains at 1 ms plant integration.
+
+Mechanical stress changes mass, damping, or stiffness to 0.7 and 1.3 times nominal, one at a time, while leaving the observer/control coefficients nominal. Pressure-noise SD is increased from 0.05 to 0.10, 0.20, 0.50 and 1.00 MPa without external prefiltering. The original internal observer filter remains active. A separate joint-noise arm doubles both position and pressure noise. These distinctions prevent a pressure-only test from being confused with the original doubled-all-sensors test.
+
+Integration refinement keeps controller sampling at 10 ms, freezes every measurement-noise sample and commanded input over that interval, and splits only the plant update into $h=10,5,2.5,1$ ms. This isolates solver sensitivity from a changed noise bandwidth or observer discretization. Spool and chamber dynamics retain the original sequential update, and the discontinuous friction and projection rules are unchanged. The 10 ms choice supplies five steps per 50 ms spool time constant but is not an a priori accuracy guarantee for chamber pressure. We therefore report sampled pressure-path discrepancies against 1 ms in addition to holding metrics. Seed 4300 is the predeclared representative trajectory; the code supplies its position, pressures, accumulator state and modes. Reported confidence intervals describe seeded model noise, not a physical-machine population.
+
+As a higher-order numerical audit, the same five seeds were replayed with a classical fourth-order Runge--Kutta update for the virtual plant at 1.0 and 0.5 ms steps. Controller updates, observer updates, measurement draws, commands and mode decisions remained on the original 10 ms grid. Pressure and stroke crossings were projected at the end of each plant step and the velocity was reset at a stroke event. No gains or thresholds were retuned. This arm tests fine-step numerical convergence; it does not replace the frozen original Euler protocol or add a physical-model claim.
+
+The paired RK4 comparison also includes the original PID--accumulator and its separate 8 s latch/discharge-gating diagnostic at both plant steps, using seeds 4300--4304, unchanged sensing and frozen gains. Ten existing hybrid runs are reused with source hashes; the two PID arms add 20 runs. A separate predeclared joint screen evaluates all eight vertices of $(m/m_0,c/c_0,k/k_0)\in\{0.7,1.3\}^3$ with the hybrid, five common seeds per vertex, a 1 ms RK4 plant step and nominal controller/observer coefficients. Each true plant starts from its own declared force-balance initial pressure; all paths retain the same reference, load step and temperature ramp. The 40 joint runs are reported in full. This finite corner screen neither samples the full box interior nor certifies robust invariance. The two RK4 steps use endpoint projections without event-root localization, so classical fourth-order convergence is not asserted for friction or projection events.
+
+\section{Results}
+\subsection{Frozen comparison with uncertainty estimates}
+The primary comparison remains the original 20-seed set 4120--4139. Table~\ref{tab:comparison} adds seed-to-seed sample standard deviations and confidence intervals without changing its trajectories. Both active holding chains passed 20/20, while PID--lock and sliding-mode--lock failed after the load step. The hybrid's mean and worst hold drops were 1.85 and 2.10 mm; the worst post-transition error was 8.90 mm. PID--accumulator achieved a smaller post-transition RMSE (0.25 versus 1.22 mm), but a larger mean hold drop (3.44 mm). No path activated pressure relief. The comparisons support a model-specific tracking--holding trade-off.
+
+\begin{table}[H]
+\centering\small
+\caption{Frozen 20-path V2 comparison with between-seed sample SD and two-sided Student-t 95\% interval for mean hold drop.}\label{tab:comparison}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Controller & Pass & Drop mean$\pm$SD (mm) & Mean-drop 95\% CI (mm) & Worst error (mm) \\
+\midrule
+PID--lock & 0/20 & 16.04$\pm$0.06 & 16.01--16.07 & 15.38 \\
+SMC--lock & 0/20 & 15.99$\pm$0.06 & 15.97--16.02 & 16.62 \\
+PID--accumulator & 20/20 & 3.44$\pm$0.25 & 3.32--3.56 & 7.43 \\
+Observer hybrid & 20/20 & 1.85$\pm$0.16 & 1.78--1.92 & 8.90 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\begin{figure}[H]
+\centering\includegraphics[width=\linewidth]{revision_comparison.pdf}
+\caption{Frozen V2 results with sample SD error bars and worst-seed diamonds, $n=20$. The dashed line is the 10 mm screen. Mean error bars do not imply every trajectory passes.}\label{fig:comparison}
+\end{figure}
+
+
+The existing independent audit on seeds 4200--4219 passed 20/20 with a mean hold drop of 1.89 mm and worst drop of 2.12 mm. The independent fivefold-leakage, doubled-noise and half-flow groups also passed 10/10 each. These sets remain independent of tuning. Confidence intervals quantify the stated seeded-noise process in one virtual plant, not uncertainty in the physical parameter values.
+
+\begin{figure}[H]
+\centering\includegraphics[width=0.95\linewidth]{revision_load_step.pdf}
+\caption{Position error and separately conserved chamber pressures after the 60 s load step. Seed 4300 was fixed before additional tests; it is not selected for favorable accuracy. Curves use the original 10 ms plant integration.}\label{fig:load-step}
+\end{figure}
+
+\subsection{Observer and supervisor contributions}
+The crossed interface-removal tests in Table~\ref{tab:observer} distinguish effects that the shared-observer comparison could not identify. Retaining filtering while fixing the load estimate at 9 kN increased the hybrid's mean drop from 1.94 to 5.87 mm and mean accumulator use from zero to 232.0 mL. All ten paths still passed, so adaptive load estimation is not necessary for passing this particular screen; it materially changes drift and stored-fluid use. PID--accumulator shows a similar oil-use increase. Replacing the entire observer by raw position, finite-difference velocity and raw pressures prevented hold entry in every path of both control chains. The raw differentiated position noise violates the velocity gate frequently. These removal tests establish dependence on the implemented interface; they do not separate every observer gain or show superiority to a properly designed alternative observer.
+
+\begin{table}[H]
+\centering\small
+\caption{Crossed observer-interface removal tests on seeds 4300--4309. A dash denotes no hold entry; failed paths remain in maximum-error statistics.}\label{tab:observer}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Control and interface & Entry & Pass & Mean drop (mm) & Worst error (mm) & Oil (mL) \\
+\midrule
+Hybrid: Shared observer & 10/10 & 10/10 & 1.94 & 8.93 & 0.0 \\
+Hybrid: Fixed load & 10/10 & 10/10 & 5.87 & 9.94 & 232.0 \\
+Hybrid: Raw interface & 0/10 & 0/10 & -- & 23.11 & 0.0 \\
+PID--acc.: Shared observer & 10/10 & 10/10 & 3.51 & 7.45 & 25.3 \\
+PID--acc.: Fixed load & 10/10 & 10/10 & 5.94 & 8.47 & 237.8 \\
+PID--acc.: Raw interface & 0/10 & 0/10 & -- & 21.59 & 0.0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\subsection{Dwell sensitivity and a matched-timer baseline}
+All six dwell settings passed the five-path additional screen (Table~\ref{tab:dwell}). Removing the hybrid dwell raised the mean mode-switch count from 13.0 to 58.8, while mean hold drop changed from 1.883 to 1.977 mm. Thus the timer accounts for a substantial fraction of the observed low switching activity. The 12 and 16 s settings also gave 13.0 mean switches with mean drops near 1.92 mm; the chosen 8 s value is not a unique robust optimum. All 27 original development candidates passed five development paths. The archived ranking and the post-selection sensitivity ledger expose the search budget and alternative settings.
+
+\begin{table}[H]
+\centering\small
+\caption{Frozen hybrid dwell sensitivity, five paths per row. All other thresholds and controller settings remain unchanged.}\label{tab:dwell}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Dwell (s) & Pass & Mean switches & Mean drop (mm) & Mean oil (mL) \\
+\midrule
+0 & 5/5 & 58.8 & 1.977 & 1.62 \\
+2 & 5/5 & 17.4 & 1.931 & 0.00 \\
+4 & 5/5 & 14.6 & 1.924 & 0.00 \\
+8 & 5/5 & 13.0 & 1.883 & 0.00 \\
+12 & 5/5 & 13.0 & 1.919 & 0.00 \\
+16 & 5/5 & 13.0 & 1.916 & 0.00 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+In the new matched-timer diagnostic, PID--accumulator with an 8 s latch and discharge gated by its support mode passed 5/5, with 3.0 mean mode changes, 3.475 mm mean hold drop and 23.91 mL mean oil use. The hybrid on identical seeds had 13.0 changes, 1.883 mm drop and zero oil use. Consequently the original reduction from 26.8 to 13.1 switches cannot be attributed to intrinsically better supervisory logic independent of dwell or actuator gating. The hybrid retains a smaller drop and less oil use in this comparison, but does not retain a switching-count advantage. Neither mode labels nor oil volume measure valve wear or total hydraulic energy.
+
+\begin{figure}[H]
+\centering\includegraphics[width=\linewidth]{revision_dwell.pdf}
+\caption{Dwell-time sensitivity and the separate matched-timer PID diagnostic. The PID diagnostic changes the original baseline's discharge gating and therefore is not a bitwise replay of that baseline.}\label{fig:dwell}
+\end{figure}
+
+\subsection{Integration refinement and pressure dynamics}
+All five hybrid paths passed at 10, 5, 2.5 and 1 ms plant steps under fixed 10 ms sensing and control (Table~\ref{tab:integration}). The mean hold drop decreased from 1.883 to 1.732 mm; the worst error decreased from 8.927 to 8.765 mm. The former is about an 8\% change relative to the coarse mean, so the coarse numerical values are not precision-converged. Their pass/fail status and the scale of the holding response are retained on these paths. Pressure discrepancies against the 1 ms replay are reported in S4, including full-horizon RMS and maximum sampled differences, rather than hidden behind matching pass rates. Different switching times and discontinuous low-speed friction can make long-horizon maximum differences larger than the local load-step discrepancy. The study does not establish a formal convergence order for this nonsmooth integrator.
+
+\begin{table}[H]
+\centering\small
+\caption{Plant integration refinement at a fixed 10 ms controller and measurement period with identical noise samples.}\label{tab:integration}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Plant step (ms) & Pass & Mean drop (mm) & Worst error (mm) & Peak pressure (MPa) \\
+\midrule
+10 & 5/5 & 1.883 & 8.927 & 11.293 \\
+5 & 5/5 & 1.862 & 8.845 & 11.247 \\
+2.5 & 5/5 & 1.831 & 8.795 & 11.231 \\
+1 & 5/5 & 1.732 & 8.765 & 11.222 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The other three frozen chains were also replayed at 1 ms on the same five seeds. PID--lock and sliding-mode--lock still failed all five paths, with mean drops of 15.886 and 15.874 mm. PID--accumulator still passed 5/5, with mean drop 3.271 mm and mean RMSE 0.249 mm, compared with 1.732 mm drop for the hybrid. Thus the active-baseline tracking--holding trade-off and the pass classifications persist in this additional check; exact values and mode-change counts still depend on integration. This limited check does not replace a full high-accuracy numerical validation.
+
+The higher-order audit provides a separate fine-step reference. With the event-clipped RK4 plant update, all five paths passed at both 1.0 and 0.5 ms (Table~\ref{tab:rk4-convergence}). The mean hold drop changed from 1.628 to 1.585 mm, while the mean worst post-transition error changed by only 0.001 mm; the mean absolute per-seed difference in worst error was 0.0023 mm. The 1.0-to-0.5 ms hold-drop difference averaged 0.046 mm. Thus the high-order fine-step arm is substantially more stable at the reported accuracy screen than the original coarse explicit path, although the hold-drop statistic remains sensitive to switching and friction events. The primary 10 ms values remain reported as the exact frozen baseline.
+
+\begin{table}[H]
+\centering\small
+\caption{Event-clipped RK4 fine-step convergence audit on the predeclared five seeds. Controller and observer updates remain at 10 ms.}
+\label{tab:rk4-convergence}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.24\linewidth}*{5}{>{\centering\arraybackslash}X}@{}}
+\toprule
+Plant step (ms) & Pass & Mean drop (mm) & Drop SD (mm) & Mean worst error (mm) & Worst error (mm)\\
+\midrule
+1.0 & 5/5 & 1.628 & 0.058 & 8.503 & 8.747\\
+0.5 & 5/5 & 1.585 & 0.059 & 8.502 & 8.747\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The paired high-order comparison in Table~\ref{tab:rk4-comparators} retains every nominal path: 30/30 pass across the three arms and two plant steps. At 0.5 ms, the hybrid has mean drop 1.585 mm, post-transition RMSE 1.192 mm and accumulator discharge 0.00 mL. The original PID--accumulator gives 2.943 mm, 0.251 mm and 29.91 mL; the matched-latch PID gives 2.953 mm, 0.251 mm and 28.50 mL, respectively. Mean mode changes are 13.0, 42.6 and 3.0. S8 supplies the paired differences and intervals at both steps. The comparisons evaluate the implemented policies with their frozen tuning budgets; they do not establish a globally optimal performance frontier or total-energy savings.
+
+
+\begin{table}[H]
+\caption{Paired RK4 comparison on five common seeds per row, with frozen gains and 10 ms sensing/control. The matched PID arm adds an 8 s latch and discharge gating. RMSE is post-transition tracking error; oil is accumulator discharge.}
+\label{tab:rk4-comparators}\centering\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.26\linewidth}*{6}{>{\centering\arraybackslash}X}@{}}\toprule
+Chain & Step (ms) & Pass & Mean drop (mm) & Mean RMSE (mm) & Mean oil (mL) & Mean changes\\\midrule
+Observer hybrid & 1.0 & 5/5 & 1.628 & 1.178 & 0.00 & 13.0 \\
+PID--accumulator & 1.0 & 5/5 & 3.002 & 0.249 & 29.31 & 40.6 \\
+PID + matched latch & 1.0 & 5/5 & 3.028 & 0.249 & 27.94 & 3.0 \\
+Observer hybrid & 0.5 & 5/5 & 1.585 & 1.192 & 0.00 & 13.0 \\
+PID--accumulator & 0.5 & 5/5 & 2.943 & 0.251 & 29.91 & 42.6 \\
+PID + matched latch & 0.5 & 5/5 & 2.953 & 0.251 & 28.50 & 3.0 \\
+\bottomrule\end{tabularx}\end{table}
+
+
+\begin{figure}[H]
+\centering\includegraphics[width=0.95\linewidth]{revision_integration.pdf}
+\caption{Plant-step sensitivity with unchanged controller/noise timing. The upper panel shows mean and sample SD; the lower panel resolves the chamber-A pressure response near the load step for seed 4300.}\label{fig:integration}
+\end{figure}
+
+\subsection{Mechanical mismatch and retained failure boundaries}
+Table~\ref{tab:mechanical} supplies the previously missing V2 mass, damping and stiffness variation runs. All six one-at-a-time perturbations passed five paths with the controller and observer coefficients fixed at their nominal values. Worst hold drop remained below 2.30 mm; the largest post-transition error was 9.32 mm. None of these paths required accumulator discharge. These are five-seed one-at-a-time numerical screens; they do not establish robustness over a full $\pm30\%$ uncertainty box.
+
+\begin{table}[H]
+\centering\small
+\caption{New V2 one-at-a-time mechanical mismatch tests. The observer and control coefficients remain nominal.}\label{tab:mechanical}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Changed plant input & Pass & Worst drop (mm) & Worst error (mm) & Mean oil (mL) \\
+\midrule
+Mass $\times$0.7 & 5/5 & 1.95 & 8.92 & 0.0 \\
+Mass $\times$1.3 & 5/5 & 2.00 & 8.92 & 0.0 \\
+Damping $\times$0.7 & 5/5 & 2.08 & 8.94 & 0.0 \\
+Damping $\times$1.3 & 5/5 & 2.04 & 8.91 & 0.0 \\
+Stiffness $\times$0.7 & 5/5 & 2.30 & 8.53 & 0.0 \\
+Stiffness $\times$1.3 & 5/5 & 2.06 & 9.32 & 0.0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The simultaneous perturbation screen in Table~\ref{tab:joint-mechanical} extends the one-at-a-time checks to all eight declared mass/damping/stiffness vertices. It yields 40/40 passing paths; the largest hold drop is 2.009 mm and the largest post-transition error is 9.177 mm. The controller and observer remain nominal and no failing path is discarded. This adds evidence for selected interacting perturbations, while leaving the box interior, other hydraulic parameters, sensor bias and the joint effect of parameter changes with destructive noise unverified.
+
+
+\begin{table}[H]
+\caption{Joint mechanical corner screen with the hybrid, five paired seeds per vertex and 1 ms RK4 integration. All controller/observer coefficients remain nominal. Ratios refer to true plant mass, damping and stiffness. Worst values include every path.}
+\label{tab:joint-mechanical}\centering\small
+\begin{tabularx}{\linewidth}{@{}*{7}{>{\centering\arraybackslash}X}@{}}\toprule
+$m/m_0$ & $c/c_0$ & $k/k_0$ & Pass & Worst drop (mm) & Worst error (mm) & Mean oil (mL)\\\midrule
+1.3 & 1.3 & 1.3 & 5/5 & 1.595 & 9.155 & 0.00 \\
+1.3 & 1.3 & 0.7 & 5/5 & 1.756 & 8.352 & 0.00 \\
+1.3 & 0.7 & 1.3 & 5/5 & 1.583 & 9.023 & 0.00 \\
+1.3 & 0.7 & 0.7 & 5/5 & 1.692 & 8.284 & 0.00 \\
+0.7 & 1.3 & 1.3 & 5/5 & 1.746 & 9.153 & 0.00 \\
+0.7 & 1.3 & 0.7 & 5/5 & 2.009 & 8.351 & 0.00 \\
+0.7 & 0.7 & 1.3 & 5/5 & 1.750 & 9.177 & 0.00 \\
+0.7 & 0.7 & 0.7 & 5/5 & 1.965 & 8.372 & 0.00 \\
+\bottomrule\end{tabularx}\end{table}
+
+
+The original $+2$ mm position-bias group remains an accuracy failure, reaching 10.61 mm worst post-transition error. Small hold drop alone does not establish true position accuracy under bias. Passing the selected mechanical perturbations does not remove this sensing boundary.
+
+\subsection{Noise activation and finite-accumulator consequences}
+Table~\ref{tab:noise} separates pressure-only noise from jointly doubled sensors. V2 passed all five pressure-only paths through 0.50 MPa SD, while at 1.00 MPa only 2/5 passed; the worst post-transition error reached 10.65 mm. No stroke-boundary hit or relief activation occurred in this sweep. At high noise the dwell timer limits mode-switch counts near their maximum achievable rate, and accumulator oil use approaches 450 mL on average. The result is an accuracy/activity failure rather than the historical stroke-boundary instability.
+
+\begin{table}[H]
+\centering\small
+\caption{V2 pressure-only noise sweep with no external prefilter. Position-noise SD remains 1.5 mm; the internal observer is retained.}\label{tab:noise}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Pressure SD (MPa) & Pass & Worst error (mm) & Switches & Oil (mL) & Min. $p_g$ (MPa) \\
+\midrule
+0.05 & 5/5 & 8.93 & 13.0 & 0.0 & 14.00 \\
+0.10 & 5/5 & 9.03 & 13.6 & 98.8 & 13.33 \\
+0.20 & 5/5 & 9.11 & 90.4 & 298.0 & 12.20 \\
+0.50 & 5/5 & 9.64 & 218.6 & 447.1 & 11.50 \\
+1.00 & 2/5 & 10.65 & 221.0 & 454.1 & 11.47 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The original jointly doubled-noise group used 61.98 mL mean oil, compared with 1.02 mL nominal, because noisy filtered position, velocity and pressure balance repeatedly request support. The new five-path joint-noise replay used 39.92 mL on average and reached a minimum gas pressure of 13.55 MPa. Its difference from 61.98 mL reflects a different seed set, not a changed controller. The nominal new paths did not discharge at all. Activation time, mode occupancy and the full accumulator-pressure trajectory in the reproduction files show that the larger relative ratio starts from near-zero nominal consumption; it does not imply sixtyfold depletion of initial storage. Position holding remained within the screen on all five joint-noise paths, with worst error 9.44 mm.
+
+To reproduce the historical destructive input level, the V2 hybrid was also run on seeds 2060--2079 with 0.10 MPa independent raw pressure noise per chamber, no external prefilter, and its internal observer retained. All 20 paths passed: mean hold drop was 1.86 mm and worst error 8.72 mm; mean accumulator discharge was 105.4 mL. The historical reduced-order raw-pressure case instead reached a 500 mm worst error at the stroke boundary. Identical absolute noise SD and seed labels do not make the perturbation processes identical: the plants, reference paths, draw sequences and observer interfaces differ. Thus V2 does not reproduce that stroke failure at 0.10 MPa, but the change cannot be attributed solely to the chamber architecture. The broader V2 sweep identifies its own accuracy failure at 1 MPa; it does not claim universal noise robustness.
+
+
+\begin{figure}[H]
+\centering\includegraphics[width=0.95\linewidth]{revision_noise.pdf}
+\caption{Position error and accumulator pressure over the complete predeclared seed-4300 trajectory. Jointly doubled noise and 1 MPa pressure-only noise are distinct interventions. Pressure-only SD is nominal in the first curve; the internal observer remains active in all curves.}\label{fig:noise}
+\end{figure}
+
+All ten original jointly doubled-noise paths were additionally replayed with storage/activity logging; every originally recorded field reproduced exactly, including 61.98 mL mean oil. Figure~\ref{fig:original-noise} shows the first original stress seed, 4160, against a same-seed nominal replay. It resolves the support-command episodes and gas-pressure decline directly; the complete ten-path activity/storage summary is in S5.
+
+\begin{figure}[H]
+\centering\includegraphics[width=0.95\linewidth]{revision_original_noise.pdf}
+\caption{Original stress-group diagnosis: first frozen seed 4160, nominal versus jointly doubled sensors, after the 8 s reference transition. The doubled-noise path reproduces its original output fields. Curves display error, gas pressure and the support command rather than interpreting a relative oil-volume ratio as energy or storage depletion.}\label{fig:original-noise}
+\end{figure}
+
+\section{Discussion}
+\subsection{Supported contribution and comparator choice}
+The contribution is a reproducible holding-supervision experiment under explicit sensing, storage and numerical assumptions. It does not establish a new observer or hydraulic robust-control theorem. Four complete chains, rather than three, are compared in the original V2 experiment: PID--lock, sliding-mode--lock, PID--accumulator and observer hybrid. The first two isolate the consequences of holding with the main valve locked; PID--accumulator supplies an active compensation baseline. The latter has lower tracking RMSE and passes the same screen, making it an informative comparator rather than a deliberately weak failing arm.
+
+Adaptive robust control, backstepping, disturbance-observer control and dead-zone compensation provide important alternatives \cite{yao2000,guan2008,choux2010,deng2017,chen2016}. Each would require a specified observer, saturation treatment, hold-entry policy and a fair tuning budget on this plant. Those complete implementations are outside the current comparison, so no claim of superiority over mainstream electrohydraulic control follows. The new matched-timer test also rules out a broad switching-activity superiority claim. The observed advantages are restricted to smaller hold drop and lower accumulator discharge in the evaluated active-baseline comparisons, with a tracking-accuracy cost.
+
+The paired RK4 experiment retains that trade-off at both 1.0 and 0.5 ms under common measurement timing and seeds. At 0.5 ms, the hybrid has 1.585 mm mean drop and 1.192 mm RMSE, compared with 2.953 mm and 0.251 mm for the matched-latch PID. Mean accumulator discharge is zero versus 28.50 mL, while the matched PID still switches less often (3.0 versus 13.0 changes). The smaller drop and discharge therefore persist after matching the numerical integration protocol; they do not establish simultaneous superiority in tracking or switching, and discharged oil is not total hydraulic energy. The comparison retains the implemented tuning choices rather than optimizing a complete performance frontier for either policy.
+
+\subsection{Model validity and numerical scope}
+Symmetric chamber areas, a prescribed load, virtual coefficients, pressure projections and simplified dry friction limit physical interpretation. The numerical boundedness result is a statement about the projected implementation. The frozen-volume mode analysis supplies a local mathematical explanation but cannot certify the nonlinear switched loop. The 8 s timer avoids rapid numerical switching; it does not prove stability. A deterministic grid is a declared stress screen, not a variance-based global sensitivity analysis or physical failure probability \cite{saltelli2010}.
+
+The original explicit step refinement preserves the hybrid's pass status on five paths while changing mean drop appreciably. The added event-clipped RK4 audit at 1.0 and 0.5 ms gives nearly identical worst-error means and supports convergence of the fine-step accuracy screen, although switching and dry-friction events still affect hold-drop statistics. The primary comparison remains an exactly reproduced original test at the declared 10 ms step, not a claim of solver-independent millimeter accuracy. Complete paths, integration discrepancies and adverse parameter/noise cases are retained. Larger interacting uncertainty sets and physical validation are still needed before making sharper performance claims.
+
+The additional eight-vertex mechanical screen tests selected simultaneous changes rather than extrapolating from one-at-a-time variations. Its shared seeds and fixed controller coefficients make the changed true-plant inputs explicit. These finite vertices do not exhaust the box interior, establish a monotone worst-case dependence, or cover simultaneous hydraulic, friction and sensor uncertainties. Neither that screen nor the paired nominal comparison establishes a global nonlinear stability guarantee.
+
+The legacy pressure-loss coefficient had been assigned an incompatible physical unit in the original description. Reinterpreting it as a virtual pressure-decay parameter corrects that dimensional error; it does not turn the historical inverse coefficient into a physical leakage estimate. Its old identifiers are retained only in immutable historical files. The primary V2 flow law is dimensionally consistent, but consistency alone is not empirical validation \cite{sargent2013}. Raw high pressure noise affects the two implementations differently because their observer, flow/state structure and control interfaces all differ. The matched absolute-noise experiment cannot identify a single architectural cause.
+
+\subsection{Measurements needed for subsequent physical verification}
+A future physical study should first identify unequal effective areas and linkage geometry, chamber dead volumes, effective bulk modulus, valve flow/dead-zone and spool lag, leakage versus pressure and temperature, friction near zero velocity, and accumulator pressure--volume/discharge behavior. The sensing study should quantify position bias and drift, independent and common pressure errors, noise spectra, latency and time synchronization. A sustained-hold experiment should then record true position error and drop from actual hold entry, transient chamber-pressure extrema, relief/cavitation events, main- and accumulator-valve commands, switching and dwell, accumulator oil/pressure loss, and electrical/hydraulic input energy. Multiple temperatures, loads and disturbance steps should be evaluated with independent tuning/test records. These are proposed validation indicators, not measurements performed here.
+
+\section{Conclusions}
+The two-chamber virtual experiment shows a conditional trade-off between position holding and tracking accuracy. On the original 20 frozen paths, the observer hybrid and PID--accumulator both passed the stated 10 mm screen. The hybrid had 1.85 mm mean and 2.10 mm worst hold drop, with lower nominal accumulator use, while PID--accumulator had lower post-transition RMSE. Crossed observer-removal tests show that filtered sensing and effective-load adaptation influence holding and stored-fluid use. A matched 8 s timer lets PID--accumulator switch less often than the hybrid, so a switching advantage independent of dwell is not supported. Alternative hybrid dwell settings also pass; 8 s is a frozen design choice, not a unique optimum.
+
+Paired 1.0 and 0.5 ms RK4 replays retain smaller hybrid hold drop and accumulator discharge alongside larger tracking RMSE than either active PID arm. At 0.5 ms, hybrid and matched PID mean drops are 1.585 and 2.953 mm, while their mean RMSE values are 1.192 and 0.251 mm. Thus the observed tracking--holding trade-off persists under a common refined numerical protocol. The eight-vertex joint mechanical screen adds finite interaction tests without certifying the complete uncertainty box.
+
+The main failure boundaries are explicit: the original $+2$ mm position-bias case reaches 10.61 mm error; raw differentiated position sensing prevents hold entry; and 1 MPa pressure noise leaves only 2/5 paths passing. The selected one-at-a-time $\pm30\%$ mechanical perturbations pass, without establishing robustness to all simultaneous uncertainties. The historical 0.10 MPa raw-pressure stroke-boundary failure is not reproduced by V2 with its internal observer, and is not transferable as a universal threshold. Finer plant integration preserves the hybrid's five-path pass status but changes mean drop, limiting numerical precision claims. Mode-wise boundedness does not establish global nonlinear stability, physical safety or a hardware accuracy guarantee. Future physical assessment should prioritize bias/noise/latency, actual cylinder geometry and leakage, low-speed valve/friction behavior, and simultaneous position, pressure, storage and energy measurements during sustained holding.
+
+\supplementary{Supplementary S1--S8 provide corrected historical interpretation, observer/selection details, statistics, numerical refinement, noise diagnostics, parameter provenance, reproduction instructions, paired RK4 comparisons and joint mechanical screens.}
+\authorcontributions{Conceptualization, C.C.; Methodology, C.C.; Software, C.C.; Formal analysis, C.C.; Visualization, C.C.; Writing---original draft preparation, C.C.; Resources, C.C.; Validation, P.W.; Investigation, C.C.; Writing---review and editing, Y.Z.; Supervision, Y.Z.; Project administration, Y.Z.; Funding acquisition, Y.Z.}
+\funding{This work has received funding from the Science and Technology Project of the Ministry of Agriculture and Rural Affairs of China.}
+\institutionalreview{Not applicable.}
+\informedconsent{Not applicable.}
+\dataavailability{The V2 virtual-prototype source code, reproduction scripts, parameter manifests, and frozen JSON outputs are provided with the submission as Supplementary Materials. The existing public project archive is available at \url{https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes}; its version history is indexed by the Zenodo concept DOI \url{https://doi.org/10.5281/zenodo.22754509}. The major-revision code, additional numerical audits and frozen outputs are supplied directly with this submission; a corresponding public revision has not yet been deposited.}
+\conflictsofinterest{The authors declare no conflicts of interest.}
+
+\reftitle{References}
+\input{references.tex}
+\end{document}

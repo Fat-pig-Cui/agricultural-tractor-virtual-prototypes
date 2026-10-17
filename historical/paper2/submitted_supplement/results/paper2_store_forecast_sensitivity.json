@@ -1,0 +1,3390 @@
+{
+  "purpose": "Frozen component-input and causal-predictor sensitivity audit. No controller, horizon, map, or seed is selected from these outcomes.",
+  "seeds": [
+    2500,
+    2501,
+    2502,
+    2503,
+    2504,
+    2505,
+    2506,
+    2507,
+    2508,
+    2509,
+    2510,
+    2511
+  ],
+  "protocol": {
+    "shared_platform": "300 kW engine, 150 kW motor/battery bus, literature-shaped virtual map, 600 s stochastic agricultural cycle",
+    "terminal_rule": "abs(SOC_T - SOC_0) <= 1e-4 with common terminal-energy governor",
+    "frozen_controllers": "ECMS lambda=2.0; terminal-set scenario MPC H=8 with five scenarios",
+    "causality": "public nominal task phase and present demand/SOC only; no future realized seed sample"
+  },
+  "battery_capacity_sensitivity": {
+    "120": {
+      "overrides": {
+        "battery_capacity_wh": 120000.0
+      },
+      "rows": {
+        "realistic_ool": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.883474606954747,
+            "soc_error": -3.3668623444782497e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004071288833333637,
+              "p95": 0.004875000000015284,
+              "maximum": 0.0204169999999948
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.981559023849834,
+            "soc_error": -5.6384896751637825e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004078603166658645,
+              "p95": 0.004917000000048688,
+              "maximum": 0.011375000000590774
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.007285225436874,
+            "soc_error": -3.4223734957095076e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00458586899997826,
+              "p95": 0.004875000000126306,
+              "maximum": 0.012082999999663002
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.006681932079731,
+            "soc_error": -4.011568854878078e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004402270999989947,
+              "p95": 0.004625000000757495,
+              "maximum": 0.016582999998959735
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.226239356934146,
+            "soc_error": -3.4042768604081175e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004302032333330412,
+              "p95": 0.004541999999219115,
+              "maximum": 0.009167000001752967
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.150611004827551,
+            "soc_error": -4.317990409674621e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00444493816666854,
+              "p95": 0.004707999998743162,
+              "maximum": 0.01912500000145201
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.14520578244162,
+            "soc_error": -4.087064020552589e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004282789666656702,
+              "p95": 0.004541999999219115,
+              "maximum": 0.00883299999898668
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 7.985994780574514,
+            "soc_error": -4.034328426882894e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004463259166701761,
+              "p95": 0.004707999998743162,
+              "maximum": 0.014000000000180535
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.179738104050111,
+            "soc_error": -3.1287195056961536e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0043214596666890275,
+              "p95": 0.004541999999219115,
+              "maximum": 0.00908399999843823
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.870723857531762,
+            "soc_error": -4.600431147139261e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00439129033332956,
+              "p95": 0.004625000002533852,
+              "maximum": 0.011792000002230907
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.741703124048466,
+            "soc_error": -6.3756777635148865e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004355997333320261,
+              "p95": 0.004625000002533852,
+              "maximum": 0.007541000002220244
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.145530273231731,
+            "soc_error": -3.799405234872211e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004406462166726281,
+              "p95": 0.004625000002533852,
+              "maximum": 0.028583000002413428
+            },
+            "saving_vs_same_seed_ool_pct": null
+          }
+        ],
+        "adaptive_ecms": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.9018076402521675,
+            "soc_error": -8.947398377756599e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.084095294833333,
+              "p95": 0.11758299999997668,
+              "maximum": 0.25758300000000567
+            },
+            "saving_vs_same_seed_ool_pct": -0.2325501661570243
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.999780316455158,
+            "soc_error": -7.785105893276523e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08322144349999448,
+              "p95": 0.1168750000006824,
+              "maximum": 0.24462499999966525
+            },
+            "saving_vs_same_seed_ool_pct": -0.2282923994031379
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.026447729975244,
+            "soc_error": -7.187916928330651e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08819599350000272,
+              "p95": 0.1249999999988205,
+              "maximum": 0.16116699999990658
+            },
+            "saving_vs_same_seed_ool_pct": -0.23931337524353488
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.02568929860618,
+            "soc_error": -1.3250844865808631e-11,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08721021549998356,
+              "p95": 0.12366699999866171,
+              "maximum": 0.15650000000100306
+            },
+            "saving_vs_same_seed_ool_pct": -0.23739380042428349
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.251603322481843,
+            "soc_error": -1.3579359858795215e-11,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08433164583332504,
+              "p95": 0.12220900000059487,
+              "maximum": 0.22729100000162816
+            },
+            "saving_vs_same_seed_ool_pct": -0.3083300211331357
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.177330831434913,
+            "soc_error": -1.6417978088156815e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08627464950001916,
+              "p95": 0.12566699999894126,
+              "maximum": 0.20554199999978096
+            },
+            "saving_vs_same_seed_ool_pct": -0.32782605612678706
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.166312681455365,
+            "soc_error": -3.993916308786538e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08691022766666032,
+              "p95": 0.12441600000201447,
+              "maximum": 0.23787499999983197
+            },
+            "saving_vs_same_seed_ool_pct": -0.25913279022666774
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.01732460718798,
+            "soc_error": -7.096656595706463e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08620904183329144,
+              "p95": 0.12079100000050857,
+              "maximum": 0.22133399999546555
+            },
+            "saving_vs_same_seed_ool_pct": -0.39230963047551837
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.208348297683482,
+            "soc_error": -2.169597834722481e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08753457733336734,
+              "p95": 0.1267089999998916,
+              "maximum": 0.23820899999549283
+            },
+            "saving_vs_same_seed_ool_pct": -0.34976906680184666
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.889822080335899,
+            "soc_error": 1.591879003060015e-07,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0892084768333727,
+              "p95": 0.12324999999435704,
+              "maximum": 0.15650000000277942
+            },
+            "saving_vs_same_seed_ool_pct": -0.24264887384991518
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.760169217117923,
+            "soc_error": -9.196088335272634e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09037014483334004,
+              "p95": 0.12254099999609025,
+              "maximum": 0.15637499999598958
+            },
+            "saving_vs_same_seed_ool_pct": -0.2385275277747982
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.165697154327344,
+            "soc_error": -1.922684234045846e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.08779577216658653,
+              "p95": 0.12525000000351838,
+              "maximum": 0.2366249999994352
+            },
+            "saving_vs_same_seed_ool_pct": -0.24758217598043453
+          }
+        ],
+        "recursive_feasible_mpc": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.966690622933427,
+            "soc_error": 4.942685860487295e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 83,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6184258273333293,
+              "p95": 0.7480410000000326,
+              "maximum": 1.8284579999999773
+            },
+            "saving_vs_same_seed_ool_pct": -1.055575366542911
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 8.032405044488913,
+            "soc_error": -4.545876688633044e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 7,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7103509936666712,
+              "p95": 0.8555420000000424,
+              "maximum": 1.741625000000191
+            },
+            "saving_vs_same_seed_ool_pct": -0.6370437214978297
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.057574252877703,
+            "soc_error": -1.1358131672967176e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 96,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7163436716666708,
+              "p95": 0.8265000000005074,
+              "maximum": 1.9249590000001149
+            },
+            "saving_vs_same_seed_ool_pct": -0.628040915553694
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.058881668188574,
+            "soc_error": -3.868425585862312e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6927484684999738,
+              "p95": 0.8080419999991761,
+              "maximum": 1.855332999999959
+            },
+            "saving_vs_same_seed_ool_pct": -0.6519521638507781
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.275383996360159,
+            "soc_error": -2.5542671677758477e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.632146211500005,
+              "p95": 0.8075840000003609,
+              "maximum": 1.8401250000010805
+            },
+            "saving_vs_same_seed_ool_pct": -0.5974131956735147
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.20268916372504,
+            "soc_error": -2.3998804826730336e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6326673476666691,
+              "p95": 0.8000830000014503,
+              "maximum": 2.0627920000002575
+            },
+            "saving_vs_same_seed_ool_pct": -0.6389479128208089
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.186393121406777,
+            "soc_error": -2.6135640903701685e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 4,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7028015045000086,
+              "p95": 0.8150000000028967,
+              "maximum": 2.6755420000021957
+            },
+            "saving_vs_same_seed_ool_pct": -0.5056635776341399
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.062852608670338,
+            "soc_error": -9.778689147310615e-08,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 14,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6349639038333504,
+              "p95": 0.8167079999950033,
+              "maximum": 1.8420840000032968
+            },
+            "saving_vs_same_seed_ool_pct": -0.9624076925616917
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.237614793145532,
+            "soc_error": -4.9575000146129256e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.629551149333368,
+              "p95": 0.8054169999951455,
+              "maximum": 1.9511250000050495
+            },
+            "saving_vs_same_seed_ool_pct": -0.7075616402286028
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.9361138622942775,
+            "soc_error": -2.592298274373128e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 96,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6689411861667117,
+              "p95": 0.8130839999935802,
+              "maximum": 1.8928750000029027
+            },
+            "saving_vs_same_seed_ool_pct": -0.8308003932820187
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.819356981264287,
+            "soc_error": -4.862001232908142e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 131,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6587317166666491,
+              "p95": 0.8101250000009941,
+              "maximum": 1.848500000001252
+            },
+            "saving_vs_same_seed_ool_pct": -1.0030590939944521
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.191491721440686,
+            "soc_error": -2.7196748193514253e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7134823233332489,
+              "p95": 0.8371249999967745,
+              "maximum": 1.9777079999983016
+            },
+            "saving_vs_same_seed_ool_pct": -0.5642536049493974
+          }
+        ]
+      },
+      "summaries": {
+        "realistic_ool": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": null,
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.004342188402781919,
+            "maximum_run_p95": 0.004917000000048688,
+            "maximum_step": 0.028583000002413428
+          }
+        },
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.2753063236330903,
+            "std": 0.055023970851186425,
+            "ci95_low": -0.3102671225063778,
+            "ci95_high": -0.24034552475980286
+          },
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.08677979027777304,
+            "maximum_run_p95": 0.1267089999998916,
+            "maximum_step": 0.25758300000000567
+          }
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.73189327321582,
+            "std": 0.18438880355057394,
+            "ci95_low": -0.8490491195805273,
+            "ci95_high": -0.6147374268511127
+          },
+          "mean_safety_filter_activations": 37.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.667596192013888,
+            "maximum_run_p95": 0.8555420000000424,
+            "maximum_step": 2.6755420000021957
+          }
+        }
+      }
+    },
+    "200": {
+      "overrides": {
+        "battery_capacity_wh": 200000.0
+      },
+      "rows": {
+        "realistic_ool": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.883474606953389,
+            "soc_error": -2.0200507933054723e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004546426833289985,
+              "p95": 0.004791999998587926,
+              "maximum": 0.012584000003812434
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.981559023848602,
+            "soc_error": -3.3831826229402395e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004713704333380993,
+              "p95": 0.004959000001747427,
+              "maximum": 0.011667000002546501
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.00728522543557,
+            "soc_error": -2.053357484044227e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004592418666642099,
+              "p95": 0.00483299999132214,
+              "maximum": 0.012334000004443624
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.006681932078525,
+            "soc_error": -2.4067414727824143e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004611775333295043,
+              "p95": 0.004833999994957594,
+              "maximum": 0.018541000002869623
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.226239356932952,
+            "soc_error": -2.042588320705363e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004751242833345752,
+              "p95": 0.004959000008852854,
+              "maximum": 0.011874999998440217
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.150611004826324,
+            "soc_error": -2.590927472567728e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0045652561665482,
+              "p95": 0.0047920000127987805,
+              "maximum": 0.008582999996065155
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.145205782440204,
+            "soc_error": -2.4522606167920458e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0049587553333575824,
+              "p95": 0.005250000000955879,
+              "maximum": 0.012374999997177838
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 7.985994780573096,
+            "soc_error": -2.4207302828926913e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004804832499954633,
+              "p95": 0.005042000012167591,
+              "maximum": 0.019499999993399797
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.179738104048889,
+            "soc_error": -1.877054067733752e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0048339209999141985,
+              "p95": 0.005125000001271474,
+              "maximum": 0.009792000000174994
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.870723857530518,
+            "soc_error": -2.7601254615206017e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004802356833283265,
+              "p95": 0.0050419999979567365,
+              "maximum": 0.011499999999387
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.7417031240472625,
+            "soc_error": -3.825384453648439e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0048613144999099705,
+              "p95": 0.005125000001271474,
+              "maximum": 0.011833000002070548
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.14553027323048,
+            "soc_error": -2.279842981067759e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00489515149999183,
+              "p95": 0.005125000001271474,
+              "maximum": 0.025125000007619747
+            },
+            "saving_vs_same_seed_ool_pct": null
+          }
+        ],
+        "adaptive_ecms": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.901807640251243,
+            "soc_error": -5.3684834355749445e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09130614750002386,
+              "p95": 0.12900000000115597,
+              "maximum": 0.20095800000063946
+            },
+            "saving_vs_same_seed_ool_pct": -0.23255016616256238
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.9997803164542365,
+            "soc_error": -4.671041331505421e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0911253983333169,
+              "p95": 0.12954199999626326,
+              "maximum": 0.19558299999999917
+            },
+            "saving_vs_same_seed_ool_pct": -0.22829239940705676
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.026447729974443,
+            "soc_error": -4.3126613391564206e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09210912733340375,
+              "p95": 0.1305419999937385,
+              "maximum": 0.24333300000023428
+            },
+            "saving_vs_same_seed_ool_pct": -0.23931337524985197
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.025689298605366,
+            "soc_error": -7.950640146248134e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09267489516673777,
+              "p95": 0.13095799999973678,
+              "maximum": 0.2627909999972644
+            },
+            "saving_vs_same_seed_ool_pct": -0.2373938004292223
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.251603322481062,
+            "soc_error": -8.147704733119099e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09278327549998977,
+              "p95": 0.13729199999090724,
+              "maximum": 0.16845899999395897
+            },
+            "saving_vs_same_seed_ool_pct": -0.3083300211381902
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.1773308314339,
+            "soc_error": -9.851008897499014e-13,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09132780333327635,
+              "p95": 0.1306660000039983,
+              "maximum": 0.16600000000721593
+            },
+            "saving_vs_same_seed_ool_pct": -0.3278260561294735
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.166312681454615,
+            "soc_error": -2.396305376350938e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09385021800010425,
+              "p95": 0.13791599999990467,
+              "maximum": 0.25512499999535976
+            },
+            "saving_vs_same_seed_ool_pct": -0.259132790234891
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.017324607186774,
+            "soc_error": -4.2579273440424e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09494871033333396,
+              "p95": 0.1355840000059061,
+              "maximum": 0.21445800000208237
+            },
+            "saving_vs_same_seed_ool_pct": -0.39230963047824613
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.208348297682686,
+            "soc_error": -1.301736496372996e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09385125116652897,
+              "p95": 0.1381249999923284,
+              "maximum": 0.22549999999910142
+            },
+            "saving_vs_same_seed_ool_pct": -0.3497690668071109
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.88982208033508,
+            "soc_error": 9.551274016139644e-08,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09696719733328744,
+              "p95": 0.13504199999658795,
+              "maximum": 0.2591249999994716
+            },
+            "saving_vs_same_seed_ool_pct": -0.24264887385534753
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.760169217117255,
+            "soc_error": -5.517586387782103e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.10027565266665306,
+              "p95": 0.1349170000111144,
+              "maximum": 0.2670420000043805
+            },
+            "saving_vs_same_seed_ool_pct": -0.2385275277817533
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.165697154326441,
+            "soc_error": -1.1535217225855376e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09679970249991736,
+              "p95": 0.14029199999754383,
+              "maximum": 0.23870900000133588
+            },
+            "saving_vs_same_seed_ool_pct": -0.24758217598474683
+          }
+        ],
+        "recursive_feasible_mpc": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.951897556604002,
+            "soc_error": -1.3951728765615456e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 87,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7021401503333353,
+              "p95": 0.8472909999994727,
+              "maximum": 1.9028749999989714
+            },
+            "saving_vs_same_seed_ool_pct": -0.8679288392742698
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 8.028758736045988,
+            "soc_error": -5.058198917962109e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 10,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7305136781666688,
+              "p95": 0.85550000000012,
+              "maximum": 1.9965840000040203
+            },
+            "saving_vs_same_seed_ool_pct": -0.5913595584065143
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.057758837489377,
+            "soc_error": -1.7399584645860777e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 95,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7350743460001715,
+              "p95": 0.863249999994764,
+              "maximum": 1.895000000004643
+            },
+            "saving_vs_same_seed_ool_pct": -0.6303461239706415
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.056856462846701,
+            "soc_error": -5.6867164519469604e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7269049395000925,
+              "p95": 0.8587080000097558,
+              "maximum": 1.9678329999948119
+            },
+            "saving_vs_same_seed_ool_pct": -0.6266582236413504
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.275781177964062,
+            "soc_error": -4.0003736736515805e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6822043283334238,
+              "p95": 0.8743749999950978,
+              "maximum": 1.9977500000010195
+            },
+            "saving_vs_same_seed_ool_pct": -0.6022414238330698
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.20190763124409,
+            "soc_error": -5.844836482538085e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7043820906665625,
+              "p95": 0.8914590000017597,
+              "maximum": 2.119124999993005
+            },
+            "saving_vs_same_seed_ool_pct": -0.6293592761007907
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.18623666558588,
+            "soc_error": -4.8798616344325474e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 3,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.732876658166684,
+              "p95": 0.8873750000049085,
+              "maximum": 2.0099169999951982
+            },
+            "saving_vs_same_seed_ool_pct": -0.5037427444022704
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.061960149202218,
+            "soc_error": -6.45396423987199e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6843071313332196,
+              "p95": 0.88266699999906,
+              "maximum": 2.0753330000076176
+            },
+            "saving_vs_same_seed_ool_pct": -0.9512323851490232
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.23684168996714,
+            "soc_error": -6.082144925390054e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.6911417835000281,
+              "p95": 0.8810839999995324,
+              "maximum": 1.9694170000121858
+            },
+            "saving_vs_same_seed_ool_pct": -0.6981101985402782
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.933558973812314,
+            "soc_error": -5.536558168972583e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 96,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7234809703333678,
+              "p95": 0.8951249999995525,
+              "maximum": 2.004084000006401
+            },
+            "saving_vs_same_seed_ool_pct": -0.7983397387481366
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.8074631071313725,
+            "soc_error": -2.0651510315383703e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 130,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7388951160001291,
+              "p95": 1.005625000004784,
+              "maximum": 2.1429579999932002
+            },
+            "saving_vs_same_seed_ool_pct": -0.8494252754261075
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.188511985947473,
+            "soc_error": -2.7288300783689934e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.77307456949994,
+              "p95": 0.8939580000060232,
+              "maximum": 2.075167000000988
+            },
+            "saving_vs_same_seed_ool_pct": -0.5276723709228313
+          }
+        ]
+      },
+      "summaries": {
+        "realistic_ool": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": null,
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.004744762986076129,
+            "maximum_run_p95": 0.005250000000955879,
+            "maximum_step": 0.025125000007619747
+          }
+        },
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.2753063236382044,
+            "std": 0.055023970850356624,
+            "ci95_low": -0.31026712251096467,
+            "ci95_high": -0.24034552476544416
+          },
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.0940016149305478,
+            "maximum_run_p95": 0.14029199999754383,
+            "maximum_step": 0.2670420000043805
+          }
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.689701346534607,
+            "std": 0.1436033821810894,
+            "ci95_low": -0.7809431977549584,
+            "ci95_high": -0.5984594953142557
+          },
+          "mean_safety_filter_activations": 37.25,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.7187496468194685,
+            "maximum_run_p95": 1.005625000004784,
+            "maximum_step": 2.1429579999932002
+          }
+        }
+      }
+    },
+    "280": {
+      "overrides": {
+        "battery_capacity_wh": 280000.0
+      },
+      "rows": {
+        "realistic_ool": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.883474606955804,
+            "soc_error": -1.4428458428028534e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0049591756666984566,
+              "p95": 0.005209000008221665,
+              "maximum": 0.011874999998440217
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.981559023851157,
+            "soc_error": -2.4164004130966532e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004817442499979545,
+              "p95": 0.0050419999979567365,
+              "maximum": 0.03679099999942537
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.007285225438123,
+            "soc_error": -1.4667156378322943e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004824248666740989,
+              "p95": 0.005082999990690951,
+              "maximum": 0.011749999998755811
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.006681932081195,
+            "soc_error": -1.719180353632055e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00487998733339623,
+              "p95": 0.005165999994005688,
+              "maximum": 0.02587500000572618
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.226239356935455,
+            "soc_error": -1.4588330543574557e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004831202666897146,
+              "p95": 0.00508399998011555,
+              "maximum": 0.012666000003491718
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.150611004828805,
+            "soc_error": -1.850519737445211e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004777460000042311,
+              "p95": 0.005041000008532137,
+              "maximum": 0.012083000001439359
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.145205782442781,
+            "soc_error": -1.7515988659511095e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004792053833564107,
+              "p95": 0.005208000004586211,
+              "maximum": 0.012042000008705145
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 7.985994780575735,
+            "soc_error": -1.7290613385512188e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005593967999933132,
+              "p95": 0.005874999999377906,
+              "maximum": 0.013125000009495125
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.179738104051175,
+            "soc_error": -1.340927369142264e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004878973833082038,
+              "p95": 0.00520899999401081,
+              "maximum": 0.012375000011388693
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.870723857532922,
+            "soc_error": -1.9716450694318155e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005013499499980867,
+              "p95": 0.00533400000790607,
+              "maximum": 0.012125000012019882
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.741703124049673,
+            "soc_error": -2.7324809082074353e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004845356166560085,
+              "p95": 0.005084000008537259,
+              "maximum": 0.01258300000017698
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.145530273233174,
+            "soc_error": -1.6284751325201796e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004734752333125887,
+              "p95": 0.004958999994641999,
+              "maximum": 0.011749999998755811
+            },
+            "saving_vs_same_seed_ool_pct": null
+          }
+        ],
+        "adaptive_ecms": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.901807640253024,
+            "soc_error": -3.834710327055291e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09906903416665358,
+              "p95": 0.1368329999991147,
+              "maximum": 0.16866700001116897
+            },
+            "saving_vs_same_seed_ool_pct": -0.23255016615444696
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.999780316456109,
+            "soc_error": -3.3364422336035204e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09721744899992284,
+              "p95": 0.13570800000195504,
+              "maximum": 0.2575000000035743
+            },
+            "saving_vs_same_seed_ool_pct": -0.22829239939842635
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.026447729976121,
+            "soc_error": -3.0804248041249593e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09722957033338275,
+              "p95": 0.1373329999978523,
+              "maximum": 0.21883299999103656
+            },
+            "saving_vs_same_seed_ool_pct": -0.239313375238861
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.025689298606862,
+            "soc_error": -5.678790770957676e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09775123383373341,
+              "p95": 0.13845899999864741,
+              "maximum": 0.24625000000355612
+            },
+            "saving_vs_same_seed_ool_pct": -0.23739380041447825
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.251603322482444,
+            "soc_error": -5.819678072782608e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.104020570499884,
+              "p95": 0.15733300000420058,
+              "maximum": 2.2643329999993966
+            },
+            "saving_vs_same_seed_ool_pct": -0.30833002112447067
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.177330831435505,
+            "soc_error": -7.036593530074242e-13,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09442156583338601,
+              "p95": 0.1386659999980111,
+              "maximum": 0.25716700000089077
+            },
+            "saving_vs_same_seed_ool_pct": -0.3278260561186074
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.166312681456017,
+            "soc_error": -1.7116308370646038e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09662739716674196,
+              "p95": 0.1386250000052769,
+              "maximum": 0.17983300000423696
+            },
+            "saving_vs_same_seed_ool_pct": -0.25913279022037167
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.017324607188579,
+            "soc_error": -3.0414559759606163e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.10312508800024034,
+              "p95": 0.14616699999692173,
+              "maximum": 0.1830420000032973
+            },
+            "saving_vs_same_seed_ool_pct": -0.3923096304676621
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.208348297683784,
+            "soc_error": -9.299228054260311e-13,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09565967533336088,
+              "p95": 0.1370410000163247,
+              "maximum": 0.2603750000105265
+            },
+            "saving_vs_same_seed_ool_pct": -0.34976906679248476
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.889822080336632,
+            "soc_error": 6.822338571854658e-08,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0990861265000736,
+              "p95": 0.13562500001285116,
+              "maximum": 0.22874999999089596
+            },
+            "saving_vs_same_seed_ool_pct": -0.24264887384445152
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.760169217118719,
+            "soc_error": -3.941402759721768e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.09916264766654592,
+              "p95": 0.13312499999074134,
+              "maximum": 0.20733299999164956
+            },
+            "saving_vs_same_seed_ool_pct": -0.23852752776944916
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.165697154328287,
+            "soc_error": -8.241185511792537e-13,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.10126965999996192,
+              "p95": 0.1440420000164977,
+              "maximum": 0.8670839999922464
+            },
+            "saving_vs_same_seed_ool_pct": -0.24758217597426269
+          }
+        ],
+        "recursive_feasible_mpc": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.931610760448224,
+            "soc_error": -4.933215938085489e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 85,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.763298390666742,
+              "p95": 0.9066249999989395,
+              "maximum": 2.101583000012397
+            },
+            "saving_vs_same_seed_ool_pct": -0.6105956560061502
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 8.013895013197411,
+            "soc_error": -5.728587511555361e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 9,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.774424364666718,
+              "p95": 0.8868329999955904,
+              "maximum": 2.068667000003188
+            },
+            "saving_vs_same_seed_ool_pct": -0.4051337495547487
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.050299701730449,
+            "soc_error": -6.682958877179956e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 91,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7872582908332532,
+              "p95": 0.8949580000034985,
+              "maximum": 2.0813750000172604
+            },
+            "saving_vs_same_seed_ool_pct": -0.5371917582712604
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.04117855854618,
+            "soc_error": -6.06909089821972e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7941553666667458,
+              "p95": 0.8971659999872372,
+              "maximum": 2.0756659999960902
+            },
+            "saving_vs_same_seed_ool_pct": -0.4308479687042937
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.263715801145207,
+            "soc_error": -8.436597072414287e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 6,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7640249098330997,
+              "p95": 1.0626659999957155,
+              "maximum": 3.8577920000193444
+            },
+            "saving_vs_same_seed_ool_pct": -0.4555720127223809
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.191829242049264,
+            "soc_error": -6.529621116746487e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 1,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7651300139999384,
+              "p95": 0.9380840000119406,
+              "maximum": 2.0736660000011398
+            },
+            "saving_vs_same_seed_ool_pct": -0.505707329132005
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.182547213040525,
+            "soc_error": -6.760037971853539e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 3,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7793107056665546,
+              "p95": 0.9927080000124988,
+              "maximum": 16.24400000000037
+            },
+            "saving_vs_same_seed_ool_pct": -0.4584467427236062
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.047325369001925,
+            "soc_error": -6.458313076673772e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 14,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7146609451668492,
+              "p95": 1.0451249999903212,
+              "maximum": 2.292541000002757
+            },
+            "saving_vs_same_seed_ool_pct": -0.7679768158046294
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.22389665421032,
+            "soc_error": -7.176652669249606e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 11,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7520818988332426,
+              "p95": 0.9363329999985126,
+              "maximum": 2.095083000000386
+            },
+            "saving_vs_same_seed_ool_pct": -0.539852860781374
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.911689731914024,
+            "soc_error": -4.994686048742647e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 60,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7575241616665231,
+              "p95": 1.052417000011019,
+              "maximum": 2.0833330000016304
+            },
+            "saving_vs_same_seed_ool_pct": -0.5204842035195276
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.781250951249588,
+            "soc_error": -4.2167823332883714e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 123,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8013317433332615,
+              "p95": 1.079249999975218,
+              "maximum": 2.1136249999926804
+            },
+            "saving_vs_same_seed_ool_pct": -0.5108414332895271
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.167483064826529,
+            "soc_error": -6.0445032014522226e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8621951180002589,
+              "p95": 0.9642919999919286,
+              "maximum": 2.25712499999986
+            },
+            "saving_vs_same_seed_ool_pct": -0.2695072126303868
+          }
+        ]
+      },
+      "summaries": {
+        "realistic_ool": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": null,
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.004912343375000066,
+            "maximum_run_p95": 0.005874999999377906,
+            "maximum_step": 0.03679099999942537
+          }
+        },
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.27530632362649765,
+            "std": 0.05502397084984437,
+            "ci95_low": -0.3102671224989324,
+            "ci95_high": -0.2403455247540629
+          },
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.09872000152782394,
+            "maximum_run_p95": 0.15733300000420058,
+            "maximum_step": 2.2643329999993966
+          }
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.5010131452616575,
+            "std": 0.11991697841220636,
+            "ci95_low": -0.5772052720549041,
+            "ci95_high": -0.4248210184684109
+          },
+          "mean_safety_filter_activations": 34.666666666666664,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.7762829924444321,
+            "maximum_run_p95": 1.079249999975218,
+            "maximum_step": 16.24400000000037
+          }
+        }
+      }
+    }
+  },
+  "forecast_residual_gain_sensitivity": {
+    "0.0": {
+      "overrides": {
+        "stochastic_phase_residual_gain": 0.0
+      },
+      "rows": {
+        "realistic_ool": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.883474606953389,
+            "soc_error": -2.0200507933054723e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005028463000035306,
+              "p95": 0.005250000015166734,
+              "maximum": 0.013582999997652223
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.981559023848602,
+            "soc_error": -3.3831826229402395e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0048137213331074236,
+              "p95": 0.005125000001271474,
+              "maximum": 0.008500000006961272
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.00728522543557,
+            "soc_error": -2.053357484044227e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00554702949997458,
+              "p95": 0.0057919999960631685,
+              "maximum": 0.03849999998806197
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.006681932078525,
+            "soc_error": -2.4067414727824143e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005180100999799227,
+              "p95": 0.005417000011220807,
+              "maximum": 0.014832999994496276
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.226239356932952,
+            "soc_error": -2.042588320705363e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005012758999773344,
+              "p95": 0.005333000018481471,
+              "maximum": 0.01341600000159815
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.150611004826324,
+            "soc_error": -2.590927472567728e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0050665601666869025,
+              "p95": 0.005375000000640284,
+              "maximum": 0.013207999984388152
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.145205782440204,
+            "soc_error": -2.4522606167920458e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0051875453333091555,
+              "p95": 0.005375000000640284,
+              "maximum": 0.09566700001073514
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 7.985994780573096,
+            "soc_error": -2.4207302828926913e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005575288166568271,
+              "p95": 0.0058340000066436914,
+              "maximum": 0.01391699998976037
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.179738104048889,
+            "soc_error": -1.877054067733752e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005898187499776479,
+              "p95": 0.006250000012641976,
+              "maximum": 0.06466599998589118
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.870723857530518,
+            "soc_error": -2.7601254615206017e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005216765333310984,
+              "p95": 0.005458000003955021,
+              "maximum": 0.025665999999091582
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.7417031240472625,
+            "soc_error": -3.825384453648439e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005063752333294739,
+              "p95": 0.005375000000640284,
+              "maximum": 0.016415999994023878
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.14553027323048,
+            "soc_error": -2.279842981067759e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005708622666593517,
+              "p95": 0.005957999974270933,
+              "maximum": 0.023292000008723335
+            },
+            "saving_vs_same_seed_ool_pct": null
+          }
+        ],
+        "recursive_feasible_mpc": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.951897556604002,
+            "soc_error": -1.3951728765615456e-06,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 87,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7851877913330316,
+              "p95": 0.9488750000059554,
+              "maximum": 2.1876250000048003
+            },
+            "saving_vs_same_seed_ool_pct": -0.8679288392742698
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 8.028758736045988,
+            "soc_error": -5.058198917962109e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 10,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.9934868713333335,
+              "p95": 1.4174169999989772,
+              "maximum": 28.013499999985925
+            },
+            "saving_vs_same_seed_ool_pct": -0.5913595584065143
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.057758837489377,
+            "soc_error": -1.7399584645860777e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 95,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8097070063332981,
+              "p95": 0.9520840000050157,
+              "maximum": 2.3836250000215387
+            },
+            "saving_vs_same_seed_ool_pct": -0.6303461239706415
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.056856462846701,
+            "soc_error": -5.6867164519469604e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7807253489999832,
+              "p95": 0.9457079999890539,
+              "maximum": 2.2244580000005953
+            },
+            "saving_vs_same_seed_ool_pct": -0.6266582236413504
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.275781177964062,
+            "soc_error": -4.0003736736515805e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7336647246666401,
+              "p95": 0.9534999999800675,
+              "maximum": 2.146875000022419
+            },
+            "saving_vs_same_seed_ool_pct": -0.6022414238330698
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.20190763124409,
+            "soc_error": -5.844836482538085e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.738021799166521,
+              "p95": 0.9371659999999338,
+              "maximum": 2.1745839999880445
+            },
+            "saving_vs_same_seed_ool_pct": -0.6293592761007907
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.18623666558588,
+            "soc_error": -4.8798616344325474e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 3,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8362671080000612,
+              "p95": 1.1294999999904576,
+              "maximum": 4.215708000003815
+            },
+            "saving_vs_same_seed_ool_pct": -0.5037427444022704
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.061960149202218,
+            "soc_error": -6.45396423987199e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7251884001668053,
+              "p95": 0.966916999999512,
+              "maximum": 4.640790999985711
+            },
+            "saving_vs_same_seed_ool_pct": -0.9512323851490232
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.23684168996714,
+            "soc_error": -6.082144925390054e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7795807381665606,
+              "p95": 0.9548750000192285,
+              "maximum": 2.480625000004011
+            },
+            "saving_vs_same_seed_ool_pct": -0.6981101985402782
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.933558973812314,
+            "soc_error": -5.536558168972583e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 96,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.884587054333511,
+              "p95": 1.041832999987946,
+              "maximum": 11.854208000016797
+            },
+            "saving_vs_same_seed_ool_pct": -0.7983397387481366
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.8074631071313725,
+            "soc_error": -2.0651510315383703e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 130,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8047135575001075,
+              "p95": 1.0747499999865795,
+              "maximum": 2.1107090000214157
+            },
+            "saving_vs_same_seed_ool_pct": -0.8494252754261075
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.188511985947473,
+            "soc_error": -2.7288300783689934e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.9648480268333577,
+              "p95": 1.1460419999878013,
+              "maximum": 3.8367080000227816
+            },
+            "saving_vs_same_seed_ool_pct": -0.5276723709228313
+          }
+        ]
+      },
+      "summaries": {
+        "realistic_ool": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": null,
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.005274899611019159,
+            "maximum_run_p95": 0.006250000012641976,
+            "maximum_step": 0.09566700001073514
+          }
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.689701346534607,
+            "std": 0.1436033821810894,
+            "ci95_low": -0.7809431977549584,
+            "ci95_high": -0.5984594953142557
+          },
+          "mean_safety_filter_activations": 37.25,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.8196648689027676,
+            "maximum_run_p95": 1.4174169999989772,
+            "maximum_step": 28.013499999985925
+          }
+        }
+      }
+    },
+    "0.5": {
+      "overrides": {
+        "stochastic_phase_residual_gain": 0.5
+      },
+      "rows": {
+        "realistic_ool": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.883474606953389,
+            "soc_error": -2.0200507933054723e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0049958268333133065,
+              "p95": 0.005291999997325547,
+              "maximum": 0.013499999994337486
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.981559023848602,
+            "soc_error": -3.3831826229402395e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0047897306667484445,
+              "p95": 0.005041000008532137,
+              "maximum": 0.009874999989278876
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.00728522543557,
+            "soc_error": -2.053357484044227e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005101868166936659,
+              "p95": 0.005416999954377388,
+              "maximum": 0.01754200002324069
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.006681932078525,
+            "soc_error": -2.4067414727824143e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004816913666985556,
+              "p95": 0.005082999962269241,
+              "maximum": 0.009124999962750735
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.226239356932952,
+            "soc_error": -2.042588320705363e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005009862666289185,
+              "p95": 0.005375000000640284,
+              "maximum": 0.013832999968599324
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.150611004826324,
+            "soc_error": -2.590927472567728e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004871823833250725,
+              "p95": 0.005125000029693183,
+              "maximum": 0.017708000029870163
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.145205782440204,
+            "soc_error": -2.4522606167920458e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004938572166452104,
+              "p95": 0.00520899999401081,
+              "maximum": 0.011874999984229362
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 7.985994780573096,
+            "soc_error": -2.4207302828926913e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004839814333346719,
+              "p95": 0.0050419999979567365,
+              "maximum": 0.050124999972922524
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.179738104048889,
+            "soc_error": -1.877054067733752e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004826093500459668,
+              "p95": 0.0050419999979567365,
+              "maximum": 0.009333999969385331
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.870723857530518,
+            "soc_error": -2.7601254615206017e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004800466666305662,
+              "p95": 0.0050419999979567365,
+              "maximum": 0.012083000001439359
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.7417031240472625,
+            "soc_error": -3.825384453648439e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0048365576672135075,
+              "p95": 0.005084000008537259,
+              "maximum": 0.010916999997334642
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.14553027323048,
+            "soc_error": -2.279842981067759e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004924063833063504,
+              "p95": 0.005166999983430287,
+              "maximum": 0.021124999989297066
+            },
+            "saving_vs_same_seed_ool_pct": null
+          }
+        ],
+        "recursive_feasible_mpc": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.954285010248849,
+            "soc_error": -3.820282362776428e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 7,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7803943649999705,
+              "p95": 0.9294170000089252,
+              "maximum": 4.04191699999501
+            },
+            "saving_vs_same_seed_ool_pct": -0.8982131208110151
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 8.029771656871178,
+            "soc_error": -5.108031465028695e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 1,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7936300328334558,
+              "p95": 0.9510829999896941,
+              "maximum": 2.055665999989742
+            },
+            "saving_vs_same_seed_ool_pct": -0.6040503224810905
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.065045916482834,
+            "soc_error": -2.5675495372690094e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 7,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7601355726666478,
+              "p95": 0.9103329999788912,
+              "maximum": 2.1086670000158847
+            },
+            "saving_vs_same_seed_ool_pct": -0.7213517368381479
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.060325495762394,
+            "soc_error": -4.4120679727144285e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 8,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.767380845333106,
+              "p95": 0.9038329999953021,
+              "maximum": 2.050750000023527
+            },
+            "saving_vs_same_seed_ool_pct": -0.66998494680983
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.275921458600529,
+            "soc_error": -6.914738819929767e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7042302149997983,
+              "p95": 0.8950420000246595,
+              "maximum": 2.093084000023282
+            },
+            "saving_vs_same_seed_ool_pct": -0.6039467065312781
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.20162720122319,
+            "soc_error": -5.1742799505927195e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7073340219996668,
+              "p95": 0.8932079999794951,
+              "maximum": 2.118833999986691
+            },
+            "saving_vs_same_seed_ool_pct": -0.6259186748902229
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.188742748578553,
+            "soc_error": -6.317292467294955e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7664586793336161,
+              "p95": 0.9039169999596197,
+              "maximum": 2.0941249999850697
+            },
+            "saving_vs_same_seed_ool_pct": -0.5345103279306739
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.059382781032301,
+            "soc_error": -6.557850854060909e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 5,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7005484184998836,
+              "p95": 0.895291000006182,
+              "maximum": 2.057000000036169
+            },
+            "saving_vs_same_seed_ool_pct": -0.9189587831653837
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.239637065256941,
+            "soc_error": -4.102065509226094e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7123974451665548,
+              "p95": 0.8927920000019185,
+              "maximum": 2.103417000000718
+            },
+            "saving_vs_same_seed_ool_pct": -0.7322845847399794
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.933261567525638,
+            "soc_error": -1.5103832341600842e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 13,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7568862149999546,
+              "p95": 0.8872079999946436,
+              "maximum": 2.1024999999781357
+            },
+            "saving_vs_same_seed_ool_pct": -0.7945610991711488
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.805409797518109,
+            "soc_error": -3.941499597004405e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 8,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7699619413330582,
+              "p95": 0.9042919999728838,
+              "maximum": 2.1717500000022483
+            },
+            "saving_vs_same_seed_ool_pct": -0.8229025635581578
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.192910856826934,
+            "soc_error": -5.411385595421869e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7778255336669915,
+              "p95": 0.8962910000036572,
+              "maximum": 2.153083000052902
+            },
+            "saving_vs_same_seed_ool_pct": -0.5816758640277256
+          }
+        ]
+      },
+      "summaries": {
+        "realistic_ool": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": null,
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.0048959661666970865,
+            "maximum_run_p95": 0.005416999954377388,
+            "maximum_step": 0.050124999972922524
+          }
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.7090298942462211,
+            "std": 0.12721024453263916,
+            "ci95_low": -0.7898559724977404,
+            "ci95_high": -0.6282038159947018
+          },
+          "mean_safety_filter_activations": 4.083333333333333,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.749765273819392,
+            "maximum_run_p95": 0.9510829999896941,
+            "maximum_step": 4.04191699999501
+          }
+        }
+      }
+    },
+    "1.0": {
+      "overrides": {
+        "stochastic_phase_residual_gain": 1.0
+      },
+      "rows": {
+        "realistic_ool": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.883474606953389,
+            "soc_error": -2.0200507933054723e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004821139166760228,
+              "p95": 0.005082999962269241,
+              "maximum": 0.009040999998433108
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 7.981559023848602,
+            "soc_error": -3.3831826229402395e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00516341066635088,
+              "p95": 0.005375000000640284,
+              "maximum": 0.013459000001603272
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.00728522543557,
+            "soc_error": -2.053357484044227e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.012727868833223965,
+              "p95": 0.027624999972886144,
+              "maximum": 2.5947499999574575
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.006681932078525,
+            "soc_error": -2.4067414727824143e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004937018999820945,
+              "p95": 0.005166000050849107,
+              "maximum": 0.022790999992139405
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.226239356932952,
+            "soc_error": -2.042588320705363e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.005155770166557734,
+              "p95": 0.005375000000640284,
+              "maximum": 0.010750000001280569
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.150611004826324,
+            "soc_error": -2.590927472567728e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.00476175283308559,
+              "p95": 0.005000000044219632,
+              "maximum": 0.012499999968440534
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.145205782440204,
+            "soc_error": -2.4522606167920458e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004832385999738638,
+              "p95": 0.00508300001911266,
+              "maximum": 0.009792000014385849
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 7.985994780573096,
+            "soc_error": -2.4207302828926913e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.0067184299996938535,
+              "p95": 0.006999999982326699,
+              "maximum": 0.02695899996751905
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.179738104048889,
+            "soc_error": -1.877054067733752e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.006296594166940395,
+              "p95": 0.006832999986272625,
+              "maximum": 0.014582999995127466
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.870723857530518,
+            "soc_error": -2.7601254615206017e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.006349473166703016,
+              "p95": 0.006917000007433671,
+              "maximum": 0.01658299999007795
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.7417031240472625,
+            "soc_error": -3.825384453648439e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004966399499750196,
+              "p95": 0.00520899999401081,
+              "maximum": 0.029957999970520177
+            },
+            "saving_vs_same_seed_ool_pct": null
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.14553027323048,
+            "soc_error": -2.279842981067759e-12,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.004859676166859117,
+              "p95": 0.005166999983430287,
+              "maximum": 0.03724999999121792
+            },
+            "saving_vs_same_seed_ool_pct": null
+          }
+        ],
+        "recursive_feasible_mpc": [
+          {
+            "seed": 2500,
+            "fuel_l": 7.9520922118500765,
+            "soc_error": -4.088910503363685e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7750585669997941,
+              "p95": 0.9322500000052969,
+              "maximum": 2.105374999985088
+            },
+            "saving_vs_same_seed_ool_pct": -0.8703979947644526
+          },
+          {
+            "seed": 2501,
+            "fuel_l": 8.033147792179964,
+            "soc_error": -5.147935296823114e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 1.1702681328332476,
+              "p95": 1.7059169999811274,
+              "maximum": 28.62695800001802
+            },
+            "saving_vs_same_seed_ool_pct": -0.6463495186493831
+          },
+          {
+            "seed": 2502,
+            "fuel_l": 8.062518350033518,
+            "soc_error": -1.8578846956995854e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 2,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.87076051833353,
+              "p95": 1.2729169999943224,
+              "maximum": 19.87454200002503
+            },
+            "saving_vs_same_seed_ool_pct": -0.6897859017497766
+          },
+          {
+            "seed": 2503,
+            "fuel_l": 8.062734831834947,
+            "soc_error": -5.145349668245203e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7718669300005536,
+              "p95": 0.8944169999836049,
+              "maximum": 2.104625000015403
+            },
+            "saving_vs_same_seed_ool_pct": -0.7000765139907378
+          },
+          {
+            "seed": 2504,
+            "fuel_l": 8.281371297206686,
+            "soc_error": -5.086686326283285e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7801418384995977,
+              "p95": 1.0156250000363798,
+              "maximum": 6.141000000013719
+            },
+            "saving_vs_same_seed_ool_pct": -0.6701961598925447
+          },
+          {
+            "seed": 2505,
+            "fuel_l": 8.205230123002677,
+            "soc_error": -5.944236059685082e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 1,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7099809079997313,
+              "p95": 0.8885000000304899,
+              "maximum": 2.080957999964994
+            },
+            "saving_vs_same_seed_ool_pct": -0.6701229900925292
+          },
+          {
+            "seed": 2506,
+            "fuel_l": 8.192412011088367,
+            "soc_error": -5.0653355260776856e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8700470856662288,
+              "p95": 1.122875000021395,
+              "maximum": 2.0837079999864727
+            },
+            "saving_vs_same_seed_ool_pct": -0.5795584532674667
+          },
+          {
+            "seed": 2507,
+            "fuel_l": 8.055935194046144,
+            "soc_error": -6.429889280978873e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 2,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.9183467108330818,
+              "p95": 1.225459000011142,
+              "maximum": 2.9000839999753225
+            },
+            "saving_vs_same_seed_ool_pct": -0.8757883694488149
+          },
+          {
+            "seed": 2508,
+            "fuel_l": 8.244125524110444,
+            "soc_error": -6.435233334478596e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.921787484832969,
+              "p95": 1.2361660000124175,
+              "maximum": 2.637375000006159
+            },
+            "saving_vs_same_seed_ool_pct": -0.7871574767129054
+          },
+          {
+            "seed": 2509,
+            "fuel_l": 7.933030368592712,
+            "soc_error": -1.7639170299066365e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.9916655973334857,
+              "p95": 1.2722499999995307,
+              "maximum": 84.38999999998487
+            },
+            "saving_vs_same_seed_ool_pct": -0.7916236446611121
+          },
+          {
+            "seed": 2510,
+            "fuel_l": 7.8006864692698805,
+            "soc_error": -5.4291854426180564e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.7824233949998521,
+              "p95": 0.9188330000142741,
+              "maximum": 2.1472910000284173
+            },
+            "saving_vs_same_seed_ool_pct": -0.7618910758719758
+          },
+          {
+            "seed": 2511,
+            "fuel_l": 8.199040558122395,
+            "soc_error": -2.3931940555721454e-05,
+            "strict_valid": true,
+            "certified": true,
+            "fallback_count": 0,
+            "terminal_set_violation_count": 0,
+            "safety_filter_activation_count": 0,
+            "decision_timing_ms": {
+              "sample_count": 6000,
+              "mean": 0.8151866716663617,
+              "p95": 0.955499999975018,
+              "maximum": 2.23854199998641
+            },
+            "saving_vs_same_seed_ool_pct": -0.6569281937085214
+          }
+        ]
+      },
+      "summaries": {
+        "realistic_ool": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": null,
+          "mean_safety_filter_activations": 0.0,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.0059658266387903796,
+            "maximum_run_p95": 0.027624999972886144,
+            "maximum_step": 2.5947499999574575
+          }
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 12,
+            "mean": -0.7249896910675183,
+            "std": 0.09214119299268272,
+            "ci95_low": -0.7835338067743637,
+            "ci95_high": -0.666445575360673
+          },
+          "mean_safety_filter_activations": 0.4166666666666667,
+          "decision_time_ms": {
+            "mean_of_run_means": 0.8647944866665362,
+            "maximum_run_p95": 1.7059169999811274,
+            "maximum_step": 84.38999999998487
+          }
+        }
+      }
+    }
+  }
+}

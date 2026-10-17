@@ -1,0 +1,32 @@
+[
+  {
+    "low_load_efficiency": 0.18,
+    "baseline_fuel_l": 5.712185927803241,
+    "baseline_valid": true,
+    "mpc_fuel_l": 5.066818799901626,
+    "mpc_valid": true,
+    "saving_pct": 11.298076359181227,
+    "soc_error": 0.0009662277519313367,
+    "max_shortage_w": 0.0
+  },
+  {
+    "low_load_efficiency": 0.15,
+    "baseline_fuel_l": 5.931101460405132,
+    "baseline_valid": true,
+    "mpc_fuel_l": 5.143532100763277,
+    "mpc_valid": true,
+    "saving_pct": 13.278635762674314,
+    "soc_error": 0.0009644865916559331,
+    "max_shortage_w": 0.0
+  },
+  {
+    "low_load_efficiency": 0.12,
+    "baseline_fuel_l": 6.2190740761907595,
+    "baseline_valid": true,
+    "mpc_fuel_l": 5.250480646268691,
+    "mpc_valid": true,
+    "saving_pct": 15.57456010421637,
+    "soc_error": 0.0009590039099527381,
+    "max_shortage_w": 0.0
+  }
+]

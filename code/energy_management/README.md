@@ -1,5 +1,9 @@
 # 混合农业车辆严格因果能量管理比较代码
 
+## 当前版本入口
+
+当前Energies大修采用 `viability_ecms_v2.py`，定位为公开任务阶段引导与软SOC防护的ECMS比较。入口为 `tools/run_paper2_major_revision.py`、`tools/run_paper2_submitted_ablation.py` 及两个 `check_paper2_revision_*.py`。独立20路径自适应平均归一化节油5.950644%，相同防护固定ECMS为7.090609%；自适应干预更少。软防护不构成递归可行证明。后续标注为旧主协议的MPC等内容是历史记录；约20%的理想全信息诊断与当前在线统计分开。
+
 本目录对应论文草案：
 
 > `papers/paper2_energy_management_draft.md`

@@ -1,0 +1,190 @@
+{
+  "purpose": "Declared idealized full-information envelope. It is a non-causal virtual upper-bound diagnostic, not an online controller result, not an MPC fuel-saving result, and not a tractor-performance estimate.",
+  "protocol": {
+    "common_with_main_platform": "300 kW virtual platform; 200 kWh battery; 150 kW motor and battery bus; 60 kW stable engine floor; 40 kW/s applied ramp; wheel-side regeneration; physical SOC bounds; common dynamic realistic-OOL baseline.",
+    "intentional_idealizations": "Complete future nominal smooth-cycle demand is known to the offline DP; terminal SOC is a task-level +/-0.01 band rather than the strict causal benchmark's 1e-4 direct-fuel threshold.",
+    "energy_accounting": "Raw engine fuel is reported separately from terminal-energy-normalized fuel. The latter returns a lower-energy oracle trajectory to its paired OOL end energy using a predeclared 0.42 conversion efficiency.",
+    "grid_resolutions": [
+      {
+        "soc_step": 0.005,
+        "engine_step_w": 4000.0
+      },
+      {
+        "soc_step": 0.002,
+        "engine_step_w": 2000.0
+      }
+    ]
+  },
+  "literature_shaped": {
+    "map_kind": "literature_shaped",
+    "baseline": {
+      "fuel_l": 6.025244393716386,
+      "soc_error": 0.009503949575209725,
+      "valid": true,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0
+    },
+    "grid_resolutions": [
+      {
+        "soc_step": 0.005,
+        "feasible": true,
+        "fuel_l": 4.656865781806299,
+        "terminal_soc_grid": 0.5500000000000003,
+        "terminal_soc_error_grid": 2.220446049250313e-16,
+        "terminal_engine_w": 60000.0,
+        "soc_grid_count": 121,
+        "engine_grid_count": 61,
+        "engine_grid_step_w": 4000.0,
+        "continuous_rollout": {
+          "max_shortage_w": 0.0,
+          "max_motor_power_violation_w": 0.0,
+          "max_battery_power_violation_w": 0.0,
+          "max_mg1_power_violation_w": 0.0,
+          "max_mg1_speed_violation_rpm": 0.0,
+          "max_mg2_speed_violation_rpm": 0.0,
+          "max_engine_ramp_violation_w": 0.0,
+          "fuel_l": 4.656865781806632,
+          "soc_error": -0.03103055917148534,
+          "min_soc": 0.5127591912490637,
+          "max_soc": 0.5537217987253052,
+          "strict_valid": false
+        },
+        "grid_saving_vs_ool_raw_fuel_pct": 22.71075698335397
+      },
+      {
+        "soc_step": 0.002,
+        "feasible": true,
+        "fuel_l": 4.656180624545517,
+        "terminal_soc_grid": 0.5500000000000003,
+        "terminal_soc_error_grid": 2.220446049250313e-16,
+        "terminal_engine_w": 60000.0,
+        "soc_grid_count": 301,
+        "engine_grid_count": 121,
+        "engine_grid_step_w": 2000.0,
+        "grid_saving_vs_ool_raw_fuel_pct": 22.722128426834278
+      }
+    ],
+    "continuous_replay": {
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0,
+      "fuel_l": 4.656865781806632,
+      "soc_error": -0.03103055917148534,
+      "min_soc": 0.5127591912490637,
+      "max_soc": 0.5537217987253052,
+      "strict_valid": false
+    },
+    "continuous_raw_saving_vs_ool_pct": 22.710756983348443,
+    "terminal_energy_normalization": {
+      "candidate_energy_deficit_vs_ool_kwh": 8.106901749339013,
+      "reference_l_per_kwh": 0.24126926937231388,
+      "fuel_correction_l": 1.955946261936157,
+      "candidate_energy_normalized_fuel_l": 6.612812043742789,
+      "energy_normalized_saving_vs_ool_pct": -9.751764602929065
+    },
+    "validity": {
+      "ool_within_task_soc_band": true,
+      "oracle_within_task_soc_band": false,
+      "all_continuous_hard_limit_violations_at_most_1": true
+    }
+  },
+  "steep_low_load_sensitivity": {
+    "map_kind": "steep_low_load_sensitivity",
+    "baseline": {
+      "fuel_l": 7.617247571002153,
+      "soc_error": 0.009503949575209725,
+      "valid": true,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0
+    },
+    "grid_resolutions": [
+      {
+        "soc_step": 0.005,
+        "feasible": true,
+        "fuel_l": 5.971048724792092,
+        "terminal_soc_grid": 0.5500000000000003,
+        "terminal_soc_error_grid": 2.220446049250313e-16,
+        "terminal_engine_w": 120000.0,
+        "soc_grid_count": 121,
+        "engine_grid_count": 61,
+        "engine_grid_step_w": 4000.0,
+        "continuous_rollout": {
+          "max_shortage_w": 0.0,
+          "max_motor_power_violation_w": 0.0,
+          "max_battery_power_violation_w": 0.0,
+          "max_mg1_power_violation_w": 0.0,
+          "max_mg1_speed_violation_rpm": 0.0,
+          "max_mg2_speed_violation_rpm": 0.0,
+          "max_engine_ramp_violation_w": 0.0,
+          "fuel_l": 5.971048724791847,
+          "soc_error": 0.00668782750202479,
+          "min_soc": 0.5436765987199474,
+          "max_soc": 0.5609013002980443,
+          "strict_valid": true
+        },
+        "grid_saving_vs_ool_raw_fuel_pct": 21.611465701560245
+      },
+      {
+        "soc_step": 0.002,
+        "feasible": true,
+        "fuel_l": 5.970725234049024,
+        "terminal_soc_grid": 0.5500000000000003,
+        "terminal_soc_error_grid": 2.220446049250313e-16,
+        "terminal_engine_w": 120000.0,
+        "soc_grid_count": 301,
+        "engine_grid_count": 121,
+        "engine_grid_step_w": 2000.0,
+        "grid_saving_vs_ool_raw_fuel_pct": 21.615712520900853
+      }
+    ],
+    "continuous_replay": {
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0,
+      "fuel_l": 5.971048724791847,
+      "soc_error": 0.00668782750202479,
+      "min_soc": 0.5436765987199474,
+      "max_soc": 0.5609013002980443,
+      "strict_valid": true
+    },
+    "continuous_raw_saving_vs_ool_pct": 21.611465701563464,
+    "terminal_energy_normalization": {
+      "candidate_energy_deficit_vs_ool_kwh": 0.5632244146369869,
+      "reference_l_per_kwh": 0.24126926937231388,
+      "fuel_correction_l": 0.135888743012115,
+      "candidate_energy_normalized_fuel_l": 6.106937467803962,
+      "energy_normalized_saving_vs_ool_pct": 19.827504477440648
+    },
+    "validity": {
+      "ool_within_task_soc_band": true,
+      "oracle_within_task_soc_band": true,
+      "all_continuous_hard_limit_violations_at_most_1": true
+    }
+  },
+  "acceptance_checks": {
+    "both_ool_baselines_within_task_soc_band": true,
+    "literature_shaped_oracle_rejected_by_continuous_soc": true,
+    "steep_oracle_within_task_soc_band": true,
+    "steep_oracle_hard_limits_satisfied": true,
+    "steep_continuous_raw_saving_at_least_20_pct": true,
+    "terminal_energy_normalization_is_conservative": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "clean_marked_text_parity_excluding_headers_line_numbers_whitespace_and_pdf_hyphenation": true,
+  "clean_marked_tex_parity_after_removing_only_marking_commands": true,
+  "marking_color_rgb": [
+    0,
+    0,
+    255
+  ],
+  "references": 23,
+  "citation_metadata_key_parity": true,
+  "sentence_spacing_regression_checks": true,
+  "replies_per_report": [
+    3,
+    6
+  ],
+  "consolidated_cover_contains_complete_responses": true,
+  "retained_reference_black_added_references_blue": true,
+  "pdf_pages": {
+    "02_Marked_Manuscript_Energies_Paper2.pdf": 14,
+    "05_Response_to_Reviewer_2.pdf": 3,
+    "04_Response_to_Reviewer_1.pdf": 3,
+    "01_Revised_Manuscript_Energies_Paper2.pdf": 13,
+    "03_Supplementary_Methods_Results.pdf": 7,
+    "08_Revision_Cover_Letter_and_Responses.pdf": 8
+  },
+  "pdf_logs_without_overflow_or_unresolved_references": true,
+  "zip_integrity_paths_and_credential_pattern_checks": true,
+  "visual_review": "已逐页目视检查最终渲染页面；未发现重叠或截断"
+}

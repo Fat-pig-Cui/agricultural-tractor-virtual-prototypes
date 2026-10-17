@@ -1,0 +1,92 @@
+[
+  {
+    "stop_threshold_kw": 15.0,
+    "baseline_fuel_l": 6.352527813209442,
+    "baseline_valid": false,
+    "baseline_engine_starts": 0,
+    "deterministic_mpc": {
+      "fuel_l": 6.335127669638236,
+      "valid": true,
+      "saving_pct": 0.2739089710874472,
+      "soc_error": 0.0072145494015448675,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "engine_starts": 0
+    },
+    "robust_mpc": {
+      "fuel_l": 6.345055685449942,
+      "valid": true,
+      "saving_pct": 0.11762447925002613,
+      "soc_error": 0.007247122062695732,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "engine_starts": 0
+    }
+  },
+  {
+    "stop_threshold_kw": 25.0,
+    "baseline_fuel_l": 5.844452601376435,
+    "baseline_valid": true,
+    "baseline_engine_starts": 26,
+    "deterministic_mpc": {
+      "fuel_l": 5.792102887543568,
+      "valid": true,
+      "saving_pct": 0.8957162869374296,
+      "soc_error": 8.116111264944159e-06,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "engine_starts": 24
+    },
+    "robust_mpc": {
+      "fuel_l": 5.800946060610615,
+      "valid": true,
+      "saving_pct": 0.7444074532416278,
+      "soc_error": 1.4312757725565284e-05,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "engine_starts": 24
+    }
+  },
+  {
+    "stop_threshold_kw": 35.0,
+    "baseline_fuel_l": 5.86308358618801,
+    "baseline_valid": true,
+    "baseline_engine_starts": 28,
+    "deterministic_mpc": {
+      "fuel_l": 5.790687162171423,
+      "valid": true,
+      "saving_pct": 1.2347841021256272,
+      "soc_error": 8.338063001822604e-06,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "engine_starts": 24
+    },
+    "robust_mpc": {
+      "fuel_l": 5.789095656192979,
+      "valid": true,
+      "saving_pct": 1.2619286235203686,
+      "soc_error": -1.9299977655817813e-05,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "engine_starts": 24
+    }
+  }
+]

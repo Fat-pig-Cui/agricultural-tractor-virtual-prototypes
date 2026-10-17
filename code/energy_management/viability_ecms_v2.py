@@ -229,19 +229,34 @@ class ECMSSettings:
     terminal_soc_tolerance: float = 0.001
 
 
+@dataclass(frozen=True)
+class ControllerFeatures:
+    """Revision ablations; defaults preserve the submitted control law."""
+    public_phase_reference: bool = True
+    soc_corridor_filter: bool = True
+    conditional_electric_reserve: bool = True
+
+
 class EnergyManager:
     def __init__(self, plant: PowerSplitVirtualPlant, mode: str,
-                 settings: ECMSSettings | None = None, total_steps: int = 600):
+                 settings: ECMSSettings | None = None, total_steps: int = 600,
+                 features: ControllerFeatures | None = None):
         self.plant = plant
         self.mode = mode
         self.settings = settings or ECMSSettings()
         self.total_steps = total_steps
+        self.features = features or ControllerFeatures()
         self.integral_soc_error = 0.0
         self.shield_activations = 0
         self.empty_action_sets = 0
+        self.hard_empty_action_sets = 0
+        self.soft_corridor_empty_sets = 0
+        self.reserve_activations = 0
 
     def _soc_reference(self, step_index: int) -> float:
         """Public task-phase SOC buffer with terminal return to 0.55."""
+        if not self.features.public_phase_reference:
+            return self.plant.p.soc_target
         elapsed_s = step_index * self.plant.p.dt_s
         phase_s = elapsed_s % 270.0
         if phase_s < 120.0:
@@ -293,14 +308,16 @@ class EnergyManager:
                          if item[0].engine_power_w <= 1.0]
         reserve_limit = (self.plant.p.electric_reserve_fraction
                          * self.plant.p.battery_bus_limit_w)
-        if (electric_only
+        if (self.features.conditional_electric_reserve and electric_only
                 and abs(electric_only[0][1].battery_bus_w) > reserve_limit):
             reserve_safe = [item for item in feasible
                             if item[0].engine_power_w > 1.0]
             if reserve_safe:
                 feasible = reserve_safe
+                self.reserve_activations += 1
         if not feasible:
             self.empty_action_sets += 1
+            self.hard_empty_action_sets += 1
             raise RuntimeError(
                 "no feasible power-split action "
                 f"(step={step_index}, demand_w={wheel_demand_w:.1f}, "
@@ -332,7 +349,7 @@ class EnergyManager:
         factor = self._equivalence_factor(state, target)
         proposed = min(feasible, key=lambda item: self._score(
             state, item[0], item[1], factor))
-        if self.mode != "viability_ecms":
+        if self.mode != "viability_ecms" or not self.features.soc_corridor_filter:
             return proposed
 
         remaining_fraction = max(0.0, (self.total_steps - step_index - 1)
@@ -342,6 +359,7 @@ class EnergyManager:
                 if target - band <= item[1].next_soc <= target + band]
         if not safe:
             self.empty_action_sets += 1
+            self.soft_corridor_empty_sets += 1
             selected = min(feasible, key=lambda item: (
                 abs(item[1].next_soc - target),
                 self._score(state, item[0], item[1], factor)))
@@ -356,12 +374,14 @@ class EnergyManager:
 
 def run_cycle(points: Iterable, mode: str, settings: ECMSSettings | None = None,
               params: PowerSplitParameters | None = None,
-              engine_map=None, motor_map=None) -> dict[str, object]:
+              engine_map=None, motor_map=None,
+              features: ControllerFeatures | None = None,
+              capture_full_trajectory: bool = False) -> dict[str, object]:
     points = list(points)
     plant = PowerSplitVirtualPlant(params, engine_map=engine_map,
                                    motor_map=motor_map)
     state = PowerSplitState(soc=plant.p.soc_target)
-    manager = EnergyManager(plant, mode, settings, len(points))
+    manager = EnergyManager(plant, mode, settings, len(points), features)
     max_abs_bus = 0.0
     max_abs_mg1 = 0.0
     max_abs_mg2 = 0.0
@@ -385,13 +405,16 @@ def run_cycle(points: Iterable, mode: str, settings: ECMSSettings | None = None,
         max_abs_mg2 = max(max_abs_mg2, abs(operating.mg2_power_w))
         max_abs_current = max(max_abs_current, abs(operating.battery_current_a))
         battery_loss_wh += operating.battery_loss_w * plant.p.dt_s / 3600.0
-        if index % max(1, int(30.0 / plant.p.dt_s)) == 0 or index == len(points) - 1:
+        if capture_full_trajectory or index % max(1, int(30.0 / plant.p.dt_s)) == 0 or index == len(points) - 1:
             trajectory.append({
                 "time_s": float(profile_point.time_s),
                 "soc": state.soc,
                 "engine_power_w": action.engine_power_w,
                 "engine_speed_rpm": action.engine_speed_rpm,
                 "battery_bus_w": operating.battery_bus_w,
+                "battery_current_a": operating.battery_current_a,
+                "wheel_demand_w": wheel_demand,
+                "reference_soc": manager._soc_reference(index),
             })
     soc_error = state.soc - plant.p.soc_target
     terminal_tolerance = (settings or ECMSSettings()).terminal_soc_tolerance
@@ -410,6 +433,9 @@ def run_cycle(points: Iterable, mode: str, settings: ECMSSettings | None = None,
         "engine_starts": state.engine_starts,
         "shield_activations": manager.shield_activations,
         "empty_action_sets": manager.empty_action_sets,
+        "hard_empty_action_sets": manager.hard_empty_action_sets,
+        "soft_corridor_empty_sets": manager.soft_corridor_empty_sets,
+        "reserve_activations": manager.reserve_activations,
         "max_abs_battery_bus_w": max_abs_bus,
         "max_abs_mg1_power_w": max_abs_mg1,
         "max_abs_mg2_power_w": max_abs_mg2,
@@ -422,7 +448,7 @@ def run_cycle(points: Iterable, mode: str, settings: ECMSSettings | None = None,
                 int(0.95 * len(decision_times_ms)))],
             "maximum": max(decision_times_ms, default=0.0),
         },
-        "trajectory_30s": trajectory,
+        ("trajectory_full" if capture_full_trajectory else "trajectory_30s"): trajectory,
     }
 
 

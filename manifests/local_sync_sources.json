@@ -1,0 +1,1305 @@
+{
+  "version": "1.1.0",
+  "byte_identical_copies": [
+    {
+      "source": "code/config/__init__.py",
+      "target": "code/config/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "code/config/parameters.py",
+      "target": "code/config/parameters.py",
+      "sha256": "979fce5d26b5ddec130d948190701772cae264466c0974a6c49f3fb880226643"
+    },
+    {
+      "source": "code/lift_control/hydraulic_v2.py",
+      "target": "code/lift_control/hydraulic_v2.py",
+      "sha256": "18e9e52f981381e3318b3cacd10ba2904a235e58e6ad5d82cac583812b3b682b"
+    },
+    {
+      "source": "code/lift_control/controllers.py",
+      "target": "code/lift_control/controllers.py",
+      "sha256": "8ce77e1ed0440c0d445ff4fc56acc558006941c4e3b3616904d76dc81848dbb5"
+    },
+    {
+      "source": "code/lift_control/README.md",
+      "target": "code/lift_control/README.md",
+      "sha256": "b660a59489a3c6d0218d42a8d65002f13143b51367616e2451cfbd1a50ed118d"
+    },
+    {
+      "source": "code/lift_control/experiments.py",
+      "target": "code/lift_control/experiments.py",
+      "sha256": "9a1e30da4f208079fc46ace6e2a4c74e9c4fad056e47be4471d2d19401cf7856"
+    },
+    {
+      "source": "code/lift_control/hydraulic_model.py",
+      "target": "code/lift_control/hydraulic_model.py",
+      "sha256": "dea6d8d6c8771bcb1cc04d7241914c8d516f619835c6c7bd732ebc0b93b6973d"
+    },
+    {
+      "source": "code/lift_control/leakage_compensation.py",
+      "target": "code/lift_control/leakage_compensation.py",
+      "sha256": "43ef4dc4e54dd76929b597966555ec9e64c0596b952e69f7cb2900a578b93aee"
+    },
+    {
+      "source": "code/lift_control/lift_v2_experiment.py",
+      "target": "code/lift_control/lift_v2_experiment.py",
+      "sha256": "4bfaaf2e0693d6b0214f14a520b820d95a76e0f3d68b0fe633f91d5b7823eda2"
+    },
+    {
+      "source": "code/common/metrics.py",
+      "target": "code/common/metrics.py",
+      "sha256": "90718d88ccc5196d915f4f255defaa5ba748f084f3fc1a78bfee1cbe08b0c560"
+    },
+    {
+      "source": "code/common/reproducibility.py",
+      "target": "code/common/reproducibility.py",
+      "sha256": "64429a03e0597cfcd0a9ca759dcd0ab7a5ab75330bd037821c7f0eebc4d6f78c"
+    },
+    {
+      "source": "code/common/statistics.py",
+      "target": "code/common/statistics.py",
+      "sha256": "ce6dd8bb0779f314de4bbeb0fb296d50dcf6fde397048e4f7f99f76b74cccadd"
+    },
+    {
+      "source": "code/common/profiles.py",
+      "target": "code/common/profiles.py",
+      "sha256": "4a197b56ae2091a1980c86d761a9355c4f460821254843f230d0cd0d306b2383"
+    },
+    {
+      "source": "code/energy_management/load_terrain_predictor.py",
+      "target": "code/energy_management/load_terrain_predictor.py",
+      "sha256": "be28b1205a2dd08c524285c6008f4fc4be9fb8abe8beeb93e7531962bdc85ec9"
+    },
+    {
+      "source": "code/energy_management/viability_ecms_v2.py",
+      "target": "code/energy_management/viability_ecms_v2.py",
+      "sha256": "0b504a74def2847a9aefba9198d32089febe54643e6f867f88a45b6f3e57e797"
+    },
+    {
+      "source": "code/energy_management/README.md",
+      "target": "code/energy_management/README.md",
+      "sha256": "dae30936082f1444ffd986977407502f381ccf1400df5ca363562d3ed3d27f94"
+    },
+    {
+      "source": "code/energy_management/experiments.py",
+      "target": "code/energy_management/experiments.py",
+      "sha256": "fb964882f5d58f0595054dd8b8d0eab22f73399de04225a8bd989f207fe1d832"
+    },
+    {
+      "source": "code/energy_management/os_ecvt_model.py",
+      "target": "code/energy_management/os_ecvt_model.py",
+      "sha256": "f6db30a5338b3e2cdcdd55cdbec3c9d46d3bd0aabe649ee79cb3ec4d265389eb"
+    },
+    {
+      "source": "code/energy_management/dp_mpc_ecms.py",
+      "target": "code/energy_management/dp_mpc_ecms.py",
+      "sha256": "55104ea8a379d051778039db5020cff6d0d5e48b4f776dc366bfbe39e44a79d5"
+    },
+    {
+      "source": "tools/run_paper1_major_revision.py",
+      "target": "tools/run_paper1_major_revision.py",
+      "sha256": "cf30b97e5d976126cdc4641bcb48b1cee3f484280f3a643dcc23f7d67ece2ae3"
+    },
+    {
+      "source": "tools/extend_paper1_revision_audits.py",
+      "target": "tools/extend_paper1_revision_audits.py",
+      "sha256": "75a87779b207435c0a10052cf4ab83651ac21516a1966fae25408646713c216c"
+    },
+    {
+      "source": "tools/refine_paper1_comparators.py",
+      "target": "tools/refine_paper1_comparators.py",
+      "sha256": "7a212e95e7e81837b7b7c608b4958b52a15fc7903e5dad25558e63a740a16768"
+    },
+    {
+      "source": "tools/replay_paper1_original_noise.py",
+      "target": "tools/replay_paper1_original_noise.py",
+      "sha256": "7cf859ef1d67a7106d931214cb3932e3aa28b24bbc22141fca6846c84d443aa3"
+    },
+    {
+      "source": "tools/rerun_paper1_mechanical_audit.py",
+      "target": "tools/rerun_paper1_mechanical_audit.py",
+      "sha256": "bb41851a2e34f41923651df41308d228a935fdce85ebf74697be7276822180e6"
+    },
+    {
+      "source": "tools/run_paper1_rk4_convergence_audit.py",
+      "target": "tools/run_paper1_rk4_convergence_audit.py",
+      "sha256": "98f093f35796efa041a13ab38a9196a7b2c291f393625ed464c6940791131f1f"
+    },
+    {
+      "source": "tools/run_paper1_strengthening_audit.py",
+      "target": "tools/run_paper1_strengthening_audit.py",
+      "sha256": "a6a7a0a165dfb3759a895b74bc28c736eeb7b3e2beecd43e2f3978edc9b14968"
+    },
+    {
+      "source": "tools/plot_paper1_major_revision.py",
+      "target": "tools/plot_paper1_major_revision.py",
+      "sha256": "90d54f3b4a23f508ce163de9bf94d7293512d4622ce399eea2d8a44bff2a7fd9"
+    },
+    {
+      "source": "tools/run_paper2_major_revision.py",
+      "target": "tools/run_paper2_major_revision.py",
+      "sha256": "a65658f5c718318d4b4980cdf53c87796cf26596f8cc11345a64f8411f5f0151"
+    },
+    {
+      "source": "tools/run_paper2_submitted_ablation.py",
+      "target": "tools/run_paper2_submitted_ablation.py",
+      "sha256": "b4c788c84000e8c26d386b7b4d51c991b4ae796f75bb9e53f834704870f43996"
+    },
+    {
+      "source": "tools/check_paper2_revision_physics.py",
+      "target": "tools/check_paper2_revision_physics.py",
+      "sha256": "a138d8c0aa4e3ffe8c4ec7c7d5bf2ab8793a202091adc9bfe685560912f1e302"
+    },
+    {
+      "source": "tools/check_paper2_revision_execution.py",
+      "target": "tools/check_paper2_revision_execution.py",
+      "sha256": "15167c917ce300bd6ec0244bc68e93ba54ae361bf9cee2cb4a9583f0db5b0415"
+    },
+    {
+      "source": "tools/plot_paper2_major_revision.py",
+      "target": "tools/plot_paper2_major_revision.py",
+      "sha256": "03bc62b0a3fc26e10d931fcc1bd14d046f5badd9a2e3fdbd93fa3cb106502282"
+    },
+    {
+      "source": "revisions/machines_major_revision/manuscript.tex",
+      "target": "revisions/machines_major_revision/manuscript.tex",
+      "sha256": "b2d0092429d2313526fc468bc391b18e0786cdefefcb7b85700f41ee9fd33633"
+    },
+    {
+      "source": "revisions/machines_major_revision/manuscript.pdf",
+      "target": "revisions/machines_major_revision/manuscript.pdf",
+      "sha256": "6b28a53a65dc1e32b38e7d582b26e6ff59d609d29f1e149ffd0f29e34bcde692"
+    },
+    {
+      "source": "revisions/machines_major_revision/references.tex",
+      "target": "revisions/machines_major_revision/references.tex",
+      "sha256": "ca21ed5d7e14213f57bda5bd9cad7c7b68a02561faab0d3d3c522c25dd3d436d"
+    },
+    {
+      "source": "revisions/machines_major_revision/supplementary.tex",
+      "target": "revisions/machines_major_revision/supplementary.tex",
+      "sha256": "18c938c01ae32c5da7e7e11bb2e4b0df36ae3aa71f158cb29f5207633fe01002"
+    },
+    {
+      "source": "revisions/machines_major_revision/supplementary.pdf",
+      "target": "revisions/machines_major_revision/supplementary.pdf",
+      "sha256": "06395ae8451e76524a19626be70962dce4e11d96ab4cf4175b6963ca985829d9"
+    },
+    {
+      "source": "revisions/machines_major_revision/reference_metadata.json",
+      "target": "revisions/machines_major_revision/reference_metadata.json",
+      "sha256": "9b41a8f0b053bf894f68f9d54d460155acdd5f5ef8921b3e059b486d79f226b9"
+    },
+    {
+      "source": "revisions/machines_major_revision/rk4_convergence_table.tex",
+      "target": "revisions/machines_major_revision/rk4_convergence_table.tex",
+      "sha256": "2aab4e6873b1fc5e0e67d3e06fb140a355785a8059d2d2d2ad2a2921800e3d04"
+    },
+    {
+      "source": "revisions/machines_major_revision/rk4_comparators_table.tex",
+      "target": "revisions/machines_major_revision/rk4_comparators_table.tex",
+      "sha256": "8af0984d7db774589f150a0b8d5b460e13ed62338b67c3898679e3e9a3918fad"
+    },
+    {
+      "source": "revisions/machines_major_revision/integration_table.tex",
+      "target": "revisions/machines_major_revision/integration_table.tex",
+      "sha256": "448cd457757acc18f832ddd56479321cdaad0fe8a9fb22013f48ea9a8f7709d4"
+    },
+    {
+      "source": "revisions/machines_major_revision/mechanical_table.tex",
+      "target": "revisions/machines_major_revision/mechanical_table.tex",
+      "sha256": "9e2d38094cd9ae46979282a55bb59420b93c14a5031036abb692c6c6d3d5b245"
+    },
+    {
+      "source": "revisions/machines_major_revision/noise_table.tex",
+      "target": "revisions/machines_major_revision/noise_table.tex",
+      "sha256": "d3ebfe4c8c6bc91b3d1a45d8aed72309a4b24ad22e07e6cee54f9e38ec865ba4"
+    },
+    {
+      "source": "revisions/machines_major_revision/joint_mechanical_table.tex",
+      "target": "revisions/machines_major_revision/joint_mechanical_table.tex",
+      "sha256": "90a0edfc4dbd34b8a0f8e7834b2f219791ac41ebcbe209425f70836c71d9d29f"
+    },
+    {
+      "source": "revisions/machines_major_revision/observer_table.tex",
+      "target": "revisions/machines_major_revision/observer_table.tex",
+      "sha256": "a30467c8f98e07b8fe5ec2205b16127d55ca173fea9a19461e92b2c877e59917"
+    },
+    {
+      "source": "revisions/machines_major_revision/comparison_table.tex",
+      "target": "revisions/machines_major_revision/comparison_table.tex",
+      "sha256": "3c0a133d3a6bc87dbdb357f22df614ac75d53c1775f7036101eb98eb89c42b2a"
+    },
+    {
+      "source": "revisions/machines_major_revision/dwell_table.tex",
+      "target": "revisions/machines_major_revision/dwell_table.tex",
+      "sha256": "5a20726702e692921194cb78f4f7078cb73900e7aae98eb3021f3bb229c1e289"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/logo-orcid.pdf",
+      "target": "revisions/machines_major_revision/Definitions/logo-orcid.pdf",
+      "sha256": "0558a0097dc4d1ffe3f4a1b3c9b4b98c6e568eac7d7439d447ca56ed1a8ec759"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "target": "revisions/machines_major_revision/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "sha256": "888e17cd85b6f8e97dfcd31b38fd52422e9a7ec8522dbfd5d5e267d66057c633"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/mdpi_apacite.bst",
+      "target": "revisions/machines_major_revision/Definitions/mdpi_apacite.bst",
+      "sha256": "c7fffe0231922e5521dc360889fafe941ee26d154c1ce4e167e4ec9f2d13498f"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/mdpi.cls",
+      "target": "revisions/machines_major_revision/Definitions/mdpi.cls",
+      "sha256": "62979fe0fe0f72a57adc1ad683add9b0138f1dae635d1da4ae48a4d811159e40"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/logo-mdpi.eps",
+      "target": "revisions/machines_major_revision/Definitions/logo-mdpi.eps",
+      "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/logo-updates.eps",
+      "target": "revisions/machines_major_revision/Definitions/logo-updates.eps",
+      "sha256": "b84b986524ff2e47afb07ecd5ef6d33cd85bc4b88d2053fdfb3e83210d695831"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/mdpi_apacite.sty",
+      "target": "revisions/machines_major_revision/Definitions/mdpi_apacite.sty",
+      "sha256": "9e9bb23ded45f7f76236ad304d4bda2c066fb48041b272cebc20f940c17865a7"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/journalnames.tex",
+      "target": "revisions/machines_major_revision/Definitions/journalnames.tex",
+      "sha256": "f4944f272ae0bfaccedb926f4da5ce40c0dabead50482afae191989430fb66dc"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/mdpi.bst",
+      "target": "revisions/machines_major_revision/Definitions/mdpi.bst",
+      "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680"
+    },
+    {
+      "source": "revisions/machines_major_revision/Definitions/mdpi_chicago.bst",
+      "target": "revisions/machines_major_revision/Definitions/mdpi_chicago.bst",
+      "sha256": "4a73faf6e0cf1a225d1b9a41a6955d3cc29a55c5fdce662177d00eee3946ce36"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_noise.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_noise.pdf",
+      "sha256": "04bf3b6452ccd5a3345325ee4adb1d67796b4d7189978fdb0652471fda834655"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_load_step.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_load_step.pdf",
+      "sha256": "9685efba578fe155cb80a56ea8252744e98fc48e21d6f18afb7112da989a19db"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_v2_results.png",
+      "target": "revisions/machines_major_revision/figures/paper1_v2_results.png",
+      "sha256": "848bffb80b0d5c3d95e26fcaa3c97e745cf15a3a447fe4102127f1fb7e47b506"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_noise.png",
+      "target": "revisions/machines_major_revision/figures/revision_noise.png",
+      "sha256": "6928a7308dad62f301ee997fcbf1bc9e5d5f82f1ea7aeb2e77d39abe1d5a0d73"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_load_step.png",
+      "target": "revisions/machines_major_revision/figures/revision_load_step.png",
+      "sha256": "cbb7d931e4b038c6a73ab166202630e6b47d33439b52433333c288ee159ac33f"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_v2_architecture.png",
+      "target": "revisions/machines_major_revision/figures/paper1_v2_architecture.png",
+      "sha256": "b76725da2af8f0ff58e52e07945ba07eef38b84718c1228ee4ae386f0229636e"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_assumption_and_proxy_stress.png",
+      "target": "revisions/machines_major_revision/figures/paper1_assumption_and_proxy_stress.png",
+      "sha256": "a59ecc99465455833d828e3e82abc9d12c427466f421dc114ee6632eb1768b57"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_dwell.png",
+      "target": "revisions/machines_major_revision/figures/revision_dwell.png",
+      "sha256": "91bdc106f8766e21609a4d3e15c05ef38f0c8e68effc5e925262f08dc974f661"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_dwell.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_dwell.pdf",
+      "sha256": "95ac4087e39cfc5e28b38fb3e194db81850a11210e22eea094f21a6714a12ada"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_load_step_ablation.png",
+      "target": "revisions/machines_major_revision/figures/paper1_load_step_ablation.png",
+      "sha256": "0326341536dd2051ed4043a8437e4211c4b648993ce49aa42a6457f7959e641a"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_integration.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_integration.pdf",
+      "sha256": "a81e14460d8e5c155a3f4d534dafc4bfac966ec6040131728732c2e6f589d611"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_integration.png",
+      "target": "revisions/machines_major_revision/figures/revision_integration.png",
+      "sha256": "d3780dd5f8c722e79609dc008f2a2df4755c92c4752fa211c1c7d756abd78940"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_comparison.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_comparison.pdf",
+      "sha256": "6ee44d3f67f234f95cc312170eb8c811613375778c34bac874c3e6ef3eeab406"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_architecture.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_architecture.pdf",
+      "sha256": "858908f85a67f08be35717c9084d2aa47e232098fbd84f6034c8c7d32b06450f"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_comparison.png",
+      "target": "revisions/machines_major_revision/figures/revision_comparison.png",
+      "sha256": "55aed427acbf63d62fa13aac7ae5e4721bb1c903bbd9b5e6a683eacca70d3190"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_architecture.png",
+      "target": "revisions/machines_major_revision/figures/revision_architecture.png",
+      "sha256": "920613396165156d0c1dc6ec17f67dc4e4f82892b1a55ca2a2b36fa359cd3ffe"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_operating_envelope.png",
+      "target": "revisions/machines_major_revision/figures/paper1_operating_envelope.png",
+      "sha256": "ebb3949d122f1b214502f5fbc29af01580f0dae43901517d8ef207cd0c747452"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_original_noise.pdf",
+      "target": "revisions/machines_major_revision/figures/revision_original_noise.pdf",
+      "sha256": "6c4beffdce4e00fd8cfaa952a10883dd681cbd21398b7b120e2e4d471d5aaa5a"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/revision_original_noise.png",
+      "target": "revisions/machines_major_revision/figures/revision_original_noise.png",
+      "sha256": "f755250ceaf108ee8f46c26018a4eff807c2172099b7847f4cf4f9ead1768d31"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_architecture.png",
+      "target": "revisions/machines_major_revision/figures/paper1_architecture.png",
+      "sha256": "4e6471399c6617b5f8430327b2e06d32f8b2f8bad77fe1b0ab9ea2489b20fcd4"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_lock_leakage_sensitivity.png",
+      "target": "revisions/machines_major_revision/figures/paper1_lock_leakage_sensitivity.png",
+      "sha256": "ae336abbb85c66014b427f064e6e0548a160cc69ed78eeb4e4a117f7c66eb0db"
+    },
+    {
+      "source": "revisions/machines_major_revision/figures/paper1_combined_stress_surface.png",
+      "target": "revisions/machines_major_revision/figures/paper1_combined_stress_surface.png",
+      "sha256": "c98de5604c438a258c7a42e5f303eb6f34c94a7de53fba3c875cb6bd5f0c9e30"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/observer_pid_accumulator_fixed_load.json",
+      "target": "revisions/machines_major_revision/results/observer_pid_accumulator_fixed_load.json",
+      "sha256": "f0437766996f455abc6ae5b8ee1c7efdc855a2a33fe0ea869c4f5926e9760553"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_stiffness_n_m_1.3.json",
+      "target": "revisions/machines_major_revision/results/mechanical_stiffness_n_m_1.3.json",
+      "sha256": "aa40771d251cc609fc35d4732b9a657e480d4beccbd456f8cff557ecacd00c7a"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/rk4_integration_20.json",
+      "target": "revisions/machines_major_revision/results/rk4_integration_20.json",
+      "sha256": "6fc0ae7573453c53520494213a5998399e7088ad29eefe3854122c172b9a01bb"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/summary.json",
+      "target": "revisions/machines_major_revision/results/summary.json",
+      "sha256": "8aa9f08934f28d4fb4f4c9c285a7d50c79c9cf6441aee05f5968aed0d9bf29cd"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_stiffness_n_m_0.7.json",
+      "target": "revisions/machines_major_revision/results/mechanical_stiffness_n_m_0.7.json",
+      "sha256": "42be3209b669c7c4165bb51b6bbc2cab4ea83a9aba58abaa669713e151b817e3"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_protocol.json",
+      "target": "revisions/machines_major_revision/results/mechanical_protocol.json",
+      "sha256": "1ab34ef15d60c6d81705e04a86d3ffdf14aa8ea41d3abcd3ab2ffbf12a4b39a6"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/submitted_statistics.json",
+      "target": "revisions/machines_major_revision/results/submitted_statistics.json",
+      "sha256": "3e4f0a79339ed115c5c1a8bb20da948c01fe8ce55795e244288ec16ef94f9176"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/dwell_2.json",
+      "target": "revisions/machines_major_revision/results/dwell_2.json",
+      "sha256": "f94c8da75091e3efc79c8e2a400f80827dfcf19fdd28da65edbd78695431f565"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/refined_comparators_protocol.json",
+      "target": "revisions/machines_major_revision/results/refined_comparators_protocol.json",
+      "sha256": "13364968d85874e7d6fbf47d94ed98f618efe4ef6a4551fc8ab6fc2c6b3eb211"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/baseline_parity.json",
+      "target": "revisions/machines_major_revision/results/baseline_parity.json",
+      "sha256": "fc8d1e97880e9cba8ecac9b3f369ee8dcea65ec801925a58fae7fe14e7f51124"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/rk4_integration_10.json",
+      "target": "revisions/machines_major_revision/results/rk4_integration_10.json",
+      "sha256": "b04fb70a28a03373592cd3b78a2a13d70f87abef22c12b80c32b995bd0b42026"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/dwell_4.json",
+      "target": "revisions/machines_major_revision/results/dwell_4.json",
+      "sha256": "4b7f2359b646f4b92b8705800f888e7c1f9bb27f869504d66e0bb65137f091d7"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_audit.json",
+      "target": "revisions/machines_major_revision/results/strengthening_audit.json",
+      "sha256": "9cf924882b5deb856183c21572773cf024d4ee85ee7c025199993d300c2e055c"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/rk4_convergence_audit.json",
+      "target": "revisions/machines_major_revision/results/rk4_convergence_audit.json",
+      "sha256": "0507f2681f74a3ababe7aebcc0d3bb2d38eb8d4afab614cd9f9364ce405bf526"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_viscous_n_s_m_0.7.json",
+      "target": "revisions/machines_major_revision/results/mechanical_viscous_n_s_m_0.7.json",
+      "sha256": "b5393e5edbaad5a85ab2fc0ef61e930a3dec6c5d8c937fc9224ca4625cb01d2a"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/pid_accumulator_matched_dwell.json",
+      "target": "revisions/machines_major_revision/results/pid_accumulator_matched_dwell.json",
+      "sha256": "fb0c62a2b78dc04e49c17509a33cb2fd28d542a40bc170778312c2ea296017d3"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_viscous_n_s_m_1.3.json",
+      "target": "revisions/machines_major_revision/results/mechanical_viscous_n_s_m_1.3.json",
+      "sha256": "b178ece3b44fdf3e3784d18de8bf0add627dd6e6ef4bea859f7320896de5e09e"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/dwell_8.json",
+      "target": "revisions/machines_major_revision/results/dwell_8.json",
+      "sha256": "9811ec56147575b3cf21aac29381a5527ceb19e34a813dad4fbfd005290cee1b"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/dwell_16.json",
+      "target": "revisions/machines_major_revision/results/dwell_16.json",
+      "sha256": "a950c923f0ed0ce2e86f1b809b825000da7874c5b8488daacfb943aacd75e0db"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/observer_observer_hybrid_shared.json",
+      "target": "revisions/machines_major_revision/results/observer_observer_hybrid_shared.json",
+      "sha256": "05f68824ce2c49919dbd2448ea84e225d43ff7a6c6c261fddf792a3d40cbb4e7"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/observer_observer_hybrid_raw.json",
+      "target": "revisions/machines_major_revision/results/observer_observer_hybrid_raw.json",
+      "sha256": "5019f4d1a19e456702deb787812bded6af8ac8535e3e8af44499df3e9e195899"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/boundedness_check.json",
+      "target": "revisions/machines_major_revision/results/boundedness_check.json",
+      "sha256": "ec61d20dc2ba742be1718b9024849c0e31ab77fdb7683c4d8c61d9df50dbb63b"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/observer_observer_hybrid_fixed_load.json",
+      "target": "revisions/machines_major_revision/results/observer_observer_hybrid_fixed_load.json",
+      "sha256": "0e93a195d16be093a178661b6d338b2398adc6fa21e6bfa6a59f5eb5ceb90ce4"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/original_noise_protocol.json",
+      "target": "revisions/machines_major_revision/results/original_noise_protocol.json",
+      "sha256": "a5cc73b993b30c706804798d3d830c87b8070f23bae236c00ac635e2f59725e3"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/integration_4.json",
+      "target": "revisions/machines_major_revision/results/integration_4.json",
+      "sha256": "d4c568a125ef209ddd55b360cbfb9c44c66aaabfd74988cf306632499f3b94b6"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/refined_comparators.json",
+      "target": "revisions/machines_major_revision/results/refined_comparators.json",
+      "sha256": "d9b1ce28e1e16d86db6dd9714bfef92c330d59801c449c9c9369d9efa3d6d311"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/integration_discrepancy.json",
+      "target": "revisions/machines_major_revision/results/integration_discrepancy.json",
+      "sha256": "e1224314f55db3084126c4308e8a8c3be2ebcec00d9745de56a73c222e091b1a"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/protocol.json",
+      "target": "revisions/machines_major_revision/results/protocol.json",
+      "sha256": "da17a6b1e2c414189aeeb320d9bdb3c2e8d497e2af003ceae652cf505bad2760"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/dwell_12.json",
+      "target": "revisions/machines_major_revision/results/dwell_12.json",
+      "sha256": "b73fa5308d27610872b90acd7c2c0cd2b70332aa96d45c8d6a8dd20f7edd6579"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/aligned_legacy_pressure_noise.json",
+      "target": "revisions/machines_major_revision/results/aligned_legacy_pressure_noise.json",
+      "sha256": "523b1b850915fd39d4649c79675087c6969692faa4a8d5b99b21a0077700770e"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/observer_pid_accumulator_shared.json",
+      "target": "revisions/machines_major_revision/results/observer_pid_accumulator_shared.json",
+      "sha256": "5866ece2e760bb2e603085ac005aaaac888209b4577a58bc2d83151999bd4db3"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/dwell_0.json",
+      "target": "revisions/machines_major_revision/results/dwell_0.json",
+      "sha256": "fdae06f675b12dc06ef2e684b005d6e9ec4f7ec30d24823cdda9bd7005892d2a"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_mass_kg_1.3.json",
+      "target": "revisions/machines_major_revision/results/mechanical_mass_kg_1.3.json",
+      "sha256": "a875fceb4f260d40f801cfec33e9947e63ceac8a8aa572e5e3eeeae85ef17be4"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/mechanical_mass_kg_0.7.json",
+      "target": "revisions/machines_major_revision/results/mechanical_mass_kg_0.7.json",
+      "sha256": "7947902590a9374406b369b43dfdd7b46f979c05fb7e1c0940dd2065c07b9ed6"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/integration_2.json",
+      "target": "revisions/machines_major_revision/results/integration_2.json",
+      "sha256": "a5a11bbfee20b89ad53b3c02ff9f2163dcd6e4f7e344b5143d8832595e747054"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_protocol.json",
+      "target": "revisions/machines_major_revision/results/strengthening_protocol.json",
+      "sha256": "fee7e36b08fc94776e0791d32a4246bfb708f73c743d521adb0673e9d67e9654"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/observer_pid_accumulator_raw.json",
+      "target": "revisions/machines_major_revision/results/observer_pid_accumulator_raw.json",
+      "sha256": "c747fd00f85f971d3db22a88ff03a10197900b0aa25500d4d981701da904e726"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4301.json",
+      "sha256": "3e0d927342e380b45a88a69a706cda8ef0384d55f2929b530122ca60af69529f"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4301.json",
+      "sha256": "b1b3c3ee28f3f9d03584d2987731ed7654560ef90186822be72a9c7c914476b4"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4301.json",
+      "sha256": "28ace77a1e9360847e72395aabd0929e4d058ae1b81ea2735f7dba61c8dc47a5"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4302.json",
+      "sha256": "aa897c0e615a796c5c5c0f86e1ce1ae231cfd5eec602dc02fdb6d963190af3a0"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4304.json",
+      "sha256": "f0d514a113f4d8f3b472039591b60b6ff766a467e8fa510abe60639e49ad998b"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4301.json",
+      "sha256": "95fa541e16c37efe9c21e41d363b49cd7782c2ac9d478d884311d37941e06889"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4300.json",
+      "sha256": "68656310c55c3414cf9244dc3bc6fe0bfce619197d2a2e134304507d9a08735d"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4300.json",
+      "sha256": "9a2f11a6f1884a76b9c14ad000b06e9a2cdb1471a1f744fb6ced5a3d5e9b43a1"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4302.json",
+      "sha256": "1d7f25ccd9ff7171260867f3c567c29c0e29cfba521366840dd915ca1e7d5abc"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4303.json",
+      "sha256": "5b0aab4b887a50b1d597f4443a53cbfc3e50b2bde1dfa334996e177c8ec70014"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4304.json",
+      "sha256": "7a6bee6c453779a53b4fbea5b8bb423f69694fa3f69aa587da648238ba898599"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4301.json",
+      "sha256": "bd502331d3a8dbf6b9388358339d2ba3d53c1b957a14001888d855fe79e7bac2"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4301.json",
+      "sha256": "86b88ff2829013ddc29094cf1da39e87b8fd077e14aefffc5c8f0fb1d53bd2b6"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4300.json",
+      "sha256": "ac17be614a860efa4bc68106635f56fbb36964d0c7b8b2413bbab1fd92c70c3d"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4303.json",
+      "sha256": "ccfc55777c0ddae211f4f86cc1be6265c5ff7e5cce7d2851231e7726a0c18d0b"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4300.json",
+      "sha256": "0b86d1fc761c3173f585c5981f72aa2985606e92c27d163f0b3887ec4c7d9cd9"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4300.json",
+      "sha256": "7edc516a185f6a7e29608cea2410d1be9d53ac7b72f1fd461210b6bf46095ce1"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4300.json",
+      "sha256": "c8252dce238a89f4049289cb72c22ef3fe922619488bcca362dfd8b1e9fe6124"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4301.json",
+      "sha256": "2efd7c5b1f0ec6318a1a567cd54e20524fb44df332b54250230c737f405246d5"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4300.json",
+      "sha256": "b15e1ea82eb7ec12e52c86545a8a8c3b1faf9532c490b86f5adf963641a978cb"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4303.json",
+      "sha256": "150463cd6216962aaddc0539fdb5f7233ca37226ef62ed428e2d96b0f896c571"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4304.json",
+      "sha256": "92751ebd4754f1be77c40edeab8d92a097914c95073d72b7b4c13b7e1d2a8036"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4301.json",
+      "sha256": "b3f5d1eac217bd4461220a1054f1b682cc49514066a73a25f2f865dd61351ebb"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4300.json",
+      "sha256": "ae0e2eddd730fff7f2552f44ee1c2dba0c0b5531094757e11ac86820f9a2db0e"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4304.json",
+      "sha256": "2758e86eef24db89911e79f7745ef166d3deeac9e921f48253a978a1de125995"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4302.json",
+      "sha256": "f0442d0fd131b118c4759e8d459165b6297bc6ee6a715436e873c52d943ca3b9"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4303.json",
+      "sha256": "f6b96fe0ad41cbd7a453f159193699cf69a538e7bbbe5599505e456d7e4642f9"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4301.json",
+      "sha256": "54f2a90b93a9038befeb8c683a74aec2aa87180fc7f6cc56be29f648a040d4b2"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4300.json",
+      "sha256": "7f0cf8dc56cc3ea40ddd97f1b15a0ce12bb6818466a91f0b5add97f3213f2719"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4302.json",
+      "sha256": "b51b6b20d5b78d8fa57316bc62a2879e344422f0c369f4acec08f75af3f0a0d7"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4301.json",
+      "sha256": "a4ff2bbf6938653ca272c686e3ad7d8203aad0a3c2c89c6969c0ca83a315c79e"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4300.json",
+      "sha256": "648b6b2a9ca92829a939d4fd8824dc8ff5296a82aee71bb14dccfa0e890da442"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4301.json",
+      "sha256": "3235fd0b36667b896eeacb061163a119d8d93db5631c12143fc815ad0054de5b"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4304.json",
+      "sha256": "5251e0c049eab7f42fb421b5f5d9125c2a875856a933ea7a347812bc6570310d"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4302.json",
+      "sha256": "9890c4d1c5fc525f86933a901f64e4c06d569f0e65181fa4a6949b625aea18a6"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4304.json",
+      "sha256": "f85b91f93c776b5282ac3ed036509b5e1b14e75cff16fb4ad99571a60fc76863"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4303.json",
+      "sha256": "6644034c1a6377d6306201e5e8ea3fcd91f887f789e8d654bbf86604ccedf5e5"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4300.json",
+      "sha256": "13d5e4390cb3d5dbc8793a7599ccacf3493ae272684a0fe22d4169815172fd05"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4302.json",
+      "sha256": "68b8405fff0629cd3efaa93a9a808f16891601e9d5a0bb34d9e504828197a1a1"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4303.json",
+      "sha256": "d44f7f07a05f508b41a47e1af48f6a7ec25a29bbeadc6cde3a1f00f0d7f43035"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4304.json",
+      "sha256": "48c20aa1a68f59c9f7e3da9f1f4ef48ef1667a526109b61ea1b00de5eb096dc7"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4304.json",
+      "sha256": "36b60441797e4ecdf314538ec668d87d835ac168f5b612259322bc3d98b42f52"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4302.json",
+      "sha256": "435b09d014eb1e6ecfd7dfd6244ad80d3a13a536f700c6ff1665d272bc3a72ce"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4304.json",
+      "sha256": "3eacffda3ab0a00e7cd2f8804079a0a007188a6bcffa7b562bacac434463e9ad"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4303.json",
+      "sha256": "77233b370c50ca455e2f68904b31e79f0f6bb754dd969ca0c78ffc2160f6d993"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_20_4301.json",
+      "sha256": "86bc771af39e7ea9ed3864e0ca42966c9a31a860407a8563b7f8e0056e360d59"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4304.json",
+      "sha256": "0f13941111f010f5768879cd6d3fe67c742e296c9dfc5bd350ede435188de9cb"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4302.json",
+      "sha256": "c9404781e276b35d6952257c0e115160c138b811a2083422130beb2209d37e91"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4303.json",
+      "sha256": "1f37f3ee0f95bc3121e21e979cef63ac6c03e374b29e3f5ce181e927fb2a57b0"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_7_4300.json",
+      "sha256": "6446efd78962e9047ca6d8714d58b95339fa3c30e1b8a4f2e9bbad70a70704c4"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4300.json",
+      "sha256": "d43b3d4788ceb3c074542983b121e4efbd62644cccc8198770e478ea36528540"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_13_4304.json",
+      "sha256": "f9f448b0ec9ebdb6cda4cdbb104ece5ca8e24dcfaaa422a42874cc7f36cf990e"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4303.json",
+      "sha256": "7ac749bde215529e6d199e2dbcb52b3ad89c4fb611051f89233b365e472a5bfc"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4303.json",
+      "sha256": "5f8e78476f891dc5b63eb29d8aa2ce9b64b44c8b939b4a3e756a7654f55b48bb"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4303.json",
+      "sha256": "75fbc541b33a0573e5e21f857d833d20b01d003a0cc1de121e94aa040a8342df"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4300.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4300.json",
+      "sha256": "e3050e9792219e378e6c069a9fabc6e71d6cdad98fd00572d2d590f4de25b893"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4302.json",
+      "sha256": "250a28a1956dd44bad5467d44d60a96259a96f91fc7287b2e522142c41bee6dc"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4302.json",
+      "sha256": "2ca9cc639f1776b0a4031e5029fb889cc2d0ae7e59340f9bdbfa07aac4cc2da2"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_7_4304.json",
+      "sha256": "4851209e485986d4fa671888b6f6b185cfefdf29f88309996766e4d89b7f6b80"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4303.json",
+      "sha256": "39ca628d0b86bb695005b1d252a1f34021dd20cbed353f2f3215a395564d68ff"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_10_4302.json",
+      "sha256": "cf1c2840cf1b306bdd607ae644c912555b0aae98fe090b201855fc90b341409d"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/observer_hybrid_10_4304.json",
+      "sha256": "2339dba30b7c044b436a39774623773ae6e8325ae3a0e36c1d1ada94f769a21d"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_7_13_4303.json",
+      "sha256": "d96dc0030d75a8fc5ff7573d52430ce083920db11ccec9a0bd669819ce8e0852"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4303.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_7_4303.json",
+      "sha256": "f4afa9f437a03b91c83606662dd7ffadad5fa04221ba4f77523c8da55f6f48af"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_10_4301.json",
+      "sha256": "10d5c35f8cf2798b3d3137ba0518ee1acd7f7bdeccd1c23342d94e3bc093490c"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4304.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_7_13_4304.json",
+      "sha256": "b052bace09ccbbf7e5da4053a4a4424f49792ba02c270b9a97f8f7f7f8f6204d"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_13_13_7_4302.json",
+      "sha256": "ff9898e24f7a76b909ebb7f521fd8648dca97778c3f966fb7fc4abf76ea56bbd"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_matched_20_4302.json",
+      "sha256": "04bd60d8253fe78bb49f5808d33fa8d60d44036d831f4b166994e477423d2984"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4302.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/joint_7_13_13_4302.json",
+      "sha256": "bbc390da397c882016fb0f8ab9874bd7335cf949515f778679caa27627ffa291"
+    },
+    {
+      "source": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4301.json",
+      "target": "revisions/machines_major_revision/results/strengthening_checkpoints/pid_accumulator_20_4301.json",
+      "sha256": "08881b64472d8b01379597a201c52cd7d6ee3556dd2834cb6e025f3e2d7c6371"
+    },
+    {
+      "source": "revisions/energies_major_revision/manuscript.tex",
+      "target": "revisions/energies_major_revision/manuscript.tex",
+      "sha256": "c158884db3948ef8d2e3477e8bc9cbfdaa0f2138aa67a0ee459f6c5d3491cf4f"
+    },
+    {
+      "source": "revisions/energies_major_revision/manuscript.pdf",
+      "target": "revisions/energies_major_revision/manuscript.pdf",
+      "sha256": "dfe80e7bc7b393a0764f56bca609aaeea5a1ac1a7f2c5d332ca1435713c61d82"
+    },
+    {
+      "source": "revisions/energies_major_revision/references.tex",
+      "target": "revisions/energies_major_revision/references.tex",
+      "sha256": "d99d4aef5fe19064e12992fe503b105f27097118b78ebcb70ed8321ee18a8096"
+    },
+    {
+      "source": "revisions/energies_major_revision/supplement.tex",
+      "target": "revisions/energies_major_revision/supplement.tex",
+      "sha256": "ac4fd2737e15d7ef98d1430e013ea6be840127b0462b56e9895c4b54f2f8cc26"
+    },
+    {
+      "source": "revisions/energies_major_revision/supplement.pdf",
+      "target": "revisions/energies_major_revision/supplement.pdf",
+      "sha256": "3b77e3ae0c3c51275071ff91ceea2a02740abfbf5a12bd4509477bfa6f5ac723"
+    },
+    {
+      "source": "revisions/energies_major_revision/reference_metadata.json",
+      "target": "revisions/energies_major_revision/reference_metadata.json",
+      "sha256": "56693d8f85944da0380df13c9614edc66cb10f809fe8a892068d71a5f270525a"
+    },
+    {
+      "source": "revisions/energies_major_revision/submitted_ablation_table.tex",
+      "target": "revisions/energies_major_revision/submitted_ablation_table.tex",
+      "sha256": "d3b6cab04c9d9b29ecedfa3655fb5edf0fa32d9ba83e7a4ca2a755869ed8a035"
+    },
+    {
+      "source": "revisions/energies_major_revision/audit_table.tex",
+      "target": "revisions/energies_major_revision/audit_table.tex",
+      "sha256": "7fa41520d136fb4a736ec7537bec477a80fcb4d59929f4878eaf49c74fabbe22"
+    },
+    {
+      "source": "revisions/energies_major_revision/diagnostic_table.tex",
+      "target": "revisions/energies_major_revision/diagnostic_table.tex",
+      "sha256": "dc4d51e302525631c3f425a10d805701435880908f1032cdb8e15c95574224fb"
+    },
+    {
+      "source": "revisions/energies_major_revision/comparison_table.tex",
+      "target": "revisions/energies_major_revision/comparison_table.tex",
+      "sha256": "1371106ba0e8849dc2aa5559b0c9cc67967e57fac12d5ba7a141b6f1fe2f0be3"
+    },
+    {
+      "source": "revisions/energies_major_revision/failure_list.tex",
+      "target": "revisions/energies_major_revision/failure_list.tex",
+      "sha256": "b65df3f4fab45aba9263a7c30d4db284b9fac397e67617eeef7114603f25fff5"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/logo-orcid.pdf",
+      "target": "revisions/energies_major_revision/Definitions/logo-orcid.pdf",
+      "sha256": "0558a0097dc4d1ffe3f4a1b3c9b4b98c6e568eac7d7439d447ca56ed1a8ec759"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "target": "revisions/energies_major_revision/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "sha256": "7950fa81ba20e33263dd0b1cd78cfeecd2323f721f2d654ab14156d766d7a39b"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/mdpi_apacite.bst",
+      "target": "revisions/energies_major_revision/Definitions/mdpi_apacite.bst",
+      "sha256": "c7fffe0231922e5521dc360889fafe941ee26d154c1ce4e167e4ec9f2d13498f"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/unicode.tex",
+      "target": "revisions/energies_major_revision/Definitions/unicode.tex",
+      "sha256": "6b1a5851f28c913e8818fb311b560d74d287bd1dc9cb251e24b8e857492d7632"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/mdpi.cls",
+      "target": "revisions/energies_major_revision/Definitions/mdpi.cls",
+      "sha256": "cb961f10f4ee7af7825c6809c720736179beab056dbb63b90af86b618050a24e"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/logo-mdpi.eps",
+      "target": "revisions/energies_major_revision/Definitions/logo-mdpi.eps",
+      "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/logo-updates.eps",
+      "target": "revisions/energies_major_revision/Definitions/logo-updates.eps",
+      "sha256": "71ad8b00bcca718b62f3286af02ea56678e8199b5843d7ed4fdc86bd969c2809"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/mdpi_apacite.sty",
+      "target": "revisions/energies_major_revision/Definitions/mdpi_apacite.sty",
+      "sha256": "a77a994f978c1860ff14dbcae74631f3ed835b418adbdcf84de2f06d98c34599"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/journalnames.tex",
+      "target": "revisions/energies_major_revision/Definitions/journalnames.tex",
+      "sha256": "8c1d911eedfdb4e4ea5c1de0086924f4370a42d5cbb1f3a672478ca3ab4e955f"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/mdpi.bst",
+      "target": "revisions/energies_major_revision/Definitions/mdpi.bst",
+      "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680"
+    },
+    {
+      "source": "revisions/energies_major_revision/Definitions/mdpi_chicago.bst",
+      "target": "revisions/energies_major_revision/Definitions/mdpi_chicago.bst",
+      "sha256": "4a73faf6e0cf1a225d1b9a41a6955d3cc29a55c5fdce662177d00eee3946ce36"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_soc_trajectory.pdf",
+      "target": "revisions/energies_major_revision/figures/revision_soc_trajectory.pdf",
+      "sha256": "3164e6cfb58cdf6c8017f8d13af94ba5234c01e53419b47dbd2be3ffe9aee371"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_soc_trajectory.png",
+      "target": "revisions/energies_major_revision/figures/revision_soc_trajectory.png",
+      "sha256": "0f84f1dd3c92741fdd4c0fec75fdb243a626382aa1caa55adc9613c9dc52f69e"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_ablation.pdf",
+      "target": "revisions/energies_major_revision/figures/revision_ablation.pdf",
+      "sha256": "9a2b828d9baea37d954c6cf71a5ffd1428df3526cee613dec48419e660c4e1d6"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_ablation.png",
+      "target": "revisions/energies_major_revision/figures/revision_ablation.png",
+      "sha256": "55f5eb393955ceb66993a361915808494ea482d0090c6c49458a4ee1d38e7b12"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_architecture.pdf",
+      "target": "revisions/energies_major_revision/figures/revision_architecture.pdf",
+      "sha256": "f9601e01675266f873f8e540ca6cde5b6c1e686e2d319647227868b391943a85"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_model_maps.pdf",
+      "target": "revisions/energies_major_revision/figures/revision_model_maps.pdf",
+      "sha256": "bc07d3c458c0c8b50a684ebe9af5072c2e34231765a0d9ea3d832c9f960f8f41"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_model_maps.png",
+      "target": "revisions/energies_major_revision/figures/revision_model_maps.png",
+      "sha256": "7e1d84005d8981907132554ed91f13333355e33e1dc0ab7f096ffbe91db96859"
+    },
+    {
+      "source": "revisions/energies_major_revision/figures/revision_architecture.png",
+      "target": "revisions/energies_major_revision/figures/revision_architecture.png",
+      "sha256": "62426769393141eed8d2b9b00aa741a2c7aedef15414e84bc1a338a539787d12"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/failure_ledger.json",
+      "target": "revisions/energies_major_revision/results/failure_ledger.json",
+      "sha256": "036b7c7ca2c016a3173f89deeb96cba58ee8ebbc70bad4a120ef2d8d1c50195c"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/compliance_verification.json",
+      "target": "revisions/energies_major_revision/results/compliance_verification.json",
+      "sha256": "699bd6afb47db10d01d32384950a2de245122dfa73d6e50b87e2d227204f83c2"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/comparison_summary.csv",
+      "target": "revisions/energies_major_revision/results/comparison_summary.csv",
+      "sha256": "542710cfce8ea248fa15f3b7c6fba68723501d1c05d1b5680719ac6b0689b60b"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/execution_constraint_checks.json",
+      "target": "revisions/energies_major_revision/results/execution_constraint_checks.json",
+      "sha256": "4f5153c24256294fbd02b00d7e64ed18537daa6ee517d9d4167ad301aa26e1b9"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/ablation_and_comparison.json",
+      "target": "revisions/energies_major_revision/results/ablation_and_comparison.json",
+      "sha256": "52f74bc165ffa205838dfa93f37622ca4146c1a2d2970806b832302f093d3b43"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/frozen_kp40_audits.json",
+      "target": "revisions/energies_major_revision/results/frozen_kp40_audits.json",
+      "sha256": "c322376e9b32daf6e42b32221ee906b3a3ab56d38fa1202a698d2ed2f4abbce4"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/submitted_path_ablation.json",
+      "target": "revisions/energies_major_revision/results/submitted_path_ablation.json",
+      "sha256": "efac290d03099faf26b6dfdb28296e5f1909524f58d315ec40cd2e4f8a011bc5"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/model_consistency_checks.json",
+      "target": "revisions/energies_major_revision/results/model_consistency_checks.json",
+      "sha256": "38615bab92b03e3470ba3240b57926921da1d9ba6ed5e82830d8c6e5259de60a"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/revision_provenance.json",
+      "target": "revisions/energies_major_revision/results/revision_provenance.json",
+      "sha256": "8cf3d843586513624bb97ea55af3e10103541ac6e0e7c9c8f470f5e8b97cc0be"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/development_selection.json",
+      "target": "revisions/energies_major_revision/results/development_selection.json",
+      "sha256": "f88ce077f2e7f0b7c032acda4f68754df3c42c9bd7383ccbcb7ebda99d10d93a"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/submitted_reference.json",
+      "target": "revisions/energies_major_revision/results/submitted_reference.json",
+      "sha256": "c1d2c0016bf11ee363dbe6e096a67bba4d573489f53a382aa0e77075e51e142c"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/environment.json",
+      "target": "revisions/energies_major_revision/results/environment.json",
+      "sha256": "ebc11609e53934bc34664376d26c4e08c71b3baf1990e4b33af5fdc6cf0a5694"
+    },
+    {
+      "source": "revisions/energies_major_revision/results/parameter_ledger.csv",
+      "target": "revisions/energies_major_revision/results/parameter_ledger.csv",
+      "sha256": "f168a509f8205acc710fbe3951e58f841831b360c480f2c31663c2cc076a358e"
+    },
+    {
+      "source": "MDPI_template_ACS/paper1_hitch_control_machines.tex",
+      "target": "MDPI_template_ACS/paper1_hitch_control_machines.tex",
+      "sha256": "3c329e5b589ecbcec63c079bcc0eeec18015de7a261b0568387f6844f7d64358"
+    },
+    {
+      "source": "MDPI_template_ACS/paper1_hitch_control_machines.pdf",
+      "target": "MDPI_template_ACS/paper1_hitch_control_machines.pdf",
+      "sha256": "6b28a53a65dc1e32b38e7d582b26e6ff59d609d29f1e149ffd0f29e34bcde692"
+    },
+    {
+      "source": "MDPI_template_ACS/paper2_energy_management_energies.tex",
+      "target": "MDPI_template_ACS/paper2_energy_management_energies.tex",
+      "sha256": "da28738b814afdae24f904f1bae4a651af76df1661048fa733f652c4f61b9c33"
+    },
+    {
+      "source": "MDPI_template_ACS/paper2_energy_management_energies.pdf",
+      "target": "MDPI_template_ACS/paper2_energy_management_energies.pdf",
+      "sha256": "dfe80e7bc7b393a0764f56bca609aaeea5a1ac1a7f2c5d332ca1435713c61d82"
+    },
+    {
+      "source": "papers/figures/machines_revision_architecture.pdf",
+      "target": "papers/figures/machines_revision_architecture.pdf",
+      "sha256": "858908f85a67f08be35717c9084d2aa47e232098fbd84f6034c8c7d32b06450f"
+    },
+    {
+      "source": "papers/figures/machines_revision_comparison.pdf",
+      "target": "papers/figures/machines_revision_comparison.pdf",
+      "sha256": "6ee44d3f67f234f95cc312170eb8c811613375778c34bac874c3e6ef3eeab406"
+    },
+    {
+      "source": "papers/figures/machines_revision_noise.pdf",
+      "target": "papers/figures/machines_revision_noise.pdf",
+      "sha256": "04bf3b6452ccd5a3345325ee4adb1d67796b4d7189978fdb0652471fda834655"
+    },
+    {
+      "source": "papers/figures/machines_revision_integration.pdf",
+      "target": "papers/figures/machines_revision_integration.pdf",
+      "sha256": "a81e14460d8e5c155a3f4d534dafc4bfac966ec6040131728732c2e6f589d611"
+    },
+    {
+      "source": "papers/figures/machines_revision_dwell.pdf",
+      "target": "papers/figures/machines_revision_dwell.pdf",
+      "sha256": "95ac4087e39cfc5e28b38fb3e194db81850a11210e22eea094f21a6714a12ada"
+    },
+    {
+      "source": "papers/figures/machines_revision_load_step.pdf",
+      "target": "papers/figures/machines_revision_load_step.pdf",
+      "sha256": "9685efba578fe155cb80a56ea8252744e98fc48e21d6f18afb7112da989a19db"
+    },
+    {
+      "source": "papers/figures/machines_revision_original_noise.pdf",
+      "target": "papers/figures/machines_revision_original_noise.pdf",
+      "sha256": "6c4beffdce4e00fd8cfaa952a10883dd681cbd21398b7b120e2e4d471d5aaa5a"
+    },
+    {
+      "source": "submission_packages/Machines_Paper1_Editorial_Revision_2026-10-08/04_Supplementary_Materials.zip",
+      "target": "historical/paper1/original_supplement.zip",
+      "sha256": "0192559dc605f6d7b816ef9559ef93156ca4a990bf421295d9dbfd989ce7bf04"
+    },
+    {
+      "source": "revisions/machines_major_revision/evidence/submitted_paper1_hitch_control_machines.tex",
+      "target": "historical/paper1/submitted_manuscript.tex",
+      "sha256": "e1ca99b1e0c3702ec97e3fdea3af8216b2a100285a8a1f74f489deea8c50856a"
+    }
+  ],
+  "lossless_compressed_results": [
+    {
+      "path": "revisions/machines_major_revision/results/integration_1.json",
+      "compressed_path": "revisions/machines_major_revision/results/integration_1.json.gz",
+      "sha256": "cebbd61dd96bf1fedb3f9a522cb4c20dce1ee74bca8fd0f2a19f9eefd9b0d494",
+      "compressed_sha256": "e1e32c553e647f3e628040c8ecbc7ba61188120848eaed210f5916afea3efe90",
+      "bytes": 336193656,
+      "compressed_bytes": 48397107
+    },
+    {
+      "path": "revisions/machines_major_revision/results/original_noise_diagnostics.json",
+      "compressed_path": "revisions/machines_major_revision/results/original_noise_diagnostics.json.gz",
+      "sha256": "0e6f0df12187f47ba80eb62dd9ae528cd5ccc7b5e22ab208d981729b4a7d3005",
+      "compressed_sha256": "d1bdf4dda9047ca98de99aafe638595a2187fe0973f6c3ed5e1cee0ce3c2602c",
+      "bytes": 13072191,
+      "compressed_bytes": 1960301
+    },
+    {
+      "path": "revisions/machines_major_revision/results/pressure_noise_10.json",
+      "compressed_path": "revisions/machines_major_revision/results/pressure_noise_10.json.gz",
+      "sha256": "f1a146252b798c07cdad1631460c17fec5cb8509bf97281c6e4308a79e145829",
+      "compressed_sha256": "c37106fe5c49508b81bc5f061fde162144eedd194038f19f940e46539aa92ca0",
+      "bytes": 35918597,
+      "compressed_bytes": 5770278
+    },
+    {
+      "path": "revisions/machines_major_revision/results/both_noise_2.json",
+      "compressed_path": "revisions/machines_major_revision/results/both_noise_2.json.gz",
+      "sha256": "f2f0cee94004382b5598ae4e951734843d63796dc3299b62959bcf45a6f274f5",
+      "compressed_sha256": "ae7dbbb47033a53de7432bafa7b7fa4f6662846cfc5a05606dd6daa5e8615480",
+      "bytes": 34523197,
+      "compressed_bytes": 4947423
+    },
+    {
+      "path": "revisions/machines_major_revision/results/pressure_noise_2.json",
+      "compressed_path": "revisions/machines_major_revision/results/pressure_noise_2.json.gz",
+      "sha256": "f606487aecf8b64eee8d1a81b2eabe4705be4542cb6ccafb3d7ae7bed8afb0fc",
+      "compressed_sha256": "b113c6b99247179ce8fda5d8b011e8fb52b0fd499031d0e8bb1fb338db98b443",
+      "bytes": 34769419,
+      "compressed_bytes": 4950634
+    },
+    {
+      "path": "revisions/machines_major_revision/results/pressure_noise_20.json",
+      "compressed_path": "revisions/machines_major_revision/results/pressure_noise_20.json.gz",
+      "sha256": "7c16d5543089a3017df7b80363b31e4e6acac4d61f2dae675afc7969a24d040c",
+      "compressed_sha256": "92b4de71ac759d205600ba3f866f2799afea4c5629489bba023fcce027a8cd38",
+      "bytes": 35717062,
+      "compressed_bytes": 5627315
+    },
+    {
+      "path": "revisions/machines_major_revision/results/trajectory_pid.json",
+      "compressed_path": "revisions/machines_major_revision/results/trajectory_pid.json.gz",
+      "sha256": "5388987eeb94b0352d56365984321e357a23677a24d6c5dbeb7c881a4eb35010",
+      "compressed_sha256": "847625ef339edd36751bc9ac30af0353ae873ea866bf130d6673124ac8e2fdc5",
+      "bytes": 72874607,
+      "compressed_bytes": 11542702
+    },
+    {
+      "path": "revisions/machines_major_revision/results/pressure_noise_4.json",
+      "compressed_path": "revisions/machines_major_revision/results/pressure_noise_4.json.gz",
+      "sha256": "70bb52505734d3bf9cbd84cd6f05c37dc74454f19f3db27ac8bf01d6b6a02608",
+      "compressed_sha256": "679fa9988b02e99287aae8a2a5b5e9d1cf60b233f514e54bb28d8541e95d5141",
+      "bytes": 35462780,
+      "compressed_bytes": 5295703
+    },
+    {
+      "path": "revisions/machines_major_revision/results/trajectory_nominal.json",
+      "compressed_path": "revisions/machines_major_revision/results/trajectory_nominal.json.gz",
+      "sha256": "795a5eecb118ecb0bafe872a676e1fd3058161a46810de9c494308324c26a4b5",
+      "compressed_sha256": "b660e088fac5b2114cb423aeec2987e9649cca90585d6f73b8ac7d27aa501be3",
+      "bytes": 67239511,
+      "compressed_bytes": 9685359
+    },
+    {
+      "path": "revisions/machines_major_revision/results/integration_10.json",
+      "compressed_path": "revisions/machines_major_revision/results/integration_10.json.gz",
+      "sha256": "4bcd35ace494b2b64351e9841ca01277753381807c81473db71f245675348362",
+      "compressed_sha256": "3302d389cc75ad574d78f4daaa8d6829ea7667c61ca6314fe2175005aeeb3c9e",
+      "bytes": 336214882,
+      "compressed_bytes": 45463831
+    },
+    {
+      "path": "revisions/machines_major_revision/results/pressure_noise_1.json",
+      "compressed_path": "revisions/machines_major_revision/results/pressure_noise_1.json.gz",
+      "sha256": "48d6bef36ad884e30c125011b5e6c33260716e4e3258e67a1703836ff06a4352",
+      "compressed_sha256": "41ccc90f1ab4ef5f71324dfc70e2728ea7294f7d4688d636d4b41c8e349b9858",
+      "bytes": 33609581,
+      "compressed_bytes": 4906751
+    }
+  ]
+}

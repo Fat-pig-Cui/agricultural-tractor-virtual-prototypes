@@ -1,8 +1,9 @@
 """Lift-control baselines and a virtual-prototype leakage estimator.
 
-The estimator uses the known simulated command and a pressure-state transition
-to infer the leakage coefficient.  It is deliberately model-level: it is not
-presented as a calibrated online identifier for a physical hitch.
+The historical estimator inverts a pressure-rate surrogate and estimates a
+virtual kappa in m^2/s, not a physical leakage coefficient. Archived variable
+names are retained for replay. This is separate from the primary V2 interface
+observer and is not a calibrated physical leakage identifier.
 """
 from __future__ import annotations
 from dataclasses import dataclass
@@ -47,7 +48,7 @@ class PressureObserver:
         return 1.0 + self.temperature_leakage_gain_per_c * max(0.0, temperature_c - 25.0)
 
     def flow_estimate(self, pressure_delta_pa: float, temperature_c: float) -> float:
-        """Return the current model-level leakage-flow proxy."""
+        """Return historical kappa times pressure (m^2 Pa/s), not volume flow."""
         return (self.leakage_estimate or self.nominal_leakage_m3_s_pa) * self.temperature_factor(temperature_c) * max(pressure_delta_pa, 0.0)
 
     def update_transition(self, *, pressure_before_pa: float, pressure_after_pa: float,

@@ -1,0 +1,335 @@
+{
+  "tasks": [
+    [
+      "mechanical_mass_kg_0.7",
+      "observer_hybrid",
+      4300,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 840.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_0.7",
+      "observer_hybrid",
+      4301,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 840.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_0.7",
+      "observer_hybrid",
+      4302,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 840.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_0.7",
+      "observer_hybrid",
+      4303,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 840.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_0.7",
+      "observer_hybrid",
+      4304,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 840.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_1.3",
+      "observer_hybrid",
+      4300,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 1560.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_1.3",
+      "observer_hybrid",
+      4301,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 1560.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_1.3",
+      "observer_hybrid",
+      4302,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 1560.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_1.3",
+      "observer_hybrid",
+      4303,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 1560.0
+        }
+      }
+    ],
+    [
+      "mechanical_mass_kg_1.3",
+      "observer_hybrid",
+      4304,
+      {},
+      {
+        "plant_overrides": {
+          "mass_kg": 1560.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_0.7",
+      "observer_hybrid",
+      4300,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 1540.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_0.7",
+      "observer_hybrid",
+      4301,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 1540.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_0.7",
+      "observer_hybrid",
+      4302,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 1540.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_0.7",
+      "observer_hybrid",
+      4303,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 1540.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_0.7",
+      "observer_hybrid",
+      4304,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 1540.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_1.3",
+      "observer_hybrid",
+      4300,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 2860.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_1.3",
+      "observer_hybrid",
+      4301,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 2860.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_1.3",
+      "observer_hybrid",
+      4302,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 2860.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_1.3",
+      "observer_hybrid",
+      4303,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 2860.0
+        }
+      }
+    ],
+    [
+      "mechanical_viscous_n_s_m_1.3",
+      "observer_hybrid",
+      4304,
+      {},
+      {
+        "plant_overrides": {
+          "viscous_n_s_m": 2860.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_0.7",
+      "observer_hybrid",
+      4300,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 12600.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_0.7",
+      "observer_hybrid",
+      4301,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 12600.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_0.7",
+      "observer_hybrid",
+      4302,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 12600.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_0.7",
+      "observer_hybrid",
+      4303,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 12600.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_0.7",
+      "observer_hybrid",
+      4304,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 12600.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_1.3",
+      "observer_hybrid",
+      4300,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 23400.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_1.3",
+      "observer_hybrid",
+      4301,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 23400.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_1.3",
+      "observer_hybrid",
+      4302,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 23400.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_1.3",
+      "observer_hybrid",
+      4303,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 23400.0
+        }
+      }
+    ],
+    [
+      "mechanical_stiffness_n_m_1.3",
+      "observer_hybrid",
+      4304,
+      {},
+      {
+        "plant_overrides": {
+          "stiffness_n_m": 23400.0
+        }
+      }
+    ]
+  ],
+  "controller": "All controller and observer plant coefficients remain nominal; only true plant is altered"
+}

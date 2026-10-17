@@ -1,0 +1,42 @@
+{
+  "task": {
+    "family": "comparators",
+    "group": "observer_hybrid_20",
+    "chain": "observer_hybrid",
+    "seed": 4301,
+    "substeps": 20,
+    "overrides": {}
+  },
+  "row": {
+    "controller": "observer_hybrid",
+    "seed": 4301,
+    "hold_started": true,
+    "hold_start_time_s": 11.91,
+    "final_mode": "LOCK",
+    "mode_switches": 13,
+    "hold_drop_mm": 1.6591989266648843,
+    "post_transition_rmse_mm": 1.17047764885602,
+    "post_transition_max_abs_error_mm": 8.670260219051261,
+    "terminal_error_mm": 1.126582382942165,
+    "command_energy": 3.6474452731591924,
+    "command_total_variation": 64.39188273435445,
+    "accumulator_valve_energy": 0.0,
+    "accumulator_oil_used_ml": 0.0,
+    "peak_pressure_mpa": 11.224740370612087,
+    "relief_activation_count": 0,
+    "final_position_m": 0.3488734176170578,
+    "observer_final_load_n": 13965.551167905065,
+    "observer_final_leakage_m3_s_pa": 1.08824127261747e-11,
+    "stroke_boundary_samples": 0,
+    "accumulator_active_time_s": 0.0,
+    "minimum_accumulator_pressure_mpa": 14.0,
+    "final_accumulator_pressure_mpa": 14.0,
+    "mode_times_s": {
+      "TRACK": 12.91,
+      "FINE_TRIM": 56.0,
+      "LOCK": 1731.0900000000001
+    }
+  },
+  "reused_from": "rk4_integration_20.json",
+  "reused_sha256": "6fc0ae7573453c53520494213a5998399e7088ad29eefe3854122c172b9a01bb"
+}

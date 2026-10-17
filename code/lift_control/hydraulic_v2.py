@@ -112,6 +112,98 @@ class TwoChamberHydraulicPlant:
             q_b = -self._orifice(area, p.supply_pressure_pa - p_b_pa)
         return q_a, q_b
 
+    def _rates(self, state: HydraulicV2State, command: float, load_n: float,
+               temperature_c: float, accumulator_valve: float = 0.0,
+               leakage_scale: float = 1.0, step_s: float | None = None) -> tuple:
+        """Continuous plant rates used by the optional higher-order audit.
+
+        The submitted path remains in :meth:`step` below.  This helper keeps
+        the same valve, leakage, accumulator and friction laws, but exposes
+        their rates so an RK4 plant update can be tested without changing the
+        10 ms controller or measurement interface.
+        """
+        p = self.p
+        h = p.dt_s if step_s is None else step_s
+        command = max(-1.0, min(1.0, command))
+        spool_rate = (command - state.spool) / max(p.valve_time_constant_s, h)
+        q_a, q_b = self.valve_flows(state.spool, state.p_a_pa, state.p_b_pa)
+        temperature_factor = 1.0 + p.temperature_leakage_gain_per_c * max(
+            0.0, temperature_c - 25.0)
+        q_leak = (p.internal_leakage_m3_s_pa * leakage_scale
+                  * temperature_factor * (state.p_a_pa - state.p_b_pa))
+        p_acc = self.accumulator_pressure(state)
+        acc_open = max(0.0, min(1.0, accumulator_valve))
+        q_acc = (acc_open * p.accumulator_valve_coefficient_m3_s_pa_sqrt
+                 * sqrt(max(p_acc - state.p_a_pa, 0.0)))
+        available_oil = max(0.0, p.accumulator_shell_volume_m3
+                            - state.accumulator_gas_volume_m3)
+        q_acc = min(q_acc, available_oil / max(h, 1e-9))
+        volume_a = p.chamber_dead_volume_m3 + p.piston_area_m2 * state.x_m
+        volume_b = (p.chamber_dead_volume_m3
+                    + p.piston_area_m2 * (p.stroke_m - state.x_m))
+        dp_a = (p.effective_bulk_modulus_pa / max(volume_a, 1e-8)
+                * (q_a + q_acc - p.piston_area_m2 * state.v_m_s - q_leak))
+        dp_b = (p.effective_bulk_modulus_pa / max(volume_b, 1e-8)
+                * (p.piston_area_m2 * state.v_m_s - q_b + q_leak))
+        velocity_sign = 0.0 if abs(state.v_m_s) < 1e-7 else copysign(1.0, state.v_m_s)
+        stribeck = (p.coulomb_n + p.stribeck_n
+                    * max(0.0, 1.0 - abs(state.v_m_s) / p.stribeck_velocity_m_s))
+        friction = p.viscous_n_s_m * state.v_m_s + velocity_sign * stribeck
+        force = (p.piston_area_m2 * (state.p_a_pa - state.p_b_pa) - load_n
+                 - p.stiffness_n_m * state.x_m - friction)
+        acceleration = force / p.mass_kg
+        return (state.v_m_s, acceleration, dp_a, dp_b, spool_rate, q_acc,
+                q_a, q_b, q_leak)
+
+    def step_rk4(self, state: HydraulicV2State, command: float, load_n: float,
+                 temperature_c: float, accumulator_valve: float = 0.0,
+                 leakage_scale: float = 1.0) -> HydraulicV2Step:
+        """One event-clipped RK4 plant step for convergence auditing.
+
+        Pressure and stroke events are projected at the end of the step,
+        matching the safety bounds of the submitted implementation.  This is
+        a numerical refinement arm, not a replacement of the nominal path.
+        """
+        h = self.p.dt_s
+        def add(s, k, scale):
+            return HydraulicV2State(s.x_m + scale*k[0], s.v_m_s + scale*k[1],
+                                    s.p_a_pa + scale*k[2], s.p_b_pa + scale*k[3],
+                                    s.spool + scale*k[4],
+                                    s.accumulator_gas_volume_m3 + scale*k[5])
+        k1 = self._rates(state, command, load_n, temperature_c,
+                         accumulator_valve, leakage_scale, h)
+        k2 = self._rates(add(state, k1, h/2), command, load_n, temperature_c,
+                         accumulator_valve, leakage_scale, h)
+        k3 = self._rates(add(state, k2, h/2), command, load_n, temperature_c,
+                         accumulator_valve, leakage_scale, h)
+        k4 = self._rates(add(state, k3, h), command, load_n, temperature_c,
+                         accumulator_valve, leakage_scale, h)
+        vals = [sum(w*k[i] for w,k in zip((1,2,2,1),(k1,k2,k3,k4))) * h/6
+                for i in range(6)]
+        p = self.p
+        position = state.x_m + vals[0]
+        velocity = state.v_m_s + vals[1]
+        p_a = state.p_a_pa + vals[2]
+        p_b = state.p_b_pa + vals[3]
+        spool = state.spool + vals[4]
+        gas_volume = state.accumulator_gas_volume_m3 + vals[5]
+        relief = p_a > p.relief_pressure_pa or p_b > p.relief_pressure_pa
+        p_a = max(p.tank_pressure_pa, min(p.relief_pressure_pa, p_a))
+        p_b = max(p.tank_pressure_pa, min(p.relief_pressure_pa, p_b))
+        if position <= 0.0 or position >= p.stroke_m:
+            position = max(0.0, min(p.stroke_m, position))
+            velocity = 0.0
+        next_state = HydraulicV2State(
+            position, velocity, p_a, p_b,
+            max(-1.0, min(1.0, spool)),
+            max(0.0, min(p.accumulator_shell_volume_m3, gas_volume)),
+        )
+        # Diagnostics use the endpoint rates, so the reported flows remain
+        # comparable with the Euler path while the state update is RK4.
+        end = self._rates(next_state, command, load_n, temperature_c,
+                          accumulator_valve, leakage_scale, h)
+        return HydraulicV2Step(next_state, end[6], end[7], end[8], end[5], relief)
+
     def step(self, state: HydraulicV2State, command: float, load_n: float,
              temperature_c: float, accumulator_valve: float = 0.0,
              leakage_scale: float = 1.0) -> HydraulicV2Step:

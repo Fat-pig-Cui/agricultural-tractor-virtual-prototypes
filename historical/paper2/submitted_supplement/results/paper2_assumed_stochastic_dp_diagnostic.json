@@ -1,0 +1,84 @@
+{
+  "purpose": "Offline complete-future dynamic-programming diagnostic on one stochastic assumed-map seed; not an online controller result, formal bound, or manuscript performance result.",
+  "seed": 2128,
+  "constraints": {
+    "stable_engine_floor_w": 60000.0,
+    "engine_ramp_w_per_s": 40000.0,
+    "battery_bus_limit_w": 150000.0,
+    "motor_peak_w": 150000.0,
+    "terminal_soc_tolerance": 0.01
+  },
+  "baseline": {
+    "fuel_l": 8.449408916698506,
+    "soc_error": -2.4871996473496694e-07,
+    "valid": true,
+    "max_shortage_w": 0.0,
+    "max_motor_power_violation_w": 0.0,
+    "max_battery_power_violation_w": 0.0,
+    "max_mg1_power_violation_w": 0.0,
+    "max_mg1_speed_violation_rpm": 0.0,
+    "max_mg2_speed_violation_rpm": 0.0,
+    "max_engine_ramp_violation_w": 0.0
+  },
+  "dp_result": {
+    "soc_step": 0.001,
+    "feasible": true,
+    "fuel_l": 6.414159679828245,
+    "terminal_soc_grid": 0.5500000000000003,
+    "terminal_soc_error_grid": 2.220446049250313e-16,
+    "terminal_engine_w": 120000.0,
+    "soc_grid_count": 601,
+    "engine_grid_count": 51,
+    "engine_grid_step_w": 4000.0,
+    "continuous_rollout": {
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0,
+      "fuel_l": 6.414159679827799,
+      "soc_error": -0.039722955078260624,
+      "min_soc": 0.5055002215936657,
+      "max_soc": 0.5530884089200309,
+      "strict_valid": false
+    },
+    "saving_vs_realistic_ool_pct": 24.087474720841268
+  },
+  "continuous_terminal_correction": {
+    "available": true,
+    "zero_bias": {
+      "bias_w": 0.0,
+      "fuel_l": 6.414159679827799,
+      "soc_error": -0.039722955078260624,
+      "min_soc": 0.5055002215936657,
+      "max_soc": 0.5530884089200309,
+      "ramp_path_feasible": true,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0,
+      "strict_valid": false
+    },
+    "corrected": {
+      "bias_w": 41195.59871032834,
+      "fuel_l": 7.863340036969404,
+      "soc_error": 1.3013257138538847e-11,
+      "min_soc": 0.5414826754079537,
+      "max_soc": 0.556145447036596,
+      "ramp_path_feasible": true,
+      "max_shortage_w": 0.0,
+      "max_motor_power_violation_w": 0.0,
+      "max_battery_power_violation_w": 0.0,
+      "max_mg1_power_violation_w": 0.0,
+      "max_mg1_speed_violation_rpm": 0.0,
+      "max_mg2_speed_violation_rpm": 0.0,
+      "max_engine_ramp_violation_w": 0.0,
+      "strict_valid": true
+    }
+  }
+}

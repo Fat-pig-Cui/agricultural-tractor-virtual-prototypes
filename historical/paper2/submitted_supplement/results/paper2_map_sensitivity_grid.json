@@ -1,0 +1,3349 @@
+{
+  "purpose": "Fixed-controller low-load efficiency-map sensitivity; theoretical virtual model only.",
+  "seeds": [
+    2260,
+    2261,
+    2262,
+    2263,
+    2264,
+    2265,
+    2266,
+    2267,
+    2268,
+    2269,
+    2270,
+    2271,
+    2272,
+    2273,
+    2274,
+    2275,
+    2276,
+    2277,
+    2278,
+    2279
+  ],
+  "low_load_efficiency_levels": [
+    0.08,
+    0.12,
+    0.16,
+    0.2,
+    0.25,
+    0.3,
+    0.35
+  ],
+  "fixed_ecms_factor": 2.0,
+  "controller_settings": "H=8, five scenarios, public nominal phase preview, terminal SOC 1e-4, shared 300 kW platform",
+  "cases": [
+    {
+      "low_load_efficiency": 0.08,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": 12.542897932668222,
+            "std": 0.06904316193881156,
+            "ci95_low": 12.510585109580546,
+            "ci95_high": 12.575210755755897
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 8.047824032145297,
+              "soc_error": -8.452571975681167e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.5096131660413
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.373047569069048,
+              "soc_error": -9.625189534290257e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.57710895494789
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 8.007620942980061,
+              "soc_error": -5.711933965812932e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.625387555661712
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 8.078005402278743,
+              "soc_error": -5.756617404983899e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.550716319863442
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 8.020866208361621,
+              "soc_error": -6.452727241423872e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.443064383537571
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.943454830887406,
+              "soc_error": -6.770584093374055e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.498190933879728
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.345861073587454,
+              "soc_error": -3.2807090377673376e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.485986539442772
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.312366422329042,
+              "soc_error": -8.629319481201492e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.628032042557777
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.349432572926634,
+              "soc_error": 1.8829271475340192e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.628006948058173
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 8.013401219388255,
+              "soc_error": -4.243883022780892e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.490383529616851
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 8.154726014141968,
+              "soc_error": 3.745781462782816e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.413711828770165
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.95328935273754,
+              "soc_error": -2.355893258254582e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.52121004583287
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 8.206972493787339,
+              "soc_error": -2.4353852268177434e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.574342254982529
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 8.190288194712462,
+              "soc_error": 6.757716608518649e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.582139687414132
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 8.040350930101186,
+              "soc_error": 9.876544027065393e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.57378237804059
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.307585639417823,
+              "soc_error": -2.8751601099941126e-10,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.688868997395748
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.2420323200519,
+              "soc_error": -1.0388245819115127e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.519765996107168
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.948030450559963,
+              "soc_error": -4.585332114004359e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.466187706325432
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.348767836340944,
+              "soc_error": -4.7266635050391415e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.52346173959128
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.982777394737264,
+              "soc_error": 3.5764140338123696e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 12.55799764529731
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -3.4636388810905507,
+            "std": 1.7488883629383458,
+            "ci95_low": -4.282134423368916,
+            "ci95_high": -2.645143338812185
+          },
+          "mean_safety_filter_activation_count": 35.8,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 9.71859460610675,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -5.6538510502254615
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 9.824053999117917,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -2.5728320902259614
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 9.625323697449456,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -5.02606625669863
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 9.424447944942527,
+              "soc_error": -2.4073639428134896e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": -2.0253368032496626
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 9.349308646201235,
+              "soc_error": -6.042861621313733e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 85,
+              "saving_vs_same_seed_ool_pct": -2.058405405204659
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 9.623036022680774,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -6.003379967472218
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 9.69061814231221,
+              "soc_error": -2.8015335499786964e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.615025588113666
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 9.728844199847806,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -2.260682518598687
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 9.72115358336683,
+              "soc_error": -4.1783804872075336e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.7262617458410654
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 9.694250899884882,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -5.8651819609445655
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 9.577038832091947,
+              "soc_error": -4.020978878405135e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -2.8627180753813772
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 9.651898824961131,
+              "soc_error": -9.095543627157809e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -6.16191521776142
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 9.599521162517606,
+              "soc_error": -5.299508448963763e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": -2.259932308244335
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 9.636527755102547,
+              "soc_error": -5.3866635998156553e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -2.8540897666770793
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 9.73049549648177,
+              "soc_error": -4.061650964315433e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -5.803891427187423
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 9.829663813711488,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -3.307880556578371
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 9.611574695306906,
+              "soc_error": -4.256054799955944e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": -2.01644095057959
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 9.270613375686358,
+              "soc_error": -5.780640477648369e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 139,
+              "saving_vs_same_seed_ool_pct": -2.099776305887995
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 9.704158937125355,
+              "soc_error": -5.697106943880481e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.678025690624419
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 9.624128257742845,
+              "soc_error": -6.219602641932553e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -5.421083936314432
+            }
+          ]
+        }
+      }
+    },
+    {
+      "low_load_efficiency": 0.12,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": 8.752278329920646,
+            "std": 0.12884259140430152,
+            "ci95_low": 8.691978833992367,
+            "ci95_high": 8.812577825848924
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.930531917456256,
+              "soc_error": -8.452571975681167e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.649318075446542
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.2571290487016,
+              "soc_error": -9.625189534290257e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.902251785465133
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.870924183973711,
+              "soc_error": -5.711933965812932e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.766132096562867
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.950980149708636,
+              "soc_error": -5.756617404983899e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.74669101820291
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.893291078943369,
+              "soc_error": -6.452727241423872e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.569205628462889
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.81630884453439,
+              "soc_error": -6.770584093374055e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.59263727849019
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.21679728952357,
+              "soc_error": -3.2807090377673376e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.808628830855
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.197787770899906,
+              "soc_error": -8.629319481201492e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.916364718092023
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.225694785862395,
+              "soc_error": 1.8829271475340192e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.964126739835601
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.890016628767468,
+              "soc_error": -4.243883022780892e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.61385646789527
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 8.024854094140748,
+              "soc_error": 3.745781462782816e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.650558819603711
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.819483568863001,
+              "soc_error": -2.355893258254582e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.630817594192711
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 8.07297473851803,
+              "soc_error": -2.4353852268177434e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.840380829798999
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 8.06912334822309,
+              "soc_error": 6.757716608518649e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.832431450438746
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.907029700134757,
+              "soc_error": 9.876544027065393e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.709424479086533
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.19195746435998,
+              "soc_error": -2.8751601099941126e-10,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.969230741508165
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.130906446946199,
+              "soc_error": -1.0388245819115127e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.760655183197414
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.816259339882008,
+              "soc_error": -4.585332114004359e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.58473006938028
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.225018223151451,
+              "soc_error": -4.7266635050391415e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.846695993918342
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.855219123094458,
+              "soc_error": 3.5764140338123696e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 8.691428797979587
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -2.581167301069452,
+            "std": 1.309435294417589,
+            "ci95_low": -3.193994840033721,
+            "ci95_high": -1.9683397621051826
+          },
+          "mean_safety_filter_activation_count": 35.9,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 9.051674845663207,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -4.264969653622495
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 9.234549813495224,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.8812578588257018
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 8.945765144749258,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -3.692620642063075
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 8.840580105549313,
+              "soc_error": -2.2728263167182128e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": -1.463237583303798
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 8.762504901558888,
+              "soc_error": -6.061905731147288e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 86,
+              "saving_vs_same_seed_ool_pct": -1.4992068354413126
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 8.932162874668352,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -4.456651855988662
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 9.121986706962703,
+              "soc_error": -3.8164800375772856e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.237312578618471
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 9.150977799034699,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.6742989223074558
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 9.147344680549732,
+              "soc_error": -6.574271110304508e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.23600895535283
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 9.015594945296348,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -4.423158082351833
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 8.975496061410114,
+              "soc_error": -4.020978878405135e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -2.1708980510071587
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 8.950950606506522,
+              "soc_error": -8.916177879347842e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -4.59016013894952
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 9.001747962700389,
+              "soc_error": -2.8174001714509345e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": -1.6472790668658084
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 9.045640439329677,
+              "soc_error": -2.8650795862006362e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -2.200574862803762
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 9.040000090876411,
+              "soc_error": -4.107840684863806e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -4.371280025817138
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 9.219024830834485,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -2.4437597259383166
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 9.04735822777581,
+              "soc_error": -4.2596900997171616e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": -1.5231256701034253
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 8.686897394377617,
+              "soc_error": -5.92328234657602e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 140,
+              "saving_vs_same_seed_ool_pct": -1.597840557144904
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 9.137168625470634,
+              "soc_error": -5.693882242663317e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.2621597758884024
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 8.94598330365305,
+              "soc_error": -6.13541911107518e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -3.987545178994977
+            }
+          ]
+        }
+      }
+    },
+    {
+      "low_load_efficiency": 0.16,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": 6.136381443760397,
+            "std": 0.189410334510028,
+            "ci95_low": 6.047735697271788,
+            "ci95_high": 6.225027190249007
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.850741090295623,
+              "soc_error": -8.436029652614252e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 5.9808775857202106
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.178395184294537,
+              "soc_error": -9.611311746482443e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.3757980523877835
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.778156121818103,
+              "soc_error": -5.711911319483676e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.093199028671841
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.86470427382819,
+              "soc_error": -5.7450710855277975e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.122445368277282
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.806785646190695,
+              "soc_error": -6.441291944270233e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 5.889416071880202
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.729690013301255,
+              "soc_error": -6.754707904121915e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 5.890602164305235
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.12906268425917,
+              "soc_error": -3.269606807521086e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.280745063566052
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.119845448121794,
+              "soc_error": -8.617440094838003e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.363206437810202
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.141628393383794,
+              "soc_error": 1.8837265081117494e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.445732849962369
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.805788773091554,
+              "soc_error": -4.242639572993312e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 5.93659629345312
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.936696726202606,
+              "soc_error": 3.748223953436991e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.057003402581448
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.728666402411919,
+              "soc_error": -2.3447910280083306e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 5.928843327168968
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.981638790265574,
+              "soc_error": -2.428390821762605e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.271259172330895
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.9867890879074155,
+              "soc_error": 6.759415249746326e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.248722522950327
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.816423415635513,
+              "soc_error": 9.898748487557896e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.032394755427565
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.113247426080642,
+              "soc_error": -2.874958049403631e-10,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.4036222164436305
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.055248821698674,
+              "soc_error": -1.0374479053609775e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.172926604854183
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.727127151164182,
+              "soc_error": -4.57389681685072e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 5.897957088363652
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.140786797191254,
+              "soc_error": -4.7156722970953524e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.320079615622127
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.76872531404878,
+              "soc_error": 3.576414318029464e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 6.016201253430846
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -1.9209765235279002,
+            "std": 1.0252422144561686,
+            "ci95_low": -2.400799135462998,
+            "ci95_high": -1.4411539115928025
+          },
+          "mean_safety_filter_activation_count": 35.8,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 8.623075379250084,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -3.2684647658845734
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.855221683341837,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.3723407208507437
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 8.511592702867716,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -2.761686623278574
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 8.465454824495653,
+              "soc_error": -2.7075185653924194e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": -1.0484526943488834
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 8.382613570512872,
+              "soc_error": -6.0788830333002863e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 84,
+              "saving_vs_same_seed_ool_pct": -1.0521735472122387
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 8.49083053976592,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -3.376325292122066
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.752196904212726,
+              "soc_error": -2.3753722427799495e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.903315028937147
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.775307383389718,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.1954785535097756
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.77879178647668,
+              "soc_error": -2.089665852333944e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.875818984075787
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 8.579528439006724,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -3.3873283827614955
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 8.585885968210887,
+              "soc_error": -4.020978878405135e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -1.6271484375310574
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 8.503153574822784,
+              "soc_error": -8.916177879347842e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -3.4979970025189053
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 8.614191896995022,
+              "soc_error": -2.8174001714509345e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": -1.1568402140619898
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 8.65678893502152,
+              "soc_error": -2.8650795862006362e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -1.6159325825011628
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 8.596034307570294,
+              "soc_error": -4.107840684863806e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -3.339944055076891
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.824302303536212,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -1.7992782302055161
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.680184650569881,
+              "soc_error": -4.242143792931863e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": -1.106289863891721
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 8.305836353932234,
+              "soc_error": -6.709435198770652e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 140,
+              "saving_vs_same_seed_ool_pct": -1.149645101543809
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.768270402216782,
+              "soc_error": -5.693701572706544e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.9006738110092091
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 8.512717078126816,
+              "soc_error": -6.13541911107518e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -2.984396579236459
+            }
+          ]
+        }
+      }
+    },
+    {
+      "low_load_efficiency": 0.2,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": 4.246846094153435,
+            "std": 0.23870738395317564,
+            "ci95_low": 4.135128883486917,
+            "ci95_high": 4.358563304819953
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.7904822672771825,
+              "soc_error": -7.953637748414621e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.050208697273993
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.119016859982485,
+              "soc_error": -9.106604359487847e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.556041663066567
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.708553034148592,
+              "soc_error": -5.711154401621954e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.156489666044634
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.79980824903427,
+              "soc_error": -5.350164755668629e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.228312257973903
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.741700374704293,
+              "soc_error": -5.9506843896883765e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.9514625743798137
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.664160916706757,
+              "soc_error": -6.309064382037377e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.937727612371031
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.063078309218149,
+              "soc_error": -2.5213164889237305e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.460880746194246
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.060998334876942,
+              "soc_error": -8.185785382863742e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.523134699671187
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.078453162605186,
+              "soc_error": 1.9176771282047866e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.631354968254387
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.742113063515668,
+              "soc_error": -4.199962599926721e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.001786477511555
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.870348527103711,
+              "soc_error": 3.819278227013001e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.187851466595132
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.660341432635885,
+              "soc_error": -1.8773871346411397e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.966496367292908
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.912970385721367,
+              "soc_error": -2.2288837442374643e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.419613677088231
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.9247402191877265,
+              "soc_error": 6.819589337681009e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.385048237258927
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.748276764844944,
+              "soc_error": 1.0862422072932532e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.092049786608617
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.053847343355805,
+              "soc_error": -2.8673319274474807e-10,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.547856826336708
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 7.998094779385372,
+              "soc_error": -9.866107930633916e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.306017423072965
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.660354061053261,
+              "soc_error": -3.93352017624693e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.9536478479886306
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.077376592562821,
+              "soc_error": -4.32454072551991e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.5004075429360535
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.703717442108554,
+              "soc_error": 3.57642419790416e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 4.0805333451492
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -1.408541531934992,
+            "std": 0.8340963772620729,
+            "ci95_low": -1.798906166457755,
+            "ci95_high": -1.0181768974122292
+          },
+          "mean_safety_filter_activation_count": 35.9,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 8.324038564442137,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -2.5212221339427603
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.590309488143419,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.9842884954291243
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 8.209925601821602,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -2.0772751738748227
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 8.199652731380167,
+              "soc_error": -2.7066266580777487e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": -0.68126752731693
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 8.11596982600713,
+              "soc_error": -6.081353141695889e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 86,
+              "saving_vs_same_seed_ool_pct": -0.6919660860970988
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 8.184230209600003,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -2.5807991536118107
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.490023824150828,
+              "soc_error": -1.6276218880006965e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.5979810063199803
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.510966336328448,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.8064203354868014
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.51574812817733,
+              "soc_error": -6.008835422655068e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.5310477227541294
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 8.275323575721151,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -2.6097491824822057
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 8.312558857751457,
+              "soc_error": -4.020978878405135e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -1.1955342547764405
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 8.192061638769452,
+              "soc_error": -8.916177879347842e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -2.6993885408868534
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 8.342745927485465,
+              "soc_error": -2.8174001714509345e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": -0.7716242919145286
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 8.384789602484025,
+              "soc_error": -2.8650795862006362e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -1.1656194661251735
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 8.286417660067853,
+              "soc_error": -4.107840684863806e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -2.5690429638465124
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.547781543690713,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -1.3061252518847588
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.420408443137763,
+              "soc_error": -4.250929837557038e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": -0.7467954649764943
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 8.038151664448652,
+              "soc_error": -5.9260359808521734e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 140,
+              "saving_vs_same_seed_ool_pct": -0.7832195825111113
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.509347793787247,
+              "soc_error": -6.256269685223081e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.6068290947743278
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 8.2117197351613,
+              "soc_error": -6.13541911107518e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -2.244634909687981
+            }
+          ]
+        }
+      }
+    },
+    {
+      "low_load_efficiency": 0.25,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": 3.2694420640293225,
+            "std": 0.23383930177303405,
+            "ci95_low": 3.160003159770651,
+            "ci95_high": 3.378880968287994
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.669346041911486,
+              "soc_error": -4.491962357633383e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.0807293548606642
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.006272888970393,
+              "soc_error": -5.532796443219468e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.568118135387947
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.579045121536077,
+              "soc_error": -5.706790972004328e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.184864115450144
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.677230422022788,
+              "soc_error": -2.560396339390536e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.260108961046587
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.6149270613188245,
+              "soc_error": -2.5303092954231943e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.9988364612353684
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.536265825463139,
+              "soc_error": -3.2940317140628395e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.986125387830082
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 7.943926261878845,
+              "soc_error": 2.227107387398064e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.4827876203427284
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 7.947210832844766,
+              "soc_error": -4.9932280532516415e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.5391744860613215
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 7.962109072946744,
+              "soc_error": 2.14572803969304e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.653073120006683
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.618513566234474,
+              "soc_error": -3.91648935504918e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.025760601452551
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.748665601109758,
+              "soc_error": 4.246603069191224e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.209432761776517
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.529244851980142,
+              "soc_error": 8.781864124784988e-14,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.006589862349152
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.789170373280279,
+              "soc_error": -1.0044187703783791e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.45061589294628
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.808395641606426,
+              "soc_error": 7.215550379413571e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.386762525532279
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.619420174091422,
+              "soc_error": 1.687538997430238e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.1197427606424144
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 7.936604991485798,
+              "soc_error": -2.8123992024120525e-10,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.5779852869155664
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 7.884567303875755,
+              "soc_error": -5.9745541847178174e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.319401820935207
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.534891653193233,
+              "soc_error": -4.4209080840573733e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.969139531696594
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 7.96172277263203,
+              "soc_error": -1.793898363189328e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.506737421995118
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.582487877280172,
+              "soc_error": 3.5764819794614766e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.0628551721232458
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -0.9176793903630335,
+            "std": 0.6633305051032242,
+            "ci95_low": -1.2281240550939783,
+            "ci95_high": -0.6072347256320887
+          },
+          "mean_safety_filter_activation_count": 35.9,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 8.056884756475556,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -1.816685542973727
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.353447062051726,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.6134354175947874
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.941334360384281,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -1.4430383875884176
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.962502240733679,
+              "soc_error": -2.273229625449069e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": -0.334568174006028
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.876843614074028,
+              "soc_error": -6.381689664514134e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 86,
+              "saving_vs_same_seed_ool_pct": -0.3375330355089506
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.911282880302225,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -1.841445504462387
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.253913905343309,
+              "soc_error": -3.933342933615247e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.28350403859480366
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.273122478743678,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.4166418461401246
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.279335249023866,
+              "soc_error": -5.788498853365187e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.18557903998073078
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 8.003588984728779,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -1.875772420036768
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 8.066022561950145,
+              "soc_error": -4.054127758934545e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -0.7547543432058488
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.915120002345429,
+              "soc_error": -8.916177879347842e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -1.9643398201228974
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 8.099408811263679,
+              "soc_error": -2.8174001714509345e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": -0.3948937927042708
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 8.141302214407178,
+              "soc_error": -2.8650795862006362e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -0.7322887176490012
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 8.008398443681275,
+              "soc_error": -3.732112885435068e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -1.82608171908957
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.2999348985689,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -0.8361189407804032
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.189110421855263,
+              "soc_error": -4.2656001590923864e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": -0.41490720108341955
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.799001870828615,
+              "soc_error": -5.926842667125509e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 140,
+              "saving_vs_same_seed_ool_pct": -0.431950073191294
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.27533951802141,
+              "soc_error": -5.693906313153363e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.2941865521151391
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.943767100368041,
+              "soc_error": -6.13541911107518e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -1.5558632404320984
+            }
+          ]
+        }
+      }
+    },
+    {
+      "low_load_efficiency": 0.3,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": 2.9937357547874544,
+            "std": 0.2400292848667071,
+            "ci95_low": 2.881399882559691,
+            "ci95_high": 3.1060716270152176
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.544292177358922,
+              "soc_error": -5.276890036043369e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.8178498970098915
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 7.886518588226717,
+              "soc_error": -1.4055423491754482e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.2835332844386276
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.451716617901114,
+              "soc_error": -5.703908816379055e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.8732235200882883
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.552656803139825,
+              "soc_error": -4.735101200026293e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.980797580307316
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.490813431837354,
+              "soc_error": -6.494804694057166e-14,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.688708982859837
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.409213007646861,
+              "soc_error": -6.109557304512236e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.706647982341156
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 7.821207162466346,
+              "soc_error": 5.782041512247815e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.188155622987203
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 7.823426857445901,
+              "soc_error": -1.3034018309099338e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.301197827938425
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 7.8387320052105505,
+              "soc_error": 2.382150032786967e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.3900990635202186
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.490684855447561,
+              "soc_error": -3.610534093922979e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.7741174846640044
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.621601711002258,
+              "soc_error": 4.599098879509711e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.9586298813983425
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.400894665244097,
+              "soc_error": 2.6978419498391304e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.6999421138341657
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.66028455342847,
+              "soc_error": -4.96269692007445e-14,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.2054562025388402
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.685284431210442,
+              "soc_error": 7.586065109421725e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.1149401453559284
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.492744038155714,
+              "soc_error": 2.1163071295404734e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.8014163396489384
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 7.814338930865542,
+              "soc_error": -2.752802430450174e-10,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.294446219741412
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 7.762421591859127,
+              "soc_error": -1.414979244884762e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.066361820251819
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.408025329456418,
+              "soc_error": 2.1322943410950757e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.6896479616180304
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 7.840040070095105,
+              "soc_error": 8.225642389447785e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 3.2177019838034213
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.453406117712627,
+              "soc_error": 3.5765340966609216e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 2.821841181403223
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -0.5447317130431234,
+            "std": 0.5433050368491752,
+            "ci95_low": -0.799003375078369,
+            "ci95_high": -0.29046005100787775
+          },
+          "mean_safety_filter_activation_count": 35.9,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.862652058476913,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -1.2831176989203172
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.181110601135872,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.32920131986856155
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.746613288374845,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -0.9705032970272855
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.790583212776547,
+              "soc_error": -2.273122663676297e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": -0.07553492614783852
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.701616921601024,
+              "soc_error": -6.397816482661689e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 86,
+              "saving_vs_same_seed_ool_pct": -0.04978663266768912
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.713430153370148,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -1.2881495512316452
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.082205324693641,
+              "soc_error": -3.934170257213765e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.04251106814634772
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.099134283286014,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.10658987359896256
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.107020807408265,
+              "soc_error": -5.7711402649984755e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 0.08352414994249366
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.806052996454546,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -1.3192259703508344
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.887118592636285,
+              "soc_error": -4.054127758934545e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -0.422040345201081
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.714377663813584,
+              "soc_error": -8.916177879347842e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -1.4214398658854337
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.921943190439502,
+              "soc_error": -2.8174001714509345e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": -0.10083460474100406
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.9639836324246795,
+              "soc_error": -2.8650795862006362e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -0.39850025268931344
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.809020570306952,
+              "soc_error": -4.107840684863806e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -1.3014371428082907
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.119246696715805,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -0.47890871268729046
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 8.01912573794351,
+              "soc_error": -4.2381250450862495e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": -0.13924438411631568
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.624990507756565,
+              "soc_error": -5.919864000369923e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 140,
+              "saving_vs_same_seed_ool_pct": -0.16036360577044748
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.104871753509027,
+              "soc_error": -5.75036082683944e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.051543922995406624
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.749543607925035,
+              "soc_error": -6.13541911107518e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -1.039225235950897
+            }
+          ]
+        }
+      }
+    },
+    {
+      "low_load_efficiency": 0.35,
+      "controllers": {
+        "adaptive_ecms": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -1.0745992021162032,
+            "std": 0.1340653452039382,
+            "ci95_low": -1.1373429939721171,
+            "ci95_high": -1.0118554102602892
+          },
+          "mean_safety_filter_activation_count": 0.0,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.727472850837277,
+              "soc_error": -5.2416959661627516e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0299540937603258
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.131883300172392,
+              "soc_error": -4.916289597645118e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.123319499008371
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.642083000260852,
+              "soc_error": -5.643263634169671e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.1789079501524555
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.751623038266275,
+              "soc_error": -1.3334777726470293e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0678561351455222
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.667716775957667,
+              "soc_error": -5.828781901584534e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.1346886914160133
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.590543289771343,
+              "soc_error": -6.356470905188871e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.2228046297149289
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 8.065038711390672,
+              "soc_error": -6.568745547497201e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.2768859279279499
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 8.050739845727271,
+              "soc_error": -2.1209367595531603e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.9148843547146993
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 8.072560178972616,
+              "soc_error": -5.93802784720765e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.911969523699866
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.668566434534743,
+              "soc_error": -5.6311622032012565e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0513226959972204
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.82915248338531,
+              "soc_error": -9.652723065300961e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.1687460566968013
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.5760437828730725,
+              "soc_error": -3.9589331812805995e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.1940938117492887
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.878779864678242,
+              "soc_error": -6.017297771165886e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0472610257926953
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.9091884384195845,
+              "soc_error": -1.1013190359676628e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.160053076108997
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.678582166971162,
+              "soc_error": -8.073652857376601e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.1730912584581703
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 8.025078914147759,
+              "soc_error": -5.361266985914881e-13,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.7468528271168776
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 7.961723144650894,
+              "soc_error": -3.97415433894821e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.8328268863757177
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.5786533483977285,
+              "soc_error": 4.127809205556332e-12,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0927487106832718
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 8.072575055138774,
+              "soc_error": 1.1592171667018647e-11,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0795921536531259
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.635882043925633,
+              "soc_error": -4.7025877525364024e-08,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -1.0841247341517628
+            }
+          ]
+        },
+        "recursive_feasible_mpc": {
+          "strict_valid_rate": 1.0,
+          "certified_rate": 1.0,
+          "saving_pct": {
+            "n": 20,
+            "mean": -0.2484851801027065,
+            "std": 0.4557824020994433,
+            "ci95_low": -0.4617954589478014,
+            "ci95_high": -0.03517490125761166
+          },
+          "mean_safety_filter_activation_count": 35.8,
+          "rows": [
+            {
+              "seed": 2260,
+              "fuel_l": 7.71495754092306,
+              "soc_error": -1.7351108373198088e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -0.8663273543968244
+            },
+            {
+              "seed": 2261,
+              "fuel_l": 8.049987756228234,
+              "soc_error": -3.841810746929575e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": -0.1049146658211254
+            },
+            {
+              "seed": 2262,
+              "fuel_l": 7.598867506452754,
+              "soc_error": -8.297863705486463e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 39,
+              "saving_vs_same_seed_ool_pct": -0.6067476543429591
+            },
+            {
+              "seed": 2263,
+              "fuel_l": 7.658776492116777,
+              "soc_error": -2.2757330554790123e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 91,
+              "saving_vs_same_seed_ool_pct": 0.1427034241311597
+            },
+            {
+              "seed": 2264,
+              "fuel_l": 7.567303385839794,
+              "soc_error": -6.382681128191958e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 84,
+              "saving_vs_same_seed_ool_pct": 0.18973124306344036
+            },
+            {
+              "seed": 2265,
+              "fuel_l": 7.563326208398203,
+              "soc_error": -2.9523036318201967e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -0.8598544158432885
+            },
+            {
+              "seed": 2266,
+              "fuel_l": 7.951453178934652,
+              "soc_error": -3.8265308736629144e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 0.14946668180772346
+            },
+            {
+              "seed": 2267,
+              "fuel_l": 7.966202013917782,
+              "soc_error": -6.664875260464775e-06,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 0.1447854003800039
+            },
+            {
+              "seed": 2268,
+              "fuel_l": 7.9751890363382625,
+              "soc_error": -6.006831717053629e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 0.30522967459167333
+            },
+            {
+              "seed": 2269,
+              "fuel_l": 7.655865916790384,
+              "soc_error": -4.9324177330500873e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 67,
+              "saving_vs_same_seed_ool_pct": -0.883963629873508
+            },
+            {
+              "seed": 2270,
+              "fuel_l": 7.751811099006308,
+              "soc_error": -4.020978878405135e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 3,
+              "saving_vs_same_seed_ool_pct": -0.16933636420230463
+            },
+            {
+              "seed": 2271,
+              "fuel_l": 7.562086820354797,
+              "soc_error": -8.916177879347842e-07,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 63,
+              "saving_vs_same_seed_ool_pct": -1.0076690477327068
+            },
+            {
+              "seed": 2272,
+              "fuel_l": 7.786660724856306,
+              "soc_error": -2.8174001714509345e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 53,
+              "saving_vs_same_seed_ool_pct": 0.13418926561467448
+            },
+            {
+              "seed": 2273,
+              "fuel_l": 7.828983791592091,
+              "soc_error": -2.8650795862006362e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 2,
+              "saving_vs_same_seed_ool_pct": -0.1342200980239399
+            },
+            {
+              "seed": 2274,
+              "fuel_l": 7.656305567218179,
+              "soc_error": -4.107840684863806e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 10,
+              "saving_vs_same_seed_ool_pct": -0.8795745113910862
+            },
+            {
+              "seed": 2275,
+              "fuel_l": 7.981567283641094,
+              "soc_error": -4.5265657564241835e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 17,
+              "saving_vs_same_seed_ool_pct": -0.20060775191958058
+            },
+            {
+              "seed": 2276,
+              "fuel_l": 7.888987242252593,
+              "soc_error": -4.251812245126274e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 92,
+              "saving_vs_same_seed_ool_pct": 0.08835142159893984
+            },
+            {
+              "seed": 2277,
+              "fuel_l": 7.491425208871429,
+              "soc_error": -6.7081162667737e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 140,
+              "saving_vs_same_seed_ool_pct": 0.07080000757245017
+            },
+            {
+              "seed": 2278,
+              "fuel_l": 7.973855782293489,
+              "soc_error": -5.697086094258452e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 0,
+              "saving_vs_same_seed_ool_pct": 0.1565070797079291
+            },
+            {
+              "seed": 2279,
+              "fuel_l": 7.602200896964959,
+              "soc_error": -6.13541911107518e-05,
+              "strict_valid": true,
+              "certified": true,
+              "fallback_count": 0,
+              "ramp_envelope_infeasibility_count": 0,
+              "safety_filter_activation_count": 35,
+              "saving_vs_same_seed_ool_pct": -0.6382523069748007
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # 泄漏可观测性驱动的双模式电液后提升鲁棒控制代码
 
+## 当前版本入口
+
+当前Machines大修主模型是 `hydraulic_v2.py` 与 `lift_v2_experiment.py` 的两腔虚拟对象和观测器混合监督器。实验入口为 `tools/run_paper1_major_revision.py`、`tools/run_paper1_rk4_convergence_audit.py`、`tools/run_paper1_strengthening_audit.py`；完整顺序见公开仓库的 `reproduce_paper1.sh`。原冻结20路径保留；统一细步长RK4对照30/30通过，三机械参数联合角点40/40通过。后续各节主要说明历史降阶模型，不能替代当前正文。旧损失系数是单位为m²/s的虚拟压力率参数，不能解释为物理流量泄漏系数。
+
 本目录对应论文草案：
 
 > `papers/paper1_lift_control_draft.md`

@@ -1,0 +1,7 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}
