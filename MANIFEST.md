@@ -1,16 +1,11 @@
-# v1.1.0 科学材料清单
+# 当前归档范围与核验口径
 
-| 论文 | 当前主证据 | 对应位置 |
-| --- | --- | --- |
-| 论文一 | 原20路径、观测接口、驻留匹配、步长、机械/噪声、配对RK4及联合角点 | `results/paper1_two_chamber_v2.json`；`revisions/machines_major_revision/results/` |
-| 论文一 | 两腔对象、冻结控制器与参数追溯 | `code/lift_control/{hydraulic_v2,lift_v2_experiment}.py`；`manifests/paper1_v2_parameter_manifest.csv`；`papers/reproducibility/` |
-| 论文二 | 独立开发/评估、组件消融、相同防护固定ECMS、冻结Kp=40审计 | `revisions/energies_major_revision/results/{development_selection,ablation_and_comparison,submitted_path_ablation,frozen_kp40_audits}.json` |
-| 论文二 | 功率与电池守恒、执行约束、参数台账 | 同目录 `{model_consistency_checks,execution_constraint_checks}.json`、`parameter_ledger.csv`；`code/energy_management/viability_ecms_v2.py` |
-| 两篇论文 | 英文正文、补充说明与引用元数据 | 两个 `revisions/*major_revision/` 目录，含对应 `Definitions/` 和 `figures/` |
-| 历史对齐 | 原投稿源和原补充实验 | `historical/paper1/`、`historical/paper2/` |
+工作树只保留论文一Machines接收稿、论文二Energies修正作者校样，以及模型代码、实验生成脚本、理论参数清单与文档。
 
-`results/` 中既有MPC、oracle、V2原稿结果用于历史对齐和限制性诊断。论文二21.611%原始值及19.828%归一化值为完整未来信息下的理想诊断，不能混入当前因果在线统计。
+不包含冻结实验结果、原始轨迹、检查点、开发搜索输出或独立统计JSON。正文中的结果图表及补充说明属于论文本体，继续保留。完整科研记录仍保存在作者本地论文工作区。
 
-`manifests/local_sync_sources.json` 逐文件记录本地科学源和SHA-256；`manifests/compressed_results.json` 记录无损压缩前后散列；`MANIFEST.sha256` 校验整个发布树。运行复现或编译会更新文件，此后清单不再代表原发布快照。
+`MANIFEST.sha256` 覆盖本检出全部文件，自身除外。`manifests/current_sources.json` 记录源文件与导出散列；论文二TeX注释清理及三份脚本的历史参考可选读取单列为派生操作。控制器、模型与实验参数未变。
 
-审稿意见与回复、投稿页面信息、专利及临时文件均不在本公开清单内。原始本地项目保留这些内容。
+完整性检查只核对文件、Python语法和公开范围，不复算已移除的冻结统计。短程复现和完整重算入口见README，输出只写入指定的独立工作区。缺少历史参考时，不声称核验历史记录逐字节一致性。
+
+不收录旧稿、审稿通信、作者回复、标注稿、封面信、投稿包或专利。已有Git历史和release保留。本次本地修订使用amend修改最近同步提交，暂不推送或操作Zenodo。

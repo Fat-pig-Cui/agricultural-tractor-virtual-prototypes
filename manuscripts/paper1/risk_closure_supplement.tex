@@ -1,0 +1,86 @@
+\section*{S10. Independent tuning and uncertainty audits}
+
+\paragraph{Additional independent risk-closure protocol.}
+The frozen submitted gains remain distinct from a new equal-budget development comparison. Each policy receives nine candidates. Tracking multipliers are $g_t\in\{0.7,1,1.3\}$; accumulator multipliers are $g_a\in\{0.5,1,1.5\}$. The multiplier $g_t$ scales the 650 and 90 feedback gains and the PID integral gain 20, but leaves reference feedforward unchanged; $g_a$ scales the complete accumulator command before saturation. Both policies use the same $\pm0.10$ main-valve authority, 8 s dwell and mode-gated discharge. Mode-request thresholds remain policy-specific. Thus authority, timing and search effort are matched without making the policies identical. Three development seeds (4600--4602), 300 s paths and 1 ms RK4 are used per candidate. The development load schedule is $(0,9),(60,14),(100,10),(160,16),(220,11),(260,15)$ kN with fivefold leakage. Candidates are ranked by failure count, then mean $J=\Delta_h/10+\mathrm{RMSE}/10+V_{acc}/500+N_{sw}/225$, using mm and mL. These fixed engineering normalizations express one preference, not universal utility weights. All candidates and their four-objective nondominated subset are retained. Selection is recorded before the independent 1800 s evaluation on seeds 4700--4709, using the full repeated-load schedule at both 1 and 0.5 ms. No validation outcome changes selection. Both policies share each seed's measurement sequence and initial plant state. This finite grid is not a global optimization or a comparison against all robust-control methods.
+
+A separate convergence screen repeats nominal leakage, fivefold leakage, accumulator-disabled and linked $0.7/1.3\times$ friction arms at 1 and 0.5 ms on seeds 4400--4402, without retuning the submitted controller. A 24-path stratified interior screen uses new seeds 4800--4823 and independently permuted bins for 12 simultaneous inputs: mass, viscous damping, stiffness, Coulomb friction, Stribeck amplitude and velocity scale, bulk modulus, spool lag, leakage multiplier, accumulator flow coefficient, pressure-noise amplitude and position bias. The intervals and all sampled inputs are supplied in S10. These are virtual-design intervals, not calibrated distributions. The controller retains the original gains and nominal force-balance coefficients. It contains no explicit Coulomb/Stribeck compensation; these unmodeled terms can enter its effective-load estimate. Independent friction magnitudes and velocity scales test more than a linked scaling, but the functional friction law itself remains fixed.
+
+
+The current metric schema records the confirmation sample and first post-update endpoint separately. Historical numerical outputs are unchanged; the old start label is retained as legacy metadata. A four-chain regression on seed 4120 reproduces every historical output field except the corrected start timestamp. The confirmation gate counts 100 samples; it is not reinterpreted as a continuous-time crossing. The new metric records the start position, minimum hold position and sample count so that the reported drop is directly checkable.
+
+\paragraph{Scope of mathematical statements.} The sequential projected-state recurrence uses the actual friction bound and integration step of each plant. It bounds numerical states without guaranteeing millimeter accuracy. Positive parameters satisfy the frozen-volume Routh test pointwise, but the corresponding Lyapunov matrix depends on those parameters. Neither argument proves stability of the nonlinear switched unprojected plant. The RK4 and uncertainty results are simulation evidence, not replacements for such a proof.
+
+\paragraph{Declared simultaneous intervals.} Mass 840--1560 kg; viscous coefficient 1540--2860 N s m$^{-1}$; stiffness 12600--23400 N m$^{-1}$; Coulomb friction 595--1105 N; Stribeck amplitude 245--455 N; Stribeck velocity 0.0028--0.0052 m s$^{-1}$; bulk modulus 0.14--0.26 GPa; spool lag 35--65 ms; leakage multiplier 1--10; accumulator-flow multiplier 0.5--1.5; pressure-noise multiplier 1--4; position bias $-2$ to $+2$ mm. Seed 48191 fixes stratification and independent bin permutations. All 24 input vectors are in protocol.json and individual checkpoints. The original submitted hybrid is used; these data do not tune a new robust controller.
+
+\begin{table}[H]\centering\small
+\caption{Complete development grid. Each candidate has three 300 s development paths. The nondominated flag uses drop, RMSE, oil and switching jointly.}\label{tab:risk-grid}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.13\linewidth}*{7}{>{\centering\arraybackslash}X}@{}}\toprule
+Policy & ID & $g_t/g_a$ & Fail & Mean $J$ & Drop & RMSE & Nondom.\\\midrule
+Hybrid & 0 & 0.7/0.5 & 3 & 0.4695 & 2.478 & 1.411 & No\\
+Hybrid & 1 & 0.7/1.0 & 3 & 0.5016 & 2.493 & 1.420 & No\\
+Hybrid & 2 & 0.7/1.5 & 3 & 0.5234 & 2.479 & 1.411 & No\\
+Hybrid & 3 & 1.0/0.5 & 0 & 0.4295 & 2.254 & 1.200 & Yes\\
+Hybrid & 4 & 1.0/1.0 & 0 & 0.4577 & 2.276 & 1.204 & No\\
+Hybrid & 5 & 1.0/1.5 & 0 & 0.4823 & 2.307 & 1.211 & No\\
+Hybrid & 6 & 1.3/0.5 & 0 & 0.4521 & 2.471 & 1.127 & Yes\\
+Hybrid & 7 & 1.3/1.0 & 0 & 0.4880 & 2.489 & 1.108 & Yes\\
+Hybrid & 8 & 1.3/1.5 & 0 & 0.5209 & 2.514 & 1.165 & No\\
+PID & 0 & 0.7/0.5 & 2 & 0.7174 & 3.990 & 1.174 & No\\
+PID & 1 & 0.7/1.0 & 2 & 0.7998 & 3.870 & 1.151 & No\\
+PID & 2 & 0.7/1.5 & 2 & 0.8504 & 3.799 & 1.136 & No\\
+PID & 3 & 1.0/0.5 & 0 & 0.6106 & 3.843 & 0.891 & No\\
+PID & 4 & 1.0/1.0 & 0 & 0.6713 & 3.748 & 0.874 & No\\
+PID & 5 & 1.0/1.5 & 0 & 0.7160 & 3.678 & 0.864 & No\\
+PID & 6 & 1.3/0.5 & 0 & 0.5476 & 3.666 & 0.748 & Yes\\
+PID & 7 & 1.3/1.0 & 0 & 0.5968 & 3.606 & 0.738 & Yes\\
+PID & 8 & 1.3/1.5 & 0 & 0.6346 & 3.560 & 0.729 & Yes\\
+\bottomrule\end{tabularx}\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Paired matched-PID minus hybrid differences, independent ten-seed test. Student-t intervals summarize seeded model noise; they do not represent parameter or physical uncertainty.}\label{tab:risk-paired}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.15\linewidth}*{3}{>{\centering\arraybackslash}X}@{}}\toprule
+Step (ms) & Quantity & Mean difference & 95\% interval\\\midrule
+1.0 & Drop (mm) & 1.4651 & [1.2326, 1.6976]\\
+1.0 & RMSE (mm) & -0.9519 & [-0.9633, -0.9405]\\
+1.0 & Oil (mL) & 10.7885 & [7.0132, 14.5638]\\
+1.0 & Changes & -47.5000 & [-48.1079, -46.8921]\\
+0.5 & Drop (mm) & 1.4470 & [1.2021, 1.6920]\\
+0.5 & RMSE (mm) & -0.9594 & [-0.9719, -0.9469]\\
+0.5 & Oil (mL) & 11.4952 & [6.5113, 16.4791]\\
+0.5 & Changes & -47.2000 & [-47.8574, -46.5426]\\
+\bottomrule\end{tabularx}\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Every joint interior sample, submitted hybrid at 1 ms RK4. Full input vectors accompany each checkpoint.}\label{tab:risk-interior}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.12\linewidth}*{6}{>{\centering\arraybackslash}X}@{}}\toprule
+Seed & Entry & Drop (mm) & Max error (mm) & Relief & Stroke & Screen\\\midrule
+4800 & Yes & 2.640 & 9.928 & 0 & 0 & Pass\\
+4801 & Yes & 2.684 & 6.628 & 0 & 0 & Pass\\
+4802 & Yes & 3.265 & 9.232 & 0 & 0 & Pass\\
+4803 & Yes & 2.470 & 8.661 & 0 & 0 & Pass\\
+4804 & Yes & 2.389 & 6.468 & 0 & 0 & Pass\\
+4805 & Yes & 1.899 & 8.465 & 0 & 0 & Pass\\
+4806 & Yes & 2.379 & 10.155 & 0 & 0 & Fail\\
+4807 & Yes & 2.054 & 6.932 & 0 & 0 & Pass\\
+4808 & Yes & 1.585 & 9.288 & 0 & 0 & Pass\\
+4809 & Yes & 2.396 & 7.314 & 0 & 0 & Pass\\
+4810 & Yes & 2.819 & 9.279 & 0 & 0 & Pass\\
+4811 & Yes & 2.224 & 8.047 & 0 & 0 & Pass\\
+4812 & Yes & 2.179 & 8.056 & 0 & 0 & Pass\\
+4813 & Yes & 2.058 & 7.372 & 0 & 0 & Pass\\
+4814 & Yes & 3.659 & 7.839 & 0 & 0 & Pass\\
+4815 & Yes & 2.208 & 6.563 & 0 & 0 & Pass\\
+4816 & Yes & 1.748 & 9.395 & 0 & 0 & Pass\\
+4817 & Yes & 2.423 & 5.735 & 0 & 0 & Pass\\
+4818 & Yes & 2.479 & 9.330 & 0 & 0 & Pass\\
+4819 & Yes & 2.966 & 9.587 & 0 & 0 & Pass\\
+4820 & Yes & 1.244 & 5.993 & 0 & 0 & Pass\\
+4821 & Yes & 2.056 & 10.004 & 0 & 0 & Fail\\
+4822 & Yes & 2.598 & 9.724 & 0 & 0 & Pass\\
+4823 & Yes & 2.734 & 7.555 & 0 & 0 & Pass\\
+\bottomrule\end{tabularx}\end{table}
+
+\begin{verbatim}
+python3 tools/replay_paper1_frozen_risk_closure.py --workers 4
+python3 tools/report_paper1_risk_closure.py
+\end{verbatim}

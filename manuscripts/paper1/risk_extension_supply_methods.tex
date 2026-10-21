@@ -1,0 +1,47 @@
+\subsection{Supply availability and conditional storage support}\label{sec:supply-method}
+The continuously available supply in the preceding experiments can conceal a storage contribution: active trim can replace lost fluid. A separate experiment therefore tests a declared supply-availability boundary. Let $\chi_k\in\{0,1\}$ indicate the availability of the supply-connected main-valve orifice during controller interval $k$. With $Q$ defined in Section 3.1, the additional flow law is
+\begin{equation}
+ (q_A,q_B)=
+ \begin{cases}
+ (\chi_k Q(a,p_s-p_A),\ Q(a,p_B-p_t)),&z\ge0,\\
+ (-Q(a,p_A-p_t),\ -\chi_k Q(a,p_s-p_B)),&z<0.
+ \end{cases}\label{eq:supply-flow}
+\end{equation}
+Thus $\chi=0$ disconnects supply while retaining the return-connected orifice. Every policy has the same valve, finite accumulator, spool lag, return path and availability signal; electronic control and sensing remain powered. Existing policies retain their original decision rules, while the extension explicitly conditions storage allocation on $\chi$. The initial states and all other plant equations are unchanged. The signal is an ideal test input with no detection delay or uncertainty; it is not a pressure-collapse, hose-break, cavitation, or fault-diagnosis model. Its future switching times do not enter a controller decision. Figure~\ref{fig:physical-system} depicts the normal circuit abstraction; Equation~\eqref{eq:supply-flow} specifies this additional intervention.
+
+\paragraph{A necessary balance for stationary holding.}
+Within the unprojected model, fix a nonzero supported load and suppose $v=\dot p_A=\dot p_B=0$, with $\chi=0$ and $z\ge0$. The two chamber continuity equations require
+\begin{equation}
+ q_{acc}=q_l=q_B,
+ \qquad q_l=C_l\theta_T(p_A-p_B)>0.\label{eq:reserve-balance}
+\end{equation}
+Here $\theta_T$ is the stated temperature factor. A storage inflow and a return outflow are both necessary for this stationary piston/chamber balance. Gas volume continues to increase, so this is not a steady state of the complete finite-storage system. Blocking both main ports instead imposes $q_B=0$, which is incompatible with positive leakage and the assumed nonzero pressure difference. Feeding only chamber A cannot sustain that chamber balance: pressure builds in chamber B until available discharge head decreases. This is a continuity argument under the stated conditions; compliance can permit a storage-disabled path to satisfy a finite displacement tolerance temporarily.
+
+Finite storage further requires $p_g>p_A$ while discharging. Writing $p_g=K_g V_g^{-n}$, the volume deliverable before a fixed required head $p_{req}$ is reached is at most
+\begin{equation}
+ \Delta V_{head}=\max\!\left[0,\min\!\left(V_{shell},
+ (K_g/p_{req})^{1/n}\right)-V_{g,0}\right].\label{eq:reserve-head}
+\end{equation}
+Here $V_{g,0}$ denotes gas volume at the start of the interval being considered. The expression assumes a fixed positive required head and ignores flow restrictions; it is an optimistic volume bound, not a certified holding duration. Return throttling, changing load, sensing error and pressure projections prevent interpreting it as a closed-loop guarantee.
+
+\paragraph{Availability-aware hybrid probe.}
+The additional policy uses the scalar hybrid's force/pressure and ordinary actuation branches when $\chi=1$, with its previously selected $(g_t,g_a)=(1,0.5)$. On an always-available path it is identical to that hybrid. Once holding has been confirmed and $\chi=0$, it retains the same nominal force-balance target and pressure PI. The main command becomes $u=\operatorname{clip}_{[0,0.10]}(u_{PI})$, permitting B-to-tank return without an available A supply. Define $d=\Delta p^*-\widehat{\Delta p}$. An 8 s dwell latch requests RESERVE when $d>0.03$ MPa or $e>1$ mm, and requests ISOLATED when $d<0.01$ MPa and $e<0.5$ mm. While latched in RESERVE,
+\begin{equation}
+ u_{acc}=\operatorname{clip}_{[0,1]}\!\left\{
+ g_a\left[1.5\frac{\max(d-0.02\,{\rm MPa},0)}{1\,{\rm MPa}}
+       +60\,{\rm m}^{-1}\max(e-0.5\,{\rm mm},0)\right]\right\};\label{eq:reserve-control}
+\end{equation}
+otherwise $u_{acc}=0$. Restoration of $\chi=1$ resets the reserve latch and resumes the original hybrid decision branch. The ordinary mode history and timer remain in force; a retained RESERVE or ISOLATED label receives bounded trim and zero storage command until an ordinary transition becomes eligible. A supply event can change the policy label independently of the ordinary mode timer. The hold latch remains one-way. The probe jointly changes the interruption command sign constraint and support thresholds; the comparison does not isolate the value of availability information alone. It adds an engineering allocation rule, without a new observer or a nonlinear stability theorem, and is distinct from the earlier 8 mm development-margin hybrid.
+
+\paragraph{Fixed experiment and resource accounting.}
+Exploratory seeds 5200--5202 include both-port blocking and supply-only disconnection; all their failures remain archived. They are excluded from the prospective verification. The earlier hybrid/PID/corrected-SMC gain choices remain $(1,0.5)$, $(1.3,0.5)$ and $(1.3,0.5)$; no resource objective or new validation outcome reselects them. Thus the resource comparison concerns these frozen instances, not policies optimized for input work. Each uses the same $\pm0.10$ holding authority, common measurements and 10 ms controller period. PID and SMC both receive their explicit 8 s latch/discharge gate.
+
+Before execution, a separate protocol fixes 88 paths of 1800 s: four new normal-supply repeated-load seeds under each of four policies (16 paths); eight new stratified joint parameter/sensing vectors, supply disconnected on $[300,1500)$ s, with storage enabled and disabled under each policy (64 paths); and the predeclared first joint vector repeated at 0.5 ms for both storage states under all policies (8 paths). Other paths use 1 ms coupled RK4. The interruption family has the original 60 s load step followed by its sampled constant load; it is distinct from the repeated-load normal family. S12 gives all 13 sampled intervals, vectors, failures, and paired differences. The eight-vector design is small and has no physical-frequency interpretation.
+
+Four-stage RK4 quadrature records the actual positive supply-orifice flow $q_s=q_A$ for $z\ge0$ and $q_s=-q_B$ for $z<0$. Over the same controller intervals starting at 8 s (endpoints 8.01--1800 s), report
+\begin{equation}
+ V_s=\int q_s\,dt,\qquad
+ W_g=\int p_gq_{acc}\,dt,\qquad
+ B=p_sV_s+W_g.\label{eq:boundary-resource}
+\end{equation}
+These quantities use a common window rather than policy-dependent hold-entry times. $B$ is a boundary-resource index for the declared constant-pressure source and storage outlet. It excludes pump efficiency, standby power, line dynamics, recharge and the energy effects of numerical projections. Consequently neither $B$ nor its percentage difference is a measured system-energy saving. Storage remains initially charged and is not recharged during a path. Mode counts with different policy labels are not interpreted as comparable mechanical wear.

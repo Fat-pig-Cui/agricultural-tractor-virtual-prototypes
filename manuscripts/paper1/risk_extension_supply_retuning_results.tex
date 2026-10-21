@@ -1,0 +1,18 @@
+\subsection{Resource-oriented retuning of the active comparison}\label{sec:resource-retuning}
+The additional search replaces the earlier four-objective selection criterion only for this separate experiment. It leaves the earlier trajectories and negative SMC comparison unchanged. Both policies receive 27 complete development paths and four independent validation paths. Table~\ref{tab:resource-retuning} reports means and sample standard deviations for all four validation paths per policy; S13 retains the complete candidate ranking and per-seed records.
+
+\begin{table}[H]\centering\small
+\caption{Independent normal-supply validation after equal-budget resource-oriented selection, seeds 5620--5623. Continuous metrics are mean $\pm$ sample SD across four paths per policy ($n-1=3$ in the variance denominator). $B$, RMSE and $V_s$ use endpoints 8.01--1800 s; $V_{acc}$ is total path discharge and drop uses confirmed hold. $B$ is boundary work accounting, not total input energy.}\label{tab:resource-retuning}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.44\linewidth}*{2}{>{\centering\arraybackslash}X}@{}}\toprule
+Metric & Scalar hybrid & Active SMC\\\midrule
+Selected $(g_t,g_a)$ & (1.3,0.3) & (0.7,0.5)\\
+Complete paths passing & 4/4 & 4/4\\
+Boundary resource $B$ (kJ) & 22.47$\pm$0.26 & 209.32$\pm$2.39 \\
+Post-transition RMSE (mm) & 1.2083$\pm$0.0115 & 0.3086$\pm$0.0006 \\
+Stored-oil discharge $V_{acc}$ (mL) & 104.00$\pm$15.43 & 35.96$\pm$2.15 \\
+Main-source volume $V_s$ (mL) & 1002.1$\pm$17.8 & 9943.6$\pm$114.1 \\
+Confirmed-hold drop (mm) & 2.481$\pm$0.211 & 2.754$\pm$0.158 \\
+Mode changes & 55.0$\pm$0.0 & 7.0$\pm$0.0 \\
+\bottomrule\end{tabularx}\end{table}
+
+The selected hybrid/SMC gain pairs are (1.3,0.3)/(0.7,0.5). They pass 4/4 and 4/4 validation paths. Mean $B$ is 22.47/209.32 kJ, while RMSE is 1.208/0.309 mm. Worst sampled maximum error is 7.022/9.913 mm. Mean stored-oil discharge is 104.00/35.96 mL and mean mode changes are 55.0/7.0; lower boundary resource does not imply lower storage use or activity. Both selected instances are development-feasible; validation is reported without reselection. Their differing RMSE prevents an equal-accuracy efficiency claim. The common gain search tests the resource comparison within its declared range; it cannot exclude improved SMC settings outside that range or under changes to the nonlinear term. The earlier and new validation seed sets differ, so cross-experiment mean changes are not paired causal estimates of retuning. No percentage is interpreted as total-energy saving.

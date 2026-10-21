@@ -1,0 +1,37 @@
+\subsection{Active nonlinear comparison and accuracy-margin validation}
+
+The execution-verified SMC development selects $(g_t,g_a)=(1.3,0.5)$. It passes 10/10 and 10/10 common nominal paths at 1 and 0.5 ms, respectively. The earlier unlatched SMC data are not used in this matched comparison. The corrected SMC passes 24/24 on known vectors and 24/24 on the previous 4900-series joint design. The scalar hybrid/PID/margin outcomes on that previous design remain 23/24, 24/24 and 24/24. These are follow-up checks on known protocols; Table~\ref{tab:extension-fresh} instead reports the newly frozen 5100-series design.
+
+\begin{table}[H]\centering\small
+\caption{Execution-verified repeated-load/fivefold-leakage comparison at 0.5 ms RK4. All four instances use common seeds 4700--4709. These are paired follow-up results; corrected SMC receives an explicit 8 s latch and discharge gate. Means are shown.}\label{tab:extension-nominal}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.23\linewidth}*{5}{>{\centering\arraybackslash}X}@{}}\toprule
+Policy & Pass & Drop (mm) & RMSE (mm) & Oil (mL) & Changes\\\midrule
+Scalar hybrid & 10/10 & 2.109 & 1.273 & 23.79 & 54.2\\
+Active PID & 10/10 & 3.556 & 0.314 & 35.29 & 7.0\\
+Active SMC & 10/10 & 1.992 & 0.251 & 13.62 & 5.6\\
+Margin hybrid & 10/10 & 2.026 & 1.204 & 153.15 & 54.0\\
+\bottomrule\end{tabularx}\end{table}
+
+\begin{table}[H]\centering\small
+\caption{New simultaneous parameter/friction/sensing design, seeds 5100--5123, at 1 ms RK4. All four frozen instances face the same 24 vectors and noise sequences. Worst error and other-metric means include every path with defined values; failed paths are retained.}\label{tab:extension-fresh}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.22\linewidth}*{6}{>{\centering\arraybackslash}X}@{}}\toprule
+Policy & Pass & Worst error (mm) & Drop (mm) & RMSE (mm) & Oil (mL) & Changes\\\midrule
+Scalar hybrid & 24/24 & 9.972 & 2.419 & 1.381 & 175.10 & 73.5\\
+Active PID & 24/24 & 7.068 & 3.869 & 1.076 & 34.11 & 7.0\\
+Active SMC & 24/24 & 7.377 & 2.042 & 1.056 & 13.79 & 5.8\\
+Margin hybrid & 24/24 & 8.544 & 2.134 & 1.276 & 245.34 & 88.2\\
+\bottomrule\end{tabularx}\end{table}
+
+On the new joint design, scalar hybrid/PID/corrected active SMC/margin hybrid pass 24, 24, 24 and 24 of 24 paths, respectively. The margin hybrid's worst sampled error is 8.544 mm and worst hold drop is 3.109 mm. Its earlier 4900-series result of 24/24 and 8.569 mm remains a result for that previous design, not a substitute for this new test. Figure~\ref{fig:extension-fresh} displays every new path. S11 supplies all development candidates, exact failed seeds, both nominal steps and paired descriptive intervals.
+
+All four instances pass every new joint path. This new design therefore does not demonstrate an additional pass-rate benefit from the margin requirement; the previous-design scalar failure remains separately reported.
+
+The reserve's nominal stored-fluid cost remains substantial: scalar/margin mean discharge is 23.79/153.15 mL. Corrected active SMC has nominal mean drop 1.992 mm, RMSE 0.251 mm, discharge 13.62 mL and 5.6 mode changes. Thus all four objectives, including costs introduced by the accuracy-oriented preference, must be compared together. Accumulator discharge does not measure total input energy.
+
+Corrected active SMC has lower nominal means on all four objectives than both hybrid variants and the active PID. Thus this matched nominal test supplies no mean-objective performance advantage for either hybrid. Lower means alone do not imply statistically established dominance of every objective or a universal controller ranking; paired intervals against corrected SMC are supplied in S11. The scalar hybrid's smaller discharge relative to PID remains a comparator-specific result and cannot be extended to SMC.
+
+The same four-mean ordering favors corrected SMC over both hybrids on the new joint design. This is a negative result for a hybrid-performance claim, not evidence that one controller wins on every metric: the active PID has a smaller sampled worst error than SMC.
+
+Successful finite screens do not certify the twelve-dimensional interval. Gaussian noise has no finite deterministic bound, the friction function remains fixed, and the margin is a declared development requirement rather than an observer-error theorem. The current comparison evaluates policy instances under explicit choices; it does not establish universal hybrid superiority.
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{risk_extension_fresh.pdf}\caption{New simultaneous uncertainty, seeds 5100--5123: all 24 paired vectors under each frozen policy with verified baseline latch/gating. Points show individual paths; black bars show means. The 10 mm threshold applies to maximum error, not RMSE. Discharge is stored-fluid use rather than system energy.}\label{fig:extension-fresh}\end{figure}

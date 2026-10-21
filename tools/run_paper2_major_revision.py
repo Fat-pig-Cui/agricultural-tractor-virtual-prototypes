@@ -98,10 +98,10 @@ def controller_tasks(label,seeds,mode='viability_ecms',settings=FROZEN,
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--audit-only',action='store_true');args=parser.parse_args()
-    submitted_path=ROOT/'tmp/submission_2026-09-27/energies_supplement/results/paper2_viability_ecms_v2.json'
+    submitted_path=OUT/'submitted_baseline/submitted_supplement/results/paper2_viability_ecms_v2.json'
     if not submitted_path.exists():
         submitted_path=OUT/'results/submitted_reference.json'
-    original=json.loads(submitted_path.read_text())
+    original=json.loads(submitted_path.read_text()) if submitted_path.exists() else None
     protocol=dict(development_seeds=DEV,independent_holdout_seeds=TEST,
         settings=asdict(FROZEN),platform=asdict(PARAMS),
         t_terminal=1e-4, original_submission='2026-09-27',
@@ -160,9 +160,13 @@ def main():
             summary=summary([r for r in rows if r['label']==label],baseline))
             for label,mode,setting,features in configs_test}
         replay=run(controller_tasks('submission_replay',tuple(range(3120,3140))))
-        original_rows={r['seed']:r for r in original['holdout']['viability_ecms_strict_1e-4']['rows']}
-        parity=max(abs(r['fuel_l']-original_rows[r['seed']]['fuel_l']) for r in replay)
-        assert parity<1e-10,parity
+        parity=None
+        if original is not None:
+            original_rows={r['seed']:r for r in original['holdout']['viability_ecms_strict_1e-4']['rows']}
+            parity=max(abs(r['fuel_l']-original_rows[r['seed']]['fuel_l']) for r in replay)
+            assert parity<1e-10,parity
+        else:
+            print('Historical reference omitted: archive parity not checked.',flush=True)
         save('ablation_and_comparison.json',dict(protocol=protocol,holdout=holdout,
              submission_replay_fuel_max_difference_l=parity,submission_replay=replay))
         print('Independent holdout', {k:v['summary'] for k,v in holdout.items()},flush=True)

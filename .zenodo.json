@@ -1,6 +1,6 @@
 {
   "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
-  "description": "<p>两篇农业拖拉机理论仿真论文的源代码、声明模型输入、复现脚本、冻结结果、图表和英文稿件。</p><p>v1.1.0同步Machines和Energies大修科学材料。论文一补充统一细步长RK4的主动PID对照及质量、阻尼、刚度联合角点；论文二补充相同防护固定ECMS、组件消融和模型/执行检查，采用软SOC防护的谨慎定位。大轨迹无损压缩并提供还原及散列校验。</p><p>全部证据依赖声明的虚拟模型；没有实车、台架或组件地图标定数据，不提供全局稳定性或递归可行性保证。约20%的燃油诊断使用理想条件及完整未来信息，与当前在线统计分开。</p>",
+  "description": "<p>两篇农业拖拉机理论虚拟样机研究的当前论文、模型与算法代码、实验生成脚本、声明参数清单及文档：Machines已接收稿、Energies修正作者校样。</p><p>工作树仅维护最新版，不包含冻结实验结果、轨迹、检查点、旧稿或审稿通信。可在空的独立工作区从源码重算主要实验；不声称提供完整冻结数据归档或自动重绘所有图表。</p><p>没有实车、台架或目标组件标定数据，不提供全局稳定性或递归可行性保证。约20%的燃油情形使用理想条件、完整未来信息和较宽终端SOC容差，与在线主协议分列。作者校样不代表最终出版版。</p>",
   "creators": [
     {
       "name": "Cui, Chenyu",
@@ -21,7 +21,8 @@
     "electrohydraulic hitch",
     "hybrid electric tractor",
     "energy management",
-    "model predictive control",
+    "equivalent consumption minimization",
+    "observer-based control",
     "virtual prototype",
     "reproducible research"
   ],

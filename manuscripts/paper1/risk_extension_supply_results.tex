@@ -1,0 +1,31 @@
+\subsection{Supply availability and the storage contribution}\label{sec:supply-results}
+
+The additional supply experiment evaluates previously frozen gains, with a newly declared boundary-resource measurement. It does not replace the four-objective negative comparison in Section 4.9. Table~\ref{tab:supply-normal} and Figure~\ref{fig:supply-normal} report all four normal-supply seeds; the availability hybrid is numerically identical to the scalar hybrid on these paths.
+
+\begin{table}[H]\centering\small
+\caption{New normal-supply repeated-load paths, seeds 5500--5503, 1 ms RK4. Means use the common 8.01--1800 s window. B is the declared boundary-resource index, not total input energy. All four paths enter holding under each policy.}\label{tab:supply-normal}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.24\linewidth}*{5}{>{\centering\arraybackslash}X}@{}}\toprule
+Policy & Pass & RMSE (mm) & $V_s$ (mL) & Oil (mL) & $B$ (kJ)\\\midrule
+Scalar hybrid & 4/4 & 1.271 & 1085.0 & 21.55 & 23.08\\
+Active PID & 4/4 & 0.314 & 1592.7 & 34.58 & 33.93\\
+Active SMC & 4/4 & 0.252 & 13405.7 & 13.49 & 281.71\\
+Availability hybrid & 4/4 & 1.271 & 1085.0 & 21.55 & 23.08\\
+\bottomrule\end{tabularx}\end{table}
+
+Scalar hybrid/active SMC mean main-supply volume is 1085.0/13405.7 mL and mean B is 23.08/281.71 kJ. Their RMSE is 1.271/0.252 mm. The relative main-supply-volume difference, 91.91\%, is a ratio of these group means. It quantifies a resource--tracking trade-off at frozen gains; it is not an energy-saving rate or evidence that SMC cannot reach a different trade-off after resource-oriented retuning. S12 gives the paired differences. The earlier four-objective ordering favoring SMC remains valid.
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{risk_extension_supply_normal.pdf}\caption{Normal-supply resource and tracking comparison. Small markers show all four seeded paths; large markers show means. The two hybrid instances coincide because the availability extension is inactive. B includes main-source and storage-outlet work only; no pump-input or efficiency claim follows.}\label{fig:supply-normal}\end{figure}
+
+For the eight new joint vectors with supply disconnected on [300,1500) s, complete-path pass counts are Scalar hybrid: 8/8 with storage and 1/8 without; Active PID: 8/8 with storage and 1/8 without; Active SMC: 8/8 with storage and 0/8 without; Availability hybrid: 8/8 with storage and 1/8 without. Figure~\ref{fig:supply-interruption} includes every on/off outcome; passing requires hold entry, both 10 mm screens, and no relief or stroke event. The current availability signal is ideal and all policies retain the same return path.
+
+Within this storage-enabled joint family, scalar hybrid/active SMC mean main-source volume is 539.9/4903.6 mL and B is 15.02/110.12 kJ. These separately paired resource comparisons are reported in S12; their schedules differ from the normal repeated-load family.
+
+The availability hybrid's worst sampled post-transition error is 9.215 mm and worst confirmed-hold drop is 2.051 mm. Mean within-interruption maximum error is 1.173 mm, compared with 3.571 mm for the scalar hybrid; the complete-path screen still includes the earlier transition. Mean storage use is 409.74/286.68 mL, respectively. Paired changes are given in S12. This small fixed design evaluates the stated availability rule and does not establish a superior controller family.
+
+At fixed plant and noise inputs, enabling storage changes a failed complete path into a passing path in Scalar hybrid: 7/8, Active PID: 7/8, Active SMC: 8/8, Availability hybrid: 7/8. The reverse changes, unchanged pass/fail cases and exact seeds are also retained in S12. Storage necessity is therefore judged for each declared policy and interruption, while the original continuously supplied disabled-storage successes remain valid. A common pass ratio cannot establish physical reliability or universal necessity.
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{risk_extension_supply_interruption.pdf}\caption{All eight paired joint vectors during the 1800 s supply-availability study. Each value is the larger of maximum post-transition absolute error and confirmed-hold drop; both have the same 10 mm limit. Thus an error below 10 mm alone cannot hide a drop failure. Maximum error includes the pre-interruption transition. Other pass conditions and all failed seeds are reported in S12.}\label{fig:supply-interruption}\end{figure}
+
+The prespecified seed-5400 refinement gives a largest absolute drop change of 0.212 mm and maximum-error change of 0.195 mm across the eight policy/storage pairs. Pass status changes in 0 of eight pairs. This is a representative numerical sensitivity check, not convergence certification over all joint vectors.
+
+The archived both-port-isolation exploration provides an adverse mechanism check: all eight 600 s interruption paths fail the 10 mm screen, including storage-enabled paths. Added storage alone cannot supply the required return balance, and gas--A pressure equalization can stop useful discharge while oil remains. That failed boundary is distinct from Equation~\eqref{eq:supply-flow}. The prospectively frozen supply-only results do not repair or replace those failures.

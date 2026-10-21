@@ -15,14 +15,22 @@ def main():
         ('revised_band_load_following','load_following',FROZEN,ControllerFeatures())]
     rows=run([task for label,mode,settings,features in configurations for task in
         controller_tasks(label,seeds,mode=mode,settings=settings,features=features)])
-    submitted=json.loads((OUT/'results/submitted_reference.json').read_text())
+    reference=OUT/'results/submitted_reference.json'
+    if reference.exists():
+        submitted=json.loads(reference.read_text())
+        baseline_origin='archived submitted records'
+    else:
+        regenerated=run(controller_tasks('load_following',seeds,mode='load_following',
+            settings=replace(FROZEN,terminal_soc_tolerance=.001)))
+        submitted={'holdout':{'load_following':{'rows':regenerated}}}
+        baseline_origin='regenerated with submitted baseline settings; no archive parity check'
     baseline={r['seed']:{**r,'completed':True,'strict_valid':abs(r['soc_error'])<=1e-4}
         for r in submitted['holdout']['load_following']['rows']}
     arms={label:dict(rows=[r for r in rows if r['label']==label],
         summary=summary([r for r in rows if r['label']==label],baseline))
         for label,*_ in configurations}
     data=dict(purpose='Post-review attribution on submitted paths, no retuning; independent confirmation is separately reported',
-        baseline='Exact submitted load-following records, internal band used settings tolerance 0.001; evaluated here at 1e-4.',
+        baseline=baseline_origin+'; internal settings tolerance 0.001, evaluated at 1e-4.',
         seeds=seeds,arms=arms)
     (OUT/'results/submitted_path_ablation.json').write_text(json.dumps(data,indent=2))
     names={'full':'Submitted full adaptive','without_adaptation':'Without adaptation','without_phase':'Without phase','without_filter':'Without SOC filter','without_reserve':'Without reserve'}

@@ -28,6 +28,16 @@ class LiftV2Config:
     accumulator_pressure_deficit_pa: float = 0.30e6
     lock_error_m: float = 0.0025
     accumulator_error_m: float = 0.004
+    # Optional deterministic load schedule for the Reviewer 3 stress audit.
+    # Each pair is (time in seconds, load in newtons); the last active pair
+    # remains in force until the next pair. The empty tuple preserves the
+    # submitted single-step protocol exactly.
+    load_schedule: tuple[tuple[float, float], ...] = ()
+    accumulator_enabled: bool = True
+    # Explicit audit-only tuning interface. Defaults preserve all commands.
+    tracking_gain_scale: float = 1.0
+    accumulator_gain_scale: float = 1.0
+    hold_main_valve_limit: float | None = None
 
 
 @dataclass
@@ -119,11 +129,21 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
     minimum_accumulator_pressure = plant.accumulator_pressure(state)
     accumulator_active_samples = 0
     mode_samples = {}
+    hold_confirmation_time_s = None
+    hold_window_start_time_s = None
 
     for step in range(step_count):
         time_s = step * params.dt_s
         reference, reference_velocity, reference_acceleration = smooth_reference(time_s)
-        load_n = 9000.0 if time_s < config.load_step_time_s else config.post_step_load_n
+        if config.load_schedule:
+            load_n = config.load_schedule[0][1]
+            for schedule_time, scheduled_load in config.load_schedule:
+                if time_s >= schedule_time:
+                    load_n = scheduled_load
+                else:
+                    break
+        else:
+            load_n = 9000.0 if time_s < config.load_step_time_s else config.post_step_load_n
         temperature_c = (config.temperature_start_c
                          + (config.temperature_end_c - config.temperature_start_c)
                          * step / max(1, step_count - 1))
@@ -154,6 +174,8 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
         if not memory.hold_started and memory.hold_counter >= required_hold_steps:
             memory.hold_started = True
             memory.hold_start_time_s = time_s - 1.0
+            hold_confirmation_time_s = time_s
+            hold_window_start_time_s = time_s + params.dt_s
             memory.mode = "FINE_TRIM"
             memory.mode_dwell_steps = 0
 
@@ -161,17 +183,17 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
         if controller in ("pid_lock", "pid_accumulator"):
             memory.position_integral = max(-0.05, min(
                 0.05, memory.position_integral + error * params.dt_s))
-            desired_acceleration = (reference_acceleration + 650.0 * error
-                                    + 90.0 * velocity_error
-                                    + 20.0 * memory.position_integral)
+            desired_acceleration = (reference_acceleration + (650.0 * config.tracking_gain_scale) * error
+                                    + (90.0 * config.tracking_gain_scale) * velocity_error
+                                    + (20.0 * config.tracking_gain_scale) * memory.position_integral)
             target_force = (estimated_load + control_params.stiffness_n_m * reference
                             + control_params.viscous_n_s_m * reference_velocity
                             + control_params.mass_kg * desired_acceleration)
             target_delta = target_force / control_params.piston_area_m2
-        elif controller == "smc_lock":
+        elif controller in ("smc_lock", "smc_accumulator"):
             sliding = 18.0 * error + velocity_error
-            desired_acceleration = (reference_acceleration + 650.0 * error
-                                    + 90.0 * velocity_error)
+            desired_acceleration = (reference_acceleration + (650.0 * config.tracking_gain_scale) * error
+                                    + (90.0 * config.tracking_gain_scale) * velocity_error)
             robust_force = 1200.0 * tanh(sliding / 0.006)
             target_force = (estimated_load + control_params.stiffness_n_m * reference
                             + control_params.viscous_n_s_m * reference_velocity
@@ -179,8 +201,8 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
                             + robust_force)
             target_delta = target_force / control_params.piston_area_m2
         elif controller == "observer_hybrid":
-            desired_acceleration = (reference_acceleration + 650.0 * error
-                                    + 90.0 * velocity_error)
+            desired_acceleration = (reference_acceleration + (650.0 * config.tracking_gain_scale) * error
+                                    + (90.0 * config.tracking_gain_scale) * velocity_error)
             target_force = (estimated_load + control_params.stiffness_n_m * reference
                             + control_params.viscous_n_s_m * reference_velocity
                             + control_params.mass_kg * desired_acceleration)
@@ -195,12 +217,13 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
             if controller in ("pid_lock", "smc_lock"):
                 command = 0.0
                 new_mode = "LOCK"
-            elif controller == "pid_accumulator":
+            elif controller in ("pid_accumulator", "smc_accumulator"):
                 new_mode = "ACCUMULATOR" if error > 0.002 else "LOCK"
                 if baseline_dwell_s and memory.mode_dwell_steps * params.dt_s < baseline_dwell_s:
                     new_mode = memory.mode
-                command = max(-0.08, min(0.08, command))
-                accumulator_valve = max(0.0, min(1.0, 80.0 * max(error - 0.001, 0.0)))
+                limit = 0.08 if config.hold_main_valve_limit is None else config.hold_main_valve_limit
+                command = max(-limit, min(limit, command))
+                accumulator_valve = max(0.0, min(1.0, (80.0 * config.accumulator_gain_scale) * max(error - 0.001, 0.0)))
                 if baseline_dwell_s and new_mode != "ACCUMULATOR":
                     accumulator_valve = 0.0
             else:
@@ -230,11 +253,14 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
                 if new_mode == "LOCK":
                     command = 0.0
                 else:
-                    command = max(-0.10, min(0.10, command))
+                    limit = 0.10 if config.hold_main_valve_limit is None else config.hold_main_valve_limit
+                    command = max(-limit, min(limit, command))
                 if new_mode == "ACCUMULATOR":
                     accumulator_valve = max(0.0, min(
-                        1.0, 1.5 * max(pressure_deficit, 0.0) / 1.0e6
-                        + 60.0 * max(error - 0.001, 0.0)))
+                        1.0, (1.5 * config.accumulator_gain_scale) * max(pressure_deficit, 0.0) / 1.0e6
+                        + (60.0 * config.accumulator_gain_scale) * max(error - 0.001, 0.0)))
+            if not config.accumulator_enabled:
+                accumulator_valve = 0.0
             if new_mode != memory.mode:
                 memory.mode = new_mode
                 memory.mode_dwell_steps = 0
@@ -260,6 +286,7 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
         mode_samples[memory.mode] = mode_samples.get(memory.mode, 0) + 1
         if trace_interval_s is not None and step % max(1, round(trace_interval_s/params.dt_s)) == 0:
             trace.append(dict(t_s=time_s, x_m=state.x_m, error_mm=(reference-state.x_m)*1000,
+                state_time_s=time_s + params.dt_s,
                 p_a_mpa=state.p_a_pa/1e6, p_b_mpa=state.p_b_pa/1e6,
                 p_acc_mpa=p_acc/1e6, command=command, accumulator_valve=accumulator_valve,
                 mode=memory.mode, load_estimate_n=observer.load_hat_n))
@@ -283,7 +310,13 @@ def run_lift_v2(controller: str, config: LiftV2Config = LiftV2Config(), *,
         "controller": controller,
         "seed": config.seed,
         "hold_started": memory.hold_started,
-        "hold_start_time_s": memory.hold_start_time_s,
+        "hold_start_time_s": hold_window_start_time_s,
+        "hold_confirmation_time_s": hold_confirmation_time_s,
+        "legacy_hold_start_time_s": memory.hold_start_time_s,
+        "hold_start_position_m": hold_positions[0] if hold_positions else None,
+        "hold_min_position_m": min(hold_positions) if hold_positions else None,
+        "hold_sample_count": len(hold_positions),
+        "metric_schema": "endpoint-hold-window-v2; legacy numeric drop unchanged",
         "final_mode": memory.mode,
         "mode_switches": memory.switches,
         "hold_drop_mm": None if hold_drop is None else hold_drop * 1000.0,

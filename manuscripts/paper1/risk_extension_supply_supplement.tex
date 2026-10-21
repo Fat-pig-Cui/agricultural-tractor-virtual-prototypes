@@ -1,0 +1,196 @@
+\section*{S12. Supply availability and boundary-resource accounting}\renewcommand{\theHtable}{supply.\arabic{table}}
+
+The 88-path protocol and source hashes were frozen before their outcomes. Seeds 5200--5202 are exploratory development. Those explorations use different schedules and control prototypes and do not form a paired estimate of a return-path effect. The prospective paired storage contrast uses one common supply-only flow law. The archived double-port 88-path plan was not executed and contributes no outcomes or pass count. New normal seeds are 5500--5503 and new joint seeds are 5400--5407. Gains, the availability rule and the 1/0.5 ms refinement vector are fixed. No policy is selected by this new verification.
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{risk_extension_supply_boundary.pdf}\caption{Declared hydraulic availability boundaries. Both-port blocking prevents the steady return required by positive internal leakage. Supply disconnection leaves the shared main-valve return orifice available. These are ideal virtual interventions; valve lag and finite gas storage remain in the model.}\label{fig:supply-boundary}\end{figure}
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrr}
+\caption{All prospectively fixed joint-input intervals; SI base units unless the field name states degrees Celsius or a dimensionless scale.}\\\toprule
+Class & Input & Low & High\\\midrule\endfirsthead
+\toprule
+Class & Input & Low & High\\\midrule\endhead
+config & leakage\_scale & 3 & 8\\
+config & accumulator\_flow\_scale & 0.8 & 1.2\\
+config & position\_bias\_m & -0.001 & 0.001\\
+config & pressure\_bias\_pa & -50000 & 50000\\
+config & pressure\_noise\_scale & 1 & 1.5\\
+config & temperature\_end\_c & 40 & 55\\
+config & post\_step\_load\_n & 12000 & 16000\\
+plant & mass\_kg & 1000 & 1400\\
+plant & stiffness\_n\_m & 15000 & 21000\\
+plant & viscous\_n\_s\_m & 1800 & 2600\\
+plant & coulomb\_n & 680 & 1020\\
+plant & stribeck\_n & 280 & 420\\
+plant & effective\_bulk\_modulus\_pa & 1.6e+08 & 2.4e+08\\
+\bottomrule\end{longtable}\endgroup
+
+The following paired intervals are t-based descriptive summaries of sampled differences. The joint design stratifies 13 inputs and is not an independently drawn physical population; its intervals have no hardware-coverage or reliability interpretation. Normal-supply intervals concern four seeded noise paths at one theoretical plant. No p-values or physical pass probabilities are inferred.
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rrrrrrr}
+\caption{Selected coordinates of all eight joint vectors. Every remaining coordinate and exact floating-point value is in protocol.json; no vector is dropped.}\\\toprule
+Seed & Leak scale & x bias (mm) & p bias (kPa) & Load (kN) & Mass (kg) & $\beta_e$ ($10^8$ Pa)\\\midrule\endfirsthead
+\toprule
+Seed & Leak scale & x bias (mm) & p bias (kPa) & Load (kN) & Mass (kg) & $\beta_e$ ($10^8$ Pa)\\\midrule\endhead
+5400 & 5.592 & -0.258 & -28.82 & 15.335 & 1264.9 & 1.685\\
+5401 & 5.365 & -0.740 & 18.46 & 12.223 & 1386.5 & 2.284\\
+5402 & 6.505 & 0.743 & 31.15 & 13.416 & 1239.3 & 2.029\\
+5403 & 3.432 & 0.181 & -12.59 & 15.696 & 1010.2 & 1.872\\
+5404 & 7.467 & 0.805 & 44.33 & 14.582 & 1104.4 & 1.744\\
+5405 & 6.984 & -0.176 & 7.86 & 12.613 & 1313.4 & 2.189\\
+5406 & 4.029 & -0.983 & -39.15 & 14.414 & 1084.2 & 1.988\\
+5407 & 4.779 & 0.370 & -3.28 & 13.617 & 1180.7 & 2.301\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rlrrrrr}
+\caption{Every paired interruption outcome. Pass column is enabled/disabled (1 means pass). Error and drop are mm; oil is enabled-storage mL. Every failure remains in the calculation.}\\\toprule
+Seed & Policy & Pass on/off & Error on & Error off & Drop on & Oil on\\\midrule\endfirsthead
+\toprule
+Seed & Policy & Pass on/off & Error on & Error off & Drop on & Oil on\\\midrule\endhead
+5400 & Scalar hybrid & 1/0 & 7.811 & 17.851 & 2.551 & 205.1\\
+5401 & Scalar hybrid & 1/0 & 7.752 & 21.292 & 2.734 & 280.5\\
+5402 & Scalar hybrid & 1/0 & 9.215 & 32.920 & 3.154 & 375.1\\
+5403 & Scalar hybrid & 1/1 & 8.142 & 8.142 & 2.594 & 0.0\\
+5404 & Scalar hybrid & 1/0 & 9.070 & 45.789 & 2.939 & 549.0\\
+5405 & Scalar hybrid & 1/0 & 8.116 & 39.545 & 3.356 & 464.2\\
+5406 & Scalar hybrid & 1/0 & 7.453 & 9.964 & 2.534 & 131.3\\
+5407 & Scalar hybrid & 1/0 & 9.089 & 25.507 & 2.968 & 288.4\\
+5400 & Active PID & 1/0 & 4.966 & 19.618 & 3.515 & 241.1\\
+5401 & Active PID & 1/0 & 4.865 & 23.346 & 2.232 & 282.2\\
+5402 & Active PID & 1/0 & 6.241 & 32.731 & 2.608 & 387.3\\
+5403 & Active PID & 1/1 & 5.244 & 7.981 & 3.997 & 94.2\\
+5404 & Active PID & 1/0 & 6.169 & 45.680 & 3.088 & 547.8\\
+5405 & Active PID & 1/0 & 5.052 & 39.967 & 2.832 & 481.8\\
+5406 & Active PID & 1/0 & 4.450 & 12.979 & 3.108 & 162.4\\
+5407 & Active PID & 1/0 & 6.127 & 28.285 & 2.919 & 336.5\\
+5400 & Active SMC & 1/0 & 5.268 & 45.867 & 2.186 & 564.5\\
+5401 & Active SMC & 1/0 & 5.185 & 42.406 & 1.096 & 519.2\\
+5402 & Active SMC & 1/0 & 6.567 & 55.041 & 1.462 & 663.0\\
+5403 & Active SMC & 1/0 & 5.560 & 31.679 & 2.471 & 377.6\\
+5404 & Active SMC & 1/0 & 6.487 & 68.079 & 1.876 & 832.1\\
+5405 & Active SMC & 1/0 & 5.344 & 58.241 & 1.771 & 715.1\\
+5406 & Active SMC & 1/0 & 4.770 & 35.429 & 1.736 & 437.7\\
+5407 & Active SMC & 1/0 & 6.448 & 45.585 & 1.638 & 549.3\\
+5400 & Availability hybrid & 1/0 & 7.811 & 17.712 & 1.978 & 345.6\\
+5401 & Availability hybrid & 1/0 & 7.752 & 21.169 & 1.855 & 355.9\\
+5402 & Availability hybrid & 1/0 & 9.215 & 32.795 & 1.735 & 455.4\\
+5403 & Availability hybrid & 1/1 & 8.142 & 8.142 & 1.867 & 245.4\\
+5404 & Availability hybrid & 1/0 & 9.070 & 45.658 & 2.000 & 642.3\\
+5405 & Availability hybrid & 1/0 & 8.116 & 39.453 & 2.051 & 537.7\\
+5406 & Availability hybrid & 1/0 & 7.453 & 9.879 & 1.757 & 268.4\\
+5407 & Availability hybrid & 1/0 & 9.089 & 25.437 & 1.971 & 427.2\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}p{.18\linewidth}p{.25\linewidth}p{.20\linewidth}p{.12\linewidth}p{.12\linewidth}@{}}
+\caption{Complete-path storage attribution. Paired changes use the same plant, noise and return path. The on/off intervention alone changes storage flow.}\\\toprule
+Policy & On pass/off fail seeds & On fail/off pass seeds & Both pass & Both fail\\\midrule\endfirsthead
+\toprule
+Policy & On pass/off fail seeds & On fail/off pass seeds & Both pass & Both fail\\\midrule\endhead
+Scalar hybrid & 5400,\allowbreak 5401,\allowbreak 5402,\allowbreak 5404,\allowbreak 5405,\allowbreak 5406,\allowbreak 5407 & None & 1 & 0\\
+Active PID & 5400,\allowbreak 5401,\allowbreak 5402,\allowbreak 5404,\allowbreak 5405,\allowbreak 5406,\allowbreak 5407 & None & 1 & 0\\
+Active SMC & 5400,\allowbreak 5401,\allowbreak 5402,\allowbreak 5403,\allowbreak 5404,\allowbreak 5405,\allowbreak 5406,\allowbreak 5407 & None & 0 & 0\\
+Availability hybrid & 5400,\allowbreak 5401,\allowbreak 5402,\allowbreak 5404,\allowbreak 5405,\allowbreak 5406,\allowbreak 5407 & None & 1 & 0\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrr}
+\caption{Normal paired scalar-hybrid minus active-SMC differences. Units follow the metric field; negative values indicate a smaller hybrid quantity.}\\\toprule
+Metric & Mean & Lower & Upper\\\midrule\endfirsthead
+\toprule
+Metric & Mean & Lower & Upper\\\midrule\endhead
+hold\_drop\_mm & 0.3692 & -0.3315 & 1.07\\
+post\_transition\_rmse\_mm & 1.019 & 1.008 & 1.031\\
+post\_transition\_max\_abs\_error\_mm & 2.606 & 2.515 & 2.696\\
+post\_transition\_main\_supply\_volume\_ml & -1.232e+04 & -1.246e+04 & -1.219e+04\\
+accumulator\_oil\_used\_ml & 8.056 & -2.098 & 18.21\\
+post\_transition\_storage\_boundary\_work\_j & 111.8 & -28.98 & 252.5\\
+post\_transition\_boundary\_resource\_j & -2.586e+05 & -2.615e+05 & -2.558e+05\\
+isolated\_max\_abs\_error\_mm & 0 & 0 & 0\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrr}
+\caption{Storage-enabled joint family: scalar hybrid minus active SMC. All eight pairs are included; units follow field names. Intervals are descriptive.}\\\toprule
+Metric & Mean & Lower & Upper\\\midrule\endfirsthead
+\toprule
+Metric & Mean & Lower & Upper\\\midrule\endhead
+hold\_drop\_mm & 1.074 & 0.5733 & 1.575\\
+post\_transition\_rmse\_mm & 0.5502 & 0.3916 & 0.7087\\
+post\_transition\_max\_abs\_error\_mm & 2.627 & 2.565 & 2.69\\
+post\_transition\_main\_supply\_volume\_ml & -4364 & -4546 & -4181\\
+accumulator\_oil\_used\_ml & -295.6 & -337.5 & -253.8\\
+post\_transition\_storage\_boundary\_work\_j & -3454 & -4095 & -2812\\
+post\_transition\_boundary\_resource\_j & -9.509e+04 & -9.935e+04 & -9.083e+04\\
+isolated\_max\_abs\_error\_mm & 1.892 & 1.556 & 2.228\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrr}
+\caption{Storage-enabled joint family: availability hybrid minus scalar hybrid. All eight pairs are included; units follow field names. Intervals are descriptive.}\\\toprule
+Metric & Mean & Lower & Upper\\\midrule\endfirsthead
+\toprule
+Metric & Mean & Lower & Upper\\\midrule\endhead
+hold\_drop\_mm & -0.9521 & -1.192 & -0.7123\\
+post\_transition\_rmse\_mm & -0.6262 & -0.9472 & -0.3051\\
+post\_transition\_max\_abs\_error\_mm & 0 & 0 & 0\\
+post\_transition\_main\_supply\_volume\_ml & -53.95 & -73.14 & -34.77\\
+accumulator\_oil\_used\_ml & 123.1 & 74.97 & 171.1\\
+post\_transition\_storage\_boundary\_work\_j & 1510 & 836.4 & 2184\\
+post\_transition\_boundary\_resource\_j & 377.4 & -142.5 & 897.3\\
+isolated\_max\_abs\_error\_mm & -2.398 & -2.986 & -1.809\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrrrrr}
+\caption{Prespecified seed 5400: fine minus coarse. Steps are 0.5 and 1 ms. Pass is coarse/fine; error and drop differences are mm; supply and oil differences are mL.}\\\toprule
+Policy & Store & Pass & Drop & Error & Supply & Oil\\\midrule\endfirsthead
+\toprule
+Policy & Store & Pass & Drop & Error & Supply & Oil\\\midrule\endhead
+Scalar hybrid & on & 1/1 & -0.1996 & -0.0010 & 4.661 & -4.730\\
+Scalar hybrid & off & 0/0 & -0.1554 & -0.0412 & -1.914 & 0.000\\
+Active PID & on & 1/1 & -0.1892 & -0.0175 & 21.945 & -0.117\\
+Active PID & off & 0/0 & -0.2120 & -0.0361 & 25.254 & 0.000\\
+Active SMC & on & 1/1 & -0.0371 & -0.0042 & 4.646 & 0.976\\
+Active SMC & off & 0/0 & -0.1954 & -0.1950 & -0.171 & 0.000\\
+Availability hybrid & on & 1/1 & -0.1580 & -0.0010 & -2.172 & 1.444\\
+Availability hybrid & off & 0/0 & -0.1496 & -0.0354 & -2.169 & 0.000\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lp{.28\linewidth}p{.40\linewidth}}
+\caption{All failed seeds by family and policy. Every failure is included in its summary.}\\\toprule
+Family & Policy & Failed seeds\\\midrule\endfirsthead
+\toprule
+Family & Policy & Failed seeds\\\midrule\endhead
+normal & Scalar hybrid & None\\
+normal & Active PID & None\\
+normal & Active SMC & None\\
+normal & Availability hybrid & None\\
+isolated on & Scalar hybrid & None\\
+isolated on & Active PID & None\\
+isolated on & Active SMC & None\\
+isolated on & Availability hybrid & None\\
+isolated off & Scalar hybrid & 5400, 5401, 5402, 5404, 5405, 5406, 5407\\
+isolated off & Active PID & 5400, 5401, 5402, 5404, 5405, 5406, 5407\\
+isolated off & Active SMC & 5400, 5401, 5402, 5403, 5404, 5405, 5406, 5407\\
+isolated off & Availability hybrid & 5400, 5401, 5402, 5404, 5405, 5406, 5407\\
+refined on & Scalar hybrid & None\\
+refined on & Active PID & None\\
+refined on & Active SMC & None\\
+refined on & Availability hybrid & None\\
+refined off & Scalar hybrid & 5400\\
+refined off & Active PID & 5400\\
+refined off & Active SMC & 5400\\
+refined off & Availability hybrid & 5400\\
+\bottomrule\end{longtable}\endgroup
+
+Full normal, interruption, refinement, paired and conservation data are supplied in the reproduction archive. Differences involving failed paths remain included.
+
+\begin{verbatim}
+python3 tools/run_paper1_supply_validation.py --workers 8
+python3 tools/report_paper1_supply_coordination.py
+python3 tools/check_paper1_supply_coordination.py --preflight
+\end{verbatim}

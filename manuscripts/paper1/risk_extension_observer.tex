@@ -1,0 +1,17 @@
+\paragraph{Position-filter bias and moment bounds.}
+The implemented position/velocity filter has the exact stored-state recursion
+\begin{equation}
+ z_{k+1}=Fz_k+By_k,\qquad
+ F=\begin{bmatrix}1-\alpha&h\\-\beta/h&1\end{bmatrix},\quad
+ B=\begin{bmatrix}\alpha\\\beta/h\end{bmatrix},\quad
+ (h,\alpha,\beta)=(0.01,0.08,0.0005),
+\end{equation}
+where $z=(\hat x,\hat v)^\top$ and $y$ is measured position. Its poles are 0.926834 and 0.993166. Bounded measurement inputs therefore give bounded filter states, but the DC response to a constant measured position is $(I-F)^{-1}B=(1,0)^\top$: constant position bias is retained. For the additive iid measurement-noise component with a frozen input trajectory, $P=FPF^\top+\sigma_x^2BB^\top$ gives position standard deviation $0.211675\sigma_x$ (0.318 mm at the nominal 1.5 mm raw SD). This is a filter-component calculation, not the covariance of the feedback-connected hydraulic loop. The identity $x_r-x=(x_r-\hat x)+(\hat x-x)$ shows why estimated error alone cannot certify true accuracy without an observer-error bound. The 2 mm design reserve accounts heuristically for one bias component; motion transients, pressure/load estimation and unbounded Gaussian samples prevent interpreting it as a guaranteed total error budget.
+
+A limited moment bound is still available under the declared projections. Since true position is in $[0,L]$, bounded bias and finite measurement-noise variance give a uniformly finite $L_2$ norm of $y_k$. After expressing stored states and measurements in fixed dimensionless units, Schur stability supplies $C<\infty$ and $0<r<1$ such that $\|F^j\|\le Cr^j$. Minkowski's inequality then yields
+\begin{equation}
+ \|z_k\|_{L_2}\le Cr^k\|z_0\|_{L_2}
+ +\frac{C\|B\|}{1-r}\sup_i\|y_i\|_{L_2}.
+\end{equation}
+This proves bounded second moments of this filter under projected-position inputs, including finite-variance Gaussian noise; it does not require feedback-input independence. The pressure filters have pole 0.82, and effective-load smoothing has pole 0.995 with input formed from those filters and a finite difference of $\hat v$, so their second moments are also bounded under bounded projected pressures and finite pressure-noise variance. Clipped control outputs and integrators remain bounded separately. These moment bounds establish neither a deterministic sample-path accuracy bound nor asymptotic tracking, invariance of the unprojected plant, or nonlinear switched stability.
+

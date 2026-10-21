@@ -1,0 +1,55 @@
+\section*{S13. Equal-budget resource-oriented retuning}\renewcommand{\theHtable}{retuning.\arabic{table}}
+The separate protocol fixes nine candidates and three complete 1800 s development paths per policy before any new outcome. Both policies use $g_t\in\{0.7,1.0,1.3\}$ and $g_a\in\{0.3,0.5,0.7\}$; candidate IDs follow that Cartesian-product order. Development seeds are 5600--5602. The repeated loads are $(0,9),(60,14),(300,10),(600,16),(900,11),(1200,15)$ in s/kN, with fivefold leakage, normal supply, 10 ms sensing/control and 1 ms coupled RK4. There is no retuning of the plant or observer. Failed paths rank before $B$ only in the sense that fewer failures always take priority; zero failures are required for a development-feasible candidate. Mean $B$ then ranks candidates, with ID breaking an exact tie. $B$ uses the common 8.01--1800 s window. Both policies retain the same main-valve limit and explicit 8 s latch/discharge gate. Other architecture parameters, including SMC amplitude/width and hybrid thresholds, remain fixed. This bounded search does not establish a globally optimized control-family frontier.
+
+Selection is written to a hash-bound ledger before the independent validation tasks are executed. Validation seeds 5620--5623 are disjoint from development and all earlier normal-supply seeds. The experiment adds 54 development and eight validation paths; it does not overwrite the earlier 88-path supply study. Its normal-supply validation does not extend the interruption or joint-uncertainty evidence. Machine-readable protocol, complete candidate records, selection, validation protocol and all 62 checkpoints accompany the reproduction ZIP.
+
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrrrrr}
+\caption{All development candidates; three paths each. Failure counts use the full feasibility screen.}\\\toprule
+Policy & ID & $g_t$ & $g_a$ & Fail & Mean $B$ (kJ) & RMSE (mm)\\\midrule\endfirsthead
+\toprule Policy & ID & $g_t$ & $g_a$ & Fail & Mean $B$ (kJ) & RMSE (mm)\\\midrule\endhead
+Hybrid & g00 & 0.7 & 0.3 & 3 & 23.395 & 1.314 \\
+Hybrid & g01 & 0.7 & 0.5 & 3 & 23.399 & 1.315 \\
+Hybrid & g02 & 0.7 & 0.7 & 3 & 23.440 & 1.315 \\
+Hybrid & g03 & 1.0 & 0.3 & 0 & 22.760 & 1.243 \\
+Hybrid & g04 & 1.0 & 0.5 & 0 & 22.862 & 1.243 \\
+Hybrid & g05 & 1.0 & 0.7 & 0 & 22.924 & 1.245 \\
+Hybrid & g06 & 1.3 & 0.3 & 0 & 21.832 & 1.202 \\
+Hybrid & g07 & 1.3 & 0.5 & 0 & 22.251 & 1.185 \\
+Hybrid & g08 & 1.3 & 0.7 & 0 & 22.251 & 1.183 \\
+SMC & g00 & 0.7 & 0.3 & 0 & 211.695 & 0.304 \\
+SMC & g01 & 0.7 & 0.5 & 0 & 211.550 & 0.302 \\
+SMC & g02 & 0.7 & 0.7 & 0 & 211.632 & 0.300 \\
+SMC & g03 & 1.0 & 0.3 & 0 & 247.442 & 0.261 \\
+SMC & g04 & 1.0 & 0.5 & 0 & 247.334 & 0.260 \\
+SMC & g05 & 1.0 & 0.7 & 0 & 247.273 & 0.259 \\
+SMC & g06 & 1.3 & 0.3 & 0 & 285.747 & 0.248 \\
+SMC & g07 & 1.3 & 0.5 & 0 & 285.576 & 0.247 \\
+SMC & g08 & 1.3 & 0.7 & 0 & 285.671 & 0.247 \\
+\bottomrule\end{longtable}\endgroup
+\begingroup\hypersetup{hypertexnames=true}\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrrrrr}
+\caption{Every selected-policy validation path. Error is the maximum post-transition absolute error; drop uses confirmed hold.}\\\toprule
+Policy & Seed & Pass & Error (mm) & Drop (mm) & RMSE (mm) & $B$ (kJ)\\\midrule\endfirsthead
+\toprule Policy & Seed & Pass & Error (mm) & Drop (mm) & RMSE (mm) & $B$ (kJ)\\\midrule\endhead
+Hybrid & 5620 & 1 & 6.566 & 2.674 & 1.197 & 22.606 \\
+Hybrid & 5621 & 1 & 6.917 & 2.408 & 1.204 & 22.541 \\
+Hybrid & 5622 & 1 & 7.022 & 2.626 & 1.224 & 22.634 \\
+Hybrid & 5623 & 1 & 6.413 & 2.215 & 1.207 & 22.079 \\
+SMC & 5620 & 1 & 9.391 & 2.673 & 0.309 & 206.558 \\
+SMC & 5621 & 1 & 9.809 & 2.930 & 0.308 & 211.537 \\
+SMC & 5622 & 1 & 9.913 & 2.579 & 0.309 & 208.097 \\
+SMC & 5623 & 1 & 9.350 & 2.835 & 0.308 & 211.070 \\
+\bottomrule\end{longtable}\endgroup
+\begin{table}[H]\centering\small
+\caption{Paired hybrid minus SMC validation differences, $n=4$. Intervals use a Student $t$ multiplier with three degrees of freedom; they describe seeded simulation variability only.}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.48\linewidth}XX@{}}\toprule
+Metric & Mean & 95\% interval\\\midrule
+Boundary resource (kJ) & -186.850 & [-190.908, -182.793] \\
+Main-source volume (mL) & -8941.490 & [-9127.368, -8755.611] \\
+Post-transition RMSE (mm) & 0.900 & [0.882, 0.918] \\
+Confirmed-hold drop (mm) & -0.274 & [-0.825, 0.277] \\
+Stored-oil discharge (mL) & 68.041 & [43.748, 92.334] \\
+Mode changes & 48.000 & [48.000, 48.000] \\
+\bottomrule\end{tabularx}\end{table}
+All path metrics, including storage-outlet work, oil, mode changes, pressure and boundary counters, remain in the JSON checkpoints. Candidate ranking is independent for each policy and does not equalize RMSE; lower $B$ with larger tracking error is a resource--accuracy trade-off. Four validation seeds are a small nominal screen. No finite grid certifies an optimum, physical reliability, robustness over an uncertainty region or actual energy saving.

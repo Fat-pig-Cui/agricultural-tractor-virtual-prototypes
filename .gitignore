@@ -7,15 +7,9 @@ __pycache__/
 *.out
 *.toc
 *.synctex.gz
-MDPI_template_ACS/missfont.log
-revisions/machines_major_revision/results/integration_1.json
-revisions/machines_major_revision/results/integration_10.json
-revisions/machines_major_revision/results/trajectory_nominal.json
-revisions/machines_major_revision/results/trajectory_pid.json
-revisions/machines_major_revision/results/both_noise_2.json
-revisions/machines_major_revision/results/pressure_noise_1.json
-revisions/machines_major_revision/results/pressure_noise_2.json
-revisions/machines_major_revision/results/pressure_noise_4.json
-revisions/machines_major_revision/results/pressure_noise_10.json
-revisions/machines_major_revision/results/pressure_noise_20.json
-revisions/machines_major_revision/results/original_noise_diagnostics.json
+.build/
+scratch/
+# 仿真生成物仅在独立工作区保存；防止误加入公开检出。
+/experiments/
+/results/
+/revisions/

@@ -1,0 +1,830 @@
+{
+  "snapshot_date": "2026-10-21",
+  "papers": {
+    "paper1": "Machines 已接收稿",
+    "paper2": "Energies 修正作者校样"
+  },
+  "byte_identical_copies": [
+    {
+      "source": "revisions/machines_minor_revision/manuscript.tex",
+      "target": "manuscripts/paper1/manuscript.tex",
+      "sha256": "acff0224f96ede2d718fe10cf8784d79d1af1239c592805d788963cc58f54c08"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_observer.tex",
+      "target": "manuscripts/paper1/risk_extension_observer.tex",
+      "sha256": "3c7b34efc08567441eb306be30b7a3c21d52852ed807b4a4a24060c382d465e4"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_closure_methods.tex",
+      "target": "manuscripts/paper1/risk_closure_methods.tex",
+      "sha256": "33925090649a7377aa53ab31a9bc0b629e82e8343fe0ddfe984f51c2a7d92565"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_methods.tex",
+      "target": "manuscripts/paper1/risk_extension_methods.tex",
+      "sha256": "ac0ce06493e47e71a42196cffda029d578a8e320751c9b3f00345ef8c4060909"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supply_methods.tex",
+      "target": "manuscripts/paper1/risk_extension_supply_methods.tex",
+      "sha256": "c4a8aa2509abe5f07b564bb3ed726aeca5dd95fca06514f01cca0fe1416de0de"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supply_retuning_methods.tex",
+      "target": "manuscripts/paper1/risk_extension_supply_retuning_methods.tex",
+      "sha256": "e3a27019dfe77a6f3e6522dc87b59dd1864bc1f9f6d97f33c98f60be81c1b4cc"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_closure_results.tex",
+      "target": "manuscripts/paper1/risk_closure_results.tex",
+      "sha256": "0010fcae29eeb91e7d19c2d869231f633998c754c5fd61aaa3be7cb93535ab3d"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_results.tex",
+      "target": "manuscripts/paper1/risk_extension_results.tex",
+      "sha256": "e5f905ac8c2f460f7bc4adba39b5b25393c0f1e2bfade882844ac231c8683b4b"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supply_results.tex",
+      "target": "manuscripts/paper1/risk_extension_supply_results.tex",
+      "sha256": "0342f80aac8f7e13d89fa1d519c8ad9adbfd9095f0f358f2d92ce2d2f6a076e3"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supply_retuning_results.tex",
+      "target": "manuscripts/paper1/risk_extension_supply_retuning_results.tex",
+      "sha256": "c16ce88191047e1019e25fd8a27ef35c2d8150790b3c2747362cb57f620be21a"
+    },
+    {
+      "source": "revisions/machines_minor_revision/comparison_summary.tex",
+      "target": "manuscripts/paper1/comparison_summary.tex",
+      "sha256": "db885d9e6af73dbd2f3804e0b73266b7b475dd49cee82c13f12463c138b6ccf1"
+    },
+    {
+      "source": "revisions/machines_minor_revision/references.tex",
+      "target": "manuscripts/paper1/references.tex",
+      "sha256": "1d3a87c9a425d5899f9d3d5280008eeefcac5a50e697dab4254d83c413e96c79"
+    },
+    {
+      "source": "revisions/machines_minor_revision/supplementary.tex",
+      "target": "manuscripts/paper1/supplementary.tex",
+      "sha256": "89a98ed6a11d7562a084282c441902abc56cff87a6a582025f0a8de65ec6985d"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_closure_supplement.tex",
+      "target": "manuscripts/paper1/risk_closure_supplement.tex",
+      "sha256": "1f231574db3a6b0ee86fac39bb20700c3478a55be8e0de35eacc433bb462fc8e"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supplement.tex",
+      "target": "manuscripts/paper1/risk_extension_supplement.tex",
+      "sha256": "73f71fa05a6cdac2459cb7d5cd5f14210e64e1c1634789052ee26d729b55914d"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supply_supplement.tex",
+      "target": "manuscripts/paper1/risk_extension_supply_supplement.tex",
+      "sha256": "a487886465ec8475b3f9480cfdc23567baaa77286198d165f5a4538891c52f9d"
+    },
+    {
+      "source": "revisions/machines_minor_revision/risk_extension_supply_retuning_supplement.tex",
+      "target": "manuscripts/paper1/risk_extension_supply_retuning_supplement.tex",
+      "sha256": "07c927d544b09a802134034eaecad7ee9a5f3da3eb0b39a4092d3a9742243875"
+    },
+    {
+      "source": "revisions/machines_minor_revision/manuscript.pdf",
+      "target": "manuscripts/paper1/manuscript.pdf",
+      "sha256": "6eb3efcbddc2266bd08d267abb595a94d80dd925136c799ef006e614f58f504a"
+    },
+    {
+      "source": "submission_packages/Machines_Paper1_Minor_Revision/03_Supplementary_Material.pdf",
+      "target": "manuscripts/paper1/supplementary.pdf",
+      "sha256": "781c1566d2e25eeae29f6cb67988a4e11d115814503dafac7aa35b54d4441584"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/journalnames.tex",
+      "target": "manuscripts/paper1/Definitions/journalnames.tex",
+      "sha256": "f4944f272ae0bfaccedb926f4da5ce40c0dabead50482afae191989430fb66dc"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "target": "manuscripts/paper1/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "sha256": "888e17cd85b6f8e97dfcd31b38fd52422e9a7ec8522dbfd5d5e267d66057c633"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/logo-mdpi.eps",
+      "target": "manuscripts/paper1/Definitions/logo-mdpi.eps",
+      "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/logo-orcid.pdf",
+      "target": "manuscripts/paper1/Definitions/logo-orcid.pdf",
+      "sha256": "0558a0097dc4d1ffe3f4a1b3c9b4b98c6e568eac7d7439d447ca56ed1a8ec759"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/logo-updates.eps",
+      "target": "manuscripts/paper1/Definitions/logo-updates.eps",
+      "sha256": "b84b986524ff2e47afb07ecd5ef6d33cd85bc4b88d2053fdfb3e83210d695831"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/mdpi.bst",
+      "target": "manuscripts/paper1/Definitions/mdpi.bst",
+      "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/mdpi.cls",
+      "target": "manuscripts/paper1/Definitions/mdpi.cls",
+      "sha256": "62979fe0fe0f72a57adc1ad683add9b0138f1dae635d1da4ae48a4d811159e40"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/mdpi_apacite.bst",
+      "target": "manuscripts/paper1/Definitions/mdpi_apacite.bst",
+      "sha256": "c7fffe0231922e5521dc360889fafe941ee26d154c1ce4e167e4ec9f2d13498f"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/mdpi_apacite.sty",
+      "target": "manuscripts/paper1/Definitions/mdpi_apacite.sty",
+      "sha256": "9e9bb23ded45f7f76236ad304d4bda2c066fb48041b272cebc20f940c17865a7"
+    },
+    {
+      "source": "revisions/machines_minor_revision/Definitions/mdpi_chicago.bst",
+      "target": "manuscripts/paper1/Definitions/mdpi_chicago.bst",
+      "sha256": "4a73faf6e0cf1a225d1b9a41a6955d3cc29a55c5fdce662177d00eee3946ce36"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_architecture.png",
+      "target": "manuscripts/paper1/figures/paper1_architecture.png",
+      "sha256": "4e6471399c6617b5f8430327b2e06d32f8b2f8bad77fe1b0ab9ea2489b20fcd4"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_assumption_and_proxy_stress.png",
+      "target": "manuscripts/paper1/figures/paper1_assumption_and_proxy_stress.png",
+      "sha256": "a59ecc99465455833d828e3e82abc9d12c427466f421dc114ee6632eb1768b57"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_combined_stress_surface.png",
+      "target": "manuscripts/paper1/figures/paper1_combined_stress_surface.png",
+      "sha256": "c98de5604c438a258c7a42e5f303eb6f34c94a7de53fba3c875cb6bd5f0c9e30"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_load_step_ablation.png",
+      "target": "manuscripts/paper1/figures/paper1_load_step_ablation.png",
+      "sha256": "0326341536dd2051ed4043a8437e4211c4b648993ce49aa42a6457f7959e641a"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_lock_leakage_sensitivity.png",
+      "target": "manuscripts/paper1/figures/paper1_lock_leakage_sensitivity.png",
+      "sha256": "ae336abbb85c66014b427f064e6e0548a160cc69ed78eeb4e4a117f7c66eb0db"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_operating_envelope.png",
+      "target": "manuscripts/paper1/figures/paper1_operating_envelope.png",
+      "sha256": "ebb3949d122f1b214502f5fbc29af01580f0dae43901517d8ef207cd0c747452"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_v2_architecture.png",
+      "target": "manuscripts/paper1/figures/paper1_v2_architecture.png",
+      "sha256": "b76725da2af8f0ff58e52e07945ba07eef38b84718c1228ee4ae386f0229636e"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/paper1_v2_results.png",
+      "target": "manuscripts/paper1/figures/paper1_v2_results.png",
+      "sha256": "848bffb80b0d5c3d95e26fcaa3c97e745cf15a3a447fe4102127f1fb7e47b506"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/reviewer3_accumulator_ablation.pdf",
+      "target": "manuscripts/paper1/figures/reviewer3_accumulator_ablation.pdf",
+      "sha256": "eb5f2703e5f85c10a3c910d57e1b8c1b67f9726f25b75adf72a4bcb25483cac3"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/reviewer3_accumulator_ablation.png",
+      "target": "manuscripts/paper1/figures/reviewer3_accumulator_ablation.png",
+      "sha256": "b34372774609fe26aceca23856f57cd7d72ee9eca72609e51f145a136c4136e4"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/reviewer3_physical_system.pdf",
+      "target": "manuscripts/paper1/figures/reviewer3_physical_system.pdf",
+      "sha256": "4d1ce607a5c1828d602eb36f195101f2a0bf87cf2ec45d85a67c9b53844b009f"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/reviewer3_physical_system.png",
+      "target": "manuscripts/paper1/figures/reviewer3_physical_system.png",
+      "sha256": "66913e21cac7b877ce8b34ba2493099f3a3280d2b1af1077803219badd3eab73"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/reviewer3_repeated_load.pdf",
+      "target": "manuscripts/paper1/figures/reviewer3_repeated_load.pdf",
+      "sha256": "d44be298abfa5517c8052ce32d47fb0bcdd205a3256fdfaeb57ef4382017d2dc"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/reviewer3_repeated_load.png",
+      "target": "manuscripts/paper1/figures/reviewer3_repeated_load.png",
+      "sha256": "7f21621c12f8698cba071c9103e5d2fd61384772cab772a204215c61d0e30f51"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_architecture.pdf",
+      "target": "manuscripts/paper1/figures/revision_architecture.pdf",
+      "sha256": "858908f85a67f08be35717c9084d2aa47e232098fbd84f6034c8c7d32b06450f"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_architecture.png",
+      "target": "manuscripts/paper1/figures/revision_architecture.png",
+      "sha256": "920613396165156d0c1dc6ec17f67dc4e4f82892b1a55ca2a2b36fa359cd3ffe"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_comparison.pdf",
+      "target": "manuscripts/paper1/figures/revision_comparison.pdf",
+      "sha256": "6ee44d3f67f234f95cc312170eb8c811613375778c34bac874c3e6ef3eeab406"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_comparison.png",
+      "target": "manuscripts/paper1/figures/revision_comparison.png",
+      "sha256": "55aed427acbf63d62fa13aac7ae5e4721bb1c903bbd9b5e6a683eacca70d3190"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_dwell.pdf",
+      "target": "manuscripts/paper1/figures/revision_dwell.pdf",
+      "sha256": "95ac4087e39cfc5e28b38fb3e194db81850a11210e22eea094f21a6714a12ada"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_dwell.png",
+      "target": "manuscripts/paper1/figures/revision_dwell.png",
+      "sha256": "91bdc106f8766e21609a4d3e15c05ef38f0c8e68effc5e925262f08dc974f661"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_integration.pdf",
+      "target": "manuscripts/paper1/figures/revision_integration.pdf",
+      "sha256": "a81e14460d8e5c155a3f4d534dafc4bfac966ec6040131728732c2e6f589d611"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_integration.png",
+      "target": "manuscripts/paper1/figures/revision_integration.png",
+      "sha256": "d3780dd5f8c722e79609dc008f2a2df4755c92c4752fa211c1c7d756abd78940"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_load_step.pdf",
+      "target": "manuscripts/paper1/figures/revision_load_step.pdf",
+      "sha256": "9685efba578fe155cb80a56ea8252744e98fc48e21d6f18afb7112da989a19db"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_load_step.png",
+      "target": "manuscripts/paper1/figures/revision_load_step.png",
+      "sha256": "cbb7d931e4b038c6a73ab166202630e6b47d33439b52433333c288ee159ac33f"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_noise.pdf",
+      "target": "manuscripts/paper1/figures/revision_noise.pdf",
+      "sha256": "04bf3b6452ccd5a3345325ee4adb1d67796b4d7189978fdb0652471fda834655"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_noise.png",
+      "target": "manuscripts/paper1/figures/revision_noise.png",
+      "sha256": "6928a7308dad62f301ee997fcbf1bc9e5d5f82f1ea7aeb2e77d39abe1d5a0d73"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_original_noise.pdf",
+      "target": "manuscripts/paper1/figures/revision_original_noise.pdf",
+      "sha256": "6c4beffdce4e00fd8cfaa952a10883dd681cbd21398b7b120e2e4d471d5aaa5a"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/revision_original_noise.png",
+      "target": "manuscripts/paper1/figures/revision_original_noise.png",
+      "sha256": "f755250ceaf108ee8f46c26018a4eff807c2172099b7847f4cf4f9ead1768d31"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_closure_frontier.pdf",
+      "target": "manuscripts/paper1/figures/risk_closure_frontier.pdf",
+      "sha256": "ecdbed4de9a54cd7c5d8f7f43f1e439533702274d6776c1e40bcb7fe2d05656b"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_closure_frontier.png",
+      "target": "manuscripts/paper1/figures/risk_closure_frontier.png",
+      "sha256": "a1eaec3cb80d11b79896aeb4e864f556544328107e55a90667014b5e47bae784"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_closure_validation.pdf",
+      "target": "manuscripts/paper1/figures/risk_closure_validation.pdf",
+      "sha256": "60e8823197e26ced94ab6a2093dfc29c58bc25874a49c1220607df62ba4ecc38"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_closure_validation.png",
+      "target": "manuscripts/paper1/figures/risk_closure_validation.png",
+      "sha256": "094b673f36a1273f87544e27583ee8b1b4c89c1837fa5366f750c8bb32bd9c56"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_fresh.pdf",
+      "target": "manuscripts/paper1/figures/risk_extension_fresh.pdf",
+      "sha256": "2f1435beca550fa6f4dfaeb69c3ffe131e97008d853c39e60ef321b054f92775"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_fresh.png",
+      "target": "manuscripts/paper1/figures/risk_extension_fresh.png",
+      "sha256": "bee6e0f685326be3096450e89b4fd34badc3f1eadc235b3eb08b6b355ba9efb0"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_supply_boundary.pdf",
+      "target": "manuscripts/paper1/figures/risk_extension_supply_boundary.pdf",
+      "sha256": "2374aab6ec238167211010ebc726319cd4fb1bb5cdd718e5bb625e147d915390"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_supply_boundary.png",
+      "target": "manuscripts/paper1/figures/risk_extension_supply_boundary.png",
+      "sha256": "9c76b90f77dfefb171d9cd1cc712e1dc8342cd7f88983af8854aa8d512931508"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_supply_interruption.pdf",
+      "target": "manuscripts/paper1/figures/risk_extension_supply_interruption.pdf",
+      "sha256": "9de6dd5cb19323fa1ac988d625b0cc7d62afb57cd50ba5f13121146fa032029e"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_supply_interruption.png",
+      "target": "manuscripts/paper1/figures/risk_extension_supply_interruption.png",
+      "sha256": "f0a104bf5d55c6e8d709d91dbbeb21acaf1c76a403c20b75a7bbaece583c7cc9"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_supply_normal.pdf",
+      "target": "manuscripts/paper1/figures/risk_extension_supply_normal.pdf",
+      "sha256": "db916e293982ba11b1d89fe49d61e3a8680029ba9176cfccf4840431e84cbc77"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_supply_normal.png",
+      "target": "manuscripts/paper1/figures/risk_extension_supply_normal.png",
+      "sha256": "8acd1f50a1e674c5f58d12f8088e3eb41979a6e1ab8b03cafa54eef17b4aa609"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_transition.pdf",
+      "target": "manuscripts/paper1/figures/risk_extension_transition.pdf",
+      "sha256": "4dd4577b75785fdc3d66dbb2cb3043ac63bf8556c304a6822626a2604a2147e4"
+    },
+    {
+      "source": "revisions/machines_minor_revision/figures/risk_extension_transition.png",
+      "target": "manuscripts/paper1/figures/risk_extension_transition.png",
+      "sha256": "02185b99f3ba6a05736a285c04da42273f1256b06adbd25654937be5c78eab75"
+    },
+    {
+      "source": "revisions/energies_proofreading/energies-4623536-english.pdf",
+      "target": "manuscripts/paper2/manuscript.pdf",
+      "sha256": "0af2aa0dc33dbc09d3adc1bc1e71fad904f0c058a1199295f0e7886276831969"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/energies-logo-eps-converted-to.pdf",
+      "target": "manuscripts/paper2/Definitions/energies-logo-eps-converted-to.pdf",
+      "sha256": "7d05925bf0f1cd4026a757e62bde544c09cd7b32f2c9a5860480f75ec54209c8"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/energies-logo.eps",
+      "target": "manuscripts/paper2/Definitions/energies-logo.eps",
+      "sha256": "4f37d32afd3b02162ef5defdb674d75e9311babe9a3abf4116245f063daa27ff"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/energies-logo.png",
+      "target": "manuscripts/paper2/Definitions/energies-logo.png",
+      "sha256": "3107cc1e865c984bbfaf8874535a07ccae87602ec3074a3c6e551ca3bb09b892"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/journalnames.tex",
+      "target": "manuscripts/paper2/Definitions/journalnames.tex",
+      "sha256": "131464c3a5c1d3ca13967b798581bf1d275c3967611df5b66b50f14e964a37f0"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "target": "manuscripts/paper2/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "sha256": "abd3831e47bbc44b332782e23fd3284f7656303113f5c69da3c0275cde148ff8"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/logo-mdpi.eps",
+      "target": "manuscripts/paper2/Definitions/logo-mdpi.eps",
+      "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/logo-orcid.pdf",
+      "target": "manuscripts/paper2/Definitions/logo-orcid.pdf",
+      "sha256": "0558a0097dc4d1ffe3f4a1b3c9b4b98c6e568eac7d7439d447ca56ed1a8ec759"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/logo-updates-eps-converted-to.pdf",
+      "target": "manuscripts/paper2/Definitions/logo-updates-eps-converted-to.pdf",
+      "sha256": "29d138aacfa653cc429fb07fbce7401e7fbb3ea6d907ded138f71c662c0a9652"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/logo-updates.eps",
+      "target": "manuscripts/paper2/Definitions/logo-updates.eps",
+      "sha256": "71ad8b00bcca718b62f3286af02ea56678e8199b5843d7ed4fdc86bd969c2809"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/mdpi.bst",
+      "target": "manuscripts/paper2/Definitions/mdpi.bst",
+      "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/mdpi.cls",
+      "target": "manuscripts/paper2/Definitions/mdpi.cls",
+      "sha256": "cc23e5a3b2b769041bc9e600be4274abc619b545cf2577b610a2812603d3c243"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/mdpi_apacite.bst",
+      "target": "manuscripts/paper2/Definitions/mdpi_apacite.bst",
+      "sha256": "c7fffe0231922e5521dc360889fafe941ee26d154c1ce4e167e4ec9f2d13498f"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/mdpi_apacite.sty",
+      "target": "manuscripts/paper2/Definitions/mdpi_apacite.sty",
+      "sha256": "a77a994f978c1860ff14dbcae74631f3ed835b418adbdcf84de2f06d98c34599"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/mdpi_chicago.bst",
+      "target": "manuscripts/paper2/Definitions/mdpi_chicago.bst",
+      "sha256": "4a73faf6e0cf1a225d1b9a41a6955d3cc29a55c5fdce662177d00eee3946ce36"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/mdpi_xelatex.cls",
+      "target": "manuscripts/paper2/Definitions/mdpi_xelatex.cls",
+      "sha256": "63822a06b08047c8a8e1f2b406cfe69d872cec7e7a705bcbee81fa9e4c737496"
+    },
+    {
+      "source": "revisions/energies_proofreading/Definitions/unicode.tex",
+      "target": "manuscripts/paper2/Definitions/unicode.tex",
+      "sha256": "1a41f6c85db06401a4582008e6b8933c7212d17541497701797a55fe473d19e0"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_ablation.pdf",
+      "target": "manuscripts/paper2/figures/revision_ablation.pdf",
+      "sha256": "9a2b828d9baea37d954c6cf71a5ffd1428df3526cee613dec48419e660c4e1d6"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_ablation.png",
+      "target": "manuscripts/paper2/figures/revision_ablation.png",
+      "sha256": "55f5eb393955ceb66993a361915808494ea482d0090c6c49458a4ee1d38e7b12"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_architecture.pdf",
+      "target": "manuscripts/paper2/figures/revision_architecture.pdf",
+      "sha256": "709497952f13c6a3c19961c67a0cb0ec61f2829c62a78896292b4282f1cfd70c"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_architecture.png",
+      "target": "manuscripts/paper2/figures/revision_architecture.png",
+      "sha256": "62426769393141eed8d2b9b00aa741a2c7aedef15414e84bc1a338a539787d12"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_model_maps.pdf",
+      "target": "manuscripts/paper2/figures/revision_model_maps.pdf",
+      "sha256": "bc07d3c458c0c8b50a684ebe9af5072c2e34231765a0d9ea3d832c9f960f8f41"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_model_maps.png",
+      "target": "manuscripts/paper2/figures/revision_model_maps.png",
+      "sha256": "7e1d84005d8981907132554ed91f13333355e33e1dc0ab7f096ffbe91db96859"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_soc_trajectory.pdf",
+      "target": "manuscripts/paper2/figures/revision_soc_trajectory.pdf",
+      "sha256": "3164e6cfb58cdf6c8017f8d13af94ba5234c01e53419b47dbd2be3ffe9aee371"
+    },
+    {
+      "source": "revisions/energies_proofreading/figures/revision_soc_trajectory.png",
+      "target": "manuscripts/paper2/figures/revision_soc_trajectory.png",
+      "sha256": "0f84f1dd3c92741fdd4c0fec75fdb243a626382aa1caa55adc9613c9dc52f69e"
+    },
+    {
+      "source": "revisions/energies_major_revision/supplement.tex",
+      "target": "manuscripts/paper2/supplementary.tex",
+      "sha256": "ac4fd2737e15d7ef98d1430e013ea6be840127b0462b56e9895c4b54f2f8cc26"
+    },
+    {
+      "source": "revisions/energies_major_revision/submitted_ablation_table.tex",
+      "target": "manuscripts/paper2/submitted_ablation_table.tex",
+      "sha256": "d3b6cab04c9d9b29ecedfa3655fb5edf0fa32d9ba83e7a4ca2a755869ed8a035"
+    },
+    {
+      "source": "revisions/energies_major_revision/comparison_table.tex",
+      "target": "manuscripts/paper2/comparison_table.tex",
+      "sha256": "1371106ba0e8849dc2aa5559b0c9cc67967e57fac12d5ba7a141b6f1fe2f0be3"
+    },
+    {
+      "source": "revisions/energies_major_revision/diagnostic_table.tex",
+      "target": "manuscripts/paper2/diagnostic_table.tex",
+      "sha256": "dc4d51e302525631c3f425a10d805701435880908f1032cdb8e15c95574224fb"
+    },
+    {
+      "source": "revisions/energies_major_revision/audit_table.tex",
+      "target": "manuscripts/paper2/audit_table.tex",
+      "sha256": "7fa41520d136fb4a736ec7537bec477a80fcb4d59929f4878eaf49c74fabbe22"
+    },
+    {
+      "source": "revisions/energies_major_revision/failure_list.tex",
+      "target": "manuscripts/paper2/failure_list.tex",
+      "sha256": "b65df3f4fab45aba9263a7c30d4db284b9fac397e67617eeef7114603f25fff5"
+    },
+    {
+      "source": "revisions/energies_proofreading/校样返还上传包/03_Supplementary_Methods_Results.pdf",
+      "target": "manuscripts/paper2/supplementary.pdf",
+      "sha256": "3b77e3ae0c3c51275071ff91ceea2a02740abfbf5a12bd4509477bfa6f5ac723"
+    },
+    {
+      "source": "code/common/metrics.py",
+      "target": "code/common/metrics.py",
+      "sha256": "90718d88ccc5196d915f4f255defaa5ba748f084f3fc1a78bfee1cbe08b0c560"
+    },
+    {
+      "source": "code/common/profiles.py",
+      "target": "code/common/profiles.py",
+      "sha256": "4a197b56ae2091a1980c86d761a9355c4f460821254843f230d0cd0d306b2383"
+    },
+    {
+      "source": "code/common/reproducibility.py",
+      "target": "code/common/reproducibility.py",
+      "sha256": "64429a03e0597cfcd0a9ca759dcd0ab7a5ab75330bd037821c7f0eebc4d6f78c"
+    },
+    {
+      "source": "code/common/statistics.py",
+      "target": "code/common/statistics.py",
+      "sha256": "ce6dd8bb0779f314de4bbeb0fb296d50dcf6fde397048e4f7f99f76b74cccadd"
+    },
+    {
+      "source": "code/config/__init__.py",
+      "target": "code/config/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "code/config/parameters.py",
+      "target": "code/config/parameters.py",
+      "sha256": "979fce5d26b5ddec130d948190701772cae264466c0974a6c49f3fb880226643"
+    },
+    {
+      "source": "code/energy_management/dp_mpc_ecms.py",
+      "target": "code/energy_management/dp_mpc_ecms.py",
+      "sha256": "55104ea8a379d051778039db5020cff6d0d5e48b4f776dc366bfbe39e44a79d5"
+    },
+    {
+      "source": "code/energy_management/experiments.py",
+      "target": "code/energy_management/experiments.py",
+      "sha256": "fb964882f5d58f0595054dd8b8d0eab22f73399de04225a8bd989f207fe1d832"
+    },
+    {
+      "source": "code/energy_management/load_terrain_predictor.py",
+      "target": "code/energy_management/load_terrain_predictor.py",
+      "sha256": "be28b1205a2dd08c524285c6008f4fc4be9fb8abe8beeb93e7531962bdc85ec9"
+    },
+    {
+      "source": "code/energy_management/os_ecvt_model.py",
+      "target": "code/energy_management/os_ecvt_model.py",
+      "sha256": "f6db30a5338b3e2cdcdd55cdbec3c9d46d3bd0aabe649ee79cb3ec4d265389eb"
+    },
+    {
+      "source": "code/energy_management/viability_ecms_v2.py",
+      "target": "code/energy_management/viability_ecms_v2.py",
+      "sha256": "0b504a74def2847a9aefba9198d32089febe54643e6f867f88a45b6f3e57e797"
+    },
+    {
+      "source": "code/lift_control/controllers.py",
+      "target": "code/lift_control/controllers.py",
+      "sha256": "8ce77e1ed0440c0d445ff4fc56acc558006941c4e3b3616904d76dc81848dbb5"
+    },
+    {
+      "source": "code/lift_control/experiments.py",
+      "target": "code/lift_control/experiments.py",
+      "sha256": "9a1e30da4f208079fc46ace6e2a4c74e9c4fad056e47be4471d2d19401cf7856"
+    },
+    {
+      "source": "code/lift_control/hydraulic_model.py",
+      "target": "code/lift_control/hydraulic_model.py",
+      "sha256": "dea6d8d6c8771bcb1cc04d7241914c8d516f619835c6c7bd732ebc0b93b6973d"
+    },
+    {
+      "source": "code/lift_control/hydraulic_v2.py",
+      "target": "code/lift_control/hydraulic_v2.py",
+      "sha256": "18e9e52f981381e3318b3cacd10ba2904a235e58e6ad5d82cac583812b3b682b"
+    },
+    {
+      "source": "code/lift_control/leakage_compensation.py",
+      "target": "code/lift_control/leakage_compensation.py",
+      "sha256": "43ef4dc4e54dd76929b597966555ec9e64c0596b952e69f7cb2900a578b93aee"
+    },
+    {
+      "source": "code/lift_control/lift_reserve_control.py",
+      "target": "code/lift_control/lift_reserve_control.py",
+      "sha256": "cec5541f4c64c0556dbb459278ef5b19426161535ad3b203f19aefe356a04a72"
+    },
+    {
+      "source": "code/lift_control/lift_reserve_coordination.py",
+      "target": "code/lift_control/lift_reserve_coordination.py",
+      "sha256": "7f1211310e893258186678edcf0c849f9f02663f63f6e89aefa39ed9161622ef"
+    },
+    {
+      "source": "code/lift_control/lift_reserve_experiment.py",
+      "target": "code/lift_control/lift_reserve_experiment.py",
+      "sha256": "64879518517b82f5c79f083ad0e8228b212ece67a5f393b58476ad9015d12e3f"
+    },
+    {
+      "source": "code/lift_control/lift_reserve_supply.py",
+      "target": "code/lift_control/lift_reserve_supply.py",
+      "sha256": "bb6d10e348df801816bc6248cac367bcfac3b3c08e5f802ba2d965d7f6b5d170"
+    },
+    {
+      "source": "code/lift_control/lift_v2_experiment.py",
+      "target": "code/lift_control/lift_v2_experiment.py",
+      "sha256": "aa3e578b93925b13c951e269cac99b768295629240a0779cd1d8c5febe91ebad"
+    },
+    {
+      "source": "tools/analyze_paper1_observer_margin.py",
+      "target": "tools/analyze_paper1_observer_margin.py",
+      "sha256": "fec5d9f9ad1b1ff54b4c7ab5b1827a0e63822a3528560018c0ce30a8fe3c3a46"
+    },
+    {
+      "source": "tools/analyze_paper1_weight_sensitivity.py",
+      "target": "tools/analyze_paper1_weight_sensitivity.py",
+      "sha256": "f5768f0ae799712dac8c8f4387c8e0a48dbb3aab4c3cf3f82b398f06f03641dc"
+    },
+    {
+      "source": "tools/check_paper1_extension_parity.py",
+      "target": "tools/check_paper1_extension_parity.py",
+      "sha256": "41610b9c83bb3c921a6762007e893bf9d05bd267861390d8f7a1d1ea03004110"
+    },
+    {
+      "source": "tools/check_paper1_supply_coordination.py",
+      "target": "tools/check_paper1_supply_coordination.py",
+      "sha256": "15c4d63e84a43c34ce3cb4c2b31e1cc9555f0d2f88ab09a0351143d3afab76db"
+    },
+    {
+      "source": "tools/check_paper2_revision_physics.py",
+      "target": "tools/check_paper2_revision_physics.py",
+      "sha256": "a138d8c0aa4e3ffe8c4ec7c7d5bf2ab8793a202091adc9bfe685560912f1e302"
+    },
+    {
+      "source": "tools/diagnose_paper1_bias_margin.py",
+      "target": "tools/diagnose_paper1_bias_margin.py",
+      "sha256": "e4a225beb63e03f055139550462ce4de366861933c81088b2d008712ba8270e9"
+    },
+    {
+      "source": "tools/extend_paper1_revision_audits.py",
+      "target": "tools/extend_paper1_revision_audits.py",
+      "sha256": "75a87779b207435c0a10052cf4ab83651ac21516a1966fae25408646713c216c"
+    },
+    {
+      "source": "tools/refine_paper1_comparators.py",
+      "target": "tools/refine_paper1_comparators.py",
+      "sha256": "7a212e95e7e81837b7b7c608b4958b52a15fc7903e5dad25558e63a740a16768"
+    },
+    {
+      "source": "tools/replay_paper1_original_noise.py",
+      "target": "tools/replay_paper1_original_noise.py",
+      "sha256": "7cf859ef1d67a7106d931214cb3932e3aa28b24bbc22141fca6846c84d443aa3"
+    },
+    {
+      "source": "tools/rerun_paper1_mechanical_audit.py",
+      "target": "tools/rerun_paper1_mechanical_audit.py",
+      "sha256": "bb41851a2e34f41923651df41308d228a935fdce85ebf74697be7276822180e6"
+    },
+    {
+      "source": "tools/run_paper1_major_revision.py",
+      "target": "tools/run_paper1_major_revision.py",
+      "sha256": "cf30b97e5d976126cdc4641bcb48b1cee3f484280f3a643dcc23f7d67ece2ae3"
+    },
+    {
+      "source": "tools/run_paper1_margin_paired.py",
+      "target": "tools/run_paper1_margin_paired.py",
+      "sha256": "3bec5648761bd9838268c5b5aa4702b1701b3cd4c8293c60551a449abc820682"
+    },
+    {
+      "source": "tools/run_paper1_margin_selection.py",
+      "target": "tools/run_paper1_margin_selection.py",
+      "sha256": "b3a4eada8a1620fffe7db8a1e53b4b6cc6e3fa8c257a585e37a61a2618f327c6"
+    },
+    {
+      "source": "tools/run_paper1_matched_smc_correction.py",
+      "target": "tools/run_paper1_matched_smc_correction.py",
+      "sha256": "16cd7086a121c5656c7925dbdda477a646a3a3aecc354fd87121a3b6064a6260"
+    },
+    {
+      "source": "tools/run_paper1_measurement_observer_audit.py",
+      "target": "tools/run_paper1_measurement_observer_audit.py",
+      "sha256": "a29f8c6a12b131dedb6880f5e4b85a17e91afc0f7fc5517afeb3eb34175148c8"
+    },
+    {
+      "source": "tools/run_paper1_reserve_long_pilot.py",
+      "target": "tools/run_paper1_reserve_long_pilot.py",
+      "sha256": "eeb7fc5f52a0746278d822a6937a4d10a1431d7696a891587f9daa4b18a68b29"
+    },
+    {
+      "source": "tools/run_paper1_reserve_pilot.py",
+      "target": "tools/run_paper1_reserve_pilot.py",
+      "sha256": "32c689315da604292b301e5b05c8f56c84c3d8743abbd8b2f3d2e9a3740e77e1"
+    },
+    {
+      "source": "tools/run_paper1_reserve_validation.py",
+      "target": "tools/run_paper1_reserve_validation.py",
+      "sha256": "b93785bfa85ba4ee454063f954b52be9c372c6af2ead86313465c7d64151249d"
+    },
+    {
+      "source": "tools/run_paper1_reviewer3_audit.py",
+      "target": "tools/run_paper1_reviewer3_audit.py",
+      "sha256": "8561664055ec2680d243197f214bec48d55f40528ff91871b2b7f9f2873d2e49"
+    },
+    {
+      "source": "tools/run_paper1_reviewer3_friction_audit.py",
+      "target": "tools/run_paper1_reviewer3_friction_audit.py",
+      "sha256": "c94b88f8e739bc9a1dc737d37fd7a5aaf1a85d983bde4110d4f0365a42ce36dd"
+    },
+    {
+      "source": "tools/run_paper1_risk_closure.py",
+      "target": "tools/run_paper1_risk_closure.py",
+      "sha256": "3b14447c2f87f345b0ce443d5fdd10ffbab75068889d44a48b3299e07a90eb95"
+    },
+    {
+      "source": "tools/run_paper1_risk_extension.py",
+      "target": "tools/run_paper1_risk_extension.py",
+      "sha256": "90cc7e51b568d868720b643ce6212fff721f14e24ec29f90f4867a9538ec3012"
+    },
+    {
+      "source": "tools/run_paper1_rk4_convergence_audit.py",
+      "target": "tools/run_paper1_rk4_convergence_audit.py",
+      "sha256": "98f093f35796efa041a13ab38a9196a7b2c291f393625ed464c6940791131f1f"
+    },
+    {
+      "source": "tools/run_paper1_strengthening_audit.py",
+      "target": "tools/run_paper1_strengthening_audit.py",
+      "sha256": "a6a7a0a165dfb3759a895b74bc28c736eeb7b3e2beecd43e2f3978edc9b14968"
+    },
+    {
+      "source": "tools/run_paper1_supply_pilot.py",
+      "target": "tools/run_paper1_supply_pilot.py",
+      "sha256": "502c4343243ba618f21996f444f5c19c02fde8b1cdea9e6102563598974326e5"
+    },
+    {
+      "source": "tools/run_paper1_supply_retuning.py",
+      "target": "tools/run_paper1_supply_retuning.py",
+      "sha256": "d91174e2cd4d519a6bf96e4ec6ab6f1004d058f65dc37059ed68456978f54b31"
+    },
+    {
+      "source": "tools/run_paper1_supply_validation.py",
+      "target": "tools/run_paper1_supply_validation.py",
+      "sha256": "0a9caa7ebafa360c979b1a936e641ecba9c56acb873342b633137633d68482c6"
+    },
+    {
+      "source": "tools/run_paper1_two_chamber_v2.py",
+      "target": "tools/run_paper1_two_chamber_v2.py",
+      "sha256": "48834bfe924a45703b3cd85114d536a810dbb5b5a361d43cefbbe1b07739d47b"
+    },
+    {
+      "source": "tools/run_paper1_v2_independent_audit.py",
+      "target": "tools/run_paper1_v2_independent_audit.py",
+      "sha256": "2235c280ea3963d8873ea32ec9b0880bef19dddcdb7619b16f8d9ec5f89a41f8"
+    },
+    {
+      "source": "tools/run_paper1_v2_mode_scan.py",
+      "target": "tools/run_paper1_v2_mode_scan.py",
+      "sha256": "f384613d051c3e106c9baa63237b1fb30390b9b67761856488556fd46e8f0812"
+    },
+    {
+      "source": "tools/run_paper2_dynamic_dp_diagnostic.py",
+      "target": "tools/run_paper2_dynamic_dp_diagnostic.py",
+      "sha256": "b5d19ec86592bb4f1473babccc01f23ad40b176e0cdfaee6553bf3133a285998"
+    },
+    {
+      "source": "tools/run_paper2_ideal_oracle_envelope.py",
+      "target": "tools/run_paper2_ideal_oracle_envelope.py",
+      "sha256": "c62d43b936f0044fa7c58bcdcf7fccaa8b4c3f99ad7d5baabb2374bb05c29e2c"
+    },
+    {
+      "source": "papers/submission/paper1_v2_parameter_manifest.csv",
+      "target": "parameters/paper1.csv",
+      "sha256": "e4ece62b67328949b0fff179a393d67a54761e40ee7d5fb1128d9f7f8bcb2b22"
+    },
+    {
+      "source": "papers/submission/paper2_v2_parameter_manifest.csv",
+      "target": "parameters/paper2.csv",
+      "sha256": "6e568411a8eab9561df10b4550052d1b5c0316bed42ac6b8b35c97cc368c233e"
+    }
+  ],
+  "derived_sources": [
+    {
+      "source": "revisions/energies_proofreading/energies-4623536-english.tex",
+      "target": "manuscripts/paper2/manuscript.tex",
+      "source_sha256": "ec844a689f2025c06991937bbd7fdca951ae1b7e556f81d5d80fd17aa24b9c8c",
+      "sha256": "ab725febe03f84942f6e6191d42bcd2d90d6ecfa2047c1874a36e6c772fdadb5",
+      "operation": "移除TeX注释文字，保留注释换行及全部有效TeX内容"
+    },
+    {
+      "source": "tools/check_paper2_revision_execution.py",
+      "target": "tools/check_paper2_revision_execution.py",
+      "source_sha256": "15167c917ce300bd6ec0244bc68e93ba54ae361bf9cee2cb4a9583f0db5b0415",
+      "sha256": "0b95d3b98fbac1214658164edcf2f807cf9d7508f5f170c13d8902fea68e8d41",
+      "operation": "冻结参考结果改为可选输入；缺省从代码重算且不声称历史记录一致性"
+    },
+    {
+      "source": "tools/run_paper2_major_revision.py",
+      "target": "tools/run_paper2_major_revision.py",
+      "source_sha256": "7b40e82113d9c30e7f7ece5cab705662f0515f0704f1f59fa7b152b23a544459",
+      "sha256": "b1f3835a5fea840fbc0a9ac84791dec050609bcdd946f1fa637bb5b8e0b09561",
+      "operation": "冻结参考结果改为可选输入；缺省从代码重算且不声称历史记录一致性"
+    },
+    {
+      "source": "tools/run_paper2_submitted_ablation.py",
+      "target": "tools/run_paper2_submitted_ablation.py",
+      "source_sha256": "b4c788c84000e8c26d386b7b4d51c991b4ae796f75bb9e53f834704870f43996",
+      "sha256": "dc8fe1248600494f25cd45ae08a22375381a0e9e3d01e67e54f930ad45e54fab",
+      "operation": "冻结参考结果改为可选输入；缺省从代码重算且不声称历史记录一致性"
+    }
+  ],
+  "boundary": "当前论文、代码、文档及参数清单；不收录实验结果、轨迹、检查点、审稿通信或旧稿。未推送、创建release或操作Zenodo。"
+}

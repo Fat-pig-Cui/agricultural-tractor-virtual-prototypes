@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,booktabs,tabularx,graphicx,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\title{Supplementary Methods and Results\\\large Phase-Informed ECMS with Soft SOC Safeguarding for a Virtual Hybrid Agricultural Tractor}
+\author{Chenyu Cui, Peng Wang and Yucheng Zhang}\date{}
+\begin{document}\maketitle
+\renewcommand{\thesection}{S\arabic{section}}
+\section{Defined Component Maps and Numerical Verification}
+All primary ratings are researcher-defined virtual inputs. None constitutes a measured rating of a target tractor. The engine regression shape is traceable to Devyanin et al. (2023), DOI \href{https://doi.org/10.22314/2073-7599-2023-17-4-68-74}{10.22314/2073-7599-2023-17-4-68-74}. Its source-scale efficiency is transformed rather than used as a calibrated 300 kW map. For requested virtual power $P_e$, relative load (percent) is
+\[
+M=\min(105,\max(0,100|P_e|/300000)).
+\]
+At a source speed $n$ (rpm),
+\begin{align*}
+G(n,M)&=-0.7219+0.0026123n+0.00493M+0.0001743nM\\
+&\quad-0.0000002092n^2-0.0000172M^2\quad[\mathrm{L/h}],\\
+P_{src}&=(nM\,592/(100\cdot9550))1000\quad[\mathrm{W}],\\
+g_e&=1000(0.820G)/(P_{src}/1000)\quad[\mathrm{g/kWh}],\\
+r_e(n,M)&=\max(0.25,(3600/(42.7g_e))/0.329).
+\end{align*}
+For $P_{src}\leq100$ W, $r_e=0.30$ instead. Linear interpolation of $r_e$ uses speed nodes 750, 1100, 1500, 1800, 2150 and 2500 rpm, with endpoint clipping. The implemented efficiency is $\eta_e=\max(0.10,\min(0.42,0.42r_e))$. The normalizer 0.329, low-power guard and efficiency clipping are model choices. Consequently, even the normalized shape is a guarded proxy. No preservation of absolute source consumption or target-engine torque is claimed.
+
+Both machines use the same prescribed power-only law, with $P$ in W:
+\[
+\eta_m(P)=\max\{0.70,\min[0.96,0.96(0.75+0.25e^{-((|P|-45000)/50000)^2})]\}.
+\]
+Although the software interface accepts speed, speed does not affect this efficiency. Machine power and speed are independently screened, but no low-speed torque envelope is supplied. Main-text equations specify the ideal planetary split and the OCV--resistance battery. The 200 kWh, 650 V input gives $Q=307.6923$ Ah. At target SOC, $+180$ kW requires $+282.446$ A and has 3.590 kW ohmic loss; $-180$ kW requires $-271.808$ A and has 3.325 kW loss. These are algebraic outputs, not pack safety validation.
+
+A reproducible 1200-state/action-input sampling check (seed 5240) enumerated 42084 execution candidates; 28093 passed the instantaneous physical screens. Maximum absolute residuals were $5.83\times10^{-11}$ W for mechanical balance, $7.43\times10^{-10}$ W for battery power and zero at reported floating-point precision for kinematic, bus-definition and SOC-update identities. Rejections were 3930 MG1-power, 7561 MG2-power and 2500 battery-bus cases. The check verifies numerical consistency of these equations; it cannot establish physical representativeness or validate the imposed envelopes. The raw ledger is \texttt{model\_consistency\_checks.json}.
+
+An additional applied-command audit covers all 20 independent paths for the adaptive, shared-safeguard fixed and matched-baseline arms: 60 trajectories, 36000 samples, 397 starts and 337 stops. It finds no violations of the 60 kW cold-start point, 40 kW/s running ramp, five-second minimum on-time, one-second minimum off-time, bus limit or physical SOC bounds. All 60 meet the strict terminal tolerance. Default and explicitly enabled module settings give identical non-timing outputs; the first submitted seed retains exact fuel parity. These execution checks do not prove recursive feasibility or validate hardware.
+
+The alternative map family is an explicitly assumed efficiency grid. Speed nodes are 1000, 1500, 2000 and 2400 rpm; relative-load nodes are 0, .2, .4, .6, .8 and 1. Its unmodified rows are
+\[
+\begin{pmatrix}.18&.27&.35&.40&.40&.37\\.20&.31&.39&.43&.42&.39\\.19&.30&.38&.41&.40&.37\\.17&.27&.35&.38&.37&.34\end{pmatrix}.
+\]
+For low-load input $\ell$, every first entry becomes $\ell$ and every second entry becomes $\max(\ell,\min(.43,\ell+\eta_{base,2}-.25))$. Remaining entries stay fixed. Bilinear interpolation uses $|P_e|/300000$ clipped to $[0,1]$, endpoint speed clipping and output limits $[.12,.43]$. Thus the low-load perturbations also use a different peak cap from the primary 0.42 map; this is a map-family sensitivity, not identification of one isolated physical parameter.
+
+\section{Public Reference, Safeguard and Baseline}
+Let $\tau=(k\Delta t)\bmod270$, $s_*=.55$ and $T_r=(N-k)\Delta t$. The raw phase offset is
+\[
+\delta(\tau)=\begin{cases}.015,&0\leq\tau<120,\\.015-.020(\tau-120)/120,&120\leq\tau<240,\\-.005+.005(\tau-240)/30,&240\leq\tau<270.\end{cases}
+\]
+The public reference is $s_k^{ref}=s_*+a(T_r)\delta(\tau)$, where $a=1$ for $T_r\geq270$, $a=(T_r-120)/150$ for $120<T_r<270$, and $a=0$ otherwise. This schedule is specified by the researcher, not an optimized future-dependent reference. It remains the same in low-load and other cycle audits, exposing its task dependence.
+
+The economic proposal is minimized over currently hard-feasible candidates after the conditional engine-on reserve preference. The successor filter uses $|s_{k+1}-s_k^{ref}|\leq.045[(N-k-1)/(N-1)]^2$. If that soft set is empty, the selected hard-feasible candidate minimizes successor SOC distance, with equivalent cost as the secondary criterion. If the hard set is empty, simulation stops and the failure is retained. The soft corridor is not an invariant set, a reachable set or a robust safety certificate. At the last step its width is zero, while final acceptance permits $10^{-4}$ SOC error; no appended charge-restoration action is used.
+
+The matched load-following baseline also uses the public reference, the same hard candidate set and conditional reserve. Its target bus power is
+\[
+P_b^*=\operatorname{clip}_{[-P_{max},P_{max}]}\!\left(\frac{(s_k-s_k^{ref})E_{Wh}3600}{\max(\Delta t,T_r)}\right).
+\]
+It restricts successor SOC to a band $.1\epsilon+.002\max(0,(N-k-1)/(N-1))$, $\epsilon=10^{-4}$, if candidates exist; otherwise it uses the nearest-SOC candidate. Selection minimizes $|P_b-P_b^*|$, then instantaneous fuel, then change in engine power. This band and its fallback are part of the baseline, not the ECMS safeguard, and the baseline is explicitly stronger than unregulated engine-only load following. It is evaluated for terminal validity independently of ECMS.
+
+Conventional fixed ECMS uses a constant .55 reference, constant equivalence factor, the common execution constraints and reserve, but no successor-SOC filter. Conventional adaptive ECMS has proportional SOC feedback to .55 and the same restrictions, again without the filter. Fixed ECMS with the shared safeguard instead receives precisely the same phase, reserve, SOC filter and execution constraints as the primary adaptive arm, with $K_p=0$. The latter is the decisive same-mechanism comparator.
+
+\section{Task Generator and Seed Separation}
+The nominal cycle is a sequence of idle (30 s, 0 m/s, 12000 N draft, zero grade), transport (90 s, 2.2 m/s, 45000 N, zero grade), ploughing (120 s, 1.5 m/s, 145000 N, grade .05), and turn (30 s, .8 m/s, 30000 N, zero grade). The sequence repeats until 600 samples are obtained. Inputs interpolate toward the next segment in each segment's last 5 s; draft is floored at 10000 N. The low-load sequence changes these four durations to 60, 120, 60 and 30 s. The abrupt high-variability profile is separately defined in \texttt{code/common/profiles.py} and uses 300 s in the revised audit. It is intentionally not smoothed into primary feasibility.
+
+Stochastic disturbances use Python's seeded pseudorandom generator. Every 100 samples, the soil multiplier target changes by a Gaussian increment with standard deviation .06 and is clipped to $[.82,1.28]$. The grade-bias target changes by a Gaussian increment with standard deviation .004 and is clipped to $[-.025,.025]$. Within each block the current values move linearly from the block-start values to the targets with fraction $((k\bmod100)+1)/100$. At the revised 1 s sample interval these blocks are 100 s, rather than the 10 s blocks of the legacy 0.1 s protocol. There is no retrospective disturbance smoothing or controller-dependent task generation.
+
+\begin{center}\small\begin{tabular}{lll}\toprule
+Purpose & Seeds & Controller tuning allowed?\\\midrule
+Submitted development / replay & 3100--3105 / 3120--3139 & Original selection / none\\
+New conventional development & 5100--5105 & Equal 15-candidate budgets\\
+Independent primary and ablation & 5120--5139 & No\\
+Additional stochastic cycle & 5160--5179 & No\\
+Action-grid audit & 5180--5185 & No\\
+Map and capacity audit & 5200--5219 & No\\
+Numerical model check & 5240 & Not a tuning experiment\\\bottomrule
+\end{tabular}\end{center}
+Disjoint seeds prevent reuse of those generated paths for parameter selection. They do not create independence from the shared cycle design or virtual map. Seed 5120 is the declared illustration because it is the first independent identifier; its 600 per-sample records accompany the paper.
+
+\section{Parameter Selection and Module Protocol}
+The original 75-candidate search used the Cartesian product
+\[
+\lambda_0\in\{.8,1,1.2\},\qquad K_p\in\{20,40,60,80,120\},
+\qquad b_0\in\{.008,.015,.025,.035,.045\},
+\]
+with a development SOC tolerance of .001. It retained six-valid-path candidates, preferred those with mean interventions at most 100 and then maximized mean saving, breaking ties by fewer interventions and smaller maximum SOC error. The selected $(1,40,.045)$ was frozen. A subsequent strict $10^{-4}$ audit on seeds 3120--3139 is the source of the submitted 5.676\% normalized result. Development success at .001 is not described as development certification at $10^{-4}$. Its full original ledger is retained in \texttt{submitted\_reference.json}.
+
+The submitted load-following controller's internal band was computed with its default .001 setting, although its realized terminal errors all satisfy $10^{-4}$. The new matched baseline uses the explicit $10^{-4}$ setting in S2. This baseline-band change can slightly change the fuel denominator; it is not a retuning of ECMS. For exact attribution to the submitted 5.676\%, the submitted-path ablation below uses the original recorded baseline. New independent comparisons instead use the revised stricter-band baseline for every arm. We do not interpret differences between these protocols as improvement over the submitted saving.
+
+The new fixed-factor development explores $.3,.4,\ldots,1.7$. Adaptive development explores $\lambda_0\in\{.8,1,1.2\}$ and $K_p\in\{20,40,60,80,120\}$. Each has 15 candidates on six new development seeds, with $10^{-4}$ terminal acceptance. The shared-safeguard fixed arm also uses those 15 factors. Ranking maximizes terminal-valid count, then completed count, then completed-only normalized diagnostic saving, and finally minimizes maximum SOC error. The diagnostic tie breaker does not certify invalid paths. All 45 candidates and their individual paths are retained. They select $\lambda=1$ for both fixed families and $(1,60)$ for conventional adaptive ECMS. Held-out results do not enter selection.
+
+All primary ablations use frozen $(1,40,.045)$ except $K_p=0$ when adaptation is deleted. One-at-a-time removals disable phase, SOC filter or reserve. The stepwise sequence is (1) constant-reference adaptive ECMS without reserve/filter, (2) add public phase, (3) add conditional reserve, and (4) add the SOC filter. Step 3 equals the one-at-a-time no-filter arm; Step 4 equals the complete arm. The primary cold-start and dwell rules remain common physical execution restrictions. Their removal would change actuator authority, so no benefit is attributed to deleting them. The analysis establishes module dependence under these fixed restrictions, not a factorial decomposition of all mechanisms or a claim that the actuator restrictions themselves improve economy.
+
+\section{Complete Comparison and Attribution Results}
+The following post-review ablation uses submitted seeds 3120--3139 and the exact submitted baseline; it was not used for parameter selection. All 20 paths complete in every arm.
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}\toprule
+Submitted-path variant & Valid pairs & Saving (\%) & Max $|\Delta s|$ & Corrections\\\midrule
+\input{submitted_ablation_table.tex}
+\end{tabularx}\end{center}
+The independent results below test the same configuration and module interpretation on disjoint seeds with the new common baseline.
+The tables below use completed, terminal-valid same-seed baseline/controller intersections for savings and paired Student-$t$ intervals. Counts always retain all 20 attempted paths. Intervals for very small surviving subsets are correspondingly wide; no inference from two paths is promoted to a general comparison.
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}\toprule
+Variant & Complete & Valid pairs & Saving (\%) & 95\% interval\\\midrule
+\input{comparison_table.tex}
+\end{tabularx}\end{center}
+Completed-only diagnostic saving in the following table includes SOC-invalid trajectories. It is retained to expose the fuel/charge confound and is not a successful charge-sustaining saving. SOC maxima and intervention/start means likewise refer to all completed paths.
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}\toprule
+Variant & Diagnostic (\%) & Max $|\Delta s|$ & Corrections & Starts\\\midrule
+\input{diagnostic_table.tex}
+\end{tabularx}\end{center}
+The adaptive-minus-shared-fixed paired saving difference is $-1.140$ percentage points (95\% interval $[-1.660,-.620]$, 20 pairs), as recorded in \texttt{revision\_provenance.json}. Adaptation yields 37.0\% fewer mean proposal corrections but does not lower mean starts (7.2 versus 6.9). This is a fuel--intervention trade-off, not evidence of superior fuel economy or lower mechanical wear. Reserve deletion changes mean saving by only about .007 percentage points on this set; it does not demonstrate tolerance to arbitrary demand jumps. Removing phase increases terminal-invalid paths from zero to four. Removing the SOC filter leaves all 20 paths completed but none terminal-valid. Conditional valid-subset percentages must be read with those counts.
+
+\section{Same-Gain Audits and Failure Ledger}
+Every row below uses the frozen $K_p=40$, $\lambda_0=1$, $b_0=.045$ and strict $10^{-4}$ tolerance. Previously submitted V2 cross-cycle/map audits with $K_p=60$ are historical and are not evidence for this exact frozen configuration. ``Hard fail'' counts controller trajectories terminated by an empty hard set; completed but SOC-invalid paths are additionally visible through validity counts. All individual baseline and controller records are provided.
+\begin{center}\scriptsize\begin{tabularx}{\linewidth}{@{}Xrrrrrr@{}}\toprule
+Audit & Baseline valid & ECMS valid & Hard fail & Pairs & Saving (\%) & 95\% interval\\\midrule
+\input{audit_table.tex}
+\end{tabularx}\end{center}
+The failure ledger is included both below and in machine-readable \texttt{failure\_ledger.json}. Failure strings report the realized demand, engine power and dwell state at the empty-action step. No incomplete trajectory contributes a fuel saving, and completed-only averages cannot hide the following cases.
+\begin{itemize}[leftmargin=*,itemsep=2pt]\small\input{failure_list.tex}\end{itemize}
+Grid tests change the engine-power grid only. Capacity tests change energy capacity and thus the derived ampere-hour capacity, leaving voltage and resistance fixed; they are controlled mathematical perturbations, not redesigned physically equivalent packs. The 0.15, 0.25 and 0.35 map inputs refer to the assumed grid law in S1, not measured low-load efficiencies. These finite checks do not establish robustness to joint map, thermal, task-boundary and demand uncertainty.
+
+\section{Historical Mechanism and Full-Information Records}
+This section preserves earlier submitted findings while removing them from the revised same-platform headline comparison. The legacy model uses a different plant implementation, 150 kW electrical limits, 0.1 s task sampling and its own operating-line baseline. Its MPC uses predictive constraints and a backup construction separate from the new single-successor SOC safeguard. Historical certification labels refer only to those recorded finite executions and their defined checks; they must not be read as proof that the revised safeguard is recursively feasible.
+
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}Xlr@{}}\toprule
+Historical condition & Controller / statistic & Saving (\%)\\\midrule
+Literature-shaped frozen framework & Map-aware ECMS & $-.251$\\
+Literature-shaped frozen framework & Terminal-set MPC & $-.704$\\
+Steep-island frozen framework & Map-aware ECMS & $10.491$\\
+Steep-island frozen framework & Terminal-set MPC & $-3.219$\\
+Literature-shaped mechanism holdout & History-only MPC, $H=8$ & $-.168$\\
+Steep-island mechanism holdout & History-only MPC, $H=8$ & $-2.079$\\
+Favorable full-information replay & Raw direct-fuel reduction & $21.611$\\
+Favorable full-information replay & Terminal-energy adjusted reduction & $19.828$\\\bottomrule
+\end{tabularx}\end{center}
+Negative numbers denote more fuel than the corresponding legacy baseline. Storage (120--280 kWh) and causal predictor-gain (0, .5, 1) sweeps also retained negative MPC savings. Legacy map sweeps can change the ECMS sign and magnitude; therefore 10.491\% is a mechanism observation, not replication of the revised 5.676\% primary claim. Full historical JSON ledgers for framework, map, mechanism, storage/predictor, demand boundary and oracle tests accompany the reproduction package, together with their submitted source scripts. Those historical results are identified as retained records rather than newly rerun experiments.
+
+The favorable full-information task uses a deliberately steep map, complete nominal future, 150 kW electrical limits, 200 kWh energy capacity and a $\pm.01$ terminal SOC band. Its replay ends at SOC error $+.00669$; the legacy baseline ends at $+.00950$, leaving the oracle .563 kWh lower. A .42 conversion-efficiency adjustment adds .136 L to account for that difference and changes raw 21.611\% saving to 19.828\%, i.e., approximately 20\%. This is not the primary $10^{-4}$ terminal criterion, an online controller, or a field prediction. The separately attempted literature-shaped oracle ends at $-.0310$ SOC error on continuous replay and is rejected. The former 24.087\% grid result was also rejected after replay. Finite-grid diagnostics and closeness of two grid values do not prove global optimality, so ``theoretical upper bound'' is replaced by ``favorable full-information diagnostic.''
+
+\subsection*{Reproduction}
+The supplementary ZIP retains executable model code, original historical evidence, the frozen revision JSONs and this PDF. Using Python 3.12 with NumPy, SciPy and Matplotlib, run these commands from its top directory:
+\begin{quote}\small\ttfamily
+python tools/run\_paper2\_major\_revision.py\par
+python tools/run\_paper2\_submitted\_ablation.py\par
+python tools/check\_paper2\_revision\_physics.py\par
+python tools/check\_paper2\_revision\_execution.py\par
+python tools/plot\_paper2\_major\_revision.py
+\end{quote}
+The reproduction source includes the submitted reference JSON in its revision-results directory for exact original replay parity, together with a CSV parameter ledger. Random seeds and code hashes are recorded; wall-clock decision timing can change across hosts and is not a claimed embedded guarantee. No new public GitHub/Zenodo deposit is asserted by this revision package.
+\end{document}

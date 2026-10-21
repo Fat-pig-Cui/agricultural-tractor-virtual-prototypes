@@ -1,79 +1,76 @@
-# 农业拖拉机双论文理论仿真复现仓库
+# 农业拖拉机双论文：当前论文与最小复现源码
 
-当前发布版本为 **v1.1.0**，对应两篇论文的大修实验和英文稿件：
+本仓库仅维护两篇论文的最新版、模型与算法代码、实验生成脚本、参数清单和文档。按作者要求，不附带冻结实验数据、轨迹、检查点、开发搜索输出或统计结果文件。旧稿和审稿通信不在工作树内；既有Git历史与标签保留。
 
-| 论文 | 期刊 | 当前英文题目 | 可编辑主目录 |
-| --- | --- | --- | --- |
-| 论文一 | Machines | Observer-Based Hybrid Position Holding for an Electrohydraulic Agricultural Hitch: A Two-Chamber Virtual-Prototype Stress Test | `revisions/machines_major_revision/` |
-| 论文二 | Energies | Phase-Informed ECMS with Soft SOC Safeguarding for a Virtual Hybrid Agricultural Tractor | `revisions/energies_major_revision/` |
+| 论文 | 当前阶段 | 正文 | 补充说明 |
+| :---: | :---: | :---: | :---: |
+| 论文一 / Machines | 已接收稿 | [正文PDF](manuscripts/paper1/manuscript.pdf) | [S1–S13](manuscripts/paper1/supplementary.pdf) |
+| 论文二 / Energies | 作者修正校样 | [正文PDF](manuscripts/paper2/manuscript.pdf) | [S1–S7](manuscripts/paper2/supplementary.pdf) |
 
-两篇论文均为纯理论虚拟样机研究，参数、效率地图和噪声是声明的模型输入。仓库不包含实车、台架或组件标定数据，数值守恒检查和仿真通过不能作为实物验证。
+论文一：Observer-Based Hybrid Position Holding for an Electrohydraulic Agricultural Hitch: A Two-Chamber Virtual-Prototype Stress Test。
 
-## 当前稿件与结果
+论文二：Phase-Informed ECMS with Soft SOC Safeguarding for a Virtual Hybrid Agricultural Tractor。
 
-- 论文一正文为 `revisions/machines_major_revision/manuscript.pdf`，补充说明为同目录 `supplementary.pdf`。原20条冻结路径保持不变；新增观测接口移除、驻留匹配、积分细化、机械失配和噪声审计。累计293次数值重放跨组复用种子。统一1.0/0.5毫秒RK4的三控制器对照30/30通过，联合质量/阻尼/刚度±30%角点40/40通过；不代表全参数盒或全局稳定性保证。
-- 论文二正文为 `revisions/energies_major_revision/manuscript.pdf`，补充说明为同目录 `supplement.pdf`。独立20路径中，自适应ECMS＋软SOC防护的平均归一化节油为5.950644%，相同防护固定ECMS为7.090609%；自适应方法干预更少，不能称其更节油。原投稿5.675991%采用原基线，不能将新旧分母差异解释为算法改进。
-- 论文二约20%的结果保留为旧平台、完整未来信息、理想地图和±0.01终端SOC条件下的诊断：21.611%原始值、19.828%终端能量归一化值。它与当前在线算法使用不同实验协议。
+正文及补充PDF与作者当前文件逐字节相同。论文二公开TeX仅去除编辑问询和作者回复等注释文字，保留有效内容与出版社校样标记。原始制作端文件在作者本地保留。校样不代表最终出版版，正式卷期和文章DOI以出版社为准。
 
-`MDPI_template_ACS/` 的两个PDF是当前正文的镜像；其TeX入口保留本地路径关系。编译请使用下方脚本，它在各论文主目录内调用对应模板。
-
-## 环境与复现
-
-使用 Python 3.9 或更新版本，依赖安装命令：
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-```
-
-优先核对现成证据，无须重跑全部实验：
-
-```bash
-python3 tools/verify_release.py
-python3 tools/check_paper2_revision_physics.py
-python3 tools/check_paper2_revision_execution.py
-```
-
-大轨迹以 `.json.gz` 无损存储，SHA-256及原始字节数见 `manifests/compressed_results.json`。还原后可直接使用原仿真和绘图脚本：
-
-```bash
-python3 tools/materialize_release_data.py
-./reproduce_paper1.sh
-./reproduce_paper2.sh
-```
-
-完整运行会重新生成结果，耗时取决于计算机性能；应在另一个克隆中复现，保留原发布快照用于比较。论文一补强脚本默认复用70个已保存检查点；如需重新计算，将该克隆中的 `revisions/machines_major_revision/results/strengthening_checkpoints/` 移到其他目录，再运行脚本。原始10条混合控制器RK4结果仍按协议复用，新增计算60条。计时字段可能随设备变化，不能要求其逐位一致。
-
-论文二实验协议保留计算时的源散列；最终代码仅将全采样轨迹的输出键名由 `trajectory_30s` 改为 `trajectory_full`，已在原 `revision_provenance.json` 记录。发布核验通过逐字还原这一处命名变化验证原散列，并重放两个独立比较臂的第一条路径，核对全部非计时字段。
-
-安装PDFLaTeX后编译两篇正文和补充说明：
-
-```bash
-./build_manuscripts.sh
-```
-
-两篇论文使用不同版本的MDPI类文件，分别保存在其主目录 `Definitions/` 内。脚本从对应目录编译，避免套用另一篇的模板。
-
-## 目录与版本边界
+## 目录
 
 | 路径 | 内容 |
-| --- | --- |
-| `revisions/machines_major_revision/` | 当前论文一英文正文、补充说明、图表、协议和冻结结果 |
-| `revisions/energies_major_revision/` | 当前论文二英文正文、补充说明、图表、参数台账和冻结结果 |
-| `code/`、`tools/` | 当前虚拟模型、控制器、复现实验和核验入口 |
-| `results/`、`papers/` | 既有论文结果、参数追溯和历史机制诊断；具体用途以清单为准 |
-| `historical/` | 原投稿科学源文件与补充材料，供口径对齐；不作为当前主结论 |
-| `manifests/` | 参数、来源同步清单和压缩数据校验记录 |
+| :---: | :---: |
+| `manuscripts/paper1/`、`manuscripts/paper2/` | 当前英文正文、补充说明、TeX、模板和插图 |
+| `code/` | 液压、观测器、供油扩展、功率分流和ECMS等模型与算法 |
+| `tools/` | 实验生成、检查及独立工作区运行脚本 |
+| `parameters/` | 声明的理论模型参数清单；实验特定设置和种子见脚本及论文 |
+| `manifests/` | 本地来源与文件散列记录 |
 
-本文档和 `MANIFEST.md` 指向当前主协议。旧结果、旧代码说明及历史标签中的物理量解释，以两篇大修论文的纠正说明为准；例如旧论文一的虚拟损失系数不具有物理流量泄漏系数含义。各历史版本由Git标签保留。
+论文内用于展示结论的图表与补充说明继续保留。原始实验数据仍在作者科研工作区，此检出不提供直接读取冻结轨迹或复算其统计的功能。
 
-审稿意见、评分截图、逐条回复、封面信、投稿包和专利材料保存在本地工作项目，不进入本公开科学归档。公开稿件保持生成时的内容，包括当时数据归档状态的表述；本次release已提供相应大修证据。GitHub发布成功不等于Zenodo已完成收录。
+## 安装和完整性检查
 
-## 引用与作者
+```sh
+python3 -m pip install -r requirements.txt
+python3 tools/verify_release.py
+```
 
-仓库地址：https://github.com/Fat-pig-Cui/agricultural-tractor-virtual-prototypes
+完整性检查使用Python标准库；仿真依赖NumPy、SciPy与Matplotlib。正文和补充说明可使用PDFLaTeX编译：`./build_manuscripts.sh`。该命令会覆盖克隆内的PDF，建议在独立克隆运行。
 
-概念DOI： https://doi.org/10.5281/zenodo.22754509 。本次软件版本的引用信息见 `CITATION.cff`；既有版本的独立DOI继续对应各自历史记录，不提前指定尚未返回的新版本DOI。
+## 从源码复现
 
-作者：Chenyu Cui、Peng Wang、Yucheng Zhang。通信邮箱：zhangyucheng@ict.ac.cn。
+所有入口要求指定一个尚不存在、位于本检出之外的工作目录。入口复制源码并创建空输出目录，从头计算，不复制或下载已有实验结果。
+
+先运行短程检查：
+
+```sh
+python3 tools/run_current_experiments.py smoke --workspace ../tractor-smoke
+```
+
+该检查生成论文一两组协议，运行12秒代表性液压算例，以及论文二种子5120的完整600秒控制与基线算例。它用于确认源码能够在空工作区执行，不等同于重算论文全部实验。
+
+完整的主要实验入口：
+
+```sh
+./reproduce_paper1.sh --workspace ../tractor-paper1
+./reproduce_paper2.sh --workspace ../tractor-paper2
+```
+
+论文一重算88路径供油对照、54路径资源目标开发以及后续8路径独立验证。论文二重算开发选参、20路径独立对照、消融、地图/容量审计及原投稿种子组归因，耗时可能较长。脚本会在独立工作区保存输出及续跑检查点；全部开发和失败路径应保留，不能仅保留最优结果。`--prepare-only` 仅准备目录。
+
+额外入口：
+
+```sh
+python3 tools/run_current_experiments.py paper2-physics --workspace ../tractor-physics
+python3 tools/run_current_experiments.py paper2-execution --workspace ../tractor-execution
+python3 tools/run_current_experiments.py paper2-ideal --workspace ../tractor-ideal
+```
+
+约20%的情形由 `paper2-ideal` 单独生成：它使用完整未来信息、理想地图和较宽终端SOC带，必须与在线主协议分列；不能把未通过连续重放的24.087%网格值作为有效在线结果。具体生成方法和边界见论文与脚本。
+
+代码中的历史计算路径用于兼容原科学脚本，只在独立工作区创建相应目录。缺少历史冻结参考时，论文二从代码重算原基线设置，并将历史逐字节一致性检查标为未执行。控制器、模型、种子与实验参数保持原样；不声称用最终实现逐位重建所有早期诊断，也不承诺自动重绘所有论文图表。计时结果随平台变化。
+
+## 理论边界与引用
+
+两篇论文均为理论虚拟样机研究，参数与地图按声明定义，没有实车、台架或目标组件标定数据。有限数值试验不构成全局稳定性、递归可行性或硬件验证。
+
+作者：Chenyu Cui、Peng Wang、Yucheng Zhang。通讯作者：Yucheng Zhang，邮箱 `zhangyucheng@ict.ac.cn`。
+
+研究材料的[Zenodo概念DOI](https://doi.org/10.5281/zenodo.22754509)对应版本集合，不替代文章DOI。引用信息见 `CITATION.cff`，许可见 `LICENSE.md`。本轮未创建新的GitHub release或操作Zenodo。

@@ -33,11 +33,15 @@ def main():
     explicit=run_cycle(profile(3120),'viability_ecms',FROZEN,PARAMS,features=ControllerFeatures())
     for key in implicit:
         if key!='decision_timing_ms':assert implicit[key]==explicit[key],key
-    original=json.loads((OUT/'results/submitted_reference.json').read_text())
-    reference=next(r for r in original['holdout']['viability_ecms_strict_1e-4']['rows'] if r['seed']==3120)
-    assert implicit['fuel_l']==reference['fuel_l']
+    reference_path=OUT/'results/submitted_reference.json'
+    archive_parity=None
+    if reference_path.exists():
+        original=json.loads(reference_path.read_text())
+        reference=next(r for r in original['holdout']['viability_ecms_strict_1e-4']['rows'] if r['seed']==3120)
+        assert implicit['fuel_l']==reference['fuel_l']
+        archive_parity=True
     result=dict(counts=counts,violations=0,default_feature_parity=True,
-        submitted_seed3120_exact_fuel_parity=True,terminal_tolerance=1e-4,
+        submitted_seed3120_exact_fuel_parity=archive_parity,terminal_tolerance=1e-4,
         limitation='Execution checks do not validate hardware or prove recursive feasibility.')
     (OUT/'results/execution_constraint_checks.json').write_text(json.dumps(result,indent=2))
     print(result)
