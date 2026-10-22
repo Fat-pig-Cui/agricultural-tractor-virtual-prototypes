@@ -1,4 +1,4 @@
-"""从源码在独立工作区生成结果，公开检出不包含实验数据。"""
+"""Generate results from source in an isolated workspace; no experiment data is distributed."""
 from pathlib import Path
 import argparse
 import json
@@ -31,7 +31,7 @@ def prepare(work):
 
 
 def smoke(work):
-    """检查空工作区中的导入、计划生成和两篇论文代表性计算。"""
+    """Check imports, protocol generation, and representative calculations in an empty workspace."""
     program = r'''
 import json, math, sys
 from pathlib import Path
@@ -55,7 +55,7 @@ result=dict(paper1_short_seconds=12,paper1_rmse_mm=row['post_transition_rmse_mm'
     paper1_supply_tasks=88,paper1_resource_development_tasks=54,paper2_seed=5120,
     paper2_samples=600,paper2_terminal_valid=True,
     paper2_fuel_l=energy['fuel_l'],paper2_baseline_fuel_l=baseline['fuel_l'],
-    scope='源码短程检查；未执行全部实验，未比较历史冻结结果。')
+    scope='Short source smoke test; full experiments and historical frozen results are not compared.')
 Path('results/smoke_summary.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(result,ensure_ascii=False))
 '''

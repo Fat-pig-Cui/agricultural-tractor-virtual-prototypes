@@ -1,11 +1,11 @@
-# 当前归档范围与核验口径
+# Current archive scope and verification policy
 
-工作树只保留论文一Machines接收稿、论文二Energies修正作者校样，以及模型代码、实验生成脚本、理论参数清单与文档。
+The working tree contains the accepted Machines manuscript, the corrected Energies author proof, model code, experiment-generation scripts, theoretical parameter manifests, and documentation.
 
-不包含冻结实验结果、原始轨迹、检查点、开发搜索输出或独立统计JSON。正文中的结果图表及补充说明属于论文本体，继续保留。完整科研记录仍保存在作者本地论文工作区。
+Frozen experiment outputs, raw trajectories, checkpoints, development searches, and independent result-statistics JSON files are excluded. Figures and supplementary descriptions that belong to the manuscripts remain available. Complete scientific records remain in the author research workspace.
 
-`MANIFEST.sha256` 覆盖本检出全部文件，自身除外。`manifests/current_sources.json` 记录源文件与导出散列；论文二TeX注释清理及三份脚本的历史参考可选读取单列为派生操作。控制器、模型与实验参数未变。
+`MANIFEST.sha256` covers all files in this checkout except itself. `manifests/current_sources.json` records source mappings and exported hashes. The Paper 2 TeX comment removal and optional historical-reference behavior of three scripts are recorded as derived operations. Controllers, models, and experiment settings are unchanged.
 
-完整性检查只核对文件、Python语法和公开范围，不复算已移除的冻结统计。短程复现和完整重算入口见README，输出只写入指定的独立工作区。缺少历史参考时，不声称核验历史记录逐字节一致性。
+The integrity check covers files, Python syntax, and the public scope; it does not recompute removed frozen statistics. The short smoke test and full reproduction runners write only to an external workspace. When historical references are absent, the repository does not claim byte-level parity with historical outputs.
 
-不收录旧稿、审稿通信、作者回复、标注稿、封面信、投稿包或专利。已有Git历史和release保留。本次本地修订使用amend修改最近同步提交，暂不推送或操作Zenodo。
+Old manuscripts, review correspondence, author responses, marked files, cover letters, submission packages, and patents are excluded. Existing Git history and releases remain. This local revision uses amend for the latest synchronization commit and is not being pushed or published to Zenodo.

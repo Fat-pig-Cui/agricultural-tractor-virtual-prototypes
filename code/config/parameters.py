@@ -63,10 +63,10 @@ class PowertrainParameters:
 
 # Parameter tags: the numerical values are engineering estimates unless a source is cited.
 PARAMETER_SOURCES = {
-    "engine_rated_w": "[厂家范围/估计] 300 kW representative of ≥200 hp platform",
-    "vehicle_mass_kg": "[同级机型估计] 15–20 t range",
-    "wheel_radius_m": "[轮胎规格估计] 710/70R42 effective radius",
-    "engine_bsfc_g_kwh": "[工程估计] 190–220 g/kWh",
-    "battery_capacity_wh": "[工程估计] 50–150 kWh theoretical study range",
-    "hydraulic": "[工程估计] cylinder, leakage and valve parameters require calibration",
+    "engine_rated_w": "[manufacturer range/estimate] 300 kW representative of ≥200 hp platform",
+    "vehicle_mass_kg": "[same-class estimate] 15–20 t range",
+    "wheel_radius_m": "[tire specification estimate] 710/70R42 effective radius",
+    "engine_bsfc_g_kwh": "[engineering estimate] 190–220 g/kWh",
+    "battery_capacity_wh": "[engineering estimate] 50–150 kWh theoretical study range",
+    "hydraulic": "[engineering estimate] cylinder, leakage and valve parameters require calibration",
 }

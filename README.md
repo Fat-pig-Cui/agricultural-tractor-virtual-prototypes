@@ -1,61 +1,61 @@
-# 农业拖拉机双论文：当前论文与最小复现源码
+# Two Agricultural-Tractor Papers: Current Manuscripts and Minimal Reproduction Source
 
-本仓库仅维护两篇论文的最新版、模型与算法代码、实验生成脚本、参数清单和文档。按作者要求，不附带冻结实验数据、轨迹、检查点、开发搜索输出或统计结果文件。旧稿和审稿通信不在工作树内；既有Git历史与标签保留。
+This repository contains only the latest versions of the two papers, their model and algorithm source, experiment-generation scripts, parameter manifests, and documentation. Frozen experiment outputs, trajectories, checkpoints, development searches, and result statistics are intentionally excluded. Old manuscripts and review correspondence are outside the working tree; existing Git history and tags are retained.
 
-| 论文 | 当前阶段 | 正文 | 补充说明 |
+| Paper | Current stage | Manuscript | Supplement |
 | :---: | :---: | :---: | :---: |
-| 论文一 / Machines | 已接收稿 | [正文PDF](manuscripts/paper1/manuscript.pdf) | [S1–S13](manuscripts/paper1/supplementary.pdf) |
-| 论文二 / Energies | 作者修正校样 | [正文PDF](manuscripts/paper2/manuscript.pdf) | [S1–S7](manuscripts/paper2/supplementary.pdf) |
+| Paper 1 / Machines | Accepted manuscript | [Manuscript PDF](manuscripts/paper1/manuscript.pdf) | [S1–S13](manuscripts/paper1/supplementary.pdf) |
+| Paper 2 / Energies | Corrected author proof | [Manuscript PDF](manuscripts/paper2/manuscript.pdf) | [S1–S7](manuscripts/paper2/supplementary.pdf) |
 
-论文一：Observer-Based Hybrid Position Holding for an Electrohydraulic Agricultural Hitch: A Two-Chamber Virtual-Prototype Stress Test。
+Paper 1: Observer-Based Hybrid Position Holding for an Electrohydraulic Agricultural Hitch: A Two-Chamber Virtual-Prototype Stress Test.
 
-论文二：Phase-Informed ECMS with Soft SOC Safeguarding for a Virtual Hybrid Agricultural Tractor。
+Paper 2: Phase-Informed ECMS with Soft SOC Safeguarding for a Virtual Hybrid Agricultural Tractor.
 
-正文及补充PDF与作者当前文件逐字节相同。论文二公开TeX仅去除编辑问询和作者回复等注释文字，保留有效内容与出版社校样标记。原始制作端文件在作者本地保留。校样不代表最终出版版，正式卷期和文章DOI以出版社为准。
+The manuscript and supplement PDFs are byte-identical to the current author files. The public Paper 2 TeX source removes editorial queries and author-response comments while retaining valid TeX content and publisher proof markings. The original production files remain in the author workspace. The proof is not the final published version; publication metadata is determined by the publisher.
 
-## 目录
+## Contents
 
-| 路径 | 内容 |
+| Path | Contents |
 | :---: | :---: |
-| `manuscripts/paper1/`、`manuscripts/paper2/` | 当前英文正文、补充说明、TeX、模板和插图 |
-| `code/` | 液压、观测器、供油扩展、功率分流和ECMS等模型与算法 |
-| `tools/` | 实验生成、检查及独立工作区运行脚本 |
-| `parameters/` | 声明的理论模型参数清单；实验特定设置和种子见脚本及论文 |
-| `manifests/` | 本地来源与文件散列记录 |
+| `manuscripts/paper1/`, `manuscripts/paper2/` | Current English manuscripts, supplements, TeX sources, templates, and figures |
+| `code/` | Hydraulic, observer, supply-extension, power-split, and ECMS models and algorithms |
+| `tools/` | Experiment-generation, verification, and isolated-workspace runners |
+| `parameters/` | Declared theoretical model parameter manifests; experiment settings and seeds are in the scripts and papers |
+| `manifests/` | Local source mappings and file hashes |
 
-论文内用于展示结论的图表与补充说明继续保留。原始实验数据仍在作者科研工作区，此检出不提供直接读取冻结轨迹或复算其统计的功能。
+Figures and supplementary descriptions used by the papers remain available. The original experiment data remains in the author research workspace; this checkout does not provide frozen trajectories or precomputed statistics.
 
-## 安装和完整性检查
+## Installation and integrity check
 
 ```sh
 python3 -m pip install -r requirements.txt
 python3 tools/verify_release.py
 ```
 
-完整性检查使用Python标准库；仿真依赖NumPy、SciPy与Matplotlib。正文和补充说明可使用PDFLaTeX编译：`./build_manuscripts.sh`。该命令会覆盖克隆内的PDF，建议在独立克隆运行。
+The integrity check uses the Python standard library. Simulations require NumPy, SciPy, and Matplotlib. The manuscript and supplement sources can be compiled with PDFLaTeX using `./build_manuscripts.sh`; run it in a separate clone because it replaces local PDFs.
 
-## 从源码复现
+## Reproduce from source
 
-所有入口要求指定一个尚不存在、位于本检出之外的工作目录。入口复制源码并创建空输出目录，从头计算，不复制或下载已有实验结果。
+Every runner requires a new workspace outside this checkout. It copies source code and creates empty output directories, then computes results from scratch without copying or downloading experiment data.
 
-先运行短程检查：
+Run the short smoke test first:
 
 ```sh
 python3 tools/run_current_experiments.py smoke --workspace ../tractor-smoke
 ```
 
-该检查生成论文一两组协议，运行12秒代表性液压算例，以及论文二种子5120的完整600秒控制与基线算例。它用于确认源码能够在空工作区执行，不等同于重算论文全部实验。
+The smoke test generates the Paper 1 protocol plans, runs a representative 12-second hydraulic calculation, and runs the complete 600-second Paper 2 controller and baseline calculation for seed 5120. It checks that the source runs in an empty workspace; it is not a full reproduction.
 
-完整的主要实验入口：
+Main experiment runners:
 
 ```sh
 ./reproduce_paper1.sh --workspace ../tractor-paper1
 ./reproduce_paper2.sh --workspace ../tractor-paper2
 ```
 
-论文一重算88路径供油对照、54路径资源目标开发以及后续8路径独立验证。论文二重算开发选参、20路径独立对照、消融、地图/容量审计及原投稿种子组归因，耗时可能较长。脚本会在独立工作区保存输出及续跑检查点；全部开发和失败路径应保留，不能仅保留最优结果。`--prepare-only` 仅准备目录。
+Paper 1 recomputes the 88-path supply comparison, the 54-path resource-selection development, and the subsequent independent validation. Paper 2 recomputes development selection, the 20-path independent comparison, ablations, map and capacity audits, and attribution on the original-submission seed group. These runs can be lengthy. The scripts save outputs and resumable checkpoints in the external workspace; development and failed paths should be retained rather than selecting only the best result. `--prepare-only` only prepares the workspace.
 
-额外入口：
+Additional checks:
 
 ```sh
 python3 tools/run_current_experiments.py paper2-physics --workspace ../tractor-physics
@@ -63,14 +63,14 @@ python3 tools/run_current_experiments.py paper2-execution --workspace ../tractor
 python3 tools/run_current_experiments.py paper2-ideal --workspace ../tractor-ideal
 ```
 
-约20%的情形由 `paper2-ideal` 单独生成：它使用完整未来信息、理想地图和较宽终端SOC带，必须与在线主协议分列；不能把未通过连续重放的24.087%网格值作为有效在线结果。具体生成方法和边界见论文与脚本。
+The approximately 20% case is generated separately by `paper2-ideal`. It uses complete future information, an ideal map, and a wider terminal-SOC band and must remain separate from the causal online protocol. The 24.087% grid value, which did not pass continuous replay, must not be presented as a valid online result. See the paper and scripts for the declared method and boundaries.
 
-代码中的历史计算路径用于兼容原科学脚本，只在独立工作区创建相应目录。缺少历史冻结参考时，论文二从代码重算原基线设置，并将历史逐字节一致性检查标为未执行。控制器、模型、种子与实验参数保持原样；不声称用最终实现逐位重建所有早期诊断，也不承诺自动重绘所有论文图表。计时结果随平台变化。
+Historical path names in the source preserve compatibility with the original scientific scripts; they are created only in the external workspace. When historical reference files are absent, Paper 2 recomputes the original baseline settings and records that byte-level historical parity was not checked. The models, controllers, seeds, and experiment settings are unchanged. The repository does not claim to reconstruct every early diagnostic bit-for-bit or to redraw every paper figure automatically. Timing varies by host.
 
-## 理论边界与引用
+## Theoretical scope and citation
 
-两篇论文均为理论虚拟样机研究，参数与地图按声明定义，没有实车、台架或目标组件标定数据。有限数值试验不构成全局稳定性、递归可行性或硬件验证。
+Both papers study theoretical virtual prototypes. Parameters and maps are declared model inputs; there are no vehicle, bench, or target-component calibration data. Finite numerical experiments do not establish global stability, recursive feasibility, or hardware validation.
 
-作者：Chenyu Cui、Peng Wang、Yucheng Zhang。通讯作者：Yucheng Zhang，邮箱 `zhangyucheng@ict.ac.cn`。
+Authors: Chenyu Cui, Peng Wang, and Yucheng Zhang. Corresponding author: Yucheng Zhang, `zhangyucheng@ict.ac.cn`.
 
-研究材料的[Zenodo概念DOI](https://doi.org/10.5281/zenodo.22754509)对应版本集合，不替代文章DOI。引用信息见 `CITATION.cff`，许可见 `LICENSE.md`。本轮未创建新的GitHub release或操作Zenodo。
+The [Zenodo concept DOI](https://doi.org/10.5281/zenodo.22754509) identifies the research-material collection and does not replace article DOIs. Citation information is in `CITATION.cff`; the license is in `LICENSE.md`. No new GitHub release or Zenodo operation was performed in this local revision.

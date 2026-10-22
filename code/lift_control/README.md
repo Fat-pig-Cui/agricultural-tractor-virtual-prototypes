@@ -1,7 +1,7 @@
-# 论文一：当前虚拟模型
+# Paper 1: Current virtual model
 
-`hydraulic_v2.py` 与 `lift_v2_experiment.py` 实现两腔液压、机械对象、观测器及保持监督；`lift_reserve_supply.py` 实现主供油可用性扩展与边界资源计量。当前正文及适用边界见 `manuscripts/paper1/`。
+`hydraulic_v2.py` and `lift_v2_experiment.py` implement the two-chamber hydraulic plant, mechanical object, observer, and holding supervisor. `lift_reserve_supply.py` implements the main-supply availability extension and boundary-resource accounting. See `manuscripts/paper1/` for the current manuscript and declared scope.
 
-公开检出不附实验结果。`tools/run_paper1_supply_retuning.py` 从头执行资源目标等预算选参与独立验证，`tools/run_paper1_supply_validation.py` 生成供油与储能启停对照。主阀资源量与储能出口功受所定义边界限制，不代表整机实测能耗。
+The public checkout does not include experiment outputs. `tools/run_paper1_supply_retuning.py` recomputes resource-oriented budget selection and independent validation; `tools/run_paper1_supply_validation.py` generates the supply and storage on/off comparison. Main-valve resource and storage-outlet work are defined boundary metrics, not measured whole-vehicle energy.
 
-通过根目录README中的隔离复现入口使用科学脚本；勿直接在公开快照中运行旧路径的研究脚本。参数为声明的理论输入，无实机标定数据。
+Use the isolated reproduction runners in the root README. Do not run legacy-path research scripts directly in the public snapshot. Parameters are declared theoretical inputs with no hardware calibration data.

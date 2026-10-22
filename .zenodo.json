@@ -1,6 +1,6 @@
 {
   "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
-  "description": "<p>两篇农业拖拉机理论虚拟样机研究的当前论文、模型与算法代码、实验生成脚本、声明参数清单及文档：Machines已接收稿、Energies修正作者校样。</p><p>工作树仅维护最新版，不包含冻结实验结果、轨迹、检查点、旧稿或审稿通信。可在空的独立工作区从源码重算主要实验；不声称提供完整冻结数据归档或自动重绘所有图表。</p><p>没有实车、台架或目标组件标定数据，不提供全局稳定性或递归可行性保证。约20%的燃油情形使用理想条件、完整未来信息和较宽终端SOC容差，与在线主协议分列。作者校样不代表最终出版版。</p>",
+  "description": "<p>Current papers, model and algorithm source, experiment-generation scripts, declared parameter manifests, and documentation for two theoretical agricultural-tractor virtual-prototype studies: an accepted Machines manuscript and a corrected Energies author proof.</p><p>The working tree contains no frozen experiment outputs, trajectories, checkpoints, old manuscripts, or review correspondence. Main experiments can be recomputed from source in an empty external workspace; this archive does not claim to provide the complete frozen-data deposit or automatic regeneration of every figure.</p><p>There are no vehicle, bench, or target-component calibration data. The approximately 20% fuel case uses ideal conditions, complete future information, and a wider terminal-SOC band and is separate from the causal online protocol. The author proof is not the final published version.</p>",
   "creators": [
     {
       "name": "Cui, Chenyu",

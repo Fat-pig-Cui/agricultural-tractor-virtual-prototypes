@@ -15,7 +15,7 @@ def dump(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 def snapshot():
     target=REV/'evidence/supply_coordination_baseline';target.mkdir(exist_ok=True)
     files=[*REV.glob('*.tex'),*REV.glob('*.pdf'),REV/'responses.json',REV/'artifact.md',
-        REV/'本轮实验进度.md',REV/'Reviewer3_评价更正与正文合规复核.md',ROOT/'README.md']
+        REV/'current_experiment_progress.md',REV/'reviewer3_compliance_review.md',ROOT/'README.md']
     files+=list((REV/'responses_current').glob('*'))
     files += [ROOT/'tools'/n for n in ['build_paper1_risk_closure_responses.py',
         'make_paper1_reviewer3_marked.py','package_paper1_reviewer3_revision.py']]

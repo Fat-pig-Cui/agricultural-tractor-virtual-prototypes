@@ -9,7 +9,7 @@ __pycache__/
 *.synctex.gz
 .build/
 scratch/
-# 仿真生成物仅在独立工作区保存；防止误加入公开检出。
+# Simulation outputs stay in an external workspace and must not enter this checkout.
 /experiments/
 /results/
 /revisions/

@@ -496,14 +496,14 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
                                             soc_reference=(dp_soc_reference[index] if dp_soc_reference else None))
         elif controller_name == "dp":
             if len(dp_reference) != len(raw_demands):
-                return {"valid": False, "reason": "DP没有找到满足SOC、电池功率和终端约束的可行轨迹", "fuel_l": None}
+                return {"valid": False, "reason": "DP found no trajectory satisfying SOC, battery-power, and terminal constraints", "fuel_l": None}
             command = type("DPCommand", (), {"engine_power_w": dp_reference[index]})()
         elif controller_name == "phase_schedule":
             if (config.phase_schedule_targets_w is None
                     or config.profile_name != "smoothed_regenerative_low_load_agri_workcycle"
                     or len(config.phase_schedule_targets_w) != len(_SMOOTH_REGEN_SEGMENT_BOUNDARIES_S) - 1):
                 return {"valid": False,
-                        "reason": "离线任务相位诊断的分段目标与工况不匹配",
+                        "reason": "Offline phase-diagnostic segment targets do not match the selected profile",
                         "fuel_l": None}
             local_s = (index * model.p.dt_s) % _SMOOTH_REGEN_SEGMENT_BOUNDARIES_S[-1]
             segment = next(
@@ -518,7 +518,7 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
                     or config.profile_name != "stochastic_agri_workcycle"
                     or len(config.phase_policy_targets_w) != len(_WORKCYCLE_SEGMENT_BOUNDARIES_S) - 1):
                 return {"valid": False,
-                        "reason": "公开作业阶段策略的分段目标与随机工况不匹配",
+                        "reason": "Public phase-policy segment targets do not match the stochastic profile",
                         "fuel_l": None}
             local_s = (index * model.p.dt_s) % _WORKCYCLE_SEGMENT_BOUNDARIES_S[-1]
             segment = next(
@@ -530,7 +530,7 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             if config.phase_policy_tracking_gains is not None:
                 if len(config.phase_policy_tracking_gains) != len(config.phase_policy_targets_w):
                     return {"valid": False,
-                            "reason": "公开作业阶段策略的分段跟随系数与目标数量不匹配",
+                            "reason": "Public phase-policy tracking gains do not match the target count",
                             "fuel_l": None}
                 tracking_gain = config.phase_policy_tracking_gains[segment]
             else:
@@ -540,16 +540,16 @@ def run_definition(controller_name: str, config: ExperimentConfig = ExperimentCo
             if config.phase_policy_soc_targets is not None:
                 if len(config.phase_policy_soc_targets) != len(config.phase_policy_targets_w):
                     return {"valid": False,
-                            "reason": "公开作业阶段策略的SOC参考与目标数量不匹配",
+                            "reason": "Public phase-policy SOC references do not match the target count",
                             "fuel_l": None}
                 if config.phase_policy_soc_tracking_time_s <= 0.0:
                     return {"valid": False,
-                            "reason": "公开作业阶段策略的SOC跟踪时间常数必须为正",
+                            "reason": "Public phase-policy SOC tracking time constant must be positive",
                             "fuel_l": None}
                 soc_reference = config.phase_policy_soc_targets[segment]
                 if not model.p.soc_min <= soc_reference <= model.p.soc_max:
                     return {"valid": False,
-                            "reason": "公开作业阶段策略的SOC参考超出电池边界",
+                            "reason": "Public phase-policy SOC reference is outside the battery bounds",
                             "fuel_l": None}
                 soc_reference_correction_w = (
                     (soc_reference - state.soc) * model.p.battery_capacity_wh * 3600.0

@@ -1,8 +1,8 @@
 {
   "snapshot_date": "2026-10-21",
   "papers": {
-    "paper1": "Machines 已接收稿",
-    "paper2": "Energies 修正作者校样"
+    "paper1": "Accepted Machines manuscript",
+    "paper2": "Corrected Energies author proof"
   },
   "byte_identical_copies": [
     {
@@ -516,7 +516,7 @@
       "sha256": "b65df3f4fab45aba9263a7c30d4db284b9fac397e67617eeef7114603f25fff5"
     },
     {
-      "source": "revisions/energies_proofreading/校样返还上传包/03_Supplementary_Methods_Results.pdf",
+      "source": "revisions/energies_proofreading/\u6821\u6837\u8fd4\u8fd8\u4e0a\u4f20\u5305/03_Supplementary_Methods_Results.pdf",
       "target": "manuscripts/paper2/supplementary.pdf",
       "sha256": "3b77e3ae0c3c51275071ff91ceea2a02740abfbf5a12bd4509477bfa6f5ac723"
     },
@@ -548,7 +548,7 @@
     {
       "source": "code/config/parameters.py",
       "target": "code/config/parameters.py",
-      "sha256": "979fce5d26b5ddec130d948190701772cae264466c0974a6c49f3fb880226643"
+      "sha256": "c07ee4e3bdef40487de071898da74647ce24b882e61335debf661d41cfd1bd46"
     },
     {
       "source": "code/energy_management/dp_mpc_ecms.py",
@@ -558,7 +558,7 @@
     {
       "source": "code/energy_management/experiments.py",
       "target": "code/energy_management/experiments.py",
-      "sha256": "fb964882f5d58f0595054dd8b8d0eab22f73399de04225a8bd989f207fe1d832"
+      "sha256": "a586fb44de613cd344dd3afd75a3975efd03d7f5d88ab9d62da01af0cb38f1e7"
     },
     {
       "source": "code/energy_management/load_terrain_predictor.py",
@@ -643,7 +643,7 @@
     {
       "source": "tools/check_paper1_supply_coordination.py",
       "target": "tools/check_paper1_supply_coordination.py",
-      "sha256": "15c4d63e84a43c34ce3cb4c2b31e1cc9555f0d2f88ab09a0351143d3afab76db"
+      "sha256": "69d7d064485e91073808106f12a2d9da1c880ede13fa19c6f64eb2b1cc8fd434"
     },
     {
       "source": "tools/check_paper2_revision_physics.py",
@@ -802,29 +802,29 @@
       "target": "manuscripts/paper2/manuscript.tex",
       "source_sha256": "ec844a689f2025c06991937bbd7fdca951ae1b7e556f81d5d80fd17aa24b9c8c",
       "sha256": "ab725febe03f84942f6e6191d42bcd2d90d6ecfa2047c1874a36e6c772fdadb5",
-      "operation": "移除TeX注释文字，保留注释换行及全部有效TeX内容"
+      "operation": "Remove TeX comments while preserving line breaks and valid content"
     },
     {
       "source": "tools/check_paper2_revision_execution.py",
       "target": "tools/check_paper2_revision_execution.py",
       "source_sha256": "15167c917ce300bd6ec0244bc68e93ba54ae361bf9cee2cb4a9583f0db5b0415",
       "sha256": "0b95d3b98fbac1214658164edcf2f807cf9d7508f5f170c13d8902fea68e8d41",
-      "operation": "冻结参考结果改为可选输入；缺省从代码重算且不声称历史记录一致性"
+      "operation": "Make historical reference output optional; recompute from source when absent without claiming historical parity"
     },
     {
       "source": "tools/run_paper2_major_revision.py",
       "target": "tools/run_paper2_major_revision.py",
       "source_sha256": "7b40e82113d9c30e7f7ece5cab705662f0515f0704f1f59fa7b152b23a544459",
       "sha256": "b1f3835a5fea840fbc0a9ac84791dec050609bcdd946f1fa637bb5b8e0b09561",
-      "operation": "冻结参考结果改为可选输入；缺省从代码重算且不声称历史记录一致性"
+      "operation": "Make historical reference output optional; recompute from source when absent without claiming historical parity"
     },
     {
       "source": "tools/run_paper2_submitted_ablation.py",
       "target": "tools/run_paper2_submitted_ablation.py",
       "source_sha256": "b4c788c84000e8c26d386b7b4d51c991b4ae796f75bb9e53f834704870f43996",
       "sha256": "dc8fe1248600494f25cd45ae08a22375381a0e9e3d01e67e54f930ad45e54fab",
-      "operation": "冻结参考结果改为可选输入；缺省从代码重算且不声称历史记录一致性"
+      "operation": "Make historical reference output optional; recompute from source when absent without claiming historical parity"
     }
   ],
-  "boundary": "当前论文、代码、文档及参数清单；不收录实验结果、轨迹、检查点、审稿通信或旧稿。未推送、创建release或操作Zenodo。"
+  "boundary": "Current manuscripts, source code, documentation, and parameter manifests only; no experiment outputs, trajectories, checkpoints, review correspondence, or old manuscripts. Not pushed; no release or Zenodo operation."
 }
