@@ -1,0 +1,22 @@
+{
+  "paper1": {
+    "journal": "Machines",
+    "manuscript_id": "machines-4647986",
+    "status": "published",
+    "status_source": "user confirmation and published PDF on 25 October 2026",
+    "article_doi": "10.3390/machines14111248",
+    "citation": "Machines 2026, 14(11), 1248",
+    "article_url": "https://doi.org/10.3390/machines14111248"
+  },
+  "paper2": {
+    "journal": "Energies",
+    "manuscript_id": "energies-4623536",
+    "status": "published",
+    "status_source": "user confirmation on 25 October 2026",
+    "article_doi": "10.3390/en19215024",
+    "citation": "Energies 2026, 19(21), 5024",
+    "article_url": "https://doi.org/10.3390/en19215024"
+  },
+  "archive_scope": "latest published-state manuscript sources, source code, declared parameters and documentation; no frozen experiment outputs or review correspondence",
+  "synchronized_on": "2026-10-25"
+}

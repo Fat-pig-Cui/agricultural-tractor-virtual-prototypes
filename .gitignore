@@ -1,0 +1,25 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+.build/
+scratch/
+# Simulation outputs stay in an external workspace and must not enter this checkout.
+/experiments/
+/results/
+/revisions/
+/historical/
+/historical_sources/
+/submission_packages/
+/experiments/
+*.json.gz
+*.npz
+*.npy
+*.pkl
+*.mat
+*.h5

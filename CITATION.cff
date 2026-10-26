@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this archive, please cite the associated manuscript and this software release."
+type: software
+title: "Reproducibility archive for two agricultural-tractor virtual-prototype studies"
+doi: 10.5281/zenodo.22754509
+abstract: "Clean source code, declared virtual-model inputs, figures, and manuscript sources accompanying the published Machines and Energies studies of electrohydraulic hitch control and hybrid-tractor energy management."
+authors:
+  - family-names: Cui
+    given-names: Chenyu
+    orcid: https://orcid.org/0009-0005-1928-6218
+  - family-names: Wang
+    given-names: Peng
+  - family-names: Zhang
+    given-names: Yucheng

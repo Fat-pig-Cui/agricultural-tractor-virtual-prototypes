@@ -1,0 +1,32 @@
+{
+  "title": "Reproducibility archive for two agricultural-tractor virtual-prototype studies",
+  "description": "<p>Published Machines and Energies articles, clean model and algorithm source, experiment-generation scripts, declared parameter manifests, figures, and documentation for two theoretical agricultural-tractor virtual-prototype studies.</p><p>The working tree contains no frozen experiment outputs, trajectories, checkpoints, review correspondence, publication certificates, or submission packages. Main experiments can be recomputed from source in an empty external workspace; this archive does not claim to provide the complete frozen-data deposit.</p><p>There are no vehicle, bench, or target-component calibration data. The approximately 20% fuel case uses ideal conditions, complete future information, and a wider terminal-SOC band and is separate from the causal online protocol. Article DOIs are 10.3390/machines14111248 and 10.3390/en19215024.</p>",
+  "creators": [
+    {
+      "name": "Cui, Chenyu",
+      "orcid": "0009-0005-1928-6218",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    },
+    {
+      "name": "Wang, Peng",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    },
+    {
+      "name": "Zhang, Yucheng",
+      "affiliation": "Prospective Research Laboratory, Institute of Computing Technology, Chinese Academy of Sciences"
+    }
+  ],
+  "keywords": [
+    "agricultural tractor",
+    "electrohydraulic hitch",
+    "hybrid electric tractor",
+    "energy management",
+    "equivalent consumption minimization",
+    "observer-based control",
+    "virtual prototype",
+    "reproducible research"
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "software",
+  "access_right": "open"
+}

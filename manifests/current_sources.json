@@ -1,0 +1,9 @@
+{
+  "synchronized_on": "2026-10-26",
+  "paper1_source": "manuscripts/paper1/manuscript.tex (clean public source snapshot)",
+  "paper2_source": "manuscripts/paper2/manuscript.tex (clean public source snapshot)",
+  "published_status": true,
+  "generated_experiment_data_included": false,
+  "source_only_reproduction": true,
+  "zenodo_operation": false
+}
